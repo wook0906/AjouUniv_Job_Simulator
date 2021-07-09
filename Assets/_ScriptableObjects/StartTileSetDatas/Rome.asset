@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bed53820c1f43e439fb29522ed397c5, type: 3}
+  m_Name: Rome
+  m_EditorClassIdentifier: 
+  mapType: 1
+  player1: 0b0000000c0000000d0000000e0000000f000000
+  player2: 370000002e000000250000001c00000013000000
+  player3: 4500000044000000430000004200000041000000
+  player4: 19000000220000002b000000340000003d000000

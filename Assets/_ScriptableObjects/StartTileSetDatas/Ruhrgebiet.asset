@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bed53820c1f43e439fb29522ed397c5, type: 3}
+  m_Name: Ruhrgebiet
+  m_EditorClassIdentifier: 
+  mapType: 2
+  player1: 030000000400000005000000
+  player2: 2d000000240000001b000000
+  player3: 4d0000004c0000004b000000
+  player4: 230000002c00000035000000
