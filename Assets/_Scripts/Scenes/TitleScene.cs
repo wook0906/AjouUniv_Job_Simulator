@@ -18,6 +18,7 @@ public class TitleScene : BaseScene
 
     public UISlider progressbar;
     public GameObject dlcDownPopup;
+    public GameObject TOS_Popup;
     public UILabel downloadPercentLabel;
     public UILabel dlcSizeLabel;
 
@@ -28,6 +29,7 @@ public class TitleScene : BaseScene
     private Loads loads;
     private long dlcSize;
     private bool isStartDownloadDLC;
+    
 
     public override float Progress
     {
@@ -101,6 +103,7 @@ public class TitleScene : BaseScene
             //Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
             yield break;
         }
+        TOS_Popup.SetActive(true);
 
         #region Addressable Assets Download
         Addressables.GetDownloadSizeAsync("DLC").Completed += (result) =>
