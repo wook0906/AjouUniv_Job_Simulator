@@ -34,6 +34,7 @@ public class LobbyScene_UI : UI_Scene
         Training_Btn,
         RobotInfo_Btn,
         Profile_Btn,
+        CustomRoom_Btn,
     }
 
     enum Labels
@@ -134,7 +135,13 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowPopupUIAsync<Community_Popup>();
+            lobbyScene.SetOffAllRobotCameras();
+            Managers.UI.ShowSceneUI<Community_UI>(false);
+        }));
+        GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            lobbyScene.SetOffAllRobotCameras();
+            Managers.UI.ShowSceneUI<CustomRoom_UI>(false);
         }));
 
 
@@ -144,7 +151,6 @@ public class LobbyScene_UI : UI_Scene
         startGameBtnOutlieEffect = GetButton((int)Buttons.StartGame_Btn).transform.Find("LobbyStart_fix").gameObject;
         robotViewSection = FindObjectOfType<Volt_LobbyRobotViewSection>();
         StartCoroutine(DelayedStart());
-
     }
 
     public void OnClickStartGame()

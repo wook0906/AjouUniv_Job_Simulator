@@ -1055,7 +1055,11 @@ MonoBehaviour:
   startsActive: 0
   instantTween: 0
   optionCanBeNone: 0
-  onChange: []
+  onChange:
+  - mTarget: {fileID: 485392259}
+    mMethodName: OnToggleChangeValue
+    mParameters: []
+    oneShot: 0
   checkSprite: {fileID: 0}
   checkAnimation: {fileID: 0}
   eventReceiver: {fileID: 0}
@@ -1578,7 +1582,7 @@ MonoBehaviour:
   mHeight: 100
   mDepth: 15
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 3.77
@@ -1617,14 +1621,18 @@ MonoBehaviour:
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   duration: 0.2
   dragHighlight: 0
-  hoverSprite: 
-  pressedSprite: 
+  hoverSprite: Btn_OK_n
+  pressedSprite: Btn_OK_n
   disabledSprite: 
   hoverSprite2D: {fileID: 0}
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 485392259}
+    mMethodName: OnClickConfirmBtn
+    mParameters: []
+    oneShot: 0
 --- !u!65 &2150333354913248434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1636,7 +1644,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 377, y: 100, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1339465103043006420
 GameObject:
@@ -2492,13 +2500,14 @@ GameObject:
   - component: {fileID: 5168295881907736733}
   - component: {fileID: 2618898300864173880}
   - component: {fileID: 5338989310378788263}
+  - component: {fileID: 485392259}
   m_Layer: 5
   m_Name: TermsOfService_Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5168295881907736733
 Transform:
   m_ObjectHideFlags: 0
@@ -2558,7 +2567,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -2585,6 +2594,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &485392259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223908028024400374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b6bae7d5b72644a434d2dff7ac56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TOSToggle: {fileID: 8786201695340691671}
+  PCToggle: {fileID: 1898355270}
+  confirmBtn: {fileID: 5580042509034299551}
+  isConfirmed: 0
 --- !u!1 &6575050553212029057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,7 +2784,11 @@ MonoBehaviour:
   startsActive: 0
   instantTween: 0
   optionCanBeNone: 0
-  onChange: []
+  onChange:
+  - mTarget: {fileID: 485392259}
+    mMethodName: OnToggleChangeValue
+    mParameters: []
+    oneShot: 0
   checkSprite: {fileID: 0}
   checkAnimation: {fileID: 0}
   eventReceiver: {fileID: 0}

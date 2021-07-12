@@ -102,7 +102,7 @@ public class GameOption : MonoBehaviour
     }
     public void OnChangedSoundVolume(float value)
     {
-        soundVolume = value;
+        SoundVolume = value;
     }
     public void OnChangedFrameRate(bool on)
     {

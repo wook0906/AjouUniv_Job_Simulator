@@ -67,7 +67,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 560
   mHeight: 262
-  mDepth: 8
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 15
   mHeight: 113
-  mDepth: 10
+  mDepth: 7
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -248,8 +248,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7667302152341992153}
-  m_Father: {fileID: 3448249358120495099}
-  m_RootOrder: 1
+  m_Father: {fileID: 7349109405310947275}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8348066286531217893
 MonoBehaviour:
@@ -290,13 +290,13 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 439.68, w: 294.6}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 4
+  mDepth: 6
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
@@ -395,7 +395,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 130
   mHeight: 50
-  mDepth: 11
+  mDepth: 7
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -513,7 +513,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3448249358120495099}
+  - {fileID: 2546920535888300733}
+  - {fileID: 7919800723347355893}
   m_Father: {fileID: 9206687379519338483}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -550,7 +551,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 560
   mHeight: 325
-  mDepth: 8
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -637,7 +638,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 600
   mHeight: 720
-  mDepth: 1
+  mDepth: 4
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -692,9 +693,8 @@ Transform:
   m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_Children:
   - {fileID: 6533081050119851312}
-  - {fileID: 8831801999859836435}
-  m_Father: {fileID: 3448249358120495099}
-  m_RootOrder: 0
+  m_Father: {fileID: 7349109405310947275}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6957845969716180298
 MonoBehaviour:
@@ -729,7 +729,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 25
   mHeight: 123
-  mDepth: 9
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -894,7 +894,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -938,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5681751878039989102
 Transform:
   m_ObjectHideFlags: 0
@@ -986,7 +986,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 1920
   mHeight: 1080
-  mDepth: 0
+  mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 475
   mHeight: 80
-  mDepth: 9
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 64
   mHeight: 64
-  mDepth: 6
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1281,38 +1281,6 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick: []
---- !u!1 &5996826698968408052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3448249358120495099}
-  m_Layer: 5
-  m_Name: FriendsList_ScrollViewRoot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3448249358120495099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5996826698968408052}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7919800723347355893}
-  - {fileID: 2546920535888300733}
-  m_Father: {fileID: 7349109405310947275}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6135652946626104499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1345,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 130
   mHeight: 26
-  mDepth: 9
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1414,36 +1382,6 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!1 &6463498774996785106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8831801999859836435}
-  m_Layer: 5
-  m_Name: NGUI Snapshot Point 30
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8831801999859836435
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6463498774996785106}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7919800723347355893}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6740850849740885399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1446,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 40
   mHeight: 40
-  mDepth: 7
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1596,7 +1534,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 400
   mHeight: 80
-  mDepth: 5
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1717,7 +1655,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 253
   mHeight: 79
-  mDepth: 10
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1844,7 +1782,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 400
   mHeight: 60
-  mDepth: 4
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0

@@ -112,12 +112,15 @@ public class UIManager
                 GameObject go = result.Result;
                 go.GetOrAddComponent<T>();
                 if (parent != null)
+                {
                     go.transform.SetParent(parent);
+                }
                 if (callback != null)
                     callback.Invoke(go);
             });
     }
 
+    
     //public T ShowSceneUI<T>(string name = null) where T : UI_Scene
     //{
     //    if (string.IsNullOrEmpty(name))
@@ -132,7 +135,7 @@ public class UIManager
     //    return sceneUI;
     //}
 
-    public T ShowSceneUI<T>() where T : UI_Scene
+    public T ShowSceneUI<T>(bool prevUIUnactive = true) where T : UI_Scene
     {
         GameObject go;
         if(!_sceneUIs.TryGetValue(typeof(T), out go))
@@ -146,8 +149,13 @@ public class UIManager
         _sceneUI.gameObject.SetActive(true);
         _sceneUI.OnActive();
 
-        if (_sceneUIStack.Count > 0)
-            _sceneUIStack.Peek().gameObject.SetActive(false);
+        if (prevUIUnactive)
+        {
+            if (_sceneUIStack.Count > 0)
+            {
+                _sceneUIStack.Peek().gameObject.SetActive(false);
+            }
+        }
 
         _sceneUIStack.Push(sceneUI);
         

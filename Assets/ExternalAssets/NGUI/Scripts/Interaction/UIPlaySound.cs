@@ -44,8 +44,7 @@ public class UIPlaySound : MonoBehaviour
 
 	void OnEnable ()
 	{
-        if (PlayerPrefs.HasKey("Volt_SoundVolume"))
-            volume = PlayerPrefs.GetFloat("Volt_SoundVolume");
+        
 		if (trigger == Trigger.OnEnable)
 			NGUITools.PlaySound(audioClip, volume, pitch);
 	}

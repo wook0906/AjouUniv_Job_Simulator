@@ -16,9 +16,12 @@ public class LobbyScene : BaseScene
         RobotViewSection = 1 << 4,
         LobbyScene_AssetUI = 1 << 5,
         EmoticonScene_UI = 1 << 6,
+        Community_UI = 1 << 7,
+        CustomRoom_UI = 1<<8,
         All = LobbyScene_UI | AchScene_UI |
             HangarScene_UI | ModuleScene_UI | RobotViewSection |
-            LobbyScene_AssetUI | EmoticonScene_UI
+            LobbyScene_AssetUI | EmoticonScene_UI | Community_UI |
+            CustomRoom_UI
     }
     private Loads loads;
 
@@ -129,6 +132,8 @@ public class LobbyScene : BaseScene
         Managers.UI.ShowSceneUIAsync<HangarScene_UI>();
         Managers.UI.ShowSceneUIAsync<ModuleScene_UI>();
         Managers.UI.ShowSceneUIAsync<EmoticonScene_UI>();
+        Managers.UI.ShowSceneUIAsync<Community_UI>();
+        Managers.UI.ShowSceneUIAsync<CustomRoom_UI>();
 
         FindObjectOfType<Volt_LobbyRobotViewSection>().Init();
         loads |= Loads.RobotViewSection;
@@ -200,6 +205,17 @@ public class LobbyScene : BaseScene
     {
         loads |= Loads.LobbyScene_AssetUI;
         Debug.Log("Load Asset UI");
+    }
+    public void OnLoadedCommunityUI()
+    {
+        loads |= Loads.Community_UI;
+        Debug.Log("Load Community UI");
+        FindObjectOfType<Community_UI>().gameObject.SetActive(false);
+    }
+    public void OnLoadedCustomRoomUI()
+    {
+        loads |= Loads.CustomRoom_UI;
+        FindObjectOfType<CustomRoom_UI>().gameObject.SetActive(false);
     }
 
     public override void Clear()

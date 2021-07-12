@@ -18,7 +18,7 @@ public class TitleScene : BaseScene
 
     public UISlider progressbar;
     public GameObject dlcDownPopup;
-    public GameObject TOS_Popup;
+    public TermsOfServicePanel TOS_Popup;
     public UILabel downloadPercentLabel;
     public UILabel dlcSizeLabel;
 
@@ -29,7 +29,6 @@ public class TitleScene : BaseScene
     private Loads loads;
     private long dlcSize;
     private bool isStartDownloadDLC;
-    
 
     public override float Progress
     {
@@ -103,7 +102,9 @@ public class TitleScene : BaseScene
             //Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
             yield break;
         }
-        TOS_Popup.SetActive(true);
+        TOS_Popup.gameObject.SetActive(true);
+
+        yield return new WaitUntil(() => TOS_Popup.isConfirmed);
 
         #region Addressable Assets Download
         Addressables.GetDownloadSizeAsync("DLC").Completed += (result) =>
@@ -203,4 +204,5 @@ public class TitleScene : BaseScene
         isStartDownloadDLC = true;
         dlcDownPopup.SetActive(false);
     }
+
 }

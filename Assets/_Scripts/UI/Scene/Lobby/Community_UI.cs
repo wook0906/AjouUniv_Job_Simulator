@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Community_Popup : UI_Popup
+public class Community_UI : UI_Scene
 {
+    [SerializeField]
     GameObject friendsItemRoot;
 
     enum Buttons
@@ -17,6 +18,7 @@ public class Community_Popup : UI_Popup
         FriendsItemRoot
     }
 
+    private LobbyScene lobbyScene;
 
     public override void Init()
     {
@@ -25,9 +27,12 @@ public class Community_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
 
+        lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
+
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            lobbyScene.ChangeToLobbyCamera();
+            Managers.UI.CloseSceneUI(this);
         }));
         Get<UIButton>((int)Buttons.AddFriends_Btn).onClick.Add(new EventDelegate(() =>
         {
@@ -37,6 +42,8 @@ public class Community_Popup : UI_Popup
         friendsItemRoot = Get<GameObject>((int)GameObjects.FriendsItemRoot);
         
         SetFriendsInfo();
+
+        
     }
 
     void SetFriendsInfo()
@@ -50,16 +57,20 @@ public class Community_Popup : UI_Popup
         {
             AsyncOperationHandle<GameObject> handle = Managers.UI.MakeSubItemAsync<FriendsItem>(friendsItemRoot.transform);
             yield return new WaitUntil(() => { return handle.IsDone; });
-
+            
             FriendsItem item = handle.Result.GetComponent<FriendsItem>();
+            //item.GetComponent<UIPanel>().depth = friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth + 1;
             item.SetInfo($"temp{i}");
 
-            item.transform.localPosition = Vector3.one;
+            item.transform.localPosition = Vector3.zero;
             item.transform.localScale = Vector3.one;
-            Vector3 moveVector = Vector3.up * friendsItemRoot.GetComponent<UIGrid>().cellHeight * i;
+            //Vector3 moveVector = Vector3.up * friendsItemRoot.GetComponent<UIGrid>().cellHeight * i;
 
-            item.transform.localPosition -= moveVector;
+            //item.transform.localPosition -= moveVector;
         }
+        friendsItemRoot.GetComponent<UIGrid>().Reposition();
+
+        lobbyScene.OnLoadedCommunityUI();
     }
    
 }
