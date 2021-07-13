@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709225055068465606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196, y: 42, z: 0}
+  m_LocalPosition: {x: 122.5, y: 46.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9194017303983326893}
@@ -64,14 +64,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 300
-  mHeight: 80
+  mWidth: 309
+  mHeight: 52
   mDepth: 4
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.75
+  aspectRatio: 5.9423075
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -175,14 +175,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 252
-  mHeight: 76
+  mWidth: 142
+  mHeight: 82
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3157895
+  aspectRatio: 1.7317073
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
@@ -298,8 +298,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 120
+  mWidth: 111
+  mHeight: 111
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -334,7 +334,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 120, z: 0}
+  m_Size: {x: 111, y: 111, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5943705203087277394
 MonoBehaviour:
@@ -429,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2219125361041912449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4447684636611870887}
@@ -516,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2494449766730464890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36, y: 45, z: 0}
+  m_LocalPosition: {x: -77.5, y: 45.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4909243472453582803}
@@ -553,19 +553,19 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 176
+  mWidth: 93
   mHeight: 52
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3846154
+  aspectRatio: 1.7884616
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
   mText: 30
-  mFontSize: 20
+  mFontSize: 30
   mFontStyle: 0
   mAlignment: 2
   mEncoding: 1
@@ -713,7 +713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3943558318565019077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60, y: -484, z: 0}
+  m_LocalPosition: {x: 159, y: -444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1821269792381108843}
@@ -751,14 +751,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 252
-  mHeight: 76
+  mWidth: 198
+  mHeight: 126
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3157895
+  aspectRatio: 1.5714285
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -787,7 +787,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 252, y: 76, z: 0}
+  m_Size: {x: 198, y: 126, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4569614407392738015
 MonoBehaviour:
@@ -896,8 +896,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 128
-  mHeight: 128
+  mWidth: 94
+  mHeight: 94
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -932,7 +932,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 128, y: 128, z: 0}
+  m_Size: {x: 94, y: 94, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7937473649297049797
 MonoBehaviour:
@@ -1101,14 +1101,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 566
-  mHeight: 148
+  mWidth: 600
+  mHeight: 180
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.8243244
+  aspectRatio: 3.3333333
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1137,7 +1137,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 566, y: 148, z: 0}
+  m_Size: {x: 600, y: 180, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3416111123729407965
 MonoBehaviour:
@@ -1302,7 +1302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472503796100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -359.99997, y: -333.0011, z: 0}
+  m_LocalPosition: {x: -408, y: -367, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243473729456381}
@@ -1428,14 +1428,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 90
-  mHeight: 84
+  mWidth: 128
+  mHeight: 128
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.0714285
+  aspectRatio: 1
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1481,7 +1481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472594823785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 704, y: -444, z: 0}
+  m_LocalPosition: {x: 720, y: -444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243473552165199}
@@ -1520,14 +1520,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 462
-  mHeight: 152
+  mWidth: 413
+  mHeight: 126
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.0394738
+  aspectRatio: 3.2777777
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1556,7 +1556,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 462, y: 152, z: 0}
+  m_Size: {x: 413, y: 126, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243472594823787
 MonoBehaviour:
@@ -1760,7 +1760,7 @@ GameObject:
   - component: {fileID: 4909243472835138004}
   - component: {fileID: 4909243472835138000}
   m_Layer: 5
-  m_Name: Rank_Btn
+  m_Name: Option_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,7 +1774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472835138010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -861, y: 259, z: 0}
+  m_LocalPosition: {x: -851, y: 238, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243473716005692}
@@ -1812,8 +1812,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 177
-  mHeight: 177
+  mWidth: 162
+  mHeight: 162
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -1874,7 +1874,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 177, y: 177, z: 0}
+  m_Size: {x: 162, y: 162, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243472835138004
 MonoBehaviour:
@@ -1947,7 +1947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472938404205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -865, y: 100.00168, z: 0}
+  m_LocalPosition: {x: -851, y: 43.999992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243472587193767}
@@ -1986,13 +1986,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 162
-  mHeight: 148
+  mHeight: 162
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.0945946
+  aspectRatio: 1
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: Btn_sci-fi button02_n
+  mSpriteName: radio_hover
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!114 &4909243472938404202
@@ -2047,7 +2047,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 162, y: 148, z: 0}
+  m_Size: {x: 162, y: 162, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243472938404200
 MonoBehaviour:
@@ -2158,8 +2158,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 120
+  mWidth: 111
+  mHeight: 111
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -2194,7 +2194,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 120, z: 0}
+  m_Size: {x: 111, y: 111, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243473058342910
 MonoBehaviour:
@@ -2737,8 +2737,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 120
+  mWidth: 111
+  mHeight: 111
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -2773,7 +2773,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 120, z: 0}
+  m_Size: {x: 111, y: 111, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243473542853654
 MonoBehaviour:
@@ -2905,14 +2905,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 462
-  mHeight: 152
+  mWidth: 413
+  mHeight: 126
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.0394738
+  aspectRatio: 3.2777777
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
@@ -3006,14 +3006,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 76
-  mHeight: 96
+  mWidth: 128
+  mHeight: 128
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.7916667
+  aspectRatio: 1
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3243,7 +3243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243474110595448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -825, y: -414.99893, z: 0}
+  m_LocalPosition: {x: -874, y: -449, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243472266793917}
@@ -3339,8 +3339,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 120
+  mWidth: 111
+  mHeight: 111
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -3375,7 +3375,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 120, z: 0}
+  m_Size: {x: 111, y: 111, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243474175565709
 MonoBehaviour:
@@ -3470,7 +3470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243474233538386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76, y: -18, z: 0}
+  m_LocalPosition: {x: 73.1, y: -18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4909243472453582803}
@@ -3507,19 +3507,19 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 356
+  mWidth: 371
   mHeight: 74
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.810811
+  aspectRatio: 5.0135136
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
   mText: "\uC544\uC544\uC544\uC544\uC544\uC544\uC544\uC544"
-  mFontSize: 32
+  mFontSize: 35
   mFontStyle: 0
   mAlignment: 2
   mEncoding: 1
@@ -3571,7 +3571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6319030467577256116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -193, y: -1, z: 0}
+  m_LocalPosition: {x: -205, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4909243472453582803}
@@ -3608,14 +3608,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 178
-  mHeight: 148
+  mWidth: 145
+  mHeight: 147
   mDepth: 4
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.2027028
+  aspectRatio: 0.9863946
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -3876,18 +3876,20 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 252
-  mHeight: 76
+  mWidth: 142
+  mHeight: 82
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3157895
+  aspectRatio: 1.7317073
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: 
+  mText: 'Training
+
+    Room'
   mFontSize: 30
   mFontStyle: 0
   mAlignment: 0
@@ -3960,7 +3962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8031291219164617576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 335, y: -483, z: 0}
+  m_LocalPosition: {x: 381, y: -444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8031291218807029391}
@@ -3998,14 +4000,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 252
-  mHeight: 76
+  mWidth: 198
+  mHeight: 126
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3157895
+  aspectRatio: 1.5714285
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -4034,7 +4036,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 252, y: 76, z: 0}
+  m_Size: {x: 198, y: 126, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8031291219164617492
 MonoBehaviour:
@@ -4107,7 +4109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230605964230916413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -865, y: -50.3, z: 0}
+  m_LocalPosition: {x: -851, y: -156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8785834525164980495}
@@ -4146,13 +4148,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 162
-  mHeight: 148
+  mHeight: 162
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.0945946
+  aspectRatio: 1
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -4167,7 +4169,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: Btn_tool_n
+  mSpriteName: radio_hover
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!114 &369724749751176619
@@ -4207,7 +4209,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 162, y: 148, z: 0}
+  m_Size: {x: 162, y: 162, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2076340615169755501
 MonoBehaviour:
@@ -4406,8 +4408,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 96
-  mHeight: 96
+  mWidth: 128
+  mHeight: 128
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0

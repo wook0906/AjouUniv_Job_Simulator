@@ -17,7 +17,6 @@ public class LobbyScene_AssetUI : UIBase
         AddDiamond_Btn,
         AddBattery_Btn,
         ShowBatteryChargeTime_Btn,
-        Option_Btn
     }
 
     enum GameObjects
@@ -40,10 +39,7 @@ public class LobbyScene_AssetUI : UIBase
 
         GetComponent<UIPanel>().depth = 100;
 
-        GetButton((int)Buttons.Option_Btn).onClick.Add(new EventDelegate(() =>
-        {
-            Managers.UI.ShowPopupUIAsync<SystemOption_Popup>();
-        }));
+
         GetButton((int)Buttons.AddBattery_Btn).onClick.Add(new EventDelegate(() =>
         {
             PlayerPrefs.SetString("Volt_ShopEnterKey", "Battery");

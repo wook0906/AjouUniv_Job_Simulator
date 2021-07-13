@@ -29,7 +29,7 @@ public class LobbyScene_UI : UI_Scene
         ChangeRobot_Btn_Prev,
         ChangeRobot_Btn_Next,
         StartGame_Btn,
-        Rank_Btn,
+        Option_Btn,
         Shop_Btn,
         Training_Btn,
         RobotInfo_Btn,
@@ -83,9 +83,9 @@ public class LobbyScene_UI : UI_Scene
             lobbyScene.SetOffAllRobotCameras();
         }));
 
-        GetButton((int)Buttons.Rank_Btn).onClick.Add(new EventDelegate(() =>
+        GetButton((int)Buttons.Option_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowPopupUIAsync<Rank_Popup>();
+            Managers.UI.ShowPopupUIAsync<SystemOption_Popup>();
         }));
 
         GetButton((int)Buttons.ChangeRobot_Btn_Next).onClick.Add(new EventDelegate(() =>
