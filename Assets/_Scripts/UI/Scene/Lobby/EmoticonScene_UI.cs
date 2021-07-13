@@ -54,6 +54,7 @@ public class EmoticonScene_UI : UI_Scene
         Bind<UIScrollView>(typeof(ScrollViews));
         Bind<UIButton>(typeof(Buttons));
 
+
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
         GetButton((int)Buttons.EmoHoundTap).onClick.Add(new EventDelegate(() =>
@@ -108,8 +109,7 @@ public class EmoticonScene_UI : UI_Scene
 
         GetButton((int)Buttons.Back_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.ChangeToLobbyCamera();
-            Managers.UI.CloseSceneUI();
+            OnClose();
         }));
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().onCompletedInit += () =>
         {
@@ -127,6 +127,7 @@ public class EmoticonScene_UI : UI_Scene
     public override void OnActive()
     {
         OnClickEmoMercuryTap();
+        Managers.UI.PushToUILayerStack(this);
     }
     private void OnClickEmoVoltTap()
     {
@@ -207,5 +208,10 @@ public class EmoticonScene_UI : UI_Scene
         }
         return -1;
     }
-
+    public override void OnClose()
+    {
+        base.OnClose();
+        lobbyScene.ChangeToLobbyCamera();
+        Managers.UI.CloseSceneUI(this);
+    }
 }

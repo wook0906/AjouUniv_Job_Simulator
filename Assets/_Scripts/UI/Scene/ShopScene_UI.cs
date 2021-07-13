@@ -5,6 +5,7 @@ using Volt.Shop;
 
 public class ShopScene_UI : UI_Scene
 {
+    bool isClosing = false;
     enum Buttons
     {
         Back_Btn,
@@ -65,6 +66,8 @@ public class ShopScene_UI : UI_Scene
         Bind<UIScrollView>(typeof(ScrollViews));
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
+
+        Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Option_Btn).onClick.Add(new EventDelegate(() =>
         {
@@ -178,7 +181,7 @@ public class ShopScene_UI : UI_Scene
 
     private void OnClickBackButton()
     {
-        Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
+        OnClose();
     }
 
     private void OnClickSkinVoltTap()
@@ -542,6 +545,10 @@ public class ShopScene_UI : UI_Scene
         {
             GetLabel((int)Labels.BatteryTime_Label).text = "20:00";
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnClose();
+        }
     }
 
     public void Clear()
@@ -550,5 +557,12 @@ public class ShopScene_UI : UI_Scene
         {
             GetScrollView(i).SendMessage("Clear", SendMessageOptions.DontRequireReceiver);
         }
+    }
+    public override void OnClose()
+    {
+        if (isClosing) return;
+        isClosing = true;
+        base.OnClose();
+        Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
     }
 }

@@ -16,8 +16,4 @@ public class UI_Popup : UIBase
         Managers.UI.ClosePopupUI(this);
     }
 
-    public virtual void OnClose()
-    {
-        
-    }
 }

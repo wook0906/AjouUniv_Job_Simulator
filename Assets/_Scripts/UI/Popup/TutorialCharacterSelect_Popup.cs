@@ -50,8 +50,5 @@ public class TutorialCharacterSelect_Popup : UI_Popup
             phase.SelectedRobot = RobotType.Reaper;
             Managers.UI.ShowPopupUIAsync<TutorialCharacterSelectConfirm_Popup>();
         }));
-
-        
-
     }
 }

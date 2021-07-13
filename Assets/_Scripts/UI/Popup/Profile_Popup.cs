@@ -26,13 +26,15 @@ public class Profile_Popup : UI_Popup
 
         Bind<UIButton>(typeof(Buttons));
 
+        Managers.UI.PushToUILayerStack(this);
+
         Get<UIButton>((int)Buttons.StateMSGConfirm_Btn).onClick.Add(new EventDelegate(() =>
         {
             //TODO 입력된 상태메세지를 서버에 저장할 수 있어야함.
         }));
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
     }
     public void SetInfo(int totalPlayCnt, int defeatCnt, int winCnt, int killCnt, int deathCnt)
@@ -42,5 +44,10 @@ public class Profile_Popup : UI_Popup
         Get<UILabel>((int)Labels.WinPlayCount_Label).text = winCnt.ToString();
         Get<UILabel>((int)Labels.KillCount_Label).text = killCnt.ToString();
         Get<UILabel>((int)Labels.DeathCount_Label).text = deathCnt.ToString();
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

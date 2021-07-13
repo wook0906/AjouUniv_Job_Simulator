@@ -62,8 +62,7 @@ public class HangarScene_UI : UI_Scene
 
         GetButton((int)Buttons.Back_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.ChangeToLobbyCamera();
-            Managers.UI.CloseSceneUI();
+            OnClose();
         }));
 
         GetButton((int)Buttons.ChangeRobot_Btn_Next).onClick.Add(new EventDelegate(OnClickNextRobot));
@@ -84,6 +83,7 @@ public class HangarScene_UI : UI_Scene
         lobbyScene.ChangeToHangarCamera();
         currentSkins = Managers.Data.SkinDatas[robotViewSection.SelectRobotType].RobotSkins;
         OnChangeRobot();
+        Managers.UI.PushToUILayerStack(this);
 
     }
 
@@ -241,5 +241,11 @@ public class HangarScene_UI : UI_Scene
                 equipButton.GetComponentInChildren<UILabel>().alpha = 0.5f;
             }
         }
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        lobbyScene.ChangeToLobbyCamera();
+        Managers.UI.CloseSceneUI(this);
     }
 }

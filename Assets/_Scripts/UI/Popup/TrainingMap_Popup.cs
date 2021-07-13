@@ -44,14 +44,10 @@ public class TrainingMap_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        //BindSprite<UISprite>(typeof(Sprites));
-        //BindSprite(typeof(GameObjects));
-        //BindSprite<UIButton>(typeof(Buttons));
-
-        //SetButtonSwap(typeof(Buttons));
+        Managers.UI.PushToUILayerStack(this);
 
         GetGameObject((int)GameObjects.MapSelectHighlight_Sprite).SetActive(false);
-        GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() => { ClosePopupUI(); }));
+        GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() => { OnClose(); }));
 
         for (int i = (int)Buttons.TwinCity_Btn; i <= (int)Buttons.Tokyo_Btn; ++i)
         {
@@ -141,5 +137,10 @@ public class TrainingMap_Popup : UI_Popup
         ClosePopupUI();
         LobbyScene_UI lobbyScene_UI = FindObjectOfType<LobbyScene_UI>();
         lobbyScene_UI.OnClickStartGame();
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

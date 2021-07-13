@@ -114,9 +114,8 @@ public class ModuleScene_UI : UI_Scene
         GetButton((int)Buttons.TacticTap_Btn).onClick.Add(new EventDelegate(OnPressdownTacticTapButton));
         GetButton((int)Buttons.Back_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.CloseSceneUI();
-            Managers.UI.CloseAllPopupUI();
-            lobbyScene.ChangeToLobbyCamera();
+            OnClose();
+            
         }));
 
         string[] buttonNames = typeof(Buttons).GetEnumNames();
@@ -134,7 +133,7 @@ public class ModuleScene_UI : UI_Scene
     public override void OnActive()
     {
         Managers.UI.ShowPopupUIAsync<ModuleExplaination_Popup>();
-        
+        Managers.UI.PushToUILayerStack(this);
         OnPressdownAttackTapButton();
     }
 
@@ -187,5 +186,12 @@ public class ModuleScene_UI : UI_Scene
         GetGameObject((int)GameObjects.TacticModuleCards).SetActive(true);
         GetButton((int)Buttons.TacticTap_Btn).GetComponent<UISprite>().depth = 3;
         GetButton((int)Buttons.TacticTap_Btn).normalSprite = "Btn_button01_p";
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        Managers.UI.CloseSceneUI();
+        Managers.UI.CloseAllPopupUI();
+        lobbyScene.ChangeToLobbyCamera();
     }
 }

@@ -62,8 +62,7 @@ public class AchScene_UI : UI_Scene
 
         GetButton((int)Buttons.Back_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.ChangeToLobbyCamera();
-            Managers.UI.CloseSceneUI(this);
+            OnClose();
         }));
         GetButton((int)Buttons.DailyTap_Btn).onClick.Add(new EventDelegate(OnClickDailyTapButton));
 
@@ -92,6 +91,7 @@ public class AchScene_UI : UI_Scene
     public override void OnActive()
     {
         OnClickDailyTapButton();
+        Managers.UI.PushToUILayerStack(this);
     }
 
     public ScrollViewItemCreator GetNormalAchScrollViewItemCreator()
@@ -122,5 +122,12 @@ public class AchScene_UI : UI_Scene
         GetButton((int)Buttons.DailyTap_Btn).normalSprite = "button01_textureless_n";
         Get<UIScrollView>((int)ScrollViews.NormalACHView).GetComponent<ScrollViewItemCreator>().Show();
         Get<UIScrollView>((int)ScrollViews.DailyACHView).GetComponent<ScrollViewItemCreator>().Hide();
+    }
+
+    public override void OnClose()
+    {
+        base.OnClose();
+        lobbyScene.ChangeToLobbyCamera();
+        Managers.UI.CloseSceneUI(this);
     }
 }

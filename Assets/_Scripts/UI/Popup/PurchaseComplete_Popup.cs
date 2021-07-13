@@ -14,18 +14,19 @@ public class PurchaseComplete_Popup : UI_Popup
         Ok_Btn
     }
 
+    ShopScene_UI shopSceneUI = null;
+
     public override void Init()
     {
         base.Init();
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        ShopScene_UI shopSceneUI = null;
+        Managers.UI.PushToUILayerStack(this);
+
         GetButton((int)Buttons.Ok_Btn).onClick.Add(new EventDelegate(() =>
         {
-            shopSceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
-            shopSceneUI.InActiveBlock();
-            ClosePopupUI();
+            OnClose();
         }));
 
         Define.PurchaseProductResult result = Managers.Data.PurchaseProductResult;
@@ -79,5 +80,12 @@ public class PurchaseComplete_Popup : UI_Popup
             default:
                 break;
         }
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        shopSceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
+        shopSceneUI.InActiveBlock();
+        ClosePopupUI();
     }
 }

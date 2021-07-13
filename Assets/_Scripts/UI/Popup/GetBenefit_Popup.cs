@@ -21,9 +21,11 @@ public class GetBenefit_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
+        Managers.UI.PushToUILayerStack(this);
+
         GetButton((int)Buttons.Confirm_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
 
         switch (Managers.Data.CurrentGetBenefitType)
@@ -37,5 +39,10 @@ public class GetBenefit_Popup : UI_Popup
             default:
                 break;
         }
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

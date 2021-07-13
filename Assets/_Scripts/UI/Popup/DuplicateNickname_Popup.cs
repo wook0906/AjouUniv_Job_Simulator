@@ -29,6 +29,8 @@ public class DuplicateNickname_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UISprite>(typeof(Sprites));
 
+        Managers.UI.PushToUILayerStack(this);
+
         //BindSprite<UIButton>(typeof(Buttons));
         //BindSprite<UISprite>(typeof(Sprites));
 
@@ -36,7 +38,12 @@ public class DuplicateNickname_Popup : UI_Popup
 
         Get<UIButton>((int)Buttons.Ok_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

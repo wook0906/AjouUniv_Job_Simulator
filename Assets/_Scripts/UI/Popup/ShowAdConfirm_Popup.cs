@@ -27,10 +27,11 @@ public class ShowAdConfirm_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISprite>(typeof(Sprites));
 
+        Managers.UI.PushToUILayerStack(this);
+
         GetButton((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {
-            FindObjectOfType<ShopScene_UI>().InActiveBlock();
-            ClosePopupUI();
+            OnClose();
         }));
 
         GetButton((int)Buttons.Yes_Btn).onClick.Add(new EventDelegate(OnClickConfirm));
@@ -53,8 +54,13 @@ public class ShowAdConfirm_Popup : UI_Popup
         ShopScene_UI scene_UI = Managers.UI.GetSceneUI<ShopScene_UI>();
         ClosePopupUI();
         scene_UI.ActiveBlock();
-        
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        FindObjectOfType<ShopScene_UI>().InActiveBlock();
+        ClosePopupUI();
     }
 
-    
+
 }

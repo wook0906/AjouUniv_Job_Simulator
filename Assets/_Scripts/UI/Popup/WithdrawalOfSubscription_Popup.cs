@@ -14,11 +14,16 @@ public class WithdrawalOfSubscription_Popup : UI_Popup
         base.Init();
         Bind<UIButton>(typeof(Buttons));
 
+        Managers.UI.PushToUILayerStack(this);
+
         GetButton((int)Buttons.Confirm_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
-
-
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

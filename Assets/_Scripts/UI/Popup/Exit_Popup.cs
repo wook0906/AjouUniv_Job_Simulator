@@ -32,19 +32,21 @@ public class Exit_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISprite>(typeof(Sprites));
 
-        //BindSprite<UIButton>(typeof(Buttons));
-        //BindSprite<UISprite>(typeof(Sprites));
-
-        //SetButtonSwap(typeof(Buttons));
+        Managers.UI.PushToUILayerStack(this);
 
         Get<UIButton>((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
 
         Get<UIButton>((int)Buttons.Yes_Btn).onClick.Add(new EventDelegate(() =>
         {
             Application.Quit();
         }));
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

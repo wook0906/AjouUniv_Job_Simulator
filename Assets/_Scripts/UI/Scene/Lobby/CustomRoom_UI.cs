@@ -31,8 +31,7 @@ public class CustomRoom_UI : UI_Scene
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.ChangeToLobbyCamera();
-            Managers.UI.CloseSceneUI(this);
+            OnClose();
         }));
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
@@ -67,5 +66,16 @@ public class CustomRoom_UI : UI_Scene
 
         lobbyScene.OnLoadedCustomRoomUI();
 
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        lobbyScene.ChangeToLobbyCamera();
+        Managers.UI.CloseSceneUI(this);
+    }
+    public override void OnActive()
+    {
+        base.OnActive();
+        Managers.UI.PushToUILayerStack(this);
     }
 }

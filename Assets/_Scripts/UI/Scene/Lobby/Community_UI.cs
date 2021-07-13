@@ -31,8 +31,7 @@ public class Community_UI : UI_Scene
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.ChangeToLobbyCamera();
-            Managers.UI.CloseSceneUI(this);
+            OnClose();
         }));
         Get<UIButton>((int)Buttons.AddFriends_Btn).onClick.Add(new EventDelegate(() =>
         {
@@ -72,5 +71,16 @@ public class Community_UI : UI_Scene
 
         lobbyScene.OnLoadedCommunityUI();
     }
-   
+
+    public override void OnClose()
+    {
+        base.OnClose();
+        lobbyScene.ChangeToLobbyCamera();
+        Managers.UI.CloseSceneUI(this);
+    }
+    public override void OnActive()
+    {
+        base.OnActive();
+        Managers.UI.PushToUILayerStack(this);
+    }
 }

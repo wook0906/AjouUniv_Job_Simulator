@@ -79,4 +79,8 @@ public abstract class UIBase : MonoBehaviour
     //            break;
     //    }
     //}
+    public virtual void OnClose()
+    {
+
+    }
 }

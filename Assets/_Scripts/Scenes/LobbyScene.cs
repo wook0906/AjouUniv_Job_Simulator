@@ -6,6 +6,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class LobbyScene : BaseScene
 {
+    private Exit_Popup exitPopup;
+
     enum Loads
     {
         None,
@@ -225,5 +227,29 @@ public class LobbyScene : BaseScene
         Camera.main.enabled = false;
         robotInLobbyCamera.SetActive(false);
         robotInHangarCamera.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //if (Managers.UI.GetPopupStack().Count == 0)
+            if (Managers.UI.GetUILayerStack().Count == 0)
+            {
+                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<Exit_Popup>();
+
+                if (handle.IsValid())
+                {
+                    handle.Completed += (result) =>
+                    {
+                        exitPopup = result.Result.GetComponent<Exit_Popup>();
+                    };
+                }
+            }
+            else
+            {
+                Managers.UI.GetUILayerStack().Pop().OnClose();
+            }
+        }
     }
 }

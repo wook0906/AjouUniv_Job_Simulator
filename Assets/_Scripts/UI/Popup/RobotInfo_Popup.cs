@@ -46,9 +46,11 @@ public class RobotInfo_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UIButton>(typeof(Buttons));
 
+        Managers.UI.PushToUILayerStack(this);
+
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(()=>
         {
-            ClosePopupUI();
+            OnClose();
         }));
 
 
@@ -108,5 +110,9 @@ public class RobotInfo_Popup : UI_Popup
                 break;
         }
     }
-
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
+    }
 }

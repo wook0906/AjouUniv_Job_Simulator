@@ -46,15 +46,11 @@ public class SystemOption_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISlider>(typeof(Sliders));
 
-        //BindSprite<UISprite>(typeof(Sprites));
-        //BindSprite<UIButton>(typeof(Buttons));
-        //BindSprite<UISlider>(typeof(Sliders));
-
-        //SetButtonSwap(typeof(Buttons));
+        Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            ClosePopupUI();
+            OnClose();
         }));
 
         GetButton((int)Buttons.RestAccount_Btn).onClick.Add(new EventDelegate(() =>
@@ -80,5 +76,10 @@ public class SystemOption_Popup : UI_Popup
             PlayerPrefs.SetFloat("Volt_MusicVolume", GetSlider((int)Sliders.Volume_Slider_BG).value);
             Volt_SoundManager.S.OnChangedSoundVolume(GetSlider((int)Sliders.Volume_Slider_BG).value);
         }));
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

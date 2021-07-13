@@ -31,14 +31,11 @@ public class Equip_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UISprite>(typeof(Sprites));
 
-        //BindSprite<UIButton>(typeof(Buttons));
-        //BindSprite<UISprite>(typeof(Sprites));
-
-        //SetButtonSwap(typeof(Buttons));
+        Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {;
-            ClosePopupUI();
+            OnClose();
         }));
 
         GetButton((int)Buttons.Yes_Btn).onClick.Add(new EventDelegate(() =>
@@ -47,5 +44,10 @@ public class Equip_Popup : UI_Popup
             hangarUI.ConfirmChangeRobotSkin();
             ClosePopupUI();
         }));
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        ClosePopupUI();
     }
 }

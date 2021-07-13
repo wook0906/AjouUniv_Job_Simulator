@@ -129,4 +129,5 @@ public class ShopScene : BaseScene
     {
         load |= Loads.SceneUI;
     }
+
 }

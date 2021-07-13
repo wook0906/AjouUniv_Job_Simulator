@@ -8,6 +8,8 @@ public class UIManager
 {
     int _order = 1000;
 
+    Stack<UIBase> uiLayerStack = new Stack<UIBase>();
+
     List<string> _popups = new List<string>();
     List<UI_Popup> _popupStack = new List<UI_Popup>();
     UI_Scene _sceneUI = null;
@@ -40,6 +42,14 @@ public class UIManager
     public List<UI_Popup> GetPopupStack()
     {
         return _popupStack;
+    }
+    public void PushToUILayerStack(UIBase ui)
+    {
+        uiLayerStack.Push(ui);
+    }
+    public Stack<UIBase> GetUILayerStack()
+    {
+        return uiLayerStack;
     }
 
     public void SetCanvas(GameObject go, bool sort = true)
@@ -148,6 +158,7 @@ public class UIManager
         _sceneUI = sceneUI;
         _sceneUI.gameObject.SetActive(true);
         _sceneUI.OnActive();
+
 
         if (prevUIUnactive)
         {
@@ -368,6 +379,9 @@ public class UIManager
     public void Clear()
     {
         CloseAllPopupUI();
+
+        uiLayerStack.Clear();
+
         _popups.Clear();
 
         _sceneUIStack.Clear();

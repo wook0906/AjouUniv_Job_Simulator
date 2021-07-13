@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//아마안쓰게 될 것.
 public class Rank_Popup : UI_Popup
 {
     enum Sprites
@@ -48,6 +49,7 @@ public class Rank_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISprite>(typeof(Sprites));
         Bind<UIButton>(typeof(Buttons));
+
 
         //BindSprite<UISprite>(typeof(Sprites));
         //BindSprite<UIButton>(typeof(Buttons));

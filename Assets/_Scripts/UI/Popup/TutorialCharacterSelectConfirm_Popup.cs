@@ -62,6 +62,5 @@ public class TutorialCharacterSelectConfirm_Popup : UI_Popup
         {
             ClosePopupUI();
         }));
-       
     }
 }

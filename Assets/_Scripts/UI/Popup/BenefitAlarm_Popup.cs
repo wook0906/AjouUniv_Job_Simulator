@@ -18,6 +18,8 @@ public class BenefitAlarm_Popup : UI_Popup
     public override void Init()
     {
         base.Init();
+        Managers.UI.PushToUILayerStack(this);
+
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
@@ -25,10 +27,13 @@ public class BenefitAlarm_Popup : UI_Popup
 
         GetButton((int)Buttons.Get_Btn).onClick.Add(new EventDelegate(() =>
         {
-            PacketTransmission.SendRequestBenefit(EBenefitType.Pack1Battery);
-            ClosePopupUI();
+            OnClose();
         }));
-
-        
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        PacketTransmission.SendRequestBenefit(EBenefitType.Pack1Battery);
+        ClosePopupUI();
     }
 }

@@ -45,7 +45,7 @@ public class LobbyScene_UI : UI_Scene
     }
     private Volt_LobbyRobotViewSection robotViewSection;
     private GameObject startGameBtnOutlieEffect;
-    private Exit_Popup exitPopup;
+
     private LobbyScene lobbyScene;
 
     public override void Init()
@@ -299,28 +299,5 @@ public class LobbyScene_UI : UI_Scene
 
     
 
-    private void Update()
-    {
-        
-
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (Managers.UI.GetPopupStack().Count == 0)
-            {
-                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<Exit_Popup>();
-
-                if (handle.IsValid())
-                {
-                    handle.Completed += (result) =>
-                    {
-                        exitPopup = result.Result.GetComponent<Exit_Popup>();
-                    };
-                }
-            }
-            else
-            {
-                Managers.UI.ClosePopupUI(exitPopup);
-            }
-        }
-    }
+    
 }
