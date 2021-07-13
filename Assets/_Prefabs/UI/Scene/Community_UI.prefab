@@ -1467,7 +1467,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: small panel05
+  mSpriteName: Btn_OK_n
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!1 &6740850849740885399
