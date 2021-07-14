@@ -16,6 +16,7 @@ public class LobbyScene_AssetUI : UIBase
     {
         AddDiamond_Btn,
         AddBattery_Btn,
+        AddGold_Btn,
         ShowBatteryChargeTime_Btn,
     }
 
@@ -48,6 +49,11 @@ public class LobbyScene_AssetUI : UIBase
         GetButton((int)Buttons.AddDiamond_Btn).onClick.Add(new EventDelegate(() =>
         {
             PlayerPrefs.SetString("Volt_ShopEnterKey", "Diamond");
+            Managers.Scene.LoadSceneAsync(Define.Scene.Shop);
+        }));
+        GetButton((int)Buttons.AddGold_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            PlayerPrefs.SetString("Volt_ShopEnterKey", "Gold");
             Managers.Scene.LoadSceneAsync(Define.Scene.Shop);
         }));
 

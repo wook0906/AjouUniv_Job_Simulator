@@ -20,10 +20,11 @@ public class LobbyScene : BaseScene
         EmoticonScene_UI = 1 << 6,
         Community_UI = 1 << 7,
         CustomRoom_UI = 1<<8,
+        ProfilePictureSetup_UI = 1<<9,
         All = LobbyScene_UI | AchScene_UI |
             HangarScene_UI | ModuleScene_UI | RobotViewSection |
             LobbyScene_AssetUI | EmoticonScene_UI | Community_UI |
-            CustomRoom_UI
+            CustomRoom_UI | ProfilePictureSetup_UI
     }
     private Loads loads;
 
@@ -136,6 +137,7 @@ public class LobbyScene : BaseScene
         Managers.UI.ShowSceneUIAsync<EmoticonScene_UI>();
         Managers.UI.ShowSceneUIAsync<Community_UI>();
         Managers.UI.ShowSceneUIAsync<CustomRoom_UI>();
+        Managers.UI.ShowSceneUIAsync<ProfilePictureSetup_UI>();
 
         FindObjectOfType<Volt_LobbyRobotViewSection>().Init();
         loads |= Loads.RobotViewSection;
@@ -143,6 +145,7 @@ public class LobbyScene : BaseScene
 
     public void ChangeToLobbyCamera()
     {
+        if (Managers.UI.GetUILayerStack().Count != 0) return;
         robotInLobbyCamera.SetActive(true);
         robotInHangarCamera.SetActive(false);
     }
@@ -218,6 +221,11 @@ public class LobbyScene : BaseScene
     {
         loads |= Loads.CustomRoom_UI;
         FindObjectOfType<CustomRoom_UI>().gameObject.SetActive(false);
+    }
+    public void OnLoadedProfilePictureSetupUI()
+    {
+        loads |= Loads.ProfilePictureSetup_UI;
+        FindObjectOfType<ProfilePictureSetup_UI>().gameObject.SetActive(false);
     }
 
     public override void Clear()

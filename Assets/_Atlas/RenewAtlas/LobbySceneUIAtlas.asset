@@ -15,8 +15,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: ddd8a8088c3af4bd5b473ad9051f1df7, type: 2}
   mSprites:
   - name: Achivement_Normal
-    x: 3833
-    y: 1788
+    x: 2950
+    y: 450
     width: 128
     height: 128
     borderLeft: 0
@@ -28,8 +28,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: AMARGEDDON
-    x: 3999
-    y: 1937
+    x: 3995
+    y: 1805
     width: 93
     height: 111
     borderLeft: 0
@@ -41,8 +41,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 23
   - name: ANCHOR
-    x: 3122
-    y: 632
+    x: 3425
+    y: 526
     width: 84
     height: 83
     borderLeft: 0
@@ -54,8 +54,8 @@ MonoBehaviour:
     paddingTop: 29
     paddingBottom: 38
   - name: Back_Normal
-    x: 2948
-    y: 399
+    x: 3326
+    y: 818
     width: 127
     height: 100
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Back_Touch
-    x: 2817
-    y: 399
+    x: 3214
+    y: 577
     width: 127
     height: 100
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bg_loading-bar01
-    x: 2772
-    y: 1345
+    x: 2936
+    y: 1550
     width: 744
     height: 30
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: BlueFrame_Active
-    x: 2928
-    y: 1584
+    x: 2951
+    y: 1896
     width: 152
     height: 152
     borderLeft: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: BlueFrame_Passive
-    x: 2795
+    x: 2951
     y: 1740
     width: 152
     height: 152
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: BOMB
-    x: 1943
-    y: 1155
+    x: 1278
+    y: 848
     width: 64
     height: 95
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 27
     paddingBottom: 28
   - name: BoostPharma
-    x: 1464
-    y: 1373
+    x: 2155
+    y: 30
     width: 286
     height: 276
     borderLeft: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_button01_n
-    x: 2951
-    y: 1815
+    x: 3107
+    y: 1811
     width: 252
     height: 75
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_button01_p
-    x: 3179
-    y: 1421
+    x: 3358
+    y: 1973
     width: 252
     height: 75
     borderLeft: 0
@@ -223,8 +223,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_Button5-1_n
-    x: 2928
-    y: 1417
+    x: 3107
+    y: 1969
     width: 247
     height: 79
     borderLeft: 0
@@ -236,8 +236,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: Btn_Buy_n
-    x: 2483
-    y: 46
+    x: 2445
+    y: 44
     width: 282
     height: 80
     borderLeft: 0
@@ -249,8 +249,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_Buy_p
-    x: 2928
-    y: 1500
+    x: 3092
+    y: 1656
     width: 282
     height: 80
     borderLeft: 0
@@ -262,8 +262,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_Character_h
-    x: 3976
-    y: 1028
+    x: 3330
+    y: 704
     width: 110
     height: 110
     borderLeft: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_Left_n
-    x: 3305
+    x: 3863
     y: 1788
     width: 128
     height: 128
@@ -288,8 +288,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_OK_n
-    x: 3084
-    y: 1647
+    x: 3378
+    y: 1726
     width: 217
     height: 80
     borderLeft: 0
@@ -301,8 +301,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_OK_p
-    x: 3084
-    y: 1731
+    x: 3363
+    y: 1810
     width: 217
     height: 80
     borderLeft: 0
@@ -314,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_sci-fi button02_n
-    x: 2811
-    y: 85
+    x: 2772
+    y: 1541
     width: 160
     height: 146
     borderLeft: 0
@@ -327,8 +327,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: Btn_sci-fi button02_P
-    x: 2811
-    y: 235
+    x: 2684
+    y: 1179
     width: 161
     height: 147
     borderLeft: 0
@@ -340,8 +340,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_slider1
-    x: 2769
-    y: 82
+    x: 2736
+    y: 337
     width: 30
     height: 44
     borderLeft: 0
@@ -353,8 +353,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: Btn_tool_n
-    x: 2976
-    y: 289
+    x: 3214
+    y: 467
     width: 106
     height: 106
     borderLeft: 0
@@ -366,8 +366,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Btn_tool_p
-    x: 3976
-    y: 1142
+    x: 3212
+    y: 681
     width: 114
     height: 114
     borderLeft: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button01_textureless_n
-    x: 2951
+    x: 3363
     y: 1894
     width: 252
     height: 75
@@ -392,8 +392,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button01_textureless_p
-    x: 2951
-    y: 1973
+    x: 3107
+    y: 1890
     width: 252
     height: 75
     borderLeft: 0
@@ -419,7 +419,20 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Common_Surrender
     x: 2684
-    y: 635
+    y: 651
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Community Icon
+    x: 3122
+    y: 186
     width: 128
     height: 128
     borderLeft: 0
@@ -431,8 +444,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: CROSSFIRE
-    x: 3051
-    y: 719
+    x: 3342
+    y: 292
     width: 87
     height: 82
     borderLeft: 0
@@ -444,8 +457,21 @@ MonoBehaviour:
     paddingTop: 30
     paddingBottom: 38
   - name: Dark
-    x: 3916
-    y: 1260
+    x: 2948
+    y: 714
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Delete Icon
+    x: 2684
+    y: 915
     width: 128
     height: 128
     borderLeft: 0
@@ -457,8 +483,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: DODGE
-    x: 2018
-    y: 160
+    x: 3217
+    y: 1757
     width: 93
     height: 50
     borderLeft: 0
@@ -470,8 +496,8 @@ MonoBehaviour:
     paddingTop: 51
     paddingBottom: 49
   - name: DOUBLEATTACK
-    x: 2684
-    y: 585
+    x: 2849
+    y: 1180
     width: 95
     height: 46
     borderLeft: 0
@@ -483,8 +509,8 @@ MonoBehaviour:
     paddingTop: 55
     paddingBottom: 49
   - name: DUMMYGEAR
-    x: 2948
-    y: 713
+    x: 3345
+    y: 613
     width: 99
     height: 87
     borderLeft: 0
@@ -496,8 +522,8 @@ MonoBehaviour:
     paddingTop: 33
     paddingBottom: 30
   - name: EmoticonIcon_n
-    x: 2948
-    y: 899
+    x: 3786
+    y: 1392
     width: 128
     height: 128
     borderLeft: 0
@@ -509,8 +535,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EmoticonIcon_p
-    x: 3784
-    y: 1260
+    x: 3918
+    y: 1392
     width: 128
     height: 128
     borderLeft: 0
@@ -522,8 +548,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EmoticonNone
-    x: 3210
-    y: 653
+    x: 2868
+    y: 571
     width: 76
     height: 76
     borderLeft: 0
@@ -548,8 +574,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EmoticonSlotBG
-    x: 3963
-    y: 1392
+    x: 2684
+    y: 783
     width: 128
     height: 128
     borderLeft: 0
@@ -561,8 +587,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EMP
-    x: 3207
-    y: 1821
+    x: 3684
+    y: 1531
     width: 93
     height: 95
     borderLeft: 0
@@ -573,9 +599,35 @@ MonoBehaviour:
     paddingRight: 29
     paddingTop: 27
     paddingBottom: 28
+  - name: Exp Gage
+    x: 3344
+    y: 1054
+    width: 309
+    height: 52
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Exp GageBar
+    x: 3212
+    y: 922
+    width: 309
+    height: 52
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Frame_Body
-    x: 2636
-    y: 386
+    x: 2773
+    y: 22
     width: 177
     height: 177
     borderLeft: 0
@@ -613,8 +665,8 @@ MonoBehaviour:
     paddingTop: 21
     paddingBottom: 33
   - name: HACKING
-    x: 1943
-    y: 1064
+    x: 1278
+    y: 757
     width: 61
     height: 87
     borderLeft: 0
@@ -626,8 +678,8 @@ MonoBehaviour:
     paddingTop: 32
     paddingBottom: 31
   - name: hangar_Normal
-    x: 3437
-    y: 1788
+    x: 3893
+    y: 1260
     width: 128
     height: 128
     borderLeft: 0
@@ -639,8 +691,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Hound_Angry
-    x: 3478
-    y: 1524
+    x: 3761
+    y: 1260
     width: 128
     height: 128
     borderLeft: 0
@@ -652,8 +704,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Hound_Boo
-    x: 2816
-    y: 767
+    x: 3233
+    y: 1110
     width: 128
     height: 128
     borderLeft: 0
@@ -665,97 +717,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Hound_Demon
-    x: 1464
-    y: 1653
-    width: 324
-    height: 395
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 10
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Happiness
-    x: 3844
-    y: 1128
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Hi
-    x: 3712
-    y: 1128
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Joy
-    x: 3580
-    y: 1128
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Laughter
-    x: 2684
-    y: 1031
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_MakeFunOf
-    x: 3831
-    y: 1392
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Military
-    x: 1690
-    y: 552
-    width: 324
-    height: 395
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 10
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Hound_Neon
     x: 2018
     y: 855
     width: 324
@@ -768,33 +729,72 @@ MonoBehaviour:
     paddingRight: 10
     paddingTop: 0
     paddingBottom: 0
-  - name: Hound_Old
-    x: 1792
-    y: 1653
-    width: 324
-    height: 395
+  - name: Hound_Happiness
+    x: 2684
+    y: 1047
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 10
+    paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Hound_Origin
-    x: 1768
-    y: 1254
-    width: 324
-    height: 395
+  - name: Hound_Hi
+    x: 2950
+    y: 1110
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 10
+    paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Hound_OriginBlue
+  - name: Hound_Joy
+    x: 3101
+    y: 1110
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_Laughter
+    x: 3456
+    y: 1154
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_MakeFunOf
+    x: 3629
+    y: 1260
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_Military
     x: 1690
     y: 153
     width: 324
@@ -807,9 +807,61 @@ MonoBehaviour:
     paddingRight: 10
     paddingTop: 0
     paddingBottom: 0
+  - name: Hound_Neon
+    x: 1768
+    y: 1254
+    width: 324
+    height: 395
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 10
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_Old
+    x: 1464
+    y: 1653
+    width: 324
+    height: 395
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 10
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_Origin
+    x: 1690
+    y: 552
+    width: 324
+    height: 395
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 10
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Hound_OriginBlue
+    x: 1792
+    y: 1653
+    width: 324
+    height: 395
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 10
+    paddingTop: 0
+    paddingBottom: 0
   - name: Hound_QuestionMark
-    x: 2817
-    y: 503
+    x: 2816
+    y: 915
     width: 128
     height: 128
     borderLeft: 0
@@ -821,8 +873,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Hound_Sadness
-    x: 2684
-    y: 767
+    x: 3080
+    y: 846
     width: 128
     height: 128
     borderLeft: 0
@@ -835,7 +887,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Hound_Surprise
     x: 2816
-    y: 899
+    y: 783
     width: 128
     height: 128
     borderLeft: 0
@@ -847,8 +899,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Hound_ThumbsUp
-    x: 2816
-    y: 635
+    x: 3122
+    y: 54
     width: 128
     height: 128
     borderLeft: 0
@@ -860,8 +912,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Battery
-    x: 3084
-    y: 1585
+    x: 3107
+    y: 1749
     width: 106
     height: 58
     borderLeft: 0
@@ -873,8 +925,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Diamond
-    x: 3080
-    y: 943
+    x: 3457
+    y: 834
     width: 92
     height: 84
     borderLeft: 0
@@ -886,8 +938,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Money
-    x: 2949
-    y: 618
+    x: 3254
+    y: 283
     width: 84
     height: 91
     borderLeft: 0
@@ -899,8 +951,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ICON_Music
-    x: 4006
-    y: 1562
+    x: 3365
+    y: 1139
     width: 85
     height: 99
     borderLeft: 0
@@ -912,8 +964,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ICON_Plus
-    x: 3079
-    y: 441
+    x: 2784
+    y: 567
     width: 80
     height: 80
     borderLeft: 0
@@ -925,8 +977,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Rank
-    x: 3043
-    y: 613
+    x: 4015
+    y: 1952
     width: 75
     height: 96
     borderLeft: 0
@@ -938,8 +990,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Shop
-    x: 2949
-    y: 530
+    x: 3254
+    y: 195
     width: 90
     height: 84
     borderLeft: 0
@@ -951,8 +1003,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Tips
-    x: 621
-    y: 15
+    x: 2731
+    y: 39
     width: 18
     height: 85
     borderLeft: 0
@@ -964,8 +1016,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ICON_Volume
-    x: 3130
-    y: 552
+    x: 3448
+    y: 644
     width: 84
     height: 76
     borderLeft: 0
@@ -977,8 +1029,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Icon_Wrong
-    x: 3143
-    y: 865
+    x: 3431
+    y: 448
     width: 74
     height: 74
     borderLeft: 0
@@ -990,8 +1042,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: loading-bar01
-    x: 2434
-    y: 1295
+    x: 2772
+    y: 1506
     width: 746
     height: 31
     borderLeft: 0
@@ -1002,9 +1054,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 1
     paddingBottom: 0
+  - name: LV TextBox
+    x: 1220
+    y: 1749
+    width: 170
+    height: 52
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: MapSelect
-    x: 2483
-    y: 130
+    x: 2356
+    y: 567
     width: 324
     height: 178
     borderLeft: 0
@@ -1042,8 +1107,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 12
   - name: Mercury_Angry
-    x: 3652
-    y: 1260
+    x: 3060
+    y: 1242
     width: 128
     height: 128
     borderLeft: 0
@@ -1055,8 +1120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Boo
-    x: 3874
-    y: 1524
+    x: 2948
+    y: 846
     width: 128
     height: 128
     borderLeft: 0
@@ -1081,8 +1146,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Mercury_Happiness
-    x: 3448
-    y: 1128
+    x: 2928
+    y: 1242
     width: 128
     height: 128
     borderLeft: 0
@@ -1094,8 +1159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Hi
-    x: 3108
-    y: 1081
+    x: 2018
+    y: 178
     width: 128
     height: 128
     borderLeft: 0
@@ -1107,8 +1172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Joy
-    x: 2976
-    y: 1031
+    x: 3385
+    y: 1594
     width: 128
     height: 128
     borderLeft: 0
@@ -1120,8 +1185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Laughter
-    x: 2817
-    y: 1031
+    x: 3517
+    y: 1594
     width: 128
     height: 128
     borderLeft: 0
@@ -1133,8 +1198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_MakeFunOf
-    x: 3240
-    y: 1081
+    x: 3599
+    y: 1762
     width: 128
     height: 128
     borderLeft: 0
@@ -1146,8 +1211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Military
-    x: 2346
-    y: 931
+    x: 2096
+    y: 1292
     width: 334
     height: 357
     borderLeft: 0
@@ -1159,8 +1224,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Mercury_Neon
-    x: 2018
-    y: 494
+    x: 2120
+    y: 1691
     width: 334
     height: 357
     borderLeft: 0
@@ -1185,8 +1250,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Mercury_Origin
-    x: 2096
-    y: 1292
+    x: 2346
+    y: 931
     width: 334
     height: 357
     borderLeft: 0
@@ -1198,8 +1263,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Mercury_OriginRed
-    x: 2120
-    y: 1691
+    x: 2018
+    y: 494
     width: 334
     height: 357
     borderLeft: 0
@@ -1211,8 +1276,8 @@ MonoBehaviour:
     paddingTop: 38
     paddingBottom: 0
   - name: Mercury_QuestionMark
-    x: 3699
-    y: 1392
+    x: 3649
+    y: 1630
     width: 128
     height: 128
     borderLeft: 0
@@ -1224,8 +1289,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Sadness
-    x: 2684
-    y: 899
+    x: 3731
+    y: 1788
     width: 128
     height: 128
     borderLeft: 0
@@ -1237,8 +1302,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_Surprise
-    x: 3742
-    y: 1524
+    x: 3751
+    y: 1920
     width: 128
     height: 128
     borderLeft: 0
@@ -1250,8 +1315,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Mercury_ThumbsUp
-    x: 2817
-    y: 1163
+    x: 3883
+    y: 1920
     width: 128
     height: 128
     borderLeft: 0
@@ -1302,8 +1367,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: Module_Normal
-    x: 3471
-    y: 1920
+    x: 3781
+    y: 1524
     width: 128
     height: 128
     borderLeft: 0
@@ -1315,8 +1380,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: NipponElectrics
-    x: 2018
-    y: 214
+    x: 1464
+    y: 1373
     width: 286
     height: 276
     borderLeft: 0
@@ -1328,8 +1393,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: option_default_Remake
-    x: 3965
-    y: 1788
+    x: 3588
+    y: 1128
     width: 112
     height: 128
     borderLeft: 0
@@ -1341,8 +1406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: option_touch_Remake
-    x: 3965
-    y: 1665
+    x: 3212
+    y: 799
     width: 110
     height: 119
     borderLeft: 0
@@ -1354,8 +1419,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: PERNERATE
-    x: 3142
-    y: 733
+    x: 2684
+    y: 579
     width: 96
     height: 68
     borderLeft: 0
@@ -1367,8 +1432,8 @@ MonoBehaviour:
     paddingTop: 40
     paddingBottom: 42
   - name: POWERBEAM
-    x: 2951
-    y: 1744
+    x: 2622
+    y: 314
     width: 110
     height: 67
     borderLeft: 0
@@ -1379,9 +1444,48 @@ MonoBehaviour:
     paddingRight: 19
     paddingTop: 40
     paddingBottom: 43
+  - name: Profile Area
+    x: 2018
+    y: 310
+    width: 600
+    height: 180
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Profile Icon
+    x: 3101
+    y: 318
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Profile Image
+    x: 2954
+    y: 34
+    width: 164
+    height: 165
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: radio_hover
-    x: 3448
-    y: 1281
+    x: 3314
+    y: 1746
     width: 60
     height: 60
     borderLeft: 0
@@ -1393,8 +1497,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Radio_selected
-    x: 1278
-    y: 761
+    x: 1943
+    y: 1188
     width: 62
     height: 62
     borderLeft: 0
@@ -1406,8 +1510,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: REAPER
-    x: 2769
-    y: 8
+    x: 3092
+    y: 1585
     width: 289
     height: 67
     borderLeft: 0
@@ -1419,7 +1523,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 13
   - name: Reaper_Angry
-    x: 3435
+    x: 3654
     y: 1392
     width: 128
     height: 128
@@ -1432,8 +1536,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Boo
-    x: 3346
-    y: 1524
+    x: 3497
+    y: 1286
     width: 128
     height: 128
     borderLeft: 0
@@ -1445,8 +1549,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Demon
-    x: 0
-    y: 104
+    x: 754
+    y: 651
     width: 334
     height: 395
     borderLeft: 0
@@ -1458,8 +1562,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Happiness
-    x: 3305
-    y: 1656
+    x: 3522
+    y: 1418
     width: 128
     height: 128
     borderLeft: 0
@@ -1471,8 +1575,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Hi
-    x: 3437
-    y: 1656
+    x: 3913
+    y: 1524
     width: 128
     height: 128
     borderLeft: 0
@@ -1484,8 +1588,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Joy
-    x: 3339
-    y: 1920
+    x: 3913
+    y: 1656
     width: 128
     height: 128
     borderLeft: 0
@@ -1497,8 +1601,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Laughter
-    x: 3207
-    y: 1920
+    x: 3781
+    y: 1656
     width: 128
     height: 128
     borderLeft: 0
@@ -1510,8 +1614,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_MakeFunOf
-    x: 3214
-    y: 1515
+    x: 3619
+    y: 1920
     width: 128
     height: 128
     borderLeft: 0
@@ -1523,8 +1627,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Military
-    x: 788
-    y: 1346
+    x: 676
+    y: 252
     width: 334
     height: 395
     borderLeft: 0
@@ -1536,8 +1640,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Neon
-    x: 1014
-    y: 252
+    x: 338
+    y: 104
     width: 334
     height: 395
     borderLeft: 0
@@ -1562,8 +1666,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 2
   - name: Reaper_Origin
-    x: 416
-    y: 651
+    x: 1092
+    y: 947
     width: 334
     height: 395
     borderLeft: 0
@@ -1575,7 +1679,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_OriginRed
-    x: 338
+    x: 0
     y: 104
     width: 334
     height: 395
@@ -1588,8 +1692,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_QuestionMark
-    x: 3833
-    y: 1656
+    x: 3365
+    y: 1374
     width: 128
     height: 128
     borderLeft: 0
@@ -1601,8 +1705,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Sadness
-    x: 3603
-    y: 1920
+    x: 3233
+    y: 1374
     width: 128
     height: 128
     borderLeft: 0
@@ -1614,8 +1718,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_Surprise
-    x: 2684
-    y: 1163
+    x: 2928
+    y: 1374
     width: 128
     height: 128
     borderLeft: 0
@@ -1627,8 +1731,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Reaper_ThumbsUp
-    x: 3569
-    y: 1788
+    x: 3101
+    y: 1374
     width: 128
     height: 128
     borderLeft: 0
@@ -1640,8 +1744,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: RedFrame_Active
-    x: 2772
-    y: 1535
+    x: 2795
+    y: 1896
     width: 152
     height: 152
     borderLeft: 0
@@ -1653,8 +1757,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: RedFrame_Passive
-    x: 2975
-    y: 79
+    x: 2795
+    y: 1740
     width: 152
     height: 152
     borderLeft: 0
@@ -1679,8 +1783,8 @@ MonoBehaviour:
     paddingTop: 26
     paddingBottom: 29
   - name: Rome
-    x: 2155
-    y: 32
+    x: 2356
+    y: 749
     width: 324
     height: 178
     borderLeft: 0
@@ -1692,8 +1796,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Ruhrgebiet
-    x: 2308
-    y: 312
+    x: 2445
+    y: 128
     width: 324
     height: 178
     borderLeft: 0
@@ -1705,8 +1809,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SAWBLADE
-    x: 3049
-    y: 805
+    x: 3444
+    y: 724
     width: 90
     height: 90
     borderLeft: 0
@@ -1718,8 +1822,8 @@ MonoBehaviour:
     paddingTop: 33
     paddingBottom: 27
   - name: SHIELD
-    x: 3043
-    y: 525
+    x: 3344
+    y: 394
     width: 83
     height: 84
     borderLeft: 0
@@ -1731,8 +1835,8 @@ MonoBehaviour:
     paddingTop: 35
     paddingBottom: 31
   - name: SHOCKWAVE
-    x: 2308
-    y: 223
+    x: 3233
+    y: 378
     width: 107
     height: 85
     borderLeft: 0
@@ -1770,8 +1874,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: STEERINGNOZZLE
-    x: 2948
-    y: 804
+    x: 3324
+    y: 482
     width: 97
     height: 91
     borderLeft: 0
@@ -1783,8 +1887,8 @@ MonoBehaviour:
     paddingTop: 28
     paddingBottom: 31
   - name: TELEPORT
-    x: 1220
-    y: 1754
+    x: 3525
+    y: 945
     width: 92
     height: 47
     borderLeft: 0
@@ -1796,8 +1900,8 @@ MonoBehaviour:
     paddingTop: 52
     paddingBottom: 51
   - name: THE HOUND
-    x: 3062
-    y: 21
+    x: 3344
+    y: 996
     width: 297
     height: 54
     borderLeft: 0
@@ -1809,8 +1913,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 13
   - name: TIMEBOMB
-    x: 1278
-    y: 827
+    x: 2849
+    y: 1230
     width: 57
     height: 116
     borderLeft: 0
@@ -1835,8 +1939,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Tokyo
-    x: 2356
-    y: 749
+    x: 2773
+    y: 203
     width: 324
     height: 178
     borderLeft: 0
@@ -1848,8 +1952,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: TwinCity
-    x: 2356
-    y: 567
+    x: 2622
+    y: 385
     width: 324
     height: 178
     borderLeft: 0
@@ -1861,8 +1965,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: VOLT
-    x: 2636
-    y: 328
+    x: 2950
+    y: 392
     width: 136
     height: 54
     borderLeft: 0
@@ -1874,8 +1978,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 13
   - name: Volt_Angry
-    x: 2976
-    y: 1163
+    x: 2816
+    y: 651
     width: 128
     height: 128
     borderLeft: 0
@@ -1887,8 +1991,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Boo
-    x: 3184
-    y: 1213
+    x: 2948
+    y: 582
     width: 128
     height: 128
     borderLeft: 0
@@ -1900,8 +2004,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Demon
-    x: 676
-    y: 252
+    x: 788
+    y: 1346
     width: 334
     height: 395
     borderLeft: 0
@@ -1913,8 +2017,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Happiness
-    x: 3610
-    y: 1524
+    x: 3080
+    y: 978
     width: 128
     height: 128
     borderLeft: 0
@@ -1926,8 +2030,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Hi
-    x: 3567
-    y: 1392
+    x: 3080
+    y: 714
     width: 128
     height: 128
     borderLeft: 0
@@ -1939,8 +2043,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Joy
-    x: 3316
-    y: 1213
+    x: 3212
+    y: 978
     width: 128
     height: 128
     borderLeft: 0
@@ -1952,8 +2056,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Laughter
-    x: 3520
-    y: 1260
+    x: 3080
+    y: 582
     width: 128
     height: 128
     borderLeft: 0
@@ -1965,8 +2069,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_MakeFunOf
-    x: 3701
-    y: 1656
+    x: 3082
+    y: 450
     width: 128
     height: 128
     borderLeft: 0
@@ -1978,8 +2082,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Military
-    x: 1092
-    y: 947
+    x: 1014
+    y: 252
     width: 334
     height: 395
     borderLeft: 0
@@ -2004,7 +2108,7 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 0
   - name: Volt_Old
-    x: 754
+    x: 416
     y: 651
     width: 334
     height: 395
@@ -2043,8 +2147,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: Volt_QuestionMark
-    x: 3701
-    y: 1788
+    x: 3192
+    y: 1242
     width: 128
     height: 128
     borderLeft: 0
@@ -2056,8 +2160,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Sadness
-    x: 3867
-    y: 1920
+    x: 3324
+    y: 1242
     width: 128
     height: 128
     borderLeft: 0
@@ -2069,8 +2173,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_Surprise
-    x: 3735
-    y: 1920
+    x: 2816
+    y: 1047
     width: 128
     height: 128
     borderLeft: 0
@@ -2082,8 +2186,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Volt_ThumbsUp
-    x: 3569
-    y: 1656
+    x: 2948
+    y: 978
     width: 128
     height: 128
     borderLeft: 0
@@ -2108,8 +2212,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Wooden_Button
-    x: 2783
-    y: 581
+    x: 3629
+    y: 1396
     width: 18
     height: 18
     borderLeft: 5
@@ -2121,8 +2225,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Wooden_ShadowHighlight
-    x: 2783
-    y: 603
+    x: 3649
+    y: 1598
     width: 27
     height: 28
     borderLeft: 9
@@ -2135,7 +2239,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: YellowFrame_Active
     x: 2772
-    y: 1379
+    y: 1350
     width: 152
     height: 152
     borderLeft: 0
@@ -2147,8 +2251,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: YellowFrame_Passive
-    x: 2795
-    y: 1896
+    x: 2936
+    y: 1584
     width: 152
     height: 152
     borderLeft: 0

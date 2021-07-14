@@ -48,6 +48,8 @@ public class Profile_Popup : UI_Popup
     public override void OnClose()
     {
         base.OnClose();
+        LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
+        lobbyScene.ChangeToLobbyCamera();
         ClosePopupUI();
     }
 }

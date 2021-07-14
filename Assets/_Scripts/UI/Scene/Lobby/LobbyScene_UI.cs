@@ -34,6 +34,7 @@ public class LobbyScene_UI : UI_Scene
         Training_Btn,
         RobotInfo_Btn,
         Profile_Btn,
+        ProfilePicture_Btn,
         CustomRoom_Btn,
     }
 
@@ -135,7 +136,6 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.SetOffAllRobotCameras();
             Managers.UI.ShowSceneUI<Community_UI>(false);
         }));
         GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
@@ -143,8 +143,10 @@ public class LobbyScene_UI : UI_Scene
             lobbyScene.SetOffAllRobotCameras();
             Managers.UI.ShowSceneUI<CustomRoom_UI>(false);
         }));
-
-
+        GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Managers.UI.ShowSceneUI<ProfilePictureSetup_UI>(false);
+        }));
 
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
         

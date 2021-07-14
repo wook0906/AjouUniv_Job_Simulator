@@ -45,6 +45,8 @@ public class UIManager
     }
     public void PushToUILayerStack(UIBase ui)
     {
+        if ( uiLayerStack.Contains(ui)) return;
+        Debug.Log(ui.name + " pushed");
         uiLayerStack.Push(ui);
     }
     public Stack<UIBase> GetUILayerStack()
@@ -154,20 +156,33 @@ public class UIManager
             return null;
         }
 
+
         T sceneUI = Util.GetOrAddComponent<T>(go);
         _sceneUI = sceneUI;
         _sceneUI.gameObject.SetActive(true);
-        _sceneUI.OnActive();
-
+        
 
         if (prevUIUnactive)
         {
-            if (_sceneUIStack.Count > 0)
+            foreach (var item in uiLayerStack)
             {
-                _sceneUIStack.Peek().gameObject.SetActive(false);
+                if (item.gameObject == _sceneUI.gameObject)
+                {
+                    Debug.Log($"is This {go.name}");
+                    continue;
+                }
+                Debug.Log(item.name + "Close");
+                item.OnClose();
             }
+            uiLayerStack.Clear();
+            //if (_sceneUIStack.Count > 0)
+            //{
+            //    _sceneUIStack.Peek().gameObject.SetActive(false);
+            //}
         }
 
+        _sceneUI.OnActive();
+        if (_sceneUIStack.Contains(sceneUI)) return null;
         _sceneUIStack.Push(sceneUI);
         
         return sceneUI;
