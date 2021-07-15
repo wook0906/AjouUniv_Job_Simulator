@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfilePictureSetup_UI : UI_Scene
+public class ProfilePictureSetup_Popup : UI_Popup
 {
     UIButton[] pictureBtns;
 
@@ -34,7 +34,7 @@ public class ProfilePictureSetup_UI : UI_Scene
         pictureBtns = Get<GameObject>((int)GameObjects.PictureItemRoot).transform.GetComponentsInChildren<UIButton>();
         ItemInit();
 
-        lobbyScene.OnLoadedProfilePictureSetupUI();
+        //lobbyScene.OnLoadedProfilePictureSetupUI();
     }
     public void ItemInit()
     {
@@ -48,11 +48,11 @@ public class ProfilePictureSetup_UI : UI_Scene
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        Managers.UI.CloseSceneUI(this);
+        //Managers.UI.CloseSceneUI(this);
     }
-    public override void OnActive()
-    {
-        base.OnActive();
-        //Managers.UI.PushToUILayerStack(this);
-    }
+    //public override void OnActive()
+    //{
+    //    base.OnActive();
+    //    //Managers.UI.PushToUILayerStack(this);
+    //}
 }

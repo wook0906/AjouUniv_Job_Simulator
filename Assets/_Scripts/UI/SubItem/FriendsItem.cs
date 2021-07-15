@@ -16,10 +16,10 @@ public class FriendsItem : UIBase
     }
     public override void Init()
     {
+        
         Bind<UILabel>(typeof(Labels));
         Bind<UIButton>(typeof(Buttons));
-
-        GetComponent<UIDragScrollView>().scrollView = transform.parent.parent.GetComponent<UIScrollView>();
+        //GetComponent<UIDragScrollView>().scrollView = transform.parent.parent.GetComponent<UIScrollView>();
     }
     public void SetInfo(string nickName)
     {

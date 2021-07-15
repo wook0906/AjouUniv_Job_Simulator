@@ -64,19 +64,16 @@ public class LobbyScene_UI : UI_Scene
         {
             Managers.UI.ShowSceneUI<AchScene_UI>();
             lobbyScene.SetOffAllRobotCameras();
-            //Managers.UI.ShowPopupUIAsync<Ach_Popup>();
         }));
         GetButton((int)Buttons.Hanger_Btn).onClick.Add(new EventDelegate(() =>
         {
             Managers.UI.ShowSceneUI<HangarScene_UI>();
-            //Managers.UI.ShowPopupUIAsync<HangarUI_Popup>();
         }));
 
         GetButton((int)Buttons.Module_Btn).onClick.Add(new EventDelegate(() =>
         {
             Managers.UI.ShowSceneUI<ModuleScene_UI>();
             lobbyScene.SetOffAllRobotCameras();
-            //Managers.UI.ShowPopupUIAsync<ModuleUI_Popup>();
         }));
         GetButton((int)Buttons.Emoticon_Btn).onClick.Add(new EventDelegate(() =>
         {
@@ -136,16 +133,18 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowSceneUI<Community_UI>();
+             Managers.UI.ShowPopupUIAsync<Community_Popup>();
+            
         }));
         GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
         {
             lobbyScene.SetOffAllRobotCameras();
-            Managers.UI.ShowSceneUI<CustomRoom_UI>();
+            Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+
         }));
         GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowSceneUI<ProfilePictureSetup_UI>();
+            Managers.UI.ShowPopupUIAsync<ProfilePictureSetup_Popup>();
         }));
 
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;

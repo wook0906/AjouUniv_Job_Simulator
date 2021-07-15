@@ -160,23 +160,14 @@ public class UIManager
         T sceneUI = Util.GetOrAddComponent<T>(go);
         _sceneUI = sceneUI;
         _sceneUI.gameObject.SetActive(true);
-        
+
 
         if (prevUIUnactive)
         {
-            //while (uiLayerStack.Count != 0)
-            //{
-            //    UIBase ui = uiLayerStack.Pop();
-            //    Debug.Log(ui.name + " Close");
-            //    ui.OnClose();
-
-            //}
-
-            //uiLayerStack.Clear();
             foreach (var item in _popupStack)
             {
                 item.OnClose();
-            }   
+            }
         }
 
         if (_sceneUIStack.Count > 0)
@@ -185,7 +176,6 @@ public class UIManager
         }
 
         _sceneUI.OnActive();
-        if (_sceneUIStack.Contains(sceneUI)) return null;
         _sceneUIStack.Push(sceneUI);
         
         return sceneUI;
@@ -270,8 +260,10 @@ public class UIManager
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
         Debug.Log(name);
-        
-        GameObject go =  Managers.Resource.Instantiate($"UI/Popup/{name}");
+
+        GameObject go = Managers.Resource.Instantiate($"UI/Popup/{name}");
+
+
         T popup = Util.GetOrAddComponent<T>(go);
         _popupStack.Add(popup);
 
@@ -296,7 +288,9 @@ public class UIManager
             T popup = Util.GetOrAddComponent<T>(go);
 
             if (isAddTop)
+            {
                 _popupStack.Insert(0, popup);
+            }
             else
             {
                 _popupStack.Insert(1, popup);

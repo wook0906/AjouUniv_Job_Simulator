@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Community_UI : UI_Scene
+public class Community_Popup : UI_Popup
 {
     [SerializeField]
     GameObject friendsItemRoot;
@@ -27,6 +27,8 @@ public class Community_UI : UI_Scene
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
 
+        
+
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
@@ -39,13 +41,11 @@ public class Community_UI : UI_Scene
         }));
 
         friendsItemRoot = Get<GameObject>((int)GameObjects.FriendsItemRoot);
-        
-        SetFriendsInfo();
 
-        
+        SetFriendsInfo();
     }
 
-    void SetFriendsInfo()
+    public void SetFriendsInfo()
     {
         //플레이어 데이터를 긁어와서 그만큼 FriendsItem을 생성한다.
         StartCoroutine(CorSetFriendsInfo());
@@ -68,19 +68,24 @@ public class Community_UI : UI_Scene
             //item.transform.localPosition -= moveVector;
         }
         friendsItemRoot.GetComponent<UIGrid>().Reposition();
-
-        lobbyScene.OnLoadedCommunityUI();
+        Invoke("Redraw", 0.001f);
+        
+    }
+    void Redraw()
+    {
+        GetComponent<UIPanel>().gameObject.SetActive(false);
+        GetComponent<UIPanel>().gameObject.SetActive(true);
     }
 
     public override void OnClose()
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        Managers.UI.CloseSceneUI(this);
+        ClosePopupUI();
     }
-    public override void OnActive()
-    {
-        base.OnActive();
-        //Managers.UI.PushToUILayerStack(this);
-    }
+    //public override void OnActive()
+    //{
+    //    base.OnActive();
+    //    //Managers.UI.PushToUILayerStack(this);
+    //}
 }

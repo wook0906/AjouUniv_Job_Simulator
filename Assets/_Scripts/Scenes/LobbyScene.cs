@@ -18,13 +18,17 @@ public class LobbyScene : BaseScene
         RobotViewSection = 1 << 4,
         LobbyScene_AssetUI = 1 << 5,
         EmoticonScene_UI = 1 << 6,
-        Community_UI = 1 << 7,
-        CustomRoom_UI = 1<<8,
-        ProfilePictureSetup_UI = 1<<9,
+        //Community_Popup = 1 << 7,
+        //CustomRoom_Popup = 1<< 8,
+        //ProfilePictureSetup_Popup = 1<<9,
+
         All = LobbyScene_UI | AchScene_UI |
             HangarScene_UI | ModuleScene_UI | RobotViewSection |
-            LobbyScene_AssetUI | EmoticonScene_UI | Community_UI |
-            CustomRoom_UI | ProfilePictureSetup_UI
+            LobbyScene_AssetUI | EmoticonScene_UI 
+            
+
+            //| Community_Popup
+            // | CustomRoom_Popup | ProfilePictureSetup_Popup
     }
     private Loads loads;
 
@@ -135,9 +139,9 @@ public class LobbyScene : BaseScene
         Managers.UI.ShowSceneUIAsync<HangarScene_UI>();
         Managers.UI.ShowSceneUIAsync<ModuleScene_UI>();
         Managers.UI.ShowSceneUIAsync<EmoticonScene_UI>();
-        Managers.UI.ShowSceneUIAsync<Community_UI>();
-        Managers.UI.ShowSceneUIAsync<CustomRoom_UI>();
-        Managers.UI.ShowSceneUIAsync<ProfilePictureSetup_UI>();
+        //Managers.UI.ShowPopupUIAsync<Community_Popup>();
+        //Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+        //Managers.UI.ShowPopupUIAsync<ProfilePictureSetup_Popup>();
 
         FindObjectOfType<Volt_LobbyRobotViewSection>().Init();
         loads |= Loads.RobotViewSection;
@@ -211,22 +215,22 @@ public class LobbyScene : BaseScene
         loads |= Loads.LobbyScene_AssetUI;
         Debug.Log("Load Asset UI");
     }
-    public void OnLoadedCommunityUI()
-    {
-        loads |= Loads.Community_UI;
-        Debug.Log("Load Community UI");
-        FindObjectOfType<Community_UI>().gameObject.SetActive(false);
-    }
-    public void OnLoadedCustomRoomUI()
-    {
-        loads |= Loads.CustomRoom_UI;
-        FindObjectOfType<CustomRoom_UI>().gameObject.SetActive(false);
-    }
-    public void OnLoadedProfilePictureSetupUI()
-    {
-        loads |= Loads.ProfilePictureSetup_UI;
-        FindObjectOfType<ProfilePictureSetup_UI>().gameObject.SetActive(false);
-    }
+    //public void OnLoadedCommunityPopup()
+    //{
+    //    loads |= Loads.Community_Popup;
+    //    Debug.Log("Load Community UI");
+    //    FindObjectOfType<Community_Popup>().gameObject.SetActive(false);
+    //}
+    //public void OnLoadedCustomRoomPopup()
+    //{
+    //    loads |= Loads.CustomRoom_Popup;
+    //    FindObjectOfType<CustomRoom_Popup>().gameObject.SetActive(false);
+    //}
+    //public void OnLoadedProfilePictureSetupUI()
+    //{
+    //    loads |= Loads.ProfilePictureSetup_Popup;
+    //    FindObjectOfType<ProfilePictureSetup_Popup>().gameObject.SetActive(false);
+    //}
 
     public override void Clear()
     {
@@ -257,7 +261,6 @@ public class LobbyScene : BaseScene
             else
             {
                 Managers.UI.ClosePopupUI();
-                //Managers.UI.GetPopupStack()[0].OnClose();
             }
         }
     }

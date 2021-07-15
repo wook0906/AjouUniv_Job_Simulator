@@ -1037,7 +1037,6 @@ public class UIPanel : UIRect
 		base.OnEnable();
 		mMatrixFrame = -1;
 	}
-
 	/// <summary>
 	/// Mark all widgets as having been changed so the draw calls get re-created.
 	/// </summary>
