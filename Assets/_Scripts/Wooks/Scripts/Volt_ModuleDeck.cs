@@ -232,7 +232,7 @@ public class Volt_ModuleDeck : MonoBehaviour
                 {
                     existConfirmedCardBase = GetModuleCard(attackCardPercentage[Random.Range(0, attackCardPercentage.Count)]);
                 }
-                while (existConfirmedCardBase == null || !IsExistSpecificModuleInDeck(existConfirmedCardBase));
+                while (existConfirmedCardBase != null && IsExistSpecificModuleInDeck(existConfirmedCardBase));
                 
                 return existConfirmedCardBase;
             case ModuleType.Movement:
@@ -240,14 +240,14 @@ public class Volt_ModuleDeck : MonoBehaviour
                 {
                     existConfirmedCardBase = GetModuleCard(moveCardPercentage[Random.Range(0, moveCardPercentage.Count)]);
                 }
-                while (existConfirmedCardBase == null || !IsExistSpecificModuleInDeck(existConfirmedCardBase));
+                while (existConfirmedCardBase != null && IsExistSpecificModuleInDeck(existConfirmedCardBase));
                 return existConfirmedCardBase;
             case ModuleType.Tactic:
                 do
                 {
                     existConfirmedCardBase = GetModuleCard(tacticCardPercentage[Random.Range(0, tacticCardPercentage.Count)]);
                 }
-                while (existConfirmedCardBase == null || !IsExistSpecificModuleInDeck(existConfirmedCardBase));
+                while (existConfirmedCardBase != null && !IsExistSpecificModuleInDeck(existConfirmedCardBase));
                 return existConfirmedCardBase;
             default:
                 //print("DrawRandomModuleCard Err2");
