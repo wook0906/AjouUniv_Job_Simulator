@@ -44,7 +44,7 @@ public class TrainingMap_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetGameObject((int)GameObjects.MapSelectHighlight_Sprite).SetActive(false);
         GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() => { OnClose(); }));

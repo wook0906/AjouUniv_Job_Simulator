@@ -83,7 +83,7 @@ public class HangarScene_UI : UI_Scene
         lobbyScene.ChangeToHangarCamera();
         currentSkins = Managers.Data.SkinDatas[robotViewSection.SelectRobotType].RobotSkins;
         OnChangeRobot();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
     }
 

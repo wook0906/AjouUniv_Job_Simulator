@@ -133,7 +133,7 @@ public class ModuleScene_UI : UI_Scene
     public override void OnActive()
     {
         Managers.UI.ShowPopupUIAsync<ModuleExplaination_Popup>();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
         OnPressdownAttackTapButton();
     }
 

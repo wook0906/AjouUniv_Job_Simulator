@@ -91,7 +91,7 @@ public class AchScene_UI : UI_Scene
     public override void OnActive()
     {
         OnClickDailyTapButton();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
     }
 
     public ScrollViewItemCreator GetNormalAchScrollViewItemCreator()

@@ -176,7 +176,7 @@ public class LobbyScene_UI : UI_Scene
 
     public override void OnActive()
     {
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
         ChangeRobotNameLabelToSelectedRobot();
         if (IsAnyAchHasntBeenRewardedYet())
             ShowACHExclamationMark();

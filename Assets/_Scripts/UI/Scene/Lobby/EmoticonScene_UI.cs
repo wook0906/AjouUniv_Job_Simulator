@@ -127,7 +127,7 @@ public class EmoticonScene_UI : UI_Scene
     public override void OnActive()
     {
         OnClickEmoMercuryTap();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
     }
     private void OnClickEmoVoltTap()
     {

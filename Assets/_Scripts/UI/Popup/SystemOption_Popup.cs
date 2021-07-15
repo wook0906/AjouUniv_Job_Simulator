@@ -46,7 +46,7 @@ public class SystemOption_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISlider>(typeof(Sliders));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {

@@ -67,7 +67,7 @@ public class ShopScene_UI : UI_Scene
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Option_Btn).onClick.Add(new EventDelegate(() =>
         {

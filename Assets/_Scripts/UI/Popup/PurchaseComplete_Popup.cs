@@ -22,7 +22,7 @@ public class PurchaseComplete_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Ok_Btn).onClick.Add(new EventDelegate(() =>
         {

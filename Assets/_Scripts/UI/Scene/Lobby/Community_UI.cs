@@ -81,6 +81,6 @@ public class Community_UI : UI_Scene
     public override void OnActive()
     {
         base.OnActive();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
     }
 }

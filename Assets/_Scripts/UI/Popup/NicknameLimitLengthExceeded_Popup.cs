@@ -29,7 +29,7 @@ public class NicknameLimitLengthExceeded_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UISprite>(typeof(Sprites));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         Get<UIButton>((int)Buttons.Ok_Btn).onClick.Add(new EventDelegate(() =>
         {

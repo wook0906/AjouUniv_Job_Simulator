@@ -19,7 +19,7 @@ public class SelectMatch_Popup : UI_Popup
 
         Bind<UIButton>(typeof(Buttons));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {

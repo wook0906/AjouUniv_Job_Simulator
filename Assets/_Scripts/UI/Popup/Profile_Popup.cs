@@ -26,7 +26,7 @@ public class Profile_Popup : UI_Popup
 
         Bind<UIButton>(typeof(Buttons));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         Get<UIButton>((int)Buttons.StateMSGConfirm_Btn).onClick.Add(new EventDelegate(() =>
         {
