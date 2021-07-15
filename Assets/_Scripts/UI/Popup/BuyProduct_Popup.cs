@@ -31,7 +31,7 @@ public class BuyProduct_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISprite>(typeof(Sprites));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {

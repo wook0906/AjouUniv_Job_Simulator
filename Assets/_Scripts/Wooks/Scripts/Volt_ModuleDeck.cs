@@ -263,7 +263,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Attack:
                 foreach (var item in attackCardDeck)
                 {
-                    if (item == moduleCard)
+                    if (item.card == moduleCard.card)
                     {
                         //Debug.LogWarning(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;
@@ -273,7 +273,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Movement:
                 foreach (var item in moveCardDeck)
                 {
-                    if (item == moduleCard)
+                    if (item.card == moduleCard.card)
                     {
                         //Debug.LogWarning(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;
@@ -283,7 +283,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Tactic:
                 foreach (var item in tacticCardDeck)
                 {
-                    if (item == moduleCard)
+                    if (item.card == moduleCard.card)
                     {
                         //Debug.LogWarning(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;

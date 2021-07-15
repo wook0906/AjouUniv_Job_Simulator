@@ -32,7 +32,7 @@ public class Exit_Popup : UI_Popup
         Bind<UILabel>(typeof(Labels));
         Bind<UISprite>(typeof(Sprites));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         Get<UIButton>((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {

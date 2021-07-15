@@ -145,7 +145,7 @@ public class LobbyScene : BaseScene
 
     public void ChangeToLobbyCamera()
     {
-        if (Managers.UI.GetUILayerStack().Count != 0) return;
+        //if (Managers.UI.GetUILayerStack().Count != 0) return;
         robotInLobbyCamera.SetActive(true);
         robotInHangarCamera.SetActive(false);
     }
@@ -241,8 +241,8 @@ public class LobbyScene : BaseScene
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //if (Managers.UI.GetPopupStack().Count == 0)
-            if (Managers.UI.GetUILayerStack().Count == 0)
+            if (Managers.UI.GetPopupStack().Count == 0)
+            //if (Managers.UI.GetUILayerStack().Count == 0)
             {
                 AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<Exit_Popup>();
 
@@ -256,7 +256,8 @@ public class LobbyScene : BaseScene
             }
             else
             {
-                Managers.UI.GetUILayerStack().Pop().OnClose();
+                Managers.UI.ClosePopupUI();
+                //Managers.UI.GetPopupStack()[0].OnClose();
             }
         }
     }

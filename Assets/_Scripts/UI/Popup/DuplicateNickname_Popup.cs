@@ -29,7 +29,7 @@ public class DuplicateNickname_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UISprite>(typeof(Sprites));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         //BindSprite<UIButton>(typeof(Buttons));
         //BindSprite<UISprite>(typeof(Sprites));

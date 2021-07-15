@@ -81,6 +81,7 @@ public abstract class UIBase : MonoBehaviour
     //}
     public virtual void OnClose()
     {
-
+        if (Managers.UI.GetUILayerStack().Count == 0) return;
+        Managers.UI.GetUILayerStack().Pop();
     }
 }

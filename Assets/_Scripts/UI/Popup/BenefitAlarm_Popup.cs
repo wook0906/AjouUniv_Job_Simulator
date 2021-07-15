@@ -18,7 +18,7 @@ public class BenefitAlarm_Popup : UI_Popup
     public override void Init()
     {
         base.Init();
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));

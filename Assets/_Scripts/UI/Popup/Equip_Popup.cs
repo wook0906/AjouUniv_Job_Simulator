@@ -31,7 +31,7 @@ public class Equip_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UISprite>(typeof(Sprites));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.No_Btn).onClick.Add(new EventDelegate(() =>
         {;

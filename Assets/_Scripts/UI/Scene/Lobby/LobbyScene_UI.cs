@@ -136,16 +136,16 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowSceneUI<Community_UI>(false);
+            Managers.UI.ShowSceneUI<Community_UI>();
         }));
         GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
         {
             lobbyScene.SetOffAllRobotCameras();
-            Managers.UI.ShowSceneUI<CustomRoom_UI>(false);
+            Managers.UI.ShowSceneUI<CustomRoom_UI>();
         }));
         GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowSceneUI<ProfilePictureSetup_UI>(false);
+            Managers.UI.ShowSceneUI<ProfilePictureSetup_UI>();
         }));
 
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
@@ -176,6 +176,7 @@ public class LobbyScene_UI : UI_Scene
 
     public override void OnActive()
     {
+        Managers.UI.PushToUILayerStack(this);
         ChangeRobotNameLabelToSelectedRobot();
         if (IsAnyAchHasntBeenRewardedYet())
             ShowACHExclamationMark();

@@ -21,7 +21,7 @@ public class GetBenefit_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        Managers.UI.PushToUILayerStack(this);
+        //Managers.UI.PushToUILayerStack(this);
 
         GetButton((int)Buttons.Confirm_Btn).onClick.Add(new EventDelegate(() =>
         {

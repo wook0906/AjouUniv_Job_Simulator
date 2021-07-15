@@ -8,7 +8,7 @@ public class UIManager
 {
     int _order = 1000;
 
-    Stack<UIBase> uiLayerStack = new Stack<UIBase>();
+    //Stack<UIBase> uiLayerStack = new Stack<UIBase>();
 
     List<string> _popups = new List<string>();
     List<UI_Popup> _popupStack = new List<UI_Popup>();
@@ -43,16 +43,16 @@ public class UIManager
     {
         return _popupStack;
     }
-    public void PushToUILayerStack(UIBase ui)
-    {
-        if ( uiLayerStack.Contains(ui)) return;
-        Debug.Log(ui.name + " pushed");
-        uiLayerStack.Push(ui);
-    }
-    public Stack<UIBase> GetUILayerStack()
-    {
-        return uiLayerStack;
-    }
+    //public void PushToUILayerStack(UIBase ui)
+    //{
+    //    if ( uiLayerStack.Contains(ui)) return;
+    //    Debug.Log(ui.name + " pushed");
+    //    uiLayerStack.Push(ui);
+    //}
+    //public Stack<UIBase> GetUILayerStack()
+    //{
+    //    return uiLayerStack;
+    //}
 
     public void SetCanvas(GameObject go, bool sort = true)
     {
@@ -164,21 +164,24 @@ public class UIManager
 
         if (prevUIUnactive)
         {
-            foreach (var item in uiLayerStack)
-            {
-                if (item.gameObject == _sceneUI.gameObject)
-                {
-                    Debug.Log($"is This {go.name}");
-                    continue;
-                }
-                Debug.Log(item.name + "Close");
-                item.OnClose();
-            }
-            uiLayerStack.Clear();
-            //if (_sceneUIStack.Count > 0)
+            //while (uiLayerStack.Count != 0)
             //{
-            //    _sceneUIStack.Peek().gameObject.SetActive(false);
+            //    UIBase ui = uiLayerStack.Pop();
+            //    Debug.Log(ui.name + " Close");
+            //    ui.OnClose();
+
             //}
+
+            //uiLayerStack.Clear();
+            foreach (var item in _popupStack)
+            {
+                item.OnClose();
+            }   
+        }
+
+        if (_sceneUIStack.Count > 0)
+        {
+            _sceneUIStack.Peek().gameObject.SetActive(false);
         }
 
         _sceneUI.OnActive();
@@ -395,7 +398,7 @@ public class UIManager
     {
         CloseAllPopupUI();
 
-        uiLayerStack.Clear();
+        //uiLayerStack.Clear();
 
         _popups.Clear();
 
