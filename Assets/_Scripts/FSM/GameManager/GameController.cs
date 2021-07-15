@@ -141,7 +141,7 @@ public class GameData
     public bool useCameraEffect = false;
     public int winner = 0;
     //public bool isLocalSimulationDone = true;
-    public int vpSetupInterval = 1;
+    public int vpSetupInterval = 5;
     public int remainRoundCountToVpSetup = 0;
     public List<RobotPlaceData> placeRobotRequestDatas;
     public Dictionary<int, Volt_RobotBehavior> behaviours;

@@ -415,6 +415,11 @@ public class Volt_Tile : MonoBehaviour
 
             Volt_RandomBox moduleBox = ModuleInstance.GetComponent<Volt_RandomBox>();
             moduleBox.SpecificInit(cardType);
+
+            Debug.Log(tileInModuleType);
+            Debug.Log(moduleBox);
+            Debug.Log(moduleBox.moduleInBox);
+            Debug.Log(moduleBox.moduleInBox.card);
             tileInModuleType = moduleBox.moduleInBox.card; //Error! NullReference!!
 
             Vector3 pos = transform.position;
