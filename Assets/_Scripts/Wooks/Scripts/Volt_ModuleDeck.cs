@@ -231,7 +231,8 @@ public class Volt_ModuleDeck : MonoBehaviour
                 do
                 {
                     existConfirmedCardBase = GetModuleCard(attackCardPercentage[Random.Range(0, attackCardPercentage.Count)]);
-                    Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
+                    if(existConfirmedCardBase!=null)
+                        Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
                 }
                 while (!(existConfirmedCardBase != null && IsExistSpecificModuleInDeck(existConfirmedCardBase)));
                 Debug.LogError(existConfirmedCardBase.card + " is Confirmed");
@@ -242,7 +243,8 @@ public class Volt_ModuleDeck : MonoBehaviour
                 do
                 {
                     existConfirmedCardBase = GetModuleCard(moveCardPercentage[Random.Range(0, moveCardPercentage.Count)]);
-                    Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
+                    if (existConfirmedCardBase != null)
+                        Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
                 }
                 while (!(existConfirmedCardBase != null && IsExistSpecificModuleInDeck(existConfirmedCardBase)));
                 Debug.LogError(existConfirmedCardBase.card + " is Confirmed");
@@ -251,7 +253,8 @@ public class Volt_ModuleDeck : MonoBehaviour
                 do
                 {
                     existConfirmedCardBase = GetModuleCard(tacticCardPercentage[Random.Range(0, tacticCardPercentage.Count)]);
-                    Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
+                    if (existConfirmedCardBase != null)
+                        Debug.LogError(existConfirmedCardBase.card + " is Pop from Deck");
                 }
                 while (!(existConfirmedCardBase != null && IsExistSpecificModuleInDeck(existConfirmedCardBase)));
                 Debug.LogError(existConfirmedCardBase.card + " is Confirmed");
@@ -269,7 +272,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Attack:
                 foreach (var item in attackCardDeck)
                 {
-                    if (item.card == moduleCard.card)
+                    if (item.gameObject == moduleCard.gameObject)
                     {
                         Debug.LogError(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;
@@ -279,7 +282,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Movement:
                 foreach (var item in moveCardDeck)
                 {
-                    if (item.card == moduleCard.card)
+                    if (item.gameObject == moduleCard.gameObject)
                     {
                         Debug.LogError(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;
@@ -289,7 +292,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             case ModuleType.Tactic:
                 foreach (var item in tacticCardDeck)
                 {
-                    if (item.card == moduleCard.card)
+                    if (item.gameObject == moduleCard.gameObject)
                     {
                         Debug.LogError(moduleCard.card.ToString() + " is Exist in Deck");
                         return true;
@@ -304,7 +307,7 @@ public class Volt_ModuleDeck : MonoBehaviour
     }
     public void ReturnModuleCard(Volt_ModuleCardBase moduleCard) //모듈카드를 사용 한 후, 여기에 타입에 따라 해당덱에 카드를 반환한다.
     {
-        //Debug.Log("Return : " + moduleCard.card.ToString());
+        Debug.Log("Return : " + moduleCard.card.ToString());
         switch (moduleCard.moduleType)
         {
             case ModuleType.Attack:
@@ -334,7 +337,7 @@ public class Volt_ModuleDeck : MonoBehaviour
         Volt_ModuleCardBase cardBase = SearchModuleFromDeck(card);
         if (!cardBase)
         {
-            //Debug.LogError("GetModuleFromDeck Error CardBase is null");
+            Debug.LogError("GetModuleFromDeck Error CardBase is null");
             return null;
         }
         switch (cardBase.moduleType)
@@ -345,7 +348,7 @@ public class Volt_ModuleDeck : MonoBehaviour
                     if(item == cardBase)
                     {
                         attackCardDeck.Remove(item);
-                        //Debug.LogError($"Remove {item.card.ToString()} From Deck");
+                        Debug.LogError($"Remove {item.card.ToString()} From Deck");
                         return item;
                     }
                 }
@@ -356,7 +359,7 @@ public class Volt_ModuleDeck : MonoBehaviour
                     if (item == cardBase)
                     {
                         moveCardDeck.Remove(item);
-                        //Debug.LogError($"Remove {item.card.ToString()} From Deck");
+                        Debug.LogError($"Remove {item.card.ToString()} From Deck");
                         return item;
                     }
                 }
@@ -367,7 +370,7 @@ public class Volt_ModuleDeck : MonoBehaviour
                     if (item == cardBase)
                     {
                         tacticCardDeck.Remove(item);
-                        //Debug.LogError($"Remove {item.card.ToString()} From Deck");
+                        Debug.LogError($"Remove {item.card.ToString()} From Deck");
                         return item;
                     }
                 }
@@ -395,7 +398,7 @@ public class Volt_ModuleDeck : MonoBehaviour
             if (item.card == card)
                 return item;
         }
-        //Debug.LogError("SearchModuleFromDeck Error Card is : " + card.ToString());
+        Debug.LogError("SearchModuleFromDeck Error Card is : " + card.ToString());
         return null;
     }
     

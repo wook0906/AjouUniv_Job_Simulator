@@ -2641,6 +2641,7 @@ MonoBehaviour:
   diamondCount: 0
   playCount: 0
   victoryCount: 0
+  level: 1
   killCount: 0
   coinCount: 0
   deathCount: 0

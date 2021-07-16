@@ -162,13 +162,9 @@ public class UIManager
         _sceneUI.gameObject.SetActive(true);
 
 
-        if (prevUIUnactive)
-        {
-            foreach (var item in _popupStack)
-            {
-                item.OnClose();
-            }
-        }
+
+        Managers.UI.CloseAllPopupUI();
+
 
         if (_sceneUIStack.Count > 0)
         {

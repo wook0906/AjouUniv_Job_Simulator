@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Synchronization : PhaseBase
 {
+    ModuleType moduleType;
+    Volt_ModuleCardBase cardBase;
+
     public override void OnEnterPhase(GameController game)
     {
         Debug.Log("Enter Synchronization");
 
         type = Define.Phase.Synchronization;
+
+        moduleType = Volt_ModuleDeck.S.GetRandomModuleType();
+        cardBase = Volt_ModuleDeck.S.DrawRandomCard(moduleType);
 
         foreach (var item in Volt_ArenaSetter.S.GetTileArray())
         {
@@ -37,6 +43,8 @@ public class Synchronization : PhaseBase
 
     public override IEnumerator Action(GameData data)
     {
+        
+
         yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotIdleState() && SimulationObserver.Instance.IsAllRobotBehaviourFlagOff());
         yield return new WaitUntil(() => IsReceivedAllData());
 
@@ -135,8 +143,7 @@ public class Synchronization : PhaseBase
         //Managers.UI.ShowPopupUIAsync<ReconnectWaitBlock_Popup>();
 
         Volt_ArenaSetter.S.needSyncTiles.Clear();
-        ModuleType moduleType = Volt_ModuleDeck.S.GetRandomModuleType();
-        Volt_ModuleCardBase cardBase = Volt_ModuleDeck.S.DrawRandomCard(moduleType);
+        
 
         //Debug.Log("All Sync Done");
         for (int i = 0; i < 4; i++)

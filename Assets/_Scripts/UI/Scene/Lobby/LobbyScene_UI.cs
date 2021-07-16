@@ -5,6 +5,10 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class LobbyScene_UI : UI_Scene
 {
+    enum Sliders
+    {
+        EXP_Slider,
+    }
     enum Sprites
     {
         Nickname_Sprtie,
@@ -43,6 +47,7 @@ public class LobbyScene_UI : UI_Scene
         NickName_Label,
         GameStart_Label,
         Training_Label,
+        Level_Label,
     }
     private Volt_LobbyRobotViewSection robotViewSection;
     private GameObject startGameBtnOutlieEffect;
@@ -55,6 +60,7 @@ public class LobbyScene_UI : UI_Scene
         Bind<UISprite>(typeof(Sprites));
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
+        Bind<UISlider>(typeof(Sliders));
 
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
@@ -148,10 +154,13 @@ public class LobbyScene_UI : UI_Scene
         }));
 
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
-        
+        RenewExpValue();
+        RenewLevel();
+
         startGameBtnOutlieEffect = GetButton((int)Buttons.StartGame_Btn).transform.Find("LobbyStart_fix").gameObject;
         robotViewSection = FindObjectOfType<Volt_LobbyRobotViewSection>();
         StartCoroutine(DelayedStart());
+        
     }
 
     public void OnClickStartGame()
@@ -299,6 +308,14 @@ public class LobbyScene_UI : UI_Scene
         return false;
     }
 
+    public void RenewExpValue()
+    {
+        GetSlider((int)Sliders.EXP_Slider).value = (float)Volt_PlayerData.instance.Exp / Volt_PlayerData.instance.MaxExp;
+    }
+    public void RenewLevel()
+    {
+        GetLabel((int)Labels.Level_Label).text = $"Lv.{Volt_PlayerData.instance.Level}";
+    }
     
 
     

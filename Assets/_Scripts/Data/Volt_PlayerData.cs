@@ -106,6 +106,36 @@ public class Volt_PlayerData : MonoBehaviour
         set { victoryCount = value; }
     }
 
+    //TMP 21.07.16==================================
+    [SerializeField]
+    private int level = 5;
+    public int Level
+    {
+        get { return level; }
+        set { level = value; }
+    }
+    private int exp = 20000;
+    public int Exp
+    {
+        get { return exp; }
+        set 
+        { 
+            exp = value;
+            LobbyScene_UI ui = Managers.UI.GetSceneUI<LobbyScene_UI>();
+            if (ui != null)
+            {
+                ui.RenewExpValue();
+            }
+        }
+    }
+    private int maxExp = 23456;
+    public int MaxExp
+    {
+        get { return maxExp; }
+        set { maxExp = value; }
+    }
+    //TMP 21.07.16 END================================
+
     public float WinRate
     {
         get

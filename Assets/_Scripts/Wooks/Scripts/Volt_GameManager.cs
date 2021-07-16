@@ -483,44 +483,6 @@ public class Volt_GameManager : MonoBehaviour
                             break;
                     }
                     break;
-                case Define.MapType.Tutorial:
-                    switch (item.playerNumber)
-                    {
-                        case 1:
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(2));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(3));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(4));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(5));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(6));
-                            break;
-                        case 2:
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(54));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(45));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(36));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(27));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(18));
-                            item.playerCamRoot.rotor.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-                            break;
-                        case 3:
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(78));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(77));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(76));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(75));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(74));
-                            item.playerCamRoot.rotor.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-                            break;
-                        case 4:
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(26));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(35));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(44));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(53));
-                            item.startingTiles.Add(Volt_ArenaSetter.S.GetTileByIdx(62));
-                            item.playerCamRoot.rotor.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
                 default:
                     break;
             }
