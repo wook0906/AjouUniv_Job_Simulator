@@ -30,11 +30,18 @@ public class ProfilePictureSetup_Popup : UI_Popup
         {
             OnClose();
         }));
-
-        pictureBtns = Get<GameObject>((int)GameObjects.PictureItemRoot).transform.GetComponentsInChildren<UIButton>();
+        GameObject pictureItemRoot = Get<GameObject>((int)GameObjects.PictureItemRoot);
+        pictureItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
+        pictureBtns = pictureItemRoot.transform.GetComponentsInChildren<UIButton>();
         ItemInit();
 
-        //lobbyScene.OnLoadedProfilePictureSetupUI();
+        Invoke("Redraw", 0f);
+    }
+    void Redraw()
+    {
+        GetComponent<UIPanel>().gameObject.SetActive(false);
+        GetComponent<UIPanel>().gameObject.SetActive(true);
+        GetComponent<UIPanel>().alpha = 1f;
     }
     public void ItemInit()
     {
@@ -48,7 +55,7 @@ public class ProfilePictureSetup_Popup : UI_Popup
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        //Managers.UI.CloseSceneUI(this);
+        ClosePopupUI();
     }
     //public override void OnActive()
     //{

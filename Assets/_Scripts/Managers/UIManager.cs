@@ -69,13 +69,13 @@ public class UIManager
                 if(_popupStack[0].gameObject == go)
                 {
                     panel.depth = _order;
-                    _order++;
+                    _order+=10;
                 }
                 else
                 {
                     _popupStack[0].GetComponent<UIPanel>().depth = _order;
                     panel.depth = _order - 1;
-                    _order++;
+                    _order+=10;
                 }
             }
         }
@@ -197,7 +197,9 @@ public class UIManager
     public void CloseSceneUI()
     {
         if (_sceneUIStack.Count == 1)
+        {
             return;
+        }
 
         UI_Scene scene = _sceneUIStack.Pop();
         scene.gameObject.SetActive(false);

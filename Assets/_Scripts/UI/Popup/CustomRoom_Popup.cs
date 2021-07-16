@@ -35,7 +35,7 @@ public class CustomRoom_Popup : UI_Popup
         }));
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
-
+        inviteItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
         SetInviteInfo();
 
 
@@ -61,21 +61,21 @@ public class CustomRoom_Popup : UI_Popup
 
         }
         inviteItemRoot.GetComponent<UIGrid>().Reposition();
-
-        //lobbyScene.OnLoadedCustomRoomUI();
-
+        GetComponent<UIPanel>().gameObject.SetActive(false);
+        Invoke("Redraw", 0f);
+    }
+    void Redraw()
+    {
+        GetComponent<UIPanel>().gameObject.SetActive(true);
+        GetComponent<UIPanel>().alpha = 1f;
     }
     public override void OnClose()
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        //Managers.UI.CloseSceneUI(this);
+        ClosePopupUI();
     }
-    //public override void OnActive()
-    //{
-    //    base.OnActive();
-    //    //Managers.UI.PushToUILayerStack(this);
-    //}
+
     public void SetWaitPlayerInfo()
     {
         //TODO : 다른곳에다가 현재 방정보를 저장할 클래스를 제작해서 그 클래스로부터 정보를 받아와서 세팅하는걸로

@@ -41,7 +41,7 @@ public class Community_Popup : UI_Popup
         }));
 
         friendsItemRoot = Get<GameObject>((int)GameObjects.FriendsItemRoot);
-
+        friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
         SetFriendsInfo();
     }
 
@@ -68,13 +68,13 @@ public class Community_Popup : UI_Popup
             //item.transform.localPosition -= moveVector;
         }
         friendsItemRoot.GetComponent<UIGrid>().Reposition();
-        Invoke("Redraw", 0.001f);
-        
+        GetComponent<UIPanel>().gameObject.SetActive(false);
+        Invoke("Redraw",0f);
     }
     void Redraw()
     {
-        GetComponent<UIPanel>().gameObject.SetActive(false);
         GetComponent<UIPanel>().gameObject.SetActive(true);
+        GetComponent<UIPanel>().alpha = 1f;
     }
 
     public override void OnClose()

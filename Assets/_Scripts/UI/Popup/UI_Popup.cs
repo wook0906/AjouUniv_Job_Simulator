@@ -8,8 +8,8 @@ public class UI_Popup : UIBase
     public override void Init()
     {
         isInit = true;
-        //Managers.UI.SetCanvas(gameObject, true);
-        Managers.UI.SetCanvas(gameObject, false);
+        Managers.UI.SetCanvas(gameObject, true);
+        //Managers.UI.SetCanvas(gameObject, false);
     }
 
     public virtual void ClosePopupUI()

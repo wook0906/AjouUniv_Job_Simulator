@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 2618898300864173880}
   - component: {fileID: 5338989310378788263}
   m_Layer: 5
-  m_Name: CustomRoom_UI
+  m_Name: CustomRoom_Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   renderQueue: 0
   startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
-  mAlpha: 1
+  mAlpha: 0
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
