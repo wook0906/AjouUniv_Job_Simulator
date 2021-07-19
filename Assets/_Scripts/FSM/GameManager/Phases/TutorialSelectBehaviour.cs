@@ -64,7 +64,7 @@ public class TutorialSelectBehaviour : PhaseBase
         Volt_PlayerUI.S.BehaviourSelectOff();
 
         phaseDone = true;
-        GameController.instance.ChangePhase(new TutorialSelectRange());
+        GameController.instance.ChangePhase<TutorialSelectRange>();
     }
 
     public void SelectBehaviourDoneCallback(GameObject btnType) // 0 = move , 1 = atk

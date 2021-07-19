@@ -75,9 +75,9 @@ public class TutorialSimulation : PhaseBase
         phaseDone = true;
         
         if(data.round >= 2)
-            GameController.instance.ChangePhase(new TutorialSuddenDeath());
+            GameController.instance.ChangePhase<TutorialSuddenDeath>();
         else
-            GameController.instance.ChangePhase(new TutorialResolutionTurn());
+            GameController.instance.ChangePhase<TutorialResolutionTurn>();
     }
 
     IEnumerator RobotDoBehaviour(Volt_RobotBehavior behavior)
@@ -108,7 +108,7 @@ public class TutorialSimulation : PhaseBase
         if (player.VictoryPoint >= 2)
         {
             phaseDone = true;
-            GameController.instance.ChangePhase(new GameOver());
+            GameController.instance.ChangePhase<GameOver>();
         }
 
         foreach (var item in Volt_ArenaSetter.S.robotsInArena)

@@ -62,7 +62,7 @@ public class TutorialPlaceRobot : PhaseBase
         yield return StartCoroutine(WaitPlaceRobot(game));
         phaseDone = true;
 
-        GameController.instance.ChangePhase(new TutorialSelectBehaviour());
+        GameController.instance.ChangePhase<TutorialSelectBehaviour>();
     }
 
 

@@ -9,12 +9,9 @@ public class GameOverPacket : Packet
         //Debug.Log("Winner : " + winner);
 
         GameController.instance.gameData.winner = winner;
-        GameController.instance.ChangePhase(new GameOver());
-
-        //if (Volt_GameManager.S.pCurPhase == Phase.waitSync)
-        //    Volt_DontDestroyPanel.S.OnDisconnected();
-        //else
-        //    Volt_GameManager.S.GameOver(winner);
+        GameController.instance.gameData.isGameOverWaiting = true;
+        GameController.instance.ChangePhase<GameOver>();
         
+
     }
 }

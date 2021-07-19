@@ -23,6 +23,7 @@ public class TermsOfServicePanel : MonoBehaviour
     public void OnClickConfirmBtn()
     {
         isConfirmed = true;
+        PlayerPrefs.SetInt("TOS_Agreement", 1);
         Destroy(this.gameObject);
     }
     

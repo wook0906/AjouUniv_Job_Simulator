@@ -54,11 +54,11 @@ public class TutorialResolutionTurn : PhaseBase
         phaseDone = true;
 
         if (data.round != 4)
-            GameController.instance.ChangePhase(new TutorialItemSetup());
+            GameController.instance.ChangePhase<TutorialItemSetup>();
         else
         {
             data.winner = 1;
-            GameController.instance.ChangePhase(new GameOver());
+            GameController.instance.ChangePhase<GameOver>();
         }
     }
 

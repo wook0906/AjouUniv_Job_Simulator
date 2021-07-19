@@ -165,6 +165,6 @@ public class TutorialSuddenDeath : PhaseBase
         data.behaviours.Clear();
         phaseDone = true;
 
-        GameController.instance.ChangePhase(new TutorialResolutionTurn());
+        GameController.instance.ChangePhase<TutorialResolutionTurn>();
     }
 }

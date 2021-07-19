@@ -36,7 +36,7 @@ public class ItemSetup : PhaseBase
 
         phaseDone = true;
 
-        GameController.instance.ChangePhase(new PlaceRobot());
+        GameController.instance.ChangePhase<PlaceRobot>();
     }
     IEnumerator ItemSetupCoroutine(GameData data)
     {

@@ -140,9 +140,9 @@ public class GameScene : BaseScene
         //gameMgr.StartMatching();
 
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
-            gameController.ChangePhase(new StartMatching());
+            gameController.ChangePhase<StartMatching>();
         else
-            gameController.ChangePhase(new TutorialMatchSetup());
+            gameController.ChangePhase<TutorialMatchSetup>();
     }
 
     public void OnLoadedMatchingBGTexture()

@@ -50,7 +50,7 @@ public class TutorialItemSetup : PhaseBase
 
         phaseDone = true;
 
-        GameController.instance.ChangePhase(new TutorialPlaceRobot());
+        GameController.instance.ChangePhase<TutorialPlaceRobot>();
     }
     IEnumerator ItemSetupCoroutine(GameData data)
     {

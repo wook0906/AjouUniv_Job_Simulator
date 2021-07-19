@@ -102,9 +102,11 @@ public class TitleScene : BaseScene
             //Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
             yield break;
         }
-        TOS_Popup.gameObject.SetActive(true);
-
-        yield return new WaitUntil(() => TOS_Popup.isConfirmed);
+        if (!PlayerPrefs.HasKey("TOS_Agreement"))
+        {
+            TOS_Popup.gameObject.SetActive(true);
+            yield return new WaitUntil(() => TOS_Popup.isConfirmed);
+        }
 
         #region Addressable Assets Download
         Addressables.GetDownloadSizeAsync("DLC").Completed += (result) =>

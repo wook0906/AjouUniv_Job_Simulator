@@ -44,7 +44,7 @@ public class SelectBehaviour : PhaseBase
         if (myBehaviourSelectDone)
         {
             phaseDone = true;
-            GameController.instance.ChangePhase(new SelectRange());
+            GameController.instance.ChangePhase<SelectRange>();
             //SelectRangeStart();
         }
         else //내가 잠수를 타버린 경우.

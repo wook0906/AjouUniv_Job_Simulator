@@ -54,7 +54,7 @@ public class MatchingCompletionPacket : Packet
         GameController.instance.gameData.mapType = (Define.MapType)mapType;
 
 
-        GameController.instance.ChangePhase(new ArenaSetup());
+        GameController.instance.ChangePhase<ArenaSetup>();
         Volt_PlayerData.instance.OnPlayGame();
         
     }

@@ -58,7 +58,7 @@ public class ArenaSetup : PhaseBase
 
         yield return StartCoroutine(Volt_ArenaSetter.S.SetupField());
         phaseDone = true;
-        GameController.instance.ChangePhase(new PlayerSetup());
+        GameController.instance.ChangePhase<PlayerSetup>();
     }
 
 

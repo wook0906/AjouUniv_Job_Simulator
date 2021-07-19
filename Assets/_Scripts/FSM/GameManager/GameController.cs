@@ -60,12 +60,11 @@ public class GameController : MonoBehaviour
         //}
         Volt_PlayerUI.S.ShowModuleButton(false);
     }
-    public void ChangePhase(PhaseBase newPhase, bool immediately = false)
+    public void ChangePhase<T>(bool immediately = false) where T : PhaseBase
     {
-        //Debug.Log($"phase Change to {newPhase.GetType().ToString()}");
-        StartCoroutine(CorChangePhase(newPhase, immediately));
+        StartCoroutine(CorChangePhase<T>(immediately));
     }
-    IEnumerator CorChangePhase(PhaseBase newPhase, bool immediately)
+    IEnumerator CorChangePhase<T>(bool immediately) where T : PhaseBase
     {
         if (!immediately && CurrentPhase != null)
             yield return new WaitUntil(() => CurrentPhase.phaseDone);
@@ -73,18 +72,14 @@ public class GameController : MonoBehaviour
         if (CurrentPhase != null)
         {
             CurrentPhase.OnExitPhase(this);
-            //prevPhase = currentPhase;
         }
-
-        var t = newPhase.GetType();
        
 
-        phaseObject.AddComponent(t);
+        phaseObject.AddComponent<T>();
         //ADD 할때까지 시간이 좀 걸리나보다?
         yield return new WaitUntil(() => CurrentPhase.phaseDone == false);
 
         CurrentPhase.OnEnterPhase(this);
-        //phaseObject.GetComponent<PhaseBase>().OnEnterPhase(this);
     }
    
     

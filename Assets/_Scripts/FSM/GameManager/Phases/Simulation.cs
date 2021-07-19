@@ -84,7 +84,7 @@ public class Simulation : PhaseBase
 
             if (data.isOnSuddenDeath)
             {
-                GameController.instance.ChangePhase(new SuddenDeath());
+                GameController.instance.ChangePhase<SuddenDeath>();
                 phaseDone = true;
                 yield break;
             }

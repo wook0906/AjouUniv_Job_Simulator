@@ -23,7 +23,7 @@ public class BehaviorOrderCompletionPacket : Packet
         //Volt_GameManager.S.SimulationStart(armageddonTileIdx,armageddonTileIdx2,armageddonTileIdx3,armageddonTileIdx4);
 
         
-        GameController.instance.ChangePhase(new Simulation());
+        GameController.instance.ChangePhase<Simulation>();
 
         Volt_PlayerUI.S.ShowModuleButton(false);
     }

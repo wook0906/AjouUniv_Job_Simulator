@@ -76,7 +76,7 @@ public class PlayerSetup : PhaseBase
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
             PacketTransmission.SendFieldReadyCompletionPacket(cardBase.card);
         else
-            GameController.instance.ChangePhase(new TutorialItemSetup());
+            GameController.instance.ChangePhase<TutorialItemSetup>();
         phaseDone = true;
     }
 }

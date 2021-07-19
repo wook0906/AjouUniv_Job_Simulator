@@ -79,7 +79,7 @@ public class TutorialSelectRange : PhaseBase
         yield return StartCoroutine(WaitCameraAnimation(true));
         phaseDone = true;
 
-        GameController.instance.ChangePhase(new TutorialSimulation());
+        GameController.instance.ChangePhase<TutorialSimulation>();
     }
     IEnumerator WaitCameraAnimation(bool rewind)
     {

@@ -8,6 +8,6 @@ public class SimulationCompletionPacket : Packet
         //Debug.Log("SimulationCompletionPacket Unpack");
 
         //Volt_GameManager.S.ResolutionStart();
-        GameController.instance.ChangePhase(new ResolutionTurn());
+        GameController.instance.ChangePhase<ResolutionTurn>();
     }
 }

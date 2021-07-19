@@ -6,7 +6,7 @@ public class CharacterPositionSettingCompletionPacket : Packet
     {
         //Debug.Log("CharacterPositionSettingCompletionPacket Unpack");
         //Volt_GameManager.S.SelectBehaviourTypeStart();
-        GameController.instance.ChangePhase(new SelectBehaviour());
+        GameController.instance.ChangePhase<SelectBehaviour>();
         
     }
 }

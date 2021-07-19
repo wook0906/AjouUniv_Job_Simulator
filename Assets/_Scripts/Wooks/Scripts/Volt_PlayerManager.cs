@@ -309,7 +309,7 @@ public class Volt_PlayerManager : MonoBehaviour
             }
             //Volt_GameManager.S.StopAllCoroutines();
             //Volt_GameManager.S.pCurPhase = Define.Phase.WaitSync;
-            GameController.instance.ChangePhase(new WaitSync());
+            GameController.instance.ChangePhase<WaitSync>();
             //껐을떄
             //Debug.Log("OnApplication Pause Enter End3");
 

@@ -5,7 +5,7 @@ public class SynchronizationElsePacket : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        GameController.instance.ChangePhase(new Synchronization());
+        GameController.instance.ChangePhase<Synchronization>();
 
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 

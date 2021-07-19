@@ -7,7 +7,7 @@ public class ReConnectBattlingRoomPacket : Packet
         //Debug.Log("ReConnectBattlingRoomPacket Unpack");
         
         Volt_PlayerData.instance.NeedReConnection = false;
-        GameController.instance.ChangePhase(new WaitSync());
+        GameController.instance.ChangePhase<WaitSync>();
         //Volt_GameManager.S.pCurPhase = Phase.waitSync;
         //Volt_GameManager.S.ForcedStopSimulate();
         //Volt_GameManager.S.behaviourStack.Clear();

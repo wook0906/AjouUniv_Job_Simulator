@@ -11,7 +11,7 @@ public class GameOver : PhaseBase
         type = Define.Phase.GameOver;
 
         game.gameData.isOnSuddenDeath = false;
-        game.gameData.isGameOverWaiting = true;
+        
 
         Volt_GMUI.S.guidePanel.HideGuideText();
         foreach (var item in Volt_GMUI.S.playerPanels)

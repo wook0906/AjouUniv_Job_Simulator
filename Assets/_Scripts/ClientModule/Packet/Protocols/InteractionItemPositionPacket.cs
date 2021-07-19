@@ -24,7 +24,7 @@ public class InteractionItemPositionPacket : Packet
         GameController.instance.gameData.moduleIdx = moduleIdx;
 
 
-        GameController.instance.ChangePhase(new ItemSetup());
+        GameController.instance.ChangePhase<ItemSetup>();
         //Volt_GameManager.S.ItemSetupStart(vpIdx, repairKitIdx, moduleIdx, cardType);
         
         //필드설정 완료 후 기다리고있으면 날아오는패킷.
