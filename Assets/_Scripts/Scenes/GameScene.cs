@@ -55,6 +55,8 @@ public class GameScene : BaseScene
     List<GameObject> coreGOs = new List<GameObject>();
     //Volt_GameManager gameMgr;
     GameController gameController;
+    Exit_Popup exitPopup = null;
+
     private IEnumerator Start()
     {
         SceneType = Define.Scene.GameScene;
@@ -112,16 +114,14 @@ public class GameScene : BaseScene
         {
             Managers.Resource.InstantiateAsync($"Game/Core/TutorialData.prefab");
 
-            Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>();
-            yield return new WaitUntil(() =>
-            {
-                introVideoUI = FindObjectOfType<IntroVideo_Popup>();
-                return introVideoUI != null;
-            });
+            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>();
+            yield return new WaitUntil(() => handle.IsDone);
             Debug.Log("Intro video create");
 
+            introVideoUI = handle.Result.GetComponent<IntroVideo_Popup>();
             introVideoUI.Play();
 
+            yield return new WaitForSeconds(1f);
             yield return new WaitUntil(() => !introVideoUI.IsPlaying());
             Debug.Log("Intro video End");
         }
@@ -153,5 +153,28 @@ public class GameScene : BaseScene
     {
         Managers.Clear();
         Camera.main.enabled = false;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Managers.UI.GetPopupStack().Count == 0)
+            //if (Managers.UI.GetUILayerStack().Count == 0)
+            {
+                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<Exit_Popup>();
+
+                if (handle.IsValid())
+                {
+                    handle.Completed += (result) =>
+                    {
+                        exitPopup = result.Result.GetComponent<Exit_Popup>();
+                    };
+                }
+            }
+            else
+            {
+                Managers.UI.ClosePopupUI();
+            }
+        }
     }
 }

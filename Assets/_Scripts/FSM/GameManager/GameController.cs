@@ -17,6 +17,11 @@ public class GameController : MonoBehaviour
 
 
     public bool isOnSuddenDeath = false;
+    public bool IsOnSuddenDeath
+    {
+        get { return gameData.isOnSuddenDeath; }
+        set { gameData.isOnSuddenDeath = value; }
+    }
     public bool useCustomPostion = false;
     public PostProcessVolume postProcessVolume;
     Vignette vignette;

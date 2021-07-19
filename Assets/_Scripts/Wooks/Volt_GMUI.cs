@@ -120,10 +120,8 @@ public class Volt_GMUI : UIBase
                 //print("RoundNumber Up!");
                 GameController.instance.gameData.round = value;
                 roundNumberGo.GetComponentInChildren<UILabel>().text = GameController.instance.gameData.round.ToString();
-                //Volt_GameManager.S.RoundNumber = GameController.instance.gameData.round;
-                if (GameController.instance.gameData.round >= 10)
-                    //Volt_GameManager.S.isOnSuddenDeath = true;
-                    GameController.instance.isOnSuddenDeath = true;
+                if (value >= 10)
+                    GameController.instance.gameData.isOnSuddenDeath = true;
             }
         }
     }
@@ -295,22 +293,11 @@ public class Volt_GMUI : UIBase
     
     public void OnClickPlayerExitBtn()
     {
-        //if (Volt_GameManager.S.pCurPhase == Define.Phase.gameOver) return;
         if (GameController.instance.CurrentPhase.type == Define.Phase.GameOver) return;
-        //if (Volt_GameManager.S.IsTrainingMode)
-        //{
-        //    Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
-        //    //Volt_LoadingSceneManager.S.RequestLoadScene("Lobby2");
-        //}
-        //else if (Volt_GameManager.S.IsTutorialMode)
-        //{
-        //    Application.Quit();
-        //}
+        GameController.instance.CurrentPhase.OnExitPhase(GameController.instance);
         isHaveControl = false;
         IsTickOn = false;
         PacketTransmission.SendPlayerExitPacket();
-        //Volt_GameManager.S.pCurPhase = Phase.gameOver;
-        GameController.instance.ChangePhase(new GameOver());
         CommunicationWaitQueue.Instance.ResetOrder();
         CommunicationInfo.IsBoardGamePlaying = false;
         Volt_PlayerData.instance.NeedReConnection = false;

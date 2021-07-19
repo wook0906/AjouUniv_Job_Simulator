@@ -41,7 +41,15 @@ public class Exit_Popup : UI_Popup
 
         Get<UIButton>((int)Buttons.Yes_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Application.Quit();
+            if (Volt_GMUI.S != null)
+            {
+                Volt_GMUI.S.OnClickPlayerExitBtn();
+            }
+            else
+            {
+                Application.Quit();
+            }
+            OnClose();
         }));
     }
     public override void OnClose()

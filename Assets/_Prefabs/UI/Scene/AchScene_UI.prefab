@@ -994,7 +994,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 5
+  mDepth: 3
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 1350
   mHeight: 820
-  mDepth: 4
+  mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 240
   mHeight: 125
-  mDepth: 3
+  mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 1920
   mHeight: 1080
-  mDepth: 1
+  mDepth: 0
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1900,7 +1900,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 240
   mHeight: 125
-  mDepth: 5
+  mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
