@@ -5,6 +5,7 @@ public class BehaviorOrderCompletionPacket : Packet
     public override void UnPack(byte[] buffer)
     {
         //Debug.Log("BehaviorOrderCompletionPacket Unpack");
+        GameController.instance.gameData.randomOptionValues.Clear();
 
         int startIndex = PacketInfo.FromServerPacketDataStartIndex;
 

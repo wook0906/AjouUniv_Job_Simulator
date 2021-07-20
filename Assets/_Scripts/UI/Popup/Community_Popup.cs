@@ -52,14 +52,14 @@ public class Community_Popup : UI_Popup
     }
     IEnumerator CorSetFriendsInfo()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < Volt_PlayerData.instance.friendsProfileDataDic.Count; i++)
         {
             AsyncOperationHandle<GameObject> handle = Managers.UI.MakeSubItemAsync<FriendsItem>(friendsItemRoot.transform);
             yield return new WaitUntil(() => { return handle.IsDone; });
             
             FriendsItem item = handle.Result.GetComponent<FriendsItem>();
             //item.GetComponent<UIPanel>().depth = friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth + 1;
-            item.SetInfo($"temp{i}");
+            item.SetInfo(Volt_PlayerData.instance.friendsProfileDataDic[i]);
 
             item.transform.localPosition = Vector3.zero;
             item.transform.localScale = Vector3.one;

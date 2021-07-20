@@ -341,4 +341,8 @@ public class Simulation : PhaseBase
                 item.playerRobot.GetComponent<Volt_Robot>().panel.OrderNumberSet(-1);
         }
     }
+    public void OnAmargeddonExploded()
+    {
+        isPlayAmargeddon = false;
+    }
 }

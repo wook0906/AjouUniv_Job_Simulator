@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Profile_Popup : UI_Popup
+public class MyProfile_Popup : UI_Popup
 {
     
     enum Buttons
@@ -17,6 +17,8 @@ public class Profile_Popup : UI_Popup
         WinPlayCount_Label,
         KillCount_Label,
         DeathCount_Label,
+        Nickname_Label,
+        StateMSG_Label,
     }
 
 
@@ -25,8 +27,7 @@ public class Profile_Popup : UI_Popup
         base.Init();
 
         Bind<UIButton>(typeof(Buttons));
-
-        //Managers.UI.PushToUILayerStack(this);
+        Bind<UILabel>(typeof(Labels));
 
         Get<UIButton>((int)Buttons.StateMSGConfirm_Btn).onClick.Add(new EventDelegate(() =>
         {
@@ -36,14 +37,18 @@ public class Profile_Popup : UI_Popup
         {
             OnClose();
         }));
+
+        SetInfo();
     }
-    public void SetInfo(int totalPlayCnt, int defeatCnt, int winCnt, int killCnt, int deathCnt)
+    public void SetInfo()
     {
-        Get<UILabel>((int)Labels.TotalPlayCount_Label).text = totalPlayCnt.ToString();
-        Get<UILabel>((int)Labels.DefeatPlayCount_Label).text = deathCnt.ToString();
-        Get<UILabel>((int)Labels.WinPlayCount_Label).text = winCnt.ToString();
-        Get<UILabel>((int)Labels.KillCount_Label).text = killCnt.ToString();
-        Get<UILabel>((int)Labels.DeathCount_Label).text = deathCnt.ToString();
+        Get<UILabel>((int)Labels.Nickname_Label).text = Volt_PlayerData.instance.NickName;
+        Get<UILabel>((int)Labels.TotalPlayCount_Label).text = Volt_PlayerData.instance.PlayCount.ToString();
+        Get<UILabel>((int)Labels.DefeatPlayCount_Label).text = Volt_PlayerData.instance.DeathCount.ToString();
+        Get<UILabel>((int)Labels.WinPlayCount_Label).text = Volt_PlayerData.instance.VictoryCount.ToString();
+        Get<UILabel>((int)Labels.KillCount_Label).text = Volt_PlayerData.instance.KillCount.ToString();
+        Get<UILabel>((int)Labels.DeathCount_Label).text = Volt_PlayerData.instance.DeathCount.ToString();
+        Get<UILabel>((int)Labels.StateMSG_Label).text = Volt_PlayerData.instance.StateMSG;
     }
     public override void OnClose()
     {

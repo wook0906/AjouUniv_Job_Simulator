@@ -72,7 +72,9 @@ public class Volt_Amargeddon : MonoBehaviour
                 }
             }
 
-            GameController.instance.CallFunctionDelayed("OnAmargeddonExploded", explosionEffectGO.GetComponent<ParticleSystem>().main.duration);
+            Simulation phase = GameController.instance.CurrentPhase as Simulation;
+            phase.OnAmargeddonExploded();
+            //GameController.instance.CallFunctionDelayed("OnAmargeddonExploded", explosionEffectGO.GetComponent<ParticleSystem>().main.duration);
             //Volt_GameManager.S.CallFunctionDelayed("OnAmargeddonExploded",
             //    explosionEffectGO.GetComponent<ParticleSystem>().main.duration);
             //Destroy(gameObject);

@@ -134,7 +134,7 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Profile_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowPopupUIAsync<Profile_Popup>();
+            Managers.UI.ShowPopupUIAsync<MyProfile_Popup>();
         }));
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>

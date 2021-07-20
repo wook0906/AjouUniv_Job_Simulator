@@ -5,6 +5,17 @@ using UnityEngine;
 
 public class Define
 {
+    public struct ProfileData
+    {
+        public string nickname;
+        public int level;
+        public int totalPlayCnt;
+        public int defeatCnt;
+        public int winCnt;
+        public int killCnt;
+        public int deathCnt;
+        public string StateMSG;
+    }
     public enum Phase
     {
         None, StartMatching, ArenaSetup, PlayerSetup, ItemSetup, PlaceRobot, SelectBehaviour, SelectRange, Simulation, SuddenDeath, ResolutionTurn, Synchronization, GameOver, WaitSync,

@@ -134,6 +134,13 @@ public class Volt_PlayerData : MonoBehaviour
         get { return maxExp; }
         set { maxExp = value; }
     }
+    private string stateMSG = "Default State Message";
+    public string StateMSG
+    {
+        get { return stateMSG; }
+        set { stateMSG = value; }
+    }
+    public Dictionary<int, Define.ProfileData> friendsProfileDataDic = new Dictionary<int, Define.ProfileData>();
     //TMP 21.07.16 END================================
 
     public float WinRate
@@ -252,6 +259,7 @@ public class Volt_PlayerData : MonoBehaviour
         emoticonSet.Clear();
         selectdRobotSkins.Clear();
         Benefits.Clear();
+        friendsProfileDataDic.Clear();
     }
     public void LoadUserSkinData()
     {
@@ -323,6 +331,19 @@ public class Volt_PlayerData : MonoBehaviour
 
         //tmp
         EmoticonSetInit();
+        for (int i = 0; i < 8; i++)
+        {
+            Define.ProfileData tmpProfileData = new Define.ProfileData();
+            tmpProfileData.nickname = $"friends{i}";
+            tmpProfileData.level = i + UnityEngine.Random.Range(0,999);
+            tmpProfileData.totalPlayCnt = i + UnityEngine.Random.Range(0, 999);
+            tmpProfileData.defeatCnt = i + UnityEngine.Random.Range(0, 999);
+            tmpProfileData.winCnt = i + UnityEngine.Random.Range(0, 999);
+            tmpProfileData.killCnt = i + UnityEngine.Random.Range(0, 999);
+            tmpProfileData.deathCnt = i + UnityEngine.Random.Range(0, 999);
+            tmpProfileData.StateMSG = $"friends{i}'s State Message string";
+            friendsProfileDataDic.Add(i, tmpProfileData);
+        }
     }
 
     public override string ToString()
