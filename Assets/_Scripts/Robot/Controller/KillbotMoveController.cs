@@ -101,9 +101,16 @@ public class KillbotMoveController : MoveController
         // 이동 방향으로 이동이 불가능하다면
         Vector3 pos = fsm.startTile.transform.position;
         pos.y = fsm.transform.position.y;
-        if (!CanMoveNextTile(pos, fsm.behavior.Direction))
+        //if (!CanMoveNextTile(pos, fsm.behavior.Direction))
+        //{
+        //    ChangeMoveDirection();
+        //}
+        while (true)
         {
-            ChangeMoveDirection();
+            if (CanMoveNextTile(pos, fsm.behavior.Direction))
+                break;
+            else
+                ChangeMoveDirection();
         }
 
         // 이동 방향이 처음 셋팅한 것과 다르다면

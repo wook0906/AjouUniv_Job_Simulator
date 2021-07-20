@@ -20,6 +20,8 @@ public class FriendsItem : UIBase
     }
     public override void Init()
     {
+        transform.SetChildLayer(transform.root.gameObject.layer);
+
         Bind<UILabel>(typeof(Labels));
         Bind<UIButton>(typeof(Buttons));
 

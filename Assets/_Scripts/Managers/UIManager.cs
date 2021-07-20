@@ -299,6 +299,7 @@ public class UIManager
 
             go.transform.SetParent(PopupRoot.transform);
             go.layer = go.transform.parent.gameObject.layer;
+            go.transform.SetChildLayer(go.layer);
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale = Vector3.one;
         });

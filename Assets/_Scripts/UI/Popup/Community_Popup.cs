@@ -60,7 +60,7 @@ public class Community_Popup : UI_Popup
             FriendsItem item = handle.Result.GetComponent<FriendsItem>();
             //item.GetComponent<UIPanel>().depth = friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth + 1;
             item.SetInfo(Volt_PlayerData.instance.friendsProfileDataDic[i]);
-
+            item.gameObject.layer = transform.root.gameObject.layer;
             item.transform.localPosition = Vector3.zero;
             item.transform.localScale = Vector3.one;
             //Vector3 moveVector = Vector3.up * friendsItemRoot.GetComponent<UIGrid>().cellHeight * i;
