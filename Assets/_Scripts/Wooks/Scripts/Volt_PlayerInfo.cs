@@ -264,7 +264,7 @@ public class Volt_PlayerInfo : MonoBehaviour
             {
                 VictoryPoint++;
                 Volt_GMUI.S.Create3DMsg(MSG3DEventType.PointUp, this);
-            }
+            }                   
             else
             {
                 if (other.playerInfo.VictoryPoint > 0)

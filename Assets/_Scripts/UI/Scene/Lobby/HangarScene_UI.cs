@@ -170,6 +170,7 @@ public class HangarScene_UI : UI_Scene
     private void OnChangeRobot()
     {
         RobotSkin userCurrentSkin;
+        Volt_LobbyRobotViewSection.S.SelectRobotType = robotViewSection.SelectRobotType;
         if (Volt_PlayerData.instance.selectdRobotSkins.TryGetValue(robotViewSection.SelectRobotType, out userCurrentSkin))
         {
             switch (Application.systemLanguage)
