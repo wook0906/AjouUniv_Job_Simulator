@@ -19,8 +19,6 @@ public class SelectMatch_Popup : UI_Popup
 
         Bind<UIButton>(typeof(Buttons));
 
-        //Managers.UI.PushToUILayerStack(this);
-
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
             OnClose();
@@ -38,8 +36,8 @@ public class SelectMatch_Popup : UI_Popup
     public override void OnClose()
     {
         base.OnClose();
-        //ClosePopupUI();
-        GetComponent<UIPanel>().alpha = 0f;
+        ClosePopupUI();
+        //GetComponent<UIPanel>().alpha = 0f;
     }
 
     public void OnClickStartGame()
