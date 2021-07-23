@@ -316,7 +316,15 @@ public class LobbyScene_UI : UI_Scene
     {
         GetLabel((int)Labels.Level_Label).text = $"Lv.{Volt_PlayerData.instance.Level}";
     }
-    
+    public void ChangeProfilePicture(string PAID)
+    {
+        UIButton pictureBtn = GetButton((int)Buttons.ProfilePicture_Btn);
+        pictureBtn.normalSprite = PAID;
+        pictureBtn.hoverSprite = PAID;
+        pictureBtn.pressedSprite = PAID;
+        pictureBtn.GetComponent<UISprite>().spriteName = PAID;
+        //TODO 프로필사진 변경을 서버에다 저장해야함.
+    }
 
     
 }

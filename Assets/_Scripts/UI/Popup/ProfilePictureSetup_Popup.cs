@@ -33,7 +33,7 @@ public class ProfilePictureSetup_Popup : UI_Popup
         GameObject pictureItemRoot = Get<GameObject>((int)GameObjects.PictureItemRoot);
         pictureItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
         pictureBtns = pictureItemRoot.transform.GetComponentsInChildren<UIButton>();
-        ItemInit();
+        
 
         Invoke("Redraw", 0f);
     }
@@ -41,14 +41,28 @@ public class ProfilePictureSetup_Popup : UI_Popup
     {
         GetComponent<UIPanel>().gameObject.SetActive(false);
         GetComponent<UIPanel>().gameObject.SetActive(true);
+        ItemInit();
         GetComponent<UIPanel>().alpha = 1f;
+        
     }
+   
     public void ItemInit()
     {
-        for (int i = 0; i < pictureBtns.Length; i++)
+
+        int idx = 0;
+        for (Define.ProfileArtItemID PAID = Define.ProfileArtItemID.ProfileArt001; PAID < Define.ProfileArtItemID.MAX; PAID++)
         {
-            //pictureBtns[i].GetComponent<UISprite>().spriteName = "$ProfileImageName$" + i;
-            pictureBtns[i].GetComponent<UISprite>().spriteName = "Profile Image";
+            EventDelegate eventDelegate = new EventDelegate(this, "OnClickPictureItem");
+
+            pictureBtns[idx].GetComponent<UISprite>().spriteName = PAID.ToString();
+            pictureBtns[idx].normalSprite = PAID.ToString();
+            pictureBtns[idx].hoverSprite = PAID.ToString();
+            pictureBtns[idx].pressedSprite = PAID.ToString();
+            pictureBtns[idx].onClick.Add(eventDelegate);
+
+            eventDelegate.parameters[0] = Util.MakeParameter(pictureBtns[idx], typeof(UIButton));
+
+            idx++;
         }
     }
     public override void OnClose()
@@ -56,6 +70,10 @@ public class ProfilePictureSetup_Popup : UI_Popup
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
         ClosePopupUI();
+    }
+    void OnClickPictureItem(UIButton pictureItem)
+    {
+        Managers.UI.GetSceneUI<LobbyScene_UI>().ChangeProfilePicture(pictureItem.normalSprite);
     }
     //public override void OnActive()
     //{

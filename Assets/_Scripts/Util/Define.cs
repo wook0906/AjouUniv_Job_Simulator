@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class Define
 {
+    public enum ProfileArtItemID
+    {
+        ProfileArt001,
+        ProfileArt002,
+        ProfileArt003,
+        ProfileArt004,
+        ProfileArt005,
+     
+        MAX,
+    }
     public struct ProfileData
     {
         public string nickname;

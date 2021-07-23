@@ -1101,21 +1101,21 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 600
-  mHeight: 180
+  mWidth: 610
+  mHeight: 190
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.3333333
+  aspectRatio: 3.2105262
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mApplyGradient: 1
-  mGradientTop: {r: 0.44705883, g: 0.5019608, b: 0.74509805, a: 1}
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.4464667, g: 0.50271446, b: 0.745283, a: 0.92941177}
   centerType: 1
   leftType: 1
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: Profile Area
+  mSpriteName: ProfileArea
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!65 &4909243472453582764
@@ -3720,7 +3720,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: Profile Image
+  mSpriteName: ProfileArt003
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!114 &7461023515621363092
