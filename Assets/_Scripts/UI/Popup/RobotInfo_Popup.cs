@@ -73,34 +73,34 @@ public class RobotInfo_Popup : UI_Popup
             case RobotType.Volt:
                 slogan.text = "벽을 뛰어넘는 암살자";
                 companyName.text = "Nippon Electrics";
-                explaination.text = "일본의 에너지 연구 회사";
+                explaination.text = "일본의 에너지 연구 기업";
                 country.text = "일본";
                 map.text = "Tokyo";
                 specificity.text = "사선 기동";
                 companyIcon.spriteName = "NipponElectrics";
                 break;
             case RobotType.Mercury:
-                slogan.text = "나비처럼 날아 벌처럼 쏜다";
+                slogan.text = "화끈한 맛을 선사하는 파괴자";
                 companyName.text = "Vulcan Pizza";
-                explaination.text = "호주의 유명한 피자가게";
-                country.text = "호주";
+                explaination.text = "이탈리아 입맛을 사로잡은 피자 브랜드";
+                country.text = "이탈리아";
                 map.text = "Rome";
                 specificity.text = "회피 기동";
                 companyIcon.spriteName = "VulcanPizza";
                 break;
             case RobotType.Hound:
-                slogan.text = "최강의 기동력";
+                slogan.text = "최강 기동력! 강철의 명견";
                 companyName.text = "Max Drift";
-                explaination.text = "미국의 레이싱 회사";
+                explaination.text = "독보적인 레이싱 카 제조업체";
                 country.text = "미국";
                 map.text = "Twin Cities";
                 specificity.text = "위치 교환";
                 companyIcon.spriteName = "MaxDrift";
                 break;
             case RobotType.Reaper:
-                slogan.text = "튼튼하고 강한 톱날 사신";
+                slogan.text = "톱날의 사신";
                 companyName.text = "Boost Pharma";
-                explaination.text = "독일의 유명한 제약회사";
+                explaination.text = "독일 최고의 제약회사";
                 country.text = "독일";
                 map.text = "Ruhrgebiet";
                 specificity.text = "쉴드 장치";

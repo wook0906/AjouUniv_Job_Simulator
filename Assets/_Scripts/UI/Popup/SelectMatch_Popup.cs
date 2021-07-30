@@ -25,7 +25,7 @@ public class SelectMatch_Popup : UI_Popup
         }));
         Get<UIButton>((int)Buttons.MatchForNormal_Btn).onClick.Add(new EventDelegate(() =>
         {
-            OnClickStartGame();
+            Managers.UI.GetSceneUI<LobbyScene_UI>().OnClickStartGame();
             OnClose();
         }));
 
@@ -40,22 +40,4 @@ public class SelectMatch_Popup : UI_Popup
         //GetComponent<UIPanel>().alpha = 0f;
     }
 
-    public void OnClickStartGame()
-    {
-        Debug.Log("StartGame!");
-        //Get<UIWidget>((int)Widgets.InputBlock).gameObject.SetActive(true);
-        FindObjectOfType<LobbyScene_AssetUI>().SetOnInputBlock();
-        //if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0) //게임 플레이하고 왔는지 분기 나눠야할듯...
-        //{
-        //    Volt_TutorialManager.S.FindContentsByName("WaitClickGameStartBtn").gameObject.SetActive(false);
-        //}
-        StartCoroutine(CoStartGame());
-    }
-
-    IEnumerator CoStartGame()
-    {
-        Volt_LobbyRobotViewSection.S.PlayLobbyAnimation();
-        yield return new WaitForSeconds(2f);
-        Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
-    }
 }

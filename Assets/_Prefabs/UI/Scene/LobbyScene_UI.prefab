@@ -464,7 +464,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0.4251958, g: 0.7140507, b: 0.990566, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 309
   mHeight: 51
@@ -1428,14 +1428,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 60
-  mHeight: 54
+  mWidth: 70
+  mHeight: 64
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.1111112
+  aspectRatio: 1.09375
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1756,11 +1756,8 @@ GameObject:
   - component: {fileID: 4909243472835138011}
   - component: {fileID: 4909243472835138007}
   - component: {fileID: 4909243472835138005}
-  - component: {fileID: 4909243472835138006}
-  - component: {fileID: 4909243472835138004}
-  - component: {fileID: 4909243472835138000}
   m_Layer: 5
-  m_Name: Option_Btn
+  m_Name: Option_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,7 +1771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472835138010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -880.99994, y: 259, z: 0}
+  m_LocalPosition: {x: -880.99994, y: 172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243473716005692}
@@ -1812,8 +1809,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 96
-  mHeight: 96
+  mWidth: 128
+  mHeight: 128
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -1834,7 +1831,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: option_default_Remake
+  mSpriteName: radio_hover
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!114 &4909243472835138005
@@ -1856,61 +1853,6 @@ MonoBehaviour:
   duration: 0.2
   dragHighlight: 0
   hoverSprite: option_touch_Remake
-  pressedSprite: option_touch_Remake
-  disabledSprite: 
-  hoverSprite2D: {fileID: 0}
-  pressedSprite2D: {fileID: 0}
-  disabledSprite2D: {fileID: 0}
-  pixelSnap: 0
-  onClick: []
---- !u!65 &4909243472835138006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909243472835138010}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 96, y: 96, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4909243472835138004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909243472835138010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: c331c41f79af02043979471f4ab89068, type: 3}
-  trigger: 0
-  volume: 0.25
-  pitch: 1
---- !u!114 &4909243472835138000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909243472835138010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 4909243473716005667}
-  hover: {r: 1, g: 1, b: 1, a: 1}
-  pressed: {r: 1, g: 1, b: 1, a: 1}
-  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  duration: 0.2
-  dragHighlight: 0
-  hoverSprite: option_default_Remake
   pressedSprite: option_touch_Remake
   disabledSprite: 
   hoverSprite2D: {fileID: 0}
@@ -1947,7 +1889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909243472938404205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -880.99994, y: 111.999985, z: 0}
+  m_LocalPosition: {x: -880.99994, y: 24.999985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909243472587193767}
@@ -1985,8 +1927,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 96
-  mHeight: 96
+  mWidth: 128
+  mHeight: 128
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -2047,7 +1989,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 96, y: 96, z: 0}
+  m_Size: {x: 128, y: 128, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4909243472938404200
 MonoBehaviour:
@@ -2954,13 +2896,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4909243473716005692}
   - component: {fileID: 4909243473716005688}
+  - component: {fileID: 4936864163731885159}
+  - component: {fileID: 5476742496194904811}
+  - component: {fileID: 6187631937059246494}
   m_Layer: 5
-  m_Name: Rank_Icon
+  m_Name: Option_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4909243473716005692
 Transform:
   m_ObjectHideFlags: 0
@@ -3010,7 +2955,7 @@ MonoBehaviour:
   mHeight: 128
   mDepth: 2
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -3028,9 +2973,64 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 4ad3dba421d9e4a71baac81eb5bea07d, type: 2}
-  mSpriteName: option_default_Remake
+  mSpriteName: Option_Default
   mFixedAspect: 0
   mFillCenter: 1
+--- !u!114 &4936864163731885159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909243473716005667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 4909243473716005667}
+  hover: {r: 0.88235295, g: 0.78431374, b: 0.5882353, a: 1}
+  pressed: {r: 0.7176471, g: 0.6392157, b: 0.48235294, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: Option_Default
+  pressedSprite: Option_Touched
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick: []
+--- !u!65 &5476742496194904811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909243473716005667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 128, y: 128, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6187631937059246494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909243473716005667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 84866e57b6a849c4f8401808dce9281c, type: 3}
+  trigger: 0
+  volume: 1
+  pitch: 1
 --- !u!1 &4909243473729456380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,7 +4238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230605964230916413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -881, y: -40, z: 0}
+  m_LocalPosition: {x: -881, y: -127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8785834525164980495}
@@ -4276,8 +4276,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 96
-  mHeight: 96
+  mWidth: 128
+  mHeight: 128
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -4319,8 +4319,8 @@ MonoBehaviour:
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   duration: 0.2
   dragHighlight: 0
-  hoverSprite: Btn_sci-fi button02_n
-  pressedSprite: Btn_sci-fi button02_P
+  hoverSprite: radio_hover
+  pressedSprite: radio_hover
   disabledSprite: 
   hoverSprite2D: {fileID: 0}
   pressedSprite2D: {fileID: 0}
@@ -4338,7 +4338,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 96, y: 96, z: 0}
+  m_Size: {x: 128, y: 128, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2076340615169755501
 MonoBehaviour:
@@ -4537,8 +4537,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 56
-  mHeight: 56
+  mWidth: 76
+  mHeight: 76
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0

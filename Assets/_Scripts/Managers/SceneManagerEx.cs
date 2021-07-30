@@ -79,7 +79,7 @@ public class SceneManagerEx
             Managers.Scene.CurrentScene.Clear();
         else
             Managers.UI.CloseAllPopupUI();
-        
+      
         asyncOperation.allowSceneActivation = true;
         asyncOperation = null;
     }

@@ -470,7 +470,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
   mText: Explaination
-  mFontSize: 24
+  mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -805,7 +805,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
   mText: Slogan
-  mFontSize: 40
+  mFontSize: 30
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
