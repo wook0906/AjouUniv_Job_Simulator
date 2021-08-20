@@ -81,6 +81,7 @@ public class LobbyScene_UI : UI_Scene
             Managers.UI.ShowSceneUI<ModuleScene_UI>();
             lobbyScene.SetOffAllRobotCameras();
         }));
+
         GetButton((int)Buttons.Emoticon_Btn).onClick.Add(new EventDelegate(() =>
         {
             Managers.UI.ShowSceneUI<EmoticonScene_UI>();

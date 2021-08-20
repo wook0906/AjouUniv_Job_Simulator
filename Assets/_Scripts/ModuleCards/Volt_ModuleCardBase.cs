@@ -23,6 +23,7 @@ public abstract class Volt_ModuleCardBase : MonoBehaviour
     [Header("SetInScript")]
     [SerializeField]
     protected Volt_Robot    owner;
+    public bool             isNeedReturnToDeck = true;
     int activeType;
     public int ActiveType
     {

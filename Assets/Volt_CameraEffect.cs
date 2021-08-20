@@ -49,7 +49,6 @@ public class Volt_CameraEffect : MonoBehaviour
 
         if (vignette)
         {
-            //Debug.Log("SetVignette");
             vignette.active = true;
             color.value = newColor;
             vignette.color.value = color;

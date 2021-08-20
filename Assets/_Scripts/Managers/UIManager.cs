@@ -147,7 +147,7 @@ public class UIManager
     //    return sceneUI;
     //}
 
-    public T ShowSceneUI<T>(bool prevUIUnactive = true) where T : UI_Scene
+    public T ShowSceneUI<T>() where T : UI_Scene
     {
         GameObject go;
         if(!_sceneUIs.TryGetValue(typeof(T), out go))
@@ -257,7 +257,6 @@ public class UIManager
     {
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
-        Debug.Log(name);
 
         GameObject go = Managers.Resource.Instantiate($"UI/Popup/{name}");
 

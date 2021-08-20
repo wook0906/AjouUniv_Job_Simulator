@@ -138,7 +138,7 @@ public class GameData
     public bool isOnSuddenDeath = false;
     public bool isEndlessGame = false;
     public bool isKillbotBehaviourOff = false;
-    public bool useCameraEffect = false;
+    public bool useCameraEffect = true;
     public int winner = 0;
     //public bool isLocalSimulationDone = true;
     public int vpSetupInterval = 5;

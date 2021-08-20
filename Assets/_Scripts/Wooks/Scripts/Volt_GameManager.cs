@@ -984,11 +984,11 @@ public class Volt_GameManager : MonoBehaviour
         }
 
         //조작시간을 부여. 타이머 설정해야함.
-        if (mapType != Define.MapType.Tutorial)
-        {
-            Volt_GMUI.S.IsTickOn = true;
-            Volt_GMUI.S.TickTimer = 10;
-        }
+        //if (mapType != Define.MapType.Tutorial)
+        //{
+        //    Volt_GMUI.S.IsTickOn = true;
+        //    Volt_GMUI.S.TickTimer = 10;
+        //}
         if (IsTutorialMode && Volt_TutorialManager.S && Volt_GMUI.S.RoundNumber == 2)
         {
             Volt_TutorialManager.S.TutorialStart("ExplainationModuleType");
@@ -1087,11 +1087,11 @@ public class Volt_GameManager : MonoBehaviour
     public void SelectRangeStart()
     {
         Volt_PlayerUI.S.BehaviourSelectOff();
-        if (mapType != Define.MapType.Tutorial)
-        {
-            Volt_GMUI.S.IsTickOn = true;
-            Volt_GMUI.S.TickTimer = 15;
-        }
+        //if (mapType != Define.MapType.Tutorial)
+        //{
+        //    Volt_GMUI.S.IsTickOn = true;
+        //    Volt_GMUI.S.TickTimer = 15;
+        //}
         // noticeText.text = "Control your robot";
         Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.BehaviourSelect, true,Application.systemLanguage);
         //curPhase = Phase.rangeSelect;

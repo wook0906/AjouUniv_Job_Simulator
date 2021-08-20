@@ -34,7 +34,7 @@ public class Define
     }
     public enum MapType
     {
-        TwinCity, Rome, Ruhrgebiet, Tokyo, Tutorial
+        TwinCity, Rome, Ruhrgebiet, Tokyo
     }
     public enum Scene
     {

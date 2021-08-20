@@ -31,6 +31,37 @@ public class Volt_ModuleDeck : MonoBehaviour
         moveCardPercentage = new List<Card>();
         tacticCardPercentage = new List<Card>();
     }
+    public Volt_ModuleCardBase GetModulePrefab(ModuleType moduleType, Card cardType)
+    {
+        switch (moduleType)
+        {
+            case ModuleType.Attack:
+                foreach (var item in attackCardPrefabs)
+                {
+                    if(item.card == cardType)
+                        return item;
+                }
+                break;
+            case ModuleType.Movement:
+                foreach (var item in moveCardPrefabs)
+                {
+                    if (item.card == cardType)
+                        return item;
+                }
+                break;
+            case ModuleType.Tactic:
+                foreach (var item in tacticCardPrefabs)
+                {
+                    if (item.card == cardType)
+                        return item;
+                }
+                break;
+            default:
+                break;
+        }
+        Debug.LogError("GetModulePrefab Error");
+        return null;
+    }
     
     public void SetModuleDeckSettingData(Define.MapType mapType)
     {
@@ -294,6 +325,8 @@ public class Volt_ModuleDeck : MonoBehaviour
     }
     public void ReturnModuleCard(Volt_ModuleCardBase moduleCard) //모듈카드를 사용 한 후, 여기에 타입에 따라 해당덱에 카드를 반환한다.
     {
+        if (!moduleCard.isNeedReturnToDeck) return;
+
         switch (moduleCard.moduleType)
         {
             case ModuleType.Attack:
