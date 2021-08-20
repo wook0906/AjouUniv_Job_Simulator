@@ -201,6 +201,7 @@ public class UIManager
         scene.gameObject.SetActive(false);
 
         _sceneUIStack.Peek().gameObject.SetActive(true);
+        _sceneUI = _sceneUIStack.Peek();
     }
 
     public void ShowSceneUIAsync<T>(string name = null) where T : UI_Scene
