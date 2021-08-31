@@ -49,6 +49,7 @@ public class Volt_ArenaSetter : MonoBehaviour
     public int numOfModule;
     public int numOfRepairKit;
     public int numOfSetOnVoltageSpace;
+    [HideInInspector]
     public GameObject[] ballistaLaunchPoints;
     public static Volt_ArenaSetter S;
     Volt_Tile[,] tileArray;
@@ -76,7 +77,10 @@ public class Volt_ArenaSetter : MonoBehaviour
     [HideInInspector]
     public List<Volt_Tile> fallTiles2;
 
-    public GameObject dustParticle;
+    //[HideInInspector]
+    public GameObject[] tokyoHologramWalls;
+    public List<WallDisappearPatternData> tokyoHologramWallDisappearPartterns;
+    int curParttern = 0;
 
     int row;
     int colum;
@@ -139,6 +143,8 @@ public class Volt_ArenaSetter : MonoBehaviour
                 }
                 break;
             case Define.MapType.Tokyo:
+                //tokyoHologramWalls = GameObject.Find("Walls").GetComponentsInChildren<Transform>();
+                //tokyoHologramWalls.OrderBy(x => int.Parse(x.name)).ToArray();
                 break;
             default:
                 break;
@@ -1241,5 +1247,22 @@ public class Volt_ArenaSetter : MonoBehaviour
                 return false;
         }
         return true;
+    }
+    public void AppearAllWalls()
+    {
+        foreach (var item in tokyoHologramWalls)
+        {
+            item.gameObject.SetActive(true);
+        }
+    }
+    public void DisappearWalls()
+    {
+        foreach (var item in tokyoHologramWallDisappearPartterns[curParttern].disappearWallNumbers)
+        {
+            tokyoHologramWalls[item].gameObject.SetActive(false);
+        }
+        curParttern++;
+        if (curParttern >= tokyoHologramWallDisappearPartterns.Count)
+            curParttern = 0;
     }
 }

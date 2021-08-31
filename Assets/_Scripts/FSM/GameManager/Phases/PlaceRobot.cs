@@ -12,6 +12,9 @@ public class PlaceRobot : PhaseBase
 
         Volt_GMUI.S._3dObjectInteractable = true;
 
+        if (game.gameData.mapType == Define.MapType.Tokyo)
+            Volt_ArenaSetter.S.DisappearWalls();
+
         StartCoroutine(Action(game.gameData));
     }
     public override void OnExitPhase(GameController game)
