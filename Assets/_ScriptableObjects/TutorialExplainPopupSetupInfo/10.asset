@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
-  m_Name: 2
+  m_Name: 10
   m_EditorClassIdentifier: 
-  contents: "..\uADF8\uB7FC \uC608\uC120\uC804\uC744 \uC2DC\uC791\uD558\uACA0\uC2B5\uB2C8\uB2E4!\r\n\uC6D0\uD65C\uD55C
-    \uC9C4\uD589\uC744 \uC704\uD574 \uB85C\uBD07\uC744 \uBC30\uCE58\uD574 \uC8FC\uC2ED\uC2DC\uC624.\r"
+  contents: "\uD68D\uB4DD\uD55C \uC810\uC218\uB098 \uBAA8\uB4C8\uC740\r\n\uC67C\uCABD
+    \uC0C1\uB2E8\uC5D0\uC11C \uD655\uC778\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4!\r"
   width: 900
   height: 150
   windowAnchor: {x: 0.5, y: 0.5}

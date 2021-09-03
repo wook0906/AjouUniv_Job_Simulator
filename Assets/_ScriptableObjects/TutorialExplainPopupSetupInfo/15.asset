@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
-  m_Name: 2
+  m_Name: 15
   m_EditorClassIdentifier: 
-  contents: "..\uADF8\uB7FC \uC608\uC120\uC804\uC744 \uC2DC\uC791\uD558\uACA0\uC2B5\uB2C8\uB2E4!\r\n\uC6D0\uD65C\uD55C
-    \uC9C4\uD589\uC744 \uC704\uD574 \uB85C\uBD07\uC744 \uBC30\uCE58\uD574 \uC8FC\uC2ED\uC2DC\uC624.\r"
+  contents: "\uD574\uB2F9 \uB85C\uBD07\uC5D0 \uB9DE\uB294 \r\n\uC804\uC6A9 \uB9F5\uC5D0
+    \uC785\uC7A5\uD558\uAC8C \uB418\uBA74,\r\n\uD2B9\uC131\uC73C\uB85C \uC804\uC6A9
+    \uB9F5\uC5D0\uC11C \r\n\uC720\uB9AC\uD55C \uD328\uC2DC\uBE0C \uBAA8\uB4C8\uC744\r\n\uD558\uB098
+    \uBCF4\uC720\uD55C \uCC44\uB85C \uC2DC\uC791\uD558\uAC8C \uB429\uB2C8\uB2E4.\r"
   width: 900
   height: 150
   windowAnchor: {x: 0.5, y: 0.5}

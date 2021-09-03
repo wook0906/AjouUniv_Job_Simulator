@@ -25,7 +25,6 @@ public class SelectMatch_Popup : UI_Popup
         }));
         Get<UIButton>((int)Buttons.MatchForNormal_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.SCene
             Managers.UI.GetSceneUI<LobbyScene_UI>().OnClickStartGame();
             OnClose();
         }));

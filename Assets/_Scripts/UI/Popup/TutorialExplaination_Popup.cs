@@ -30,6 +30,8 @@ public class TutorialExplaination_Popup : UI_Popup
     {
         base.Init();
 
+        TutorialData.S.isOnTutorialPopup = true;
+
         Bind<GameObject>(typeof(GameObjects));
         Bind<UILabel>(typeof(Labels));
 
@@ -44,13 +46,15 @@ public class TutorialExplaination_Popup : UI_Popup
 
     public void SetWindow(TutorialExplainPopupSetupData data)
     {
+        UIRoot root = transform.root.GetComponent<UIRoot>();
         texts = data.contents;
         bgSprite.width = data.width;
         bgSprite.height = data.height;
         guideLabel.fontSize = data.fontSize;
-        transform.localPosition = data.position;
+        transform.position = new Vector3(root.manualWidth * data.windowAnchor.x, root.manualHeight * data.windowAnchor.y, 0f);
+        Debug.Log($"width : {root.manualWidth} , height : {root.manualHeight}, result : {transform.position}");
         bgButton.isEnabled = data.isButton;
-        spriteAnimation.transform.localPosition = data.arrowPos;
+        spriteAnimation.transform.position = new Vector3(root.manualWidth * data.arrowAnchor.x, root.manualHeight * data.arrowAnchor.y,0f);
         spriteAnimation.SetActive(data.isNeedArrow);
 
         ShowText(data);
@@ -105,6 +109,8 @@ public class TutorialExplaination_Popup : UI_Popup
         else
         {
             Volt_GMUI.S._3dObjectInteractable = true;
+            TutorialData.S.isOnTutorialPopup = false;
+            TutorialData.S.curTutorialIdx++;
             ClosePopupUI();
         }
         

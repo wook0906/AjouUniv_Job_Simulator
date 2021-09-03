@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class TutorialSimulation : PhaseBase
 {
@@ -41,6 +42,29 @@ public class TutorialSimulation : PhaseBase
             Volt_RobotBehavior currentBehaviour = behaviourStack.Pop();
             int currentBehaviourPlayerNumber = currentBehaviour.PlayerNumber;
             yield return StartCoroutine(RobotDoBehaviour(currentBehaviour));
+
+            if (data.round == 2 && currentBehaviourPlayerNumber == 1)
+            {
+                while (TutorialData.S.curTutorialIdx <= 10)
+                {
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    yield return new WaitUntil(() => handle.IsDone);
+                    TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+                    popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+                    yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
+                }
+            }
+            else if (data.round == 2 && currentBehaviourPlayerNumber == 1)
+            {
+                while (TutorialData.S.curTutorialIdx <= 14)
+                {
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    yield return new WaitUntil(() => handle.IsDone);
+                    TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+                    popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+                    yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
+                }
+            }
 
             yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotBehaviourFlagOff());
             yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotIdleState());

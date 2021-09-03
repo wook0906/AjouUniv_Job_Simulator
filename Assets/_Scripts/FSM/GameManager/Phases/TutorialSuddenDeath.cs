@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class TutorialSuddenDeath : PhaseBase
 {
@@ -28,6 +29,15 @@ public class TutorialSuddenDeath : PhaseBase
                 });
             Volt_GMUI.S.guidePanel.ShowSpriteAnimationMSG(GuideMSGType.SuddenDeath, true);
             yield return new WaitForSeconds(2.5f);
+        }
+
+        while (TutorialData.S.curTutorialIdx <= 12)
+        {
+            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+            yield return new WaitUntil(() => handle.IsDone);
+            TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+            popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+            yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
         }
 
         switch (data.round)

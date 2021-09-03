@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  contents: "\uADF8\uB7FC \uC608\uC120\uC804\uC744 \uC9C4\uD589\uD558\uB3C4\uB85D
-    \uD558\uACA0\uC2B5\uB2C8\uB2E4.\n\uC6D0\uD65C\uD55C \uC9C4\uD589\uC744 \uC704\uD574
-    \uB85C\uBD07\uC744 \uBC30\uCE58\uD574 \uC8FC\uC2ED\uC2DC\uC624."
+  contents: "\uC774\uBC88\uC5D0 \uC9C4\uD589\uD558\uB294 \uC608\uC120\uC804\uC5D0\uC11C\uB294\r\nAI\uBD07\uB4E4\uBCF4\uB2E4
+    \uBA3C\uC800 2\uC810\uC744 \uD68D\uB4DD\uD558\uBA74\r\n\uC2B9\uB9AC\uD558\uAC8C
+    \uB429\uB2C8\uB2E4!\r"
   width: 900
-  height: 150
-  position: {x: 0, y: 0, z: 0}
+  height: 200
+  windowAnchor: {x: 0.5, y: 0.5}
   fontSize: 40
   isButton: 1
   isNeedArrow: 0
-  arrowPos: {x: 0, y: 0, z: 0}
+  arrowAnchor: {x: 0.5, y: 0.5}
