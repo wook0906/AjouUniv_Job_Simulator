@@ -45,12 +45,10 @@ public class TutorialPlaceRobot : PhaseBase
     {
         if (game.round == 1)
         {
-            while (TutorialData.S.curTutorialIdx <= 2)
+            while (TutorialData.S.curTutorialIdx <= 1)
             {
-                Debug.Log("????");
                 AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                 yield return new WaitUntil(() => handle.IsDone);
-                Debug.Log("???????????????");
                 TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                 popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
                 yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);

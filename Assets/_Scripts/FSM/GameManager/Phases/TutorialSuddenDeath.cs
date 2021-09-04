@@ -31,7 +31,7 @@ public class TutorialSuddenDeath : PhaseBase
             yield return new WaitForSeconds(2.5f);
         }
 
-        while (TutorialData.S.curTutorialIdx <= 12)
+        while (TutorialData.S.curTutorialIdx <= 11)
         {
             AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
             yield return new WaitUntil(() => handle.IsDone);

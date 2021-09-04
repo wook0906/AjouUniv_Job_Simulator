@@ -42,7 +42,7 @@ public class TutorialSelectBehaviour : PhaseBase
         switch (game.round)
         {
             case 1:
-                while (TutorialData.S.curTutorialIdx <= 4)
+                while (TutorialData.S.curTutorialIdx <= 2)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -52,7 +52,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 2:
-                while (TutorialData.S.curTutorialIdx <= 8)
+                while (TutorialData.S.curTutorialIdx <= 7)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -62,7 +62,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 3:
-                while (TutorialData.S.curTutorialIdx <= 10)
+                while (TutorialData.S.curTutorialIdx <= 12)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -72,7 +72,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 4:
-                while (TutorialData.S.curTutorialIdx <= 19)
+                while (TutorialData.S.curTutorialIdx <= 18)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -139,6 +139,12 @@ public class TutorialSelectBehaviour : PhaseBase
         Volt_Robot robot = Volt_PlayerManager.S.I.playerRobot.GetComponent<Volt_Robot>();
         robot.moduleCardExcutor.SetOnActiveCard(robot.moduleCardExcutor.GetCurEquipCards()[slotNumber], slotNumber);
 
+
+        TutorialData.S.curTutorialIdx++;
+        TutorialData.S.isOnTutorialPopup = false;
+        Volt_GMUI.S._3dObjectInteractable = true;
+        
+        Managers.UI.ClosePopupUI();
 
         Volt_PlayerUI.S.BehaviourSelectOff();
         myBehaviourSelectDone = true;

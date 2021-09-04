@@ -56,9 +56,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 91f013df9c9eb334391ab47de99db32c, type: 2}
   - {fileID: 11400000, guid: 664bfac59f4963f40bc32bb2f598c775, type: 2}
   - {fileID: 11400000, guid: 60f721f3ac221934b91ebaaecb9da40a, type: 2}
+  - {fileID: 11400000, guid: 71a596cd401764047a6619f52e1fddf6, type: 2}
   - {fileID: 11400000, guid: f335c6ba10b12654e85ebe7886351ffc, type: 2}
   - {fileID: 11400000, guid: 1ed452494b25a524182c6691a7f51cb5, type: 2}
   - {fileID: 11400000, guid: 434967419ea572c48936817aea9b2d16, type: 2}
   - {fileID: 11400000, guid: 0179f4bc3ef826744accd5f0e5bef881, type: 2}
   - {fileID: 11400000, guid: aab6327b801ecad408b763ea08af7adb, type: 2}
   - {fileID: 11400000, guid: 4224c48d58c2bf046b3d749310d92b3f, type: 2}
+  isOnTutorialPopup: 0
+  curTutorialIdx: 0

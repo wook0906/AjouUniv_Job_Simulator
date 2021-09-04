@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
-  m_Name: 19
+  m_Name: 0
   m_EditorClassIdentifier: 
-  contents: "\uADF8\uB7FC VP\uCF54\uC778\uC744 \uC2B5\uB4DD\uD558\uC5EC\r\n\uC810\uC218\uB97C
-    \uD68D\uB4DD\uD574 \uBCF4\uC138\uC694!\r"
+  contents: "\uC774\uBC88\uC5D0 \uC9C4\uD589\uD558\uB294 \uC608\uC120\uC804\uC5D0\uC11C\uB294\r\nAI\uBD07\uB4E4\uBCF4\uB2E4
+    \uBA3C\uC800 2\uC810\uC744 \uD68D\uB4DD\uD558\uBA74\r\n\uC2B9\uB9AC\uD558\uAC8C
+    \uB429\uB2C8\uB2E4!\r"
   width: 900
-  height: 150
-  windowAnchor: {x: 0.5, y: 0.5}
+  height: 200
+  windowAnchor: {x: 0, y: 0}
   fontSize: 40
   isButton: 1
   isNeedArrow: 0
-  arrowAnchor: {x: 0.5, y: 0.5}
+  arrowAnchor: {x: 0, y: 0}

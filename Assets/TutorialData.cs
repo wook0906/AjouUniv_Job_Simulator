@@ -11,6 +11,7 @@ public class TutorialData : MonoBehaviour
     public bool isOnTutorialPopup = false;
     public int curTutorialIdx;
 
+
     public void Awake()
     {
         S = this;

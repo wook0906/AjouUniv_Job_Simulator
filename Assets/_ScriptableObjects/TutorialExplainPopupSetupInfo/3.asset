@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  contents: "\uBAA8\uB4C8\uC740 \uC88B\uC740 \uD6A8\uACFC\uB97C \uAC00\uC9C0\uACE0
-    \uC788\uC2B5\uB2C8\uB2E4.\n\uBAA8\uB4C8\uC744 \uC2B5\uB4DD \uD558\uAE30 \uC704\uD574
-    [0000FF]\uC774\uB3D9[-]\uD574 \uBCF4\uC138\uC694!"
+  contents: "\uD68D\uB4DD\uD55C \uBAA8\uB4C8\uC740 \uC5EC\uAE30\r\n\uC624\uB978\uCABD
+    \uC544\uB798\uC758 \uBAA8\uB4C8 \uCE78\uC5D0\uC11C\r\n\uD655\uC778\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4!\r"
   width: 900
-  height: 150
-  windowAnchor: {x: 0.5, y: 0.5}
+  height: 200
+  windowAnchor: {x: 0, y: 0}
   fontSize: 40
-  isButton: 0
-  isNeedArrow: 1
-  arrowAnchor: {x: 0.5, y: 0.5}
+  isButton: 1
+  isNeedArrow: 0
+  arrowAnchor: {x: 0, y: 0}
