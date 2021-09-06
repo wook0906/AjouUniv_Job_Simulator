@@ -148,13 +148,21 @@ public class Volt_PlayerUI : MonoBehaviour
     public void BehaviourSelectOn(BehaviourType behaviourType = BehaviourType.None)
     {
         behaviourPanel.SetActive(true);
-        if(behaviourType == BehaviourType.Move)
+        UIButton atkBtn = behaviourPanel.transform.Find("Attack").GetComponent<UIButton>();
+        UIButton moveBtn = behaviourPanel.transform.Find("Move").GetComponent<UIButton>();
+
+        if (behaviourType == BehaviourType.Move)
         {
-            behaviourPanel.transform.Find("Attack").GetComponent<UIButton>().isEnabled = false;
+            atkBtn.isEnabled = false;
         }
         else if(behaviourType == BehaviourType.Attack)
         {
-            behaviourPanel.transform.Find("Move").GetComponent<UIButton>().isEnabled = false;
+            moveBtn.isEnabled = false;
+        }
+        else
+        {
+            atkBtn.isEnabled = false;
+            moveBtn.isEnabled = false;
         }
     }
     public void BehaviourSelectOff()

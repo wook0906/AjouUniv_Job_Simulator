@@ -20,7 +20,7 @@ public class TutorialSuddenDeath : PhaseBase
     }
     public override IEnumerator Action(GameData data)
     {
-        if (data.round == 2)
+        if (data.round == 3)
         {
             Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/VOLT_Soundsource_20200623/suddendeath_alram.mp3",
                 (result) =>
@@ -29,24 +29,24 @@ public class TutorialSuddenDeath : PhaseBase
                 });
             Volt_GMUI.S.guidePanel.ShowSpriteAnimationMSG(GuideMSGType.SuddenDeath, true);
             yield return new WaitForSeconds(2.5f);
+            
+            while (TutorialData.S.curTutorialIdx <= 12)
+            {
+                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                yield return new WaitUntil(() => handle.IsDone);
+                TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+                popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+                yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
+            }
         }
 
-        while (TutorialData.S.curTutorialIdx <= 11)
-        {
-            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
-            yield return new WaitUntil(() => handle.IsDone);
-            TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
-            popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
-            yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
-        }
+        
 
         switch (data.round)
         {
-            case 2:
-                randomBallistaLaunchPoint = 2;
-                break;
             case 3:
             case 4:
+            case 5:
                 randomBallistaLaunchPoint = 3;
                 break;
             default:

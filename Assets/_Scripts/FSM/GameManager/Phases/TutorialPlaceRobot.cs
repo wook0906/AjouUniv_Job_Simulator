@@ -64,6 +64,46 @@ public class TutorialPlaceRobot : PhaseBase
         }
 
         yield return StartCoroutine(WaitPlaceRobot(game));
+
+        if (game.round == 1)
+        {
+            Card exclusiveCardType = Card.NONE;
+            ModuleType exclusiveModuleType = ModuleType.Max;
+            RobotType exclusiveRobotType = RobotType.Max;
+            switch (game.mapType)
+            {
+                case Define.MapType.TwinCity:
+                    exclusiveCardType = Card.SAWBLADE;
+                    exclusiveModuleType = ModuleType.Attack;
+                    exclusiveRobotType = RobotType.Hound;
+                    break;
+                case Define.MapType.Rome:
+                    exclusiveCardType = Card.DODGE;
+                    exclusiveModuleType = ModuleType.Movement;
+                    exclusiveRobotType = RobotType.Mercury;
+                    break;
+                case Define.MapType.Ruhrgebiet:
+                    exclusiveCardType = Card.SHIELD;
+                    exclusiveModuleType = ModuleType.Tactic;
+                    exclusiveRobotType = RobotType.Reaper;
+                    break;
+                case Define.MapType.Tokyo:
+                    exclusiveCardType = Card.PERNERATE;
+                    exclusiveModuleType = ModuleType.Attack;
+                    exclusiveRobotType = RobotType.Volt;
+                    break;
+                default:
+                    break;
+            }
+
+            foreach (var item in Volt_ArenaSetter.S.robotsInArena)
+            {
+                if (item.playerInfo.RobotType != exclusiveRobotType) continue;
+                Volt_ModuleCardBase exclusiveModule = Instantiate(Volt_ModuleDeck.S.GetModulePrefab(exclusiveModuleType, exclusiveCardType));
+                exclusiveModule.isNeedReturnToDeck = false;
+                item.OnPickupNewModuleCard(exclusiveModule);
+            }
+        }
         phaseDone = true;
 
         GameController.instance.ChangePhase<TutorialSelectBehaviour>();

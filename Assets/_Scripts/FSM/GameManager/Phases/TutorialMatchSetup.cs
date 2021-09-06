@@ -42,7 +42,7 @@ public class TutorialMatchSetup : PhaseBase
         yield return new WaitUntil(() => robotSelectDone);
 
         Volt_PlayerManager.S.CreatePlayer(PlayerType.HOSTPLAYER, 1, SelectedRobot, SkinType.Origin, Volt_PlayerData.instance.NickName);
-        Volt_PlayerManager.S.CreatePlayer(PlayerType.AI, 2, RobotType.Reaper, SkinType.Origin, Volt_Utils.GetRandomKillbotName(RobotType.Reaper));
+        Volt_PlayerManager.S.CreatePlayer(PlayerType.AI, 2, RobotType.Mercury, SkinType.Origin, Volt_Utils.GetRandomKillbotName(RobotType.Mercury));
         Volt_PlayerManager.S.CreatePlayer(PlayerType.AI, 4, RobotType.Reaper, SkinType.Origin, Volt_Utils.GetRandomKillbotName(RobotType.Reaper));
         
         yield return new WaitUntil(() => GameController.instance.gameData.playerDict.Count == 3);

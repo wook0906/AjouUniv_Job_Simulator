@@ -65,9 +65,9 @@ public class TutorialSimulation : PhaseBase
                     yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
                 }
             }
-            else if (data.round == 3 && currentBehaviourPlayerNumber == 3)
+            else if (data.round == 4 && currentBehaviourPlayerNumber == 1)
             {
-                while (TutorialData.S.curTutorialIdx <= 14)
+                while (TutorialData.S.curTutorialIdx <= 15)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -109,7 +109,7 @@ public class TutorialSimulation : PhaseBase
 
         phaseDone = true;
         
-        if(data.round >= 2)
+        if(data.round >= 3)
             GameController.instance.ChangePhase<TutorialSuddenDeath>();
         else
             GameController.instance.ChangePhase<TutorialResolutionTurn>();

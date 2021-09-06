@@ -29,10 +29,9 @@ public class TutorialItemSetup : PhaseBase
             case 2:
                 kitPlaceIdx = 49;
                 break;
-            case 3:
-                break;
-            case 4:
-                vpPlaceIdx = 50;
+
+            case 5:
+                vpPlaceIdx = 58;
                 break;
             default:
                 break;
