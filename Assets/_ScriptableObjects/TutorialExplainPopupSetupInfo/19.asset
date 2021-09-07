@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
   m_Name: 19
   m_EditorClassIdentifier: 
-  contents: "\uADF8\uB7FC VP\uCF54\uC778\uC744 \uC2B5\uB4DD\uD558\uC5EC\r\n\uC810\uC218\uB97C
-    \uD68D\uB4DD\uD574 \uBCF4\uC138\uC694!\r"
+  contents: "\uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4! \uC608\uC120\uC804\uC744 \uBB34\uC0AC\uD788
+    \uD1B5\uACFC\uD558\uC168\uAD70\uC694!"
   width: 900
   height: 150
   windowAnchor: {x: 0, y: 0}

@@ -140,11 +140,7 @@ public class TutorialSimulation : PhaseBase
 
         Debug.Log("Cehck player vp");
 
-        if (player.VictoryPoint >= 2)
-        {
-            phaseDone = true;
-            GameController.instance.ChangePhase<GameOver>();
-        }
+        
 
         foreach (var item in Volt_ArenaSetter.S.robotsInArena)
         {

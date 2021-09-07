@@ -33,13 +33,6 @@ public class TutorialResolutionTurn : PhaseBase
         yield return new WaitUntil(() => Volt_ArenaSetter.S.IsAllTileBlinkOff());
 
 
-        foreach (var item in Volt_PlayerManager.S.GetPlayers())
-        {
-            if (item.VictoryPoint >= 3)
-                yield break;
-        }
-
-
         Volt_GMUI.S.guidePanel.ShowSpriteAnimationMSG(GuideMSGType.RoundEnd, true);
 
         Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/etc/RoundOverSound.wav",
@@ -53,7 +46,7 @@ public class TutorialResolutionTurn : PhaseBase
 
         phaseDone = true;
 
-        if (data.round != 4)
+        if (data.round != 5)
             GameController.instance.ChangePhase<TutorialItemSetup>();
         else
         {

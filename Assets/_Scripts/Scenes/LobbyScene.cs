@@ -104,19 +104,16 @@ public class LobbyScene : BaseScene
 
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0) //게임 플레이하고 왔는지 분기 나눠야할듯...
         {
-            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
-            yield return new WaitUntil(() => handle.IsDone);
-            TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
-
-            TutorialExplainPopupSetupData data = new TutorialExplainPopupSetupData();
-            data.isNeedArrow = false;
-            data.width = 900;
-            data.height = 150;
-            data.fontSize = 40;
-            data.isButton = true;
-            data.contents = "수고하셨습니다, 오퍼레이터님.\n 본선에서 승리하여 슈퍼스타가 되기를 기원하겠습니다.";
-            popUp.SetWindow(data);
+            while (TutorialData.S.curTutorialIdx <= 22)
+            {
+                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                yield return new WaitUntil(() => handle.IsDone);
+                TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+                popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+                yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
+            }
             PlayerPrefs.SetInt("Volt_TutorialDone", 1);
+            Destroy(TutorialData.S.gameObject);
         }
     }
 

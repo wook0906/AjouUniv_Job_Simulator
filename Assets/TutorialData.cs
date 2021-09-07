@@ -15,5 +15,6 @@ public class TutorialData : MonoBehaviour
     public void Awake()
     {
         S = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 }

@@ -63,13 +63,11 @@ public class TutorialSelectRange : PhaseBase
                 targetTile = Volt_ArenaSetter.S.GetTileByIdx(41);
                 break;
             case 3:
+            case 5:
                 targetTile = Volt_ArenaSetter.S.GetTileByIdx(49);
                 break;
             case 4:
                 targetTile = Volt_ArenaSetter.S.GetTileByIdx(39);
-                break;
-            case 5:
-                targetTile = Volt_ArenaSetter.S.GetTileByIdx(58);
                 break;
             default:
                 break;

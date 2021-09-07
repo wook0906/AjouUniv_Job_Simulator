@@ -24,7 +24,7 @@ public class TutorialSelectBehaviour : PhaseBase
         {
             Volt_PlayerUI.S.BehaviourSelectOn();
         }
-        else if (game.gameData.round == 4)
+        else if (game.gameData.round == 4 || game.gameData.round == 5)
         {
             Volt_PlayerUI.S.BehaviourSelectOn(BehaviourType.Attack);
         }
