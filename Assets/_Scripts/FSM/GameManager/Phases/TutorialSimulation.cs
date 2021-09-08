@@ -43,18 +43,18 @@ public class TutorialSimulation : PhaseBase
             int currentBehaviourPlayerNumber = currentBehaviour.PlayerNumber;
             yield return StartCoroutine(RobotDoBehaviour(currentBehaviour));
 
-            if (data.round == 1 && currentBehaviourPlayerNumber == 1)
-            {
-                while (TutorialData.S.curTutorialIdx <= 3)
-                {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
-                    yield return new WaitUntil(() => handle.IsDone);
-                    TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
-                    popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
-                    yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
-                }
-            }
-            else if (data.round == 2 && currentBehaviourPlayerNumber == 1)
+            //if (data.round == 1 && currentBehaviourPlayerNumber == 1)
+            //{
+            //    while (TutorialData.S.curTutorialIdx <= 3)
+            //    {
+            //        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+            //        yield return new WaitUntil(() => handle.IsDone);
+            //        TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
+            //        popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
+            //        yield return new WaitUntil(() => TutorialData.S.isOnTutorialPopup == false);
+            //    }
+            //}
+            if (data.round == 2 && currentBehaviourPlayerNumber == 1)
             {
                 while (TutorialData.S.curTutorialIdx <= 8)
                 {

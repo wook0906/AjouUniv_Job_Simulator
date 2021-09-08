@@ -52,8 +52,27 @@ public class TutorialExplaination_Popup : UI_Popup
         bgSprite.width = data.width;
         bgSprite.height = data.height;
         guideLabel.fontSize = data.fontSize;
-        transform.localPosition = new Vector3(root.manualWidth * data.windowAnchor.x, root.manualHeight * data.windowAnchor.y, 0f);    
-        Debug.Log($"width : {root.manualWidth} , height : {root.manualHeight}, result : {transform.position}");
+        switch (Managers.Scene.CurrentScene.SceneType)
+        {
+            case Define.Scene.Title:
+            case Define.Scene.Lobby:
+            case Define.Scene.Shop:
+                transform.localPosition = new Vector3(root.manualWidth * data.windowAnchor.x, root.manualHeight * data.windowAnchor.y, 0f);
+                Debug.Log($"BasedWidth : {root.manualWidth} , BasedHeight : {root.manualHeight}, result : {transform.position}");
+                break;
+
+            case Define.Scene.Twincity:
+            case Define.Scene.Rome:
+            case Define.Scene.Ruhrgebiet:
+            case Define.Scene.Tokyo:
+            case Define.Scene.ResultScene:
+            case Define.Scene.GameScene:
+                transform.localPosition = new Vector3(Screen.width * data.windowAnchor.x, Screen.height * data.windowAnchor.y, 0f);
+                Debug.Log($"BasedWidth : {Screen.width} , BasedHeight : {Screen.height}, result : {transform.position}");
+                break;
+            default:
+                break;
+        }
         bgButton.isEnabled = data.isButton;
         spriteAnimation.transform.localPosition = new Vector3(root.manualWidth * data.arrowAnchor.x, root.manualHeight * data.arrowAnchor.y,0f);
         spriteAnimation.SetActive(data.isNeedArrow);
