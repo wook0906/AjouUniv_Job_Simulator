@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 21
   m_EditorClassIdentifier: 
   contents: "\uB85C\uBD07\uC758 \uD2B9\uC131\uC740 \uD558\uB2E8\uC758 \uB85C\uBD07
-    \uC774\uB984 \uC606 ?\uBC84\uD2BC\uC744 \uD1B5\uD574 \uD655\uC778 \uD558\uC2E4
+    \uC774\uB984 \uC606 ?\uBC84\uD2BC\uC744 \uD1B5\uD574\n\uD655\uC778 \uD558\uC2E4
     \uC218 \uC788\uC2B5\uB2C8\uB2E4."
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0.16, y: -0.16}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}

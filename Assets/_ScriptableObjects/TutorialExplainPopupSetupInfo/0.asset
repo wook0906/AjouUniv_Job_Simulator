@@ -16,8 +16,8 @@ MonoBehaviour:
     \uC9C4\uD589\uC744 \uC704\uD574 \uB85C\uBD07\uC744 \uBC30\uCE58\uD574 \uC8FC\uC2ED\uC2DC\uC624.\r"
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}

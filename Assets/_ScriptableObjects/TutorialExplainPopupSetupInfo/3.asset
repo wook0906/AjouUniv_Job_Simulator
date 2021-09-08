@@ -17,8 +17,8 @@ MonoBehaviour:
     \uBC14\uB78D\uB2C8\uB2E4!\r"
   width: 900
   height: 200
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}

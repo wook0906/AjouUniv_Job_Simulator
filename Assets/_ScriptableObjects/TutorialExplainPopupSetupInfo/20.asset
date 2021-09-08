@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 20
   m_EditorClassIdentifier: 
   contents: "\uADF8\uB7FC \uC815\uC2DD \uC624\uD37C\uB808\uC774\uD130\uB85C\uC368
-    \uD65C\uC57D\uC744 \uAE30\uB300\uD558\uACA0\uC2B5\uB2C8\uB2E4! \uC218\uACE0\uD558\uC168\uC2B5\uB2C8\uB2E4."
+    \uD65C\uC57D\uC744 \uAE30\uB300\uD558\uACA0\uC2B5\uB2C8\uB2E4!\n\uC218\uACE0\uD558\uC168\uC2B5\uB2C8\uB2E4."
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}

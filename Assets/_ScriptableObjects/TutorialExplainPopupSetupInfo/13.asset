@@ -15,8 +15,8 @@ MonoBehaviour:
   contents: "\uC774\uB7F0! \uB85C\uBD07 \uD2B9\uC131\uC774 \uBC1C\uD604 \uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}

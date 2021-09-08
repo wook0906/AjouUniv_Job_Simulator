@@ -15,8 +15,8 @@ MonoBehaviour:
   contents: "\uADF8\uB7FC \uC9C0\uAE08 \uBC14\uB85C \uC0AC\uC6A9\uD574 \uBCFC\uAE4C\uC694?\r"
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: -0.0625}
   fontSize: 40
-  isButton: 0
+  isButton: 1
   isNeedArrow: 1
-  arrowAnchor: {x: 0, y: 0}
+  arrowAnchor: {x: 0.2, y: 0.06}

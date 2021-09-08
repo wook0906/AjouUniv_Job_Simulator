@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contents: "\uBCF8\uC120\uC5D0\uC11C\uB294 5\uB77C\uC6B4\uB4DC\uC5D0 \uCD5C\uCD08\uB85C
     \uB4F1\uC7A5\uD558\uBA70,\r\n\uADF8 \uC774\uD6C4\uBD80\uD130\uB294 \uC2B5\uB4DD\uB41C
-    \uB77C\uC6B4\uB4DC\uBD80\uD130 5\uB77C\uC6B4\uB4DC\r\n\uB4A4\uC5D0 \uB2E4\uC2DC
-    \uB098\uC624\uAC8C \uB429\uB2C8\uB2E4\r"
+    \uB77C\uC6B4\uB4DC\uBD80\uD130 5\uB77C\uC6B4\uB4DC\r \uB4A4\uC5D0\n\uB2E4\uC2DC
+    \uB098\uC624\uAC8C \uB429\uB2C8\uB2E4\r."
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: 0}
+  windowAnchor: {x: 0, y: -0.0625}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 0
-  arrowAnchor: {x: 0, y: 0}
+  isNeedArrow: 1
+  arrowAnchor: {x: 0.2, y: 0.06}
