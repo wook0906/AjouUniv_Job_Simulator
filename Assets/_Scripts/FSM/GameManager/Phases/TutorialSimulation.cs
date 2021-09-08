@@ -45,7 +45,7 @@ public class TutorialSimulation : PhaseBase
 
             if (data.round == 1 && currentBehaviourPlayerNumber == 1)
             {
-                while (TutorialData.S.curTutorialIdx <= 4)
+                while (TutorialData.S.curTutorialIdx <= 3)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -56,7 +56,7 @@ public class TutorialSimulation : PhaseBase
             }
             else if (data.round == 2 && currentBehaviourPlayerNumber == 1)
             {
-                while (TutorialData.S.curTutorialIdx <= 9)
+                while (TutorialData.S.curTutorialIdx <= 8)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -67,7 +67,7 @@ public class TutorialSimulation : PhaseBase
             }
             else if (data.round == 4 && currentBehaviourPlayerNumber == 1)
             {
-                while (TutorialData.S.curTutorialIdx <= 15)
+                while (TutorialData.S.curTutorialIdx <= 14)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);

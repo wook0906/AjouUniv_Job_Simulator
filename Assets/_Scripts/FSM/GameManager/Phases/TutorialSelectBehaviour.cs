@@ -47,7 +47,7 @@ public class TutorialSelectBehaviour : PhaseBase
         switch (game.round)
         {
             case 1:
-                while (TutorialData.S.curTutorialIdx <= 2)
+                while (TutorialData.S.curTutorialIdx <= 1)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -57,7 +57,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 2:
-                while (TutorialData.S.curTutorialIdx <= 7)
+                while (TutorialData.S.curTutorialIdx <= 6)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -67,7 +67,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 3:
-                while (TutorialData.S.curTutorialIdx <= 10)
+                while (TutorialData.S.curTutorialIdx <= 9)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -77,7 +77,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 4:
-                while (TutorialData.S.curTutorialIdx <= 13)
+                while (TutorialData.S.curTutorialIdx <= 12)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);
@@ -87,7 +87,7 @@ public class TutorialSelectBehaviour : PhaseBase
                 }
                 break;
             case 5:
-                while (TutorialData.S.curTutorialIdx <= 19)
+                while (TutorialData.S.curTutorialIdx <= 18)
                 {
                     AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                     yield return new WaitUntil(() => handle.IsDone);

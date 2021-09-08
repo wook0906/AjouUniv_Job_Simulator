@@ -45,7 +45,7 @@ public class TutorialPlaceRobot : PhaseBase
     {
         if (game.round == 1)
         {
-            while (TutorialData.S.curTutorialIdx <= 1)
+            while (TutorialData.S.curTutorialIdx <= 0)
             {
                 AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
                 yield return new WaitUntil(() => handle.IsDone);
