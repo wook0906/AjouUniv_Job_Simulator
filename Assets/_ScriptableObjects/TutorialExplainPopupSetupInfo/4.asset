@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contents: "\uD68D\uB4DD\uD55C \uBAA8\uB4C8\uC740 \uC5EC\uAE30\r\n\uC624\uB978\uCABD
     \uC544\uB798\uC758 \uBAA8\uB4C8 \uCE78\uC5D0\uC11C\r\n\uD655\uC778\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4!\r"
-  width: 900
+  width: 600
   height: 200
-  windowAnchor: {x: 0.3, y: -0.21}
+  windowAnchor: {x: 0.35, y: -0.21}
   fontSize: 40
   isButton: 1
   isNeedArrow: 1
-  arrowAnchor: {x: 0.2, y: 0.06}
+  arrowAnchor: {x: 0.1, y: 0.06}

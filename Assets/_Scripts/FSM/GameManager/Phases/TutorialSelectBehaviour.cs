@@ -154,8 +154,6 @@ public class TutorialSelectBehaviour : PhaseBase
         Volt_Robot robot = Volt_PlayerManager.S.I.playerRobot.GetComponent<Volt_Robot>();
         robot.moduleCardExcutor.SetOnActiveCard(robot.moduleCardExcutor.GetCurEquipCards()[slotNumber], slotNumber);
 
-
-        TutorialData.S.curTutorialIdx++;
         TutorialData.S.isOnTutorialPopup = false;
         Volt_GMUI.S._3dObjectInteractable = true;
         

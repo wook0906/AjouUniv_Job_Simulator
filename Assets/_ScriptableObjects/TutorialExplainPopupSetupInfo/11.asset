@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 11
   m_EditorClassIdentifier: 
   contents: "\uBCF8\uC120\uC5D0\uC11C\uB294 10\uB77C\uC6B4\uB4DC \uBD80\uD130 \uD65C\uC131\uD654
-    \uB418\uBA70,\r\n\uC11C\uB4E0\uB370\uC2A4\uC5D0 \uC0AC\uB9DD \uC2DC \uC810\uC218\uB97C
-    \uC783\uAC8C \uB429\uB2C8\uB2E4.\r\n\uC870\uC2EC\uD558\uC138\uC694!\r"
+    \uB418\uBA70,\r\n\uAE30\uBB3C\uC5D0 \uCDA9\uB3CC\uD558\uC5EC \uC0AC\uB9DD \uC2DC
+    [F52243]\uC810\uC218\uB97C \uC783\uAC8C[-] \uB429\uB2C8\uB2E4.\r\n\uC870\uC2EC\uD558\uC138\uC694!\r"
   width: 900
-  height: 150
+  height: 180
   windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1

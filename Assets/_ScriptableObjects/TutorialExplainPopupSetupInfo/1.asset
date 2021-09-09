@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contents: "\uBAA8\uB4C8\uC740 \uC88B\uC740 \uD6A8\uACFC\uB97C \uAC00\uC9C0\uACE0
     \uC788\uC2B5\uB2C8\uB2E4.\n\uBAA8\uB4C8\uC744 \uC2B5\uB4DD \uD558\uAE30 \uC704\uD574
-    [0000FF]\uC774\uB3D9[-]\uD574 \uBCF4\uC138\uC694!"
+    \uC774\uB3D9\uD574 \uBCF4\uC138\uC694!"
   width: 900
   height: 150
   windowAnchor: {x: 0, y: -0.0625}
