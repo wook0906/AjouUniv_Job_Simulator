@@ -159,6 +159,11 @@ public class Volt_PlayerUI : MonoBehaviour
         {
             moveBtn.isEnabled = false;
         }
+        else if(behaviourType == BehaviourType.Both)
+        {
+            atkBtn.isEnabled = true;
+            moveBtn.isEnabled = true;
+        }
         else
         {
             atkBtn.isEnabled = false;

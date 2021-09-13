@@ -78,7 +78,7 @@ public class Volt_ArenaSetter : MonoBehaviour
     public List<Volt_Tile> fallTiles2;
 
     //[HideInInspector]
-    public GameObject[] tokyoHologramWalls;
+    public TokyoHologramWall[] tokyoHologramWalls;
     public List<WallDisappearPatternData> tokyoHologramWallDisappearPartterns;
     int curParttern = 0;
 
@@ -1248,18 +1248,32 @@ public class Volt_ArenaSetter : MonoBehaviour
         }
         return true;
     }
+
     public void AppearAllWalls()
     {
+        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Field/powerup_Tokyowall.wav",
+               (result) =>
+               {
+                   Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+               });
         foreach (var item in tokyoHologramWalls)
         {
-            item.gameObject.SetActive(true);
+            if(!item.isShowing)
+                item.Move(false);
         }
     }
+
     public void DisappearWalls()
     {
+        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Field/powerdown_Tokyowall.wav",
+               (result) =>
+               {
+                   Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+               });
         foreach (var item in tokyoHologramWallDisappearPartterns[curParttern].disappearWallNumbers)
         {
-            tokyoHologramWalls[item].gameObject.SetActive(false);
+            if (tokyoHologramWalls[item].isShowing)
+                tokyoHologramWalls[item].Move(true);
         }
         curParttern++;
         if (curParttern >= tokyoHologramWallDisappearPartterns.Count)

@@ -23,7 +23,7 @@ public class SelectBehaviour : PhaseBase
         Volt_GMUI.S.IsTickOn = true;
         Volt_GMUI.S.TickTimer = game.gameData.selectBehaviourTime;
 
-        Volt_PlayerUI.S.BehaviourSelectOn();
+        Volt_PlayerUI.S.BehaviourSelectOn(BehaviourType.Both);
         Volt_PlayerUI.S.ShowModuleButton(true);
 
         StartCoroutine(Action(game.gameData));
@@ -32,6 +32,7 @@ public class SelectBehaviour : PhaseBase
     {
         Volt_PlayerUI.S.BehaviourSelectOff();
         Volt_PlayerUI.S.ShowModuleButton(false);
+        
         Destroy(gameObject.GetComponent<PhaseBase>());
     }
 
@@ -72,8 +73,14 @@ public class SelectBehaviour : PhaseBase
             }
 
             yield return new WaitUntil(() => IsInputBehaviourAllPlayer());
-            
             PacketTransmission.SendBehaviorOrderCompletionPacket();
+
+            foreach (var item in Volt_PlayerManager.S.I.startingTiles)
+            {
+                item.BlinkOn = false;
+            }
+            yield return new WaitUntil(() => Volt_ArenaSetter.S.IsAllTileBlinkOff());
+
             phaseDone = true;
         }
     }

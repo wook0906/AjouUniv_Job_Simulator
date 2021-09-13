@@ -51,8 +51,10 @@ public class ResolutionTurn : PhaseBase
 
         yield return new WaitUntil(() => IsAllResolutionEnd() && SimulationObserver.Instance.IsAllRobotIdleState());
 
-        if (data.mapType == Define.MapType.Tokyo)
+        if (data.mapType == Define.MapType.Tokyo &&
+            data.round %2 == 0)
             Volt_ArenaSetter.S.AppearAllWalls();
+        yield return new WaitForSeconds(1.5f);
 
         SendCurrentGameData();
 

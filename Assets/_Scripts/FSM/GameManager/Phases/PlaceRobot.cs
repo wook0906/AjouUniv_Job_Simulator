@@ -12,8 +12,7 @@ public class PlaceRobot : PhaseBase
 
         Volt_GMUI.S._3dObjectInteractable = true;
 
-        if (game.gameData.mapType == Define.MapType.Tokyo)
-            Volt_ArenaSetter.S.DisappearWalls();
+        
 
         StartCoroutine(Action(game.gameData));
     }
@@ -42,6 +41,13 @@ public class PlaceRobot : PhaseBase
 
     public override IEnumerator Action(GameData game)
     {
+
+        if (game.mapType == Define.MapType.Tokyo &&
+            game.round % 2 == 1)
+            Volt_ArenaSetter.S.DisappearWalls();
+        yield return new WaitForSeconds(1.5f);
+
+
         Volt_GMUI.S.IsTickOn = true;
         Volt_GMUI.S.TickTimer = game.placeRobotTime;
 

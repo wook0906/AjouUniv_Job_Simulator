@@ -8,7 +8,7 @@ public enum ModuleType
 }
 public enum BehaviourType
 {
-    None, Move, Attack
+    None, Move, Attack, Both
 }
 
 public abstract class Volt_ModuleCardBase : MonoBehaviour
