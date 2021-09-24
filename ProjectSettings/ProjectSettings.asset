@@ -174,7 +174,7 @@ PlayerSettings:
     iPhone: com.GFS.VoltMobile
   buildNumber:
     iPhone: 20
-  AndroidBundleVersionCode: 37
+  AndroidBundleVersionCode: 38
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
