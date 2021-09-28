@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006317362623030704}
   - component: {fileID: 1006317362623030705}
-  - component: {fileID: 1006317362623030710}
+  - component: {fileID: 3454484891287435971}
   m_Layer: 5
   m_Name: Yes_Label
   m_TagString: Untagged
@@ -394,7 +394,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1006317362623030710
+--- !u!114 &3454484891287435971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,14 +403,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006317362623030711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC885\uB8CC"
-  eng: Yes
-  german: Yes
-  french: 
+  key: Exit_Popup_Yes
 --- !u!1 &1006317362924732555
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006317362976629208}
   - component: {fileID: 1006317362976629209}
-  - component: {fileID: 1006317362976629214}
+  - component: {fileID: 3220107863224588646}
   m_Layer: 5
   m_Name: No_Label
   m_TagString: Untagged
@@ -603,7 +599,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1006317362976629214
+--- !u!114 &3220107863224588646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,14 +608,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006317362976629215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC544\uB2C8\uC624"
-  eng: No
-  german: No
-  french: 
+  key: Exit_Popup_No
 --- !u!1 &1006317363299554391
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +685,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -730,7 +722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006317363541970831}
   - component: {fileID: 1006317363541970825}
-  - component: {fileID: 1006317363541970824}
+  - component: {fileID: 6736915191302936576}
   m_Layer: 5
   m_Name: Msg_Label
   m_TagString: Untagged
@@ -822,7 +814,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1006317363541970824
+--- !u!114 &6736915191302936576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -831,14 +823,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006317363541970830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC815\uB9D0\uB85C \uC885\uB8CC\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C? "
-  eng: 'Are you sure you want to quit? '
-  german: "Bist du sicher, dass du aufh\xF6ren willst?"
-  french: 
+  key: Exit_Popup_Msg
 --- !u!1 &1006317363645372663
 GameObject:
   m_ObjectHideFlags: 0

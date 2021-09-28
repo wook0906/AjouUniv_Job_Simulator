@@ -212,6 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5464749322282010094}
   - component: {fileID: 5464749322282010095}
+  - component: {fileID: 8539156555707317640}
   m_Layer: 5
   m_Name: Logout_Label
   m_TagString: Untagged
@@ -303,6 +304,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &8539156555707317640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464749322282010089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LoginScene_UI_Logout
 --- !u!1 &5464749322301896389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5464749323084116363}
   - component: {fileID: 5464749323084116360}
+  - component: {fileID: 5164054567453114160}
   m_Layer: 5
   m_Name: GameStart_Label
   m_TagString: Untagged
@@ -1192,6 +1207,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5164054567453114160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464749323084116362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LoginScene_UI_GameStart
 --- !u!1 &5464749323420410556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1512,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

@@ -342,8 +342,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3967970741199461141}
   - component: {fileID: 4219079130980020228}
+  - component: {fileID: 7869279887813182007}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Add_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,6 +434,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &7869279887813182007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504296486021868740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Community_Popup_Add
 --- !u!1 &1625619289435855334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4048677945108800707}
   - component: {fileID: 889275010468174852}
+  - component: {fileID: 6902583353984960171}
   m_Layer: 5
   m_Name: AddFriends_Label
   m_TagString: Untagged
@@ -1383,6 +1398,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &6902583353984960171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135652946626104499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Community_Popup_AddFriends
 --- !u!1 &6551519558156959535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,8 +1595,9 @@ GameObject:
   m_Component:
   - component: {fileID: 751174525548305341}
   - component: {fileID: 5746844672066876750}
+  - component: {fileID: 9135527830904581610}
   m_Layer: 5
-  m_Name: Record_Label
+  m_Name: CommunityTitle_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1658,6 +1687,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9135527830904581610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214096519832912619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Community_Popup_CommunityTitle
 --- !u!1 &8516550181278874863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1840,7 @@ GameObject:
   - component: {fileID: 386538717671740620}
   - component: {fileID: 541187474579834639}
   m_Layer: 5
-  m_Name: Record_BG
+  m_Name: CommunityTitle_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

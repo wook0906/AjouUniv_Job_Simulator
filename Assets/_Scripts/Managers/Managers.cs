@@ -12,12 +12,14 @@ public class Managers : MonoBehaviour
     ResourceManager _resource = new ResourceManager();
     SceneManagerEx _scene = new SceneManagerEx();
     UIManager _ui = new UIManager();
+    LocalizationManager _localization = new LocalizationManager();
 
     public static DataManager Data { get { return Instance._data; } }
     public static PoolManager Pool { get { return Instance._pool; } }
     public static ResourceManager Resource { get { return Instance._resource; } }
     public static SceneManagerEx Scene { get { return Instance._scene; } }
     public static UIManager UI { get { return Instance._ui; } }
+    public static LocalizationManager Localization { get { return Instance._localization; } }
 
     void Start()
     {
@@ -43,6 +45,7 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
             Pool.Init();
+            Localization.Init();
         }
     }
 

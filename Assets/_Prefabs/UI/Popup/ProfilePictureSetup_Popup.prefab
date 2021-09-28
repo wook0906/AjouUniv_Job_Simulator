@@ -2996,6 +2996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751174525548305341}
   - component: {fileID: 5746844672066876750}
+  - component: {fileID: 997740056272470364}
   m_Layer: 5
   m_Name: Title_Label
   m_TagString: Untagged
@@ -3087,6 +3088,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &997740056272470364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214096519832912619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: ProfilePictureSetup_Popup_Title
 --- !u!1 &7456475877803222858
 GameObject:
   m_ObjectHideFlags: 0

@@ -172,7 +172,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1039,9 +1039,9 @@ GameObject:
   m_Component:
   - component: {fileID: 247094806249894696}
   - component: {fileID: 1814586641492200964}
-  - component: {fileID: 6455036421746461253}
+  - component: {fileID: 2502703991931159683}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Hound_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6455036421746461253
+--- !u!114 &2502703991931159683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1140,14 +1140,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1303905561781435883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD558\uC6B4\uB4DC"
-  eng: Hound
-  german: Hound
-  french: 
+  key: EmoticonScene_UI_Hound
 --- !u!1 &1344165569357571260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,9 +1859,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3673579513071944158}
   - component: {fileID: 8099654026268615388}
-  - component: {fileID: 2645237865584111659}
+  - component: {fileID: 3239293180079907950}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Reaper_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1955,7 +1951,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2645237865584111659
+--- !u!114 &3239293180079907950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1964,14 +1960,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3335622685695365573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB9AC\uD37C"
-  eng: Reaper
-  german: Reaper
-  french: 
+  key: EmoticonScene_UI_Reaper
 --- !u!1 &3516497277495512187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,9 +2214,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4468972134610551937}
   - component: {fileID: 1619690267446486641}
-  - component: {fileID: 7242021882734879829}
+  - component: {fileID: 8384338651011878295}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Mercury_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2314,7 +2306,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &7242021882734879829
+--- !u!114 &8384338651011878295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2323,14 +2315,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3969482801352210489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBA38\uD050\uB9AC"
-  eng: Mercury
-  german: Mercury
-  french: 
+  key: EmoticonScene_UI_Mercury
 --- !u!1 &4003250312265887407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2391,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -2762,7 +2750,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -3568,9 +3556,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5217495000532137918}
   - component: {fileID: 2293558504054438673}
-  - component: {fileID: 5476332158017055763}
+  - component: {fileID: 6193587210631027110}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Common_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3660,7 +3648,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5476332158017055763
+--- !u!114 &6193587210631027110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3669,14 +3657,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7063963048566906097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACF5\uD1B5"
-  eng: Common
-  german: Common
-  french: Common
+  key: EmoticonScene_UI_Common
 --- !u!1 &7176657309265303306
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,9 +4169,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1239135355979187506}
   - component: {fileID: 4577536403715828593}
-  - component: {fileID: 4183805966480962298}
+  - component: {fileID: 2955857234679477648}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Volt_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4277,7 +4261,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4183805966480962298
+--- !u!114 &2955857234679477648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4286,11 +4270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9158118862499979117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBCFC\uD2B8"
-  eng: Volt
-  german: Volt
-  french: 
+  key: EmoticonScene_UI_Volt

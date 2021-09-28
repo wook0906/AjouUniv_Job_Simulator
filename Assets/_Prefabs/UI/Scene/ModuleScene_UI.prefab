@@ -2980,7 +2980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3688284695200887099}
   - component: {fileID: 3688284695200887100}
-  - component: {fileID: 3688284695200887101}
+  - component: {fileID: 4434045143021880072}
   m_Layer: 5
   m_Name: AttackTap_Label
   m_TagString: Untagged
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3688284695200887101
+--- !u!114 &4434045143021880072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3081,14 +3081,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3688284695200887098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACF5\uACA9"
-  eng: Attack
-  german: Angriff
-  french: 
+  key: ModuleScene_UI_AttackTap
 --- !u!1 &3688284695383218469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,7 +3241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3688284695660723482}
   - component: {fileID: 3688284695660723483}
-  - component: {fileID: 3688284695660723484}
+  - component: {fileID: 6383374206399666755}
   m_Layer: 5
   m_Name: MoveTap_Label
   m_TagString: Untagged
@@ -3337,7 +3333,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3688284695660723484
+--- !u!114 &6383374206399666755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3346,14 +3342,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3688284695660723481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC774\uB3D9"
-  eng: Movement
-  german: Bewegung
-  french: 
+  key: ModuleScene_UI_MoveTap
 --- !u!1 &3688284695856466183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,7 +3539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3688284695956432567}
   - component: {fileID: 3688284695956432552}
-  - component: {fileID: 3688284695956432568}
+  - component: {fileID: 929504662502786062}
   m_Layer: 5
   m_Name: TacticTap_Label
   m_TagString: Untagged
@@ -3639,7 +3631,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3688284695956432568
+--- !u!114 &929504662502786062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3648,14 +3640,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3688284695956432566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC804\uB7B5"
-  eng: Strategy
-  german: Strategie
-  french: 
+  key: ModuleScene_UI_TacticTap
 --- !u!1 &3688284696102013163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,7 +5111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247867978060494}
   - component: {fileID: 5477247867978060495}
-  - component: {fileID: 1829378030054827419}
+  - component: {fileID: 1360484803130957388}
   m_Layer: 5
   m_Name: RepulsionBlast_Label
   m_TagString: Untagged
@@ -5215,7 +5203,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1829378030054827419
+--- !u!114 &1360484803130957388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5224,14 +5212,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247867978060489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBC18\uB3D9 \uCDA9\uACA9\uD30C"
-  eng: REPULSIONBLAST
-  german: "R\xFCckprall\nSto\xDFwelle"
-  french: 
+  key: ModuleScene_UI_RepulsionBlast
 --- !u!1 &5477247868015860770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,7 +5226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868015860773}
   - component: {fileID: 5477247868015860772}
-  - component: {fileID: 1827914357486267276}
+  - component: {fileID: 5086801543148151073}
   m_Layer: 5
   m_Name: Hacking_Label
   m_TagString: Untagged
@@ -5334,7 +5318,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1827914357486267276
+--- !u!114 &5086801543148151073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5343,16 +5327,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868015860770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD574\uD0B9\uC7A5\uCE58"
-  eng: HACKING
-  german: 'Hacking
-
-    Vorrichtung'
-  french: 
+  key: ModuleScene_UI_Hacking
 --- !u!1 &5477247868024664346
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,7 +5605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868178390226}
   - component: {fileID: 5477247868178390227}
-  - component: {fileID: 5693619208360759086}
+  - component: {fileID: 3887283127572632793}
   m_Layer: 5
   m_Name: Dodge_Label
   m_TagString: Untagged
@@ -5719,7 +5697,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5693619208360759086
+--- !u!114 &3887283127572632793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5728,14 +5706,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868178390229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD68C\uD53C\uAE30\uB3D9"
-  eng: DODGE
-  german: "Ausweich\nman\xF6ver"
-  french: 
+  key: ModuleScene_UI_Dodge
 --- !u!1 &5477247868191024650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868191024653}
   - component: {fileID: 5477247868191024652}
-  - component: {fileID: 6776872758243048485}
+  - component: {fileID: 6949664099431972183}
   m_Layer: 5
   m_Name: Pernerate_Label
   m_TagString: Untagged
@@ -5838,7 +5812,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6776872758243048485
+--- !u!114 &6949664099431972183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5847,14 +5821,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868191024650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAD00\uD1B5\uD0C4"
-  eng: PERNERATE
-  german: Fokussierter Laser
-  french: 
+  key: ModuleScene_UI_Pernerate
 --- !u!1 &5477247868215979469
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,7 +5922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868261767221}
   - component: {fileID: 5477247868261767220}
-  - component: {fileID: 6173553225177640703}
+  - component: {fileID: 3690387331922014570}
   m_Layer: 5
   m_Name: Shield_Label
   m_TagString: Untagged
@@ -6044,7 +6014,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6173553225177640703
+--- !u!114 &3690387331922014570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6053,14 +6023,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868261767218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC274\uB4DC\uC7A5\uCE58"
-  eng: SHIELD
-  german: Schild
-  french: 
+  key: ModuleScene_UI_Shield
 --- !u!1 &5477247868305211021
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,7 +6037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868305211018}
   - component: {fileID: 5477247868305211019}
-  - component: {fileID: 6400965661861516072}
+  - component: {fileID: 416311452967910107}
   m_Layer: 5
   m_Name: Anchor_Label
   m_TagString: Untagged
@@ -6163,7 +6129,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6400965661861516072
+--- !u!114 &416311452967910107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6172,14 +6138,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868305211021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACE0\uC815\uC7A5\uCE58"
-  eng: ANCHOR
-  german: Block
-  french: 
+  key: ModuleScene_UI_Anchor
 --- !u!1 &5477247868383162592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,7 +7028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868609242152}
   - component: {fileID: 5477247868609242153}
-  - component: {fileID: 2303910308355753435}
+  - component: {fileID: 3247129412127433376}
   m_Layer: 5
   m_Name: Powerbeam_Label
   m_TagString: Untagged
@@ -7158,7 +7120,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2303910308355753435
+--- !u!114 &3247129412127433376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7167,14 +7129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868609242159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD30C\uC6CC\uBE54"
-  eng: POWERBEAM
-  german: Power beam
-  french: 
+  key: ModuleScene_UI_Powerbeam
 --- !u!1 &5477247868613581078
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,7 +7143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868613581073}
   - component: {fileID: 5477247868613581072}
-  - component: {fileID: 1424082287580309705}
+  - component: {fileID: 1160092309483355457}
   m_Layer: 5
   m_Name: Shockwave_Label
   m_TagString: Untagged
@@ -7277,7 +7235,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1424082287580309705
+--- !u!114 &1160092309483355457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7286,16 +7244,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868613581078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC804\uC790\uCDA9\uACA9\uD30C"
-  eng: SHOCKWAVE
-  german: 'Elektronen
-
-    schockwelle'
-  french: 
+  key: ModuleScene_UI_Shockwave
 --- !u!1 &5477247868640964661
 GameObject:
   m_ObjectHideFlags: 0
@@ -7306,7 +7258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868640964658}
   - component: {fileID: 5477247868640964659}
-  - component: {fileID: 7115525494131496011}
+  - component: {fileID: 8790516050160842589}
   m_Layer: 5
   m_Name: Grenades_Label
   m_TagString: Untagged
@@ -7398,7 +7350,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &7115525494131496011
+--- !u!114 &8790516050160842589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7407,14 +7359,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868640964661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC218\uB958"
-  eng: GRENADES
-  german: Handgranate
-  french: 
+  key: ModuleScene_UI_Grenades
 --- !u!1 &5477247868682240404
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,7 +7373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247868682240403}
   - component: {fileID: 5477247868682240402}
-  - component: {fileID: 5607588716464125194}
+  - component: {fileID: 778473312446243812}
   m_Layer: 5
   m_Name: Amargeddon_Label
   m_TagString: Untagged
@@ -7517,7 +7465,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5607588716464125194
+--- !u!114 &778473312446243812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7526,14 +7474,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247868682240404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD3ED\uACA9\uC7A5\uCE58"
-  eng: AMARGEDDON
-  german: Bewaffnete Drohne
-  french: 
+  key: ModuleScene_UI_Amargeddon
 --- !u!1 &5477247868702475972
 GameObject:
   m_ObjectHideFlags: 0
@@ -8597,7 +8541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869029427262}
   - component: {fileID: 5477247869029427263}
-  - component: {fileID: 2758636732783044032}
+  - component: {fileID: 7095396556613609288}
   m_Layer: 5
   m_Name: EMP_Label
   m_TagString: Untagged
@@ -8689,7 +8633,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2758636732783044032
+--- !u!114 &7095396556613609288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8698,16 +8642,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869029427257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "EMP\uC7A5\uCE58"
-  eng: EMP
-  german: 'EMP
-
-    Vorrichtung'
-  french: 
+  key: ModuleScene_UI_EMP
 --- !u!1 &5477247869082984507
 GameObject:
   m_ObjectHideFlags: 0
@@ -8718,7 +8656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869082984508}
   - component: {fileID: 5477247869082984509}
-  - component: {fileID: 1990856848263564038}
+  - component: {fileID: 81569277760176223}
   m_Layer: 5
   m_Name: DummyGear_Label
   m_TagString: Untagged
@@ -8810,7 +8748,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1990856848263564038
+--- !u!114 &81569277760176223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8819,14 +8757,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869082984507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB354\uBBF8\uC7A5"
-  eng: DUMMYGEAR
-  german: Attrappe
-  french: 
+  key: ModuleScene_UI_DummyGear
 --- !u!1 &5477247869093451012
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,7 +8946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869131564059}
   - component: {fileID: 5477247869131564058}
-  - component: {fileID: 211358462485681530}
+  - component: {fileID: 7974092541700375172}
   m_Layer: 5
   m_Name: DoubleAttack_Label
   m_TagString: Untagged
@@ -9104,7 +9038,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &211358462485681530
+--- !u!114 &7974092541700375172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9113,14 +9047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869131564060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC18D\uC0AC"
-  eng: DOUBLEATTACK
-  german: Schnellfeuer
-  french: 
+  key: ModuleScene_UI_DoubleAttack
 --- !u!1 &5477247869134947304
 GameObject:
   m_ObjectHideFlags: 0
@@ -9657,7 +9587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869368482755}
   - component: {fileID: 5477247869368482754}
-  - component: {fileID: 4656027791525930336}
+  - component: {fileID: 2205325997537510365}
   m_Layer: 5
   m_Name: TimeBomb_Label
   m_TagString: Untagged
@@ -9749,7 +9679,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4656027791525930336
+--- !u!114 &2205325997537510365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9758,14 +9688,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869368482756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC2DC\uD55C\uD3ED\uD0C4"
-  eng: TIMEBOMB
-  german: Zeitbombe
-  french: 
+  key: ModuleScene_UI_TimeBomb
 --- !u!1 &5477247869384499889
 GameObject:
   m_ObjectHideFlags: 0
@@ -9864,7 +9790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869491746786}
   - component: {fileID: 5477247869491746787}
-  - component: {fileID: 2177221484574317769}
+  - component: {fileID: 4819695589658680679}
   m_Layer: 5
   m_Name: Teleport_Label
   m_TagString: Untagged
@@ -9956,7 +9882,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2177221484574317769
+--- !u!114 &4819695589658680679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9965,16 +9891,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869491746789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC704\uCE58\uAD50\uD658\uAE30"
-  eng: TELEPORT
-  german: 'Position
-
-    stauscher'
-  french: 
+  key: ModuleScene_UI_Teleport
 --- !u!1 &5477247869503518556
 GameObject:
   m_ObjectHideFlags: 0
@@ -10248,7 +10168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869564172598}
   - component: {fileID: 5477247869564172599}
-  - component: {fileID: 3376368314326324249}
+  - component: {fileID: 2015337796482222715}
   m_Layer: 5
   m_Name: SteeringNozzle_Label
   m_TagString: Untagged
@@ -10340,7 +10260,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3376368314326324249
+--- !u!114 &2015337796482222715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10349,14 +10269,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869564172593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC0AC\uC120\uAE30\uB3D9"
-  eng: STEERINGNOZZLE
-  german: "Diagnoale Mobilit\xE4t"
-  french: 
+  key: ModuleScene_UI_SteeringNozzle
 --- !u!1 &5477247869564810510
 GameObject:
   m_ObjectHideFlags: 0
@@ -10543,7 +10459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869694361461}
   - component: {fileID: 5477247869694361460}
-  - component: {fileID: 5337618525510329425}
+  - component: {fileID: 2222976398911798769}
   m_Layer: 5
   m_Name: Bomb_Label
   m_TagString: Untagged
@@ -10635,7 +10551,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5337618525510329425
+--- !u!114 &2222976398911798769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10644,14 +10560,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869694361458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC790\uD3ED\uC7A5\uCE58"
-  eng: BOMB
-  german: "Selbst\nzerst\xF6rung"
-  french: 
+  key: ModuleScene_UI_Bomb
 --- !u!1 &5477247869772489748
 GameObject:
   m_ObjectHideFlags: 0
@@ -10662,7 +10574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477247869772489747}
   - component: {fileID: 5477247869772489746}
-  - component: {fileID: 7618939166167212813}
+  - component: {fileID: 4213688010725698595}
   m_Layer: 5
   m_Name: Sawblade_Label
   m_TagString: Untagged
@@ -10754,7 +10666,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &7618939166167212813
+--- !u!114 &4213688010725698595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10763,14 +10675,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477247869772489748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD1B1\uB0A0\uAC80"
-  eng: SAWBLADE
-  german: "S\xE4geblatt"
-  french: 
+  key: ModuleScene_UI_Sawblade
 --- !u!1 &5477247869807586814
 GameObject:
   m_ObjectHideFlags: 0
@@ -11481,7 +11389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8960316960429673548}
   - component: {fileID: 8960316960429673549}
-  - component: {fileID: 7145094201738642937}
+  - component: {fileID: 127614779265230685}
   m_Layer: 5
   m_Name: CrossFire_Label
   m_TagString: Untagged
@@ -11573,7 +11481,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &7145094201738642937
+--- !u!114 &127614779265230685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11582,14 +11490,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8960316960429673547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC77C\uC81C\uC0AC\uACA9"
-  eng: CROSSFIRE
-  german: Zeitbombe
-  french: 
+  key: ModuleScene_UI_CrossFire
 --- !u!1 &8960316961049632106
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4839277477981263576}
   - component: {fileID: 4839277477981263577}
-  - component: {fileID: 4839277477981263558}
+  - component: {fileID: 2644383991435739636}
   m_Layer: 5
   m_Name: Access_Label
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4839277477981263558
+--- !u!114 &2644383991435739636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,14 +111,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4839277477981263579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC811\uC18D \uC911..."
-  eng: Connecting...
-  german: 
-  french: 
+  key: LoginProgress_Popup_Access
 --- !u!1 &4839277478317920978
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +188,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

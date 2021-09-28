@@ -78,7 +78,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7613818588651787240}
   - component: {fileID: 7613818588651787239}
+  - component: {fileID: 1829457477498420952}
   m_Layer: 5
   m_Name: Yes_Label
   m_TagString: Untagged
@@ -307,6 +308,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1829457477498420952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613818588651787241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: ResetAccount_Popup_Yes
 --- !u!1 &7613818588729029909
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7613818588947174207}
   - component: {fileID: 7613818588947174206}
+  - component: {fileID: 5481006541781518787}
   m_Layer: 5
   m_Name: No_Label
   m_TagString: Untagged
@@ -700,6 +715,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5481006541781518787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613818588947174144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: ResetAccount_Popup_No
 --- !u!1 &7613818589897827431
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8553491028819633535}
   - component: {fileID: 8553491028819633528}
-  - component: {fileID: 8553491028819633529}
+  - component: {fileID: 1984988273510898520}
   m_Layer: 5
   m_Name: Guide_Label
   m_TagString: Untagged
@@ -1043,7 +1071,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8553491028819633529
+--- !u!114 &1984988273510898520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1052,30 +1080,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8553491028819633534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACC4\uC815\uC744 \uC0AD\uC81C\uD560 \uACBD\uC6B0 \uBAA8\uB4E0 \uAC8C\uC784
-    \uB370\uC774\uD130, \uACB0\uC81C\uD558\uC2E0 \uBAA8\uB4E0 \uC0C1\uD488\uB4E4\uACFC
-    \uAD6C\uB9E4\uB0B4\uC5ED\uC774 \uC0AD\uC81C\uB418\uBA70,  \uD0C8\uD1F4\uD6C4\uC5D0\uB294
-    \uBCF5\uAD6C\uAC00 \uBD88\uAC00\uB2A5\uD569\uB2C8\uB2E4. \uC815\uB9D0 \uD0C8\uD1F4\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?\n\n\n[FF0000]\uB2C9\uB124\uC784[-]\uC744
-    \uD558\uB2E8\uC758 \uC785\uB825\uCE78\uC5D0 \uC785\uB825\uD558\uBA74 \uACC4\uC815\uC744
-    \uC0AD\uC81C\uD569\uB2C8\uB2E4."
-  eng: 'If you delete the account, all game data, all products you have paid for,
-    and purchase details will be deleted, and you will not be able to recover it
-    after you withdraw. Are you sure you want to leave?
-
-
-
-
-    Deletes the account
-    by typing the [FF0000]nickname[-] in the bottom input box.'
-  german: "Wenn Sie Ihr Konto l\xF6schen, werden alle Spieldaten, alle Produkte,
-    die Sie bezahlt haben, und die Kaufdetails gel\xF6scht, und nach dem Verlassen
-    des Kontos kann es nicht wiederhergestellt werden. Wollen Sie wirklich austreten?\r\n\r\n\nWenn
-    Sie [FF0000]Nickname[-] in das Eingabefeld unten eingeben, wird das Konto gel\xF6scht."
-  french: 
+  key: ResetAccount_Popup_Guide
 --- !u!1 &8553491029918450460
 GameObject:
   m_ObjectHideFlags: 0

@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821269792381108843}
   - component: {fileID: 8848266289606688776}
-  - component: {fileID: 4929032922624796270}
+  - component: {fileID: 2882810525019033827}
   m_Layer: 5
   m_Name: CustomRoon_Label
   m_TagString: Untagged
@@ -342,7 +342,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4929032922624796270
+--- !u!114 &2882810525019033827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,14 +351,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1566410088367890823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uCEE4\uC2A4\uD140\uAC8C\uC784"
-  eng: Custom Game
-  german: Custom Game
-  french: 
+  key: LobbyScene_UI_CustomRoon
 --- !u!1 &1784131340342139462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1250,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -2691,6 +2687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4909243473552165199}
   - component: {fileID: 4909243473552165195}
+  - component: {fileID: 7800465626634321002}
   m_Layer: 5
   m_Name: GameStart_Label
   m_TagString: Untagged
@@ -2782,6 +2779,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &7800465626634321002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909243473552165198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LobbyScene_UI_GameStart
 --- !u!1 &4909243473716005667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,7 +3858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8031291218807029391}
   - component: {fileID: 8031291218807029384}
-  - component: {fileID: 8031291218807029385}
+  - component: {fileID: 2244324800509270007}
   m_Layer: 5
   m_Name: Training_Label
   m_TagString: Untagged
@@ -3942,7 +3952,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8031291218807029385
+--- !u!114 &2244324800509270007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3951,14 +3961,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8031291218807029390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD2B8\uB808\uC774\uB2DD"
-  eng: Training
-  german: "Training\r"
-  french: 
+  key: LobbyScene_UI_Training
 --- !u!1 &8031291219164617576
 GameObject:
   m_ObjectHideFlags: 0

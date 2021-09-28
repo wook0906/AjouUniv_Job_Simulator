@@ -80,7 +80,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -608,7 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8608243538362062066}
   - component: {fileID: 8608243538362062067}
-  - component: {fileID: 8608243538362062078}
+  - component: {fileID: 8958381911452357570}
   m_Layer: 5
   m_Name: Training_Label
   m_TagString: Untagged
@@ -700,7 +700,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8608243538362062078
+--- !u!114 &8958381911452357570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,14 +709,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8608243538362062077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD2B8\uB808\uC774\uB2DD"
-  eng: Training
-  german: Training
-  french: 
+  key: TrainingMap_Popup_Training
 --- !u!1 &8608243538481070084
 GameObject:
   m_ObjectHideFlags: 0

@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2287697254103392369}
   - component: {fileID: 2287697254103392375}
-  - component: {fileID: 2287697254103392374}
+  - component: {fileID: 4039767454910166170}
   m_Layer: 5
   m_Name: Msg_Label
   m_TagString: Untagged
@@ -248,7 +248,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2287697254103392374
+--- !u!114 &4039767454910166170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,14 +257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2287697254103392368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC911\uBCF5\uB41C \uB2C9\uB124\uC784\uC785\uB2C8\uB2E4."
-  eng: This nickname is taken
-  german: Dieser Spitzname wird bereits verwendet.
-  french: 
+  key: DuplicateNickname_Popup_Msg
 --- !u!1 &2287697254353453394
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2287697254863327560}
   - component: {fileID: 2287697254863327561}
+  - component: {fileID: 6006273455962305041}
   m_Layer: 5
   m_Name: Ok_Label
   m_TagString: Untagged
@@ -467,6 +464,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &6006273455962305041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287697254863327563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DuplicateNickname_Popup_Ok
 --- !u!1 &2287697255236210640
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +653,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

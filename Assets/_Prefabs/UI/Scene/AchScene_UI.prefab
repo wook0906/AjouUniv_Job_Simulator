@@ -292,7 +292,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -591,7 +591,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1009,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6843802772531685728}
   - component: {fileID: 6843802772531685735}
-  - component: {fileID: 6843802772531685730}
+  - component: {fileID: 3927703128791739320}
   m_Layer: 5
   m_Name: Normal_Label
   m_TagString: Untagged
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6843802772531685730
+--- !u!114 &3927703128791739320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1110,14 +1110,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6843802772531685729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC77C\uBC18"
-  eng: Normal
-  german: Normal
-  french: 
+  key: AchScene_UI_Normal
 --- !u!1 &6843802772551569548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6843802772551569555}
   - component: {fileID: 6843802772551569554}
-  - component: {fileID: 6843802772551569549}
+  - component: {fileID: 2740374029760952026}
   m_Layer: 5
   m_Name: Daily_Label
   m_TagString: Untagged
@@ -1220,7 +1216,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &6843802772551569549
+--- !u!114 &2740374029760952026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,14 +1225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6843802772551569548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC77C\uC77C"
-  eng: Daily
-  german: "T\xE4glich"
-  french: 
+  key: AchScene_UI_Daily
 --- !u!1 &6843802772572183680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1306,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1665,7 +1657,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3

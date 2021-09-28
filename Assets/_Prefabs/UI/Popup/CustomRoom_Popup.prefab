@@ -200,7 +200,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -1251,6 +1251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440591666946972825}
   - component: {fileID: 1086944217495127063}
+  - component: {fileID: 615117258404279555}
   m_Layer: 5
   m_Name: InviteList_Label
   m_TagString: Untagged
@@ -1342,6 +1343,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &615117258404279555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007664412611734801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: CustomRoom_Popup_InviteList
 --- !u!1 &8089970573803315304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634975026649576463}
   - component: {fileID: 4902195866153146979}
+  - component: {fileID: 5118058230625743872}
   m_Layer: 5
   m_Name: PlayerList_Label
   m_TagString: Untagged
@@ -1443,6 +1458,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5118058230625743872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089970573803315304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: CustomRoom_Popup_PlayerList
 --- !u!1 &8240447581307089512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1618,7 @@ PrefabInstance:
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -420
       objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
@@ -1665,7 +1693,7 @@ PrefabInstance:
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -280
       objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
@@ -1740,7 +1768,7 @@ PrefabInstance:
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -140
       objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4023432194008115308}
   - component: {fileID: 6567313185583489422}
+  - component: {fileID: 8251177317873049125}
   m_Layer: 5
   m_Name: MatchForNormal_Label
   m_TagString: Untagged
@@ -101,6 +102,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &8251177317873049125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227063817012267230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SelectMatch_Popup_MatchForNormal
 --- !u!1 &682760815540831641
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5414180330715949140}
   - component: {fileID: 5521214421442761305}
+  - component: {fileID: 5898670122868186983}
   m_Layer: 5
   m_Name: MatchForAI_Label
   m_TagString: Untagged
@@ -348,6 +363,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5898670122868186983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757187881383260472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SelectMatch_Popup_MatchForAI
 --- !u!1 &5041157506508415102
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +873,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

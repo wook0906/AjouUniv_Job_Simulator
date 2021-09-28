@@ -204,9 +204,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8176116208385614420}
   - component: {fileID: 2684350953018962787}
-  - component: {fileID: 4988756890744122246}
+  - component: {fileID: 1629161829113520653}
   m_Layer: 5
-  m_Name: Label
+  m_Name: RestorePurchase_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4988756890744122246
+--- !u!114 &1629161829113520653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,14 +305,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2876737181164053209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAD6C\uB9E4 \uBCF5\uC6D0"
-  eng: Restore Purchase
-  german: 
-  french: 
+  key: ShopScene_UI_RestorePurchase
 --- !u!1 &3459852922992056175
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,9 +690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852923119302531}
   - component: {fileID: 3459852923119302589}
-  - component: {fileID: 3459852923119302588}
+  - component: {fileID: 5789626611118745573}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Hound_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,7 +782,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852923119302588
+--- !u!114 &5789626611118745573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -795,14 +791,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852923119302530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD558\uC6B4\uB4DC"
-  eng: Hound
-  german: Hound
-  french: 
+  key: ShopScene_UI_Hound
 --- !u!1 &3459852923153042660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,7 +2168,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -2308,7 +2300,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -3542,9 +3534,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924044282078}
   - component: {fileID: 3459852924044282079}
-  - component: {fileID: 3459852924044282072}
+  - component: {fileID: 6488854073094373733}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Dia_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3634,7 +3626,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924044282072
+--- !u!114 &6488854073094373733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3643,14 +3635,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924044282077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB2E4\uC774\uC544"
-  eng: Diamond
-  german: Diamant
-  french: 
+  key: ShopScene_UI_Dia
 --- !u!1 &3459852924072735369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,9 +3841,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924118691598}
   - component: {fileID: 3459852924118691592}
-  - component: {fileID: 3459852924118691599}
+  - component: {fileID: 6555681353709601528}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Package_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3945,7 +3933,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924118691599
+--- !u!114 &6555681353709601528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3954,14 +3942,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924118691597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD328\uD0A4\uC9C0"
-  eng: Package
-  german: Package
-  french: Package
+  key: ShopScene_UI_Package
 --- !u!1 &3459852924231551203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,9 +3956,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924231551132}
   - component: {fileID: 3459852924231551134}
-  - component: {fileID: 3459852924231551133}
+  - component: {fileID: 1003069572408959085}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Emoticon_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4064,7 +4048,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924231551133
+--- !u!114 &1003069572408959085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4073,14 +4057,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924231551203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC774\uBAA8\uD2F0\uCF58"
-  eng: Emoticon
-  german: Emoticon
-  french: Emoticon
+  key: ShopScene_UI_Emoticon
 --- !u!1 &3459852924235033430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,7 +4134,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3010
+  startingRenderQueue: 3009
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -4329,9 +4309,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924287442249}
   - component: {fileID: 3459852924287442251}
-  - component: {fileID: 3459852924287442250}
+  - component: {fileID: 4142056640206854716}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Reaper_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4421,7 +4401,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924287442250
+--- !u!114 &4142056640206854716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4430,14 +4410,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924287442248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB9AC\uD37C"
-  eng: Reaper
-  german: Reaper
-  french: 
+  key: ShopScene_UI_Reaper
 --- !u!1 &3459852924334973110
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4868,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -5346,9 +5322,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924423918451}
   - component: {fileID: 3459852924423918444}
-  - component: {fileID: 3459852924423918445}
+  - component: {fileID: 3759638268052054821}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Skin_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5438,7 +5414,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924423918445
+--- !u!114 &3759638268052054821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5447,14 +5423,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924423918450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC2A4\uD0A8"
-  eng: Skin
-  german: Aussehen
-  french: 
+  key: ShopScene_UI_Skin
 --- !u!1 &3459852924477086279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,9 +5729,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924556318723}
   - component: {fileID: 3459852924556318781}
-  - component: {fileID: 3459852924556318780}
+  - component: {fileID: 3602083963830453182}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Mercury_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5849,7 +5821,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924556318780
+--- !u!114 &3602083963830453182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5858,14 +5830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924556318722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBA38\uD050\uB9AC"
-  eng: Mercury
-  german: Mercury
-  french: 
+  key: ShopScene_UI_Mercury
 --- !u!1 &3459852924610239186
 GameObject:
   m_ObjectHideFlags: 0
@@ -5963,9 +5931,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924634018328}
   - component: {fileID: 3459852924634018330}
-  - component: {fileID: 3459852924634018329}
+  - component: {fileID: 3790172320576178101}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Gold_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6055,7 +6023,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924634018329
+--- !u!114 &3790172320576178101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6064,14 +6032,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924634018335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACE8\uB4DC"
-  eng: Gold
-  german: Gold
-  french: Gold
+  key: ShopScene_UI_Gold
 --- !u!1 &3459852924642460926
 GameObject:
   m_ObjectHideFlags: 0
@@ -6082,9 +6046,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924642460927}
   - component: {fileID: 3459852924642460920}
-  - component: {fileID: 3459852924642460921}
+  - component: {fileID: 107423885266061399}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Battery_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6174,7 +6138,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924642460921
+--- !u!114 &107423885266061399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6183,14 +6147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924642460926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBC30\uD130\uB9AC"
-  eng: Battery
-  german: "Batterie\r"
-  french: 
+  key: ShopScene_UI_Battery
 --- !u!1 &3459852924668071265
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,7 +6224,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -7054,7 +7014,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -7124,9 +7084,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3459852924831987574}
   - component: {fileID: 3459852924831987568}
-  - component: {fileID: 3459852924831987575}
+  - component: {fileID: 8111077166758651949}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Volt_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7216,7 +7176,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3459852924831987575
+--- !u!114 &8111077166758651949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7225,14 +7185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3459852924831987573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBCFC\uD2B8"
-  eng: Volt
-  german: Volt
-  french: 
+  key: ShopScene_UI_Volt
 --- !u!1 &3459852924839592232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7606,7 +7562,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -7838,7 +7794,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -8004,7 +7960,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3007
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -8205,7 +8161,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3005
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -8522,7 +8478,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3013
+  startingRenderQueue: 3012
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

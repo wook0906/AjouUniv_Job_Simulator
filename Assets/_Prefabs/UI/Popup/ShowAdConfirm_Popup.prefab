@@ -97,9 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054995428916740}
   - component: {fileID: 5120054995428916741}
-  - component: {fileID: 3476351320571324975}
+  - component: {fileID: 5621426550714844675}
   m_Layer: 5
-  m_Name: ProductName_Label
+  m_Name: Msg_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3476351320571324975
+--- !u!114 &5621426550714844675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,17 +199,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5120054995428916743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC624\uD37C\uB808\uC774\uD130\uB2D8, \uAD11\uACE0\uC0AC\uC5D0\uAC8C\uC11C\n\uC5F0\uB77D\uC774
-    \uC654\uC2B5\uB2C8\uB2E4."
-  eng: "\uC624\uD37C\uB808\uC774\uD130\uB2D8, \uAD11\uACE0\uC0AC\uC5D0\uAC8C\uC11C\n\uC5F0\uB77D\uC774
-    \uC654\uC2B5\uB2C8\uB2E4."
-  german: "\uC624\uD37C\uB808\uC774\uD130\uB2D8, \uAD11\uACE0\uC0AC\uC5D0\uAC8C\uC11C\n\uC5F0\uB77D\uC774
-    \uC654\uC2B5\uB2C8\uB2E4."
-  french: 
+  key: ShowAdConfirm_Popup_Msg
 --- !u!1 &5120054995869163052
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +428,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -474,7 +467,7 @@ GameObject:
   - component: {fileID: 5120054996036119723}
   - component: {fileID: 5120054996036119720}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Yes_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,7 +687,7 @@ GameObject:
   - component: {fileID: 5120054996208135775}
   - component: {fileID: 5120054996208135772}
   m_Layer: 5
-  m_Name: Label
+  m_Name: No_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -912,9 +905,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054996394586612}
   - component: {fileID: 5120054996394586613}
-  - component: {fileID: 5120054996394586610}
+  - component: {fileID: 3133388192186233310}
   m_Layer: 5
-  m_Name: SemiWithdrawl_Label
+  m_Name: Notice_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1005,7 +998,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5120054996394586610
+--- !u!114 &3133388192186233310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1014,15 +1007,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5120054996394586615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAD11\uACE0\uB97C \uC9C4\uD589\uD574\uC8FC\uBA74 \uBC30\uD130\uB9AC\uB97C
-    \n\uC81C\uACF5\uD574\uC900\uB2E4\uACE0 \uD569\uB2C8\uB2E4. [FFFF00]\uC218\uB77D\uD560\uAE4C\uC694?[-]"
-  eng: "\uCD94\uAC00\uD574\uC57C\uD568"
-  german: "\uCD94\uAC00\uD574\uC57C\uD568"
-  french: 
+  key: ShowAdConfirm_Popup_Notice
 --- !u!1 &5120054996538175876
 GameObject:
   m_ObjectHideFlags: 0

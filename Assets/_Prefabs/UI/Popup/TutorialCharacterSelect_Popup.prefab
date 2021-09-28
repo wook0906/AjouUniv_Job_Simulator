@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3025596823066837008}
   - component: {fileID: 3025596823066837022}
-  - component: {fileID: 3025596823066837009}
+  - component: {fileID: 4316079551172839265}
   m_Layer: 5
   m_Name: ReaperLabel
   m_TagString: Untagged
@@ -248,7 +248,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3025596823066837009
+--- !u!114 &4316079551172839265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,14 +257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3025596823066837011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB9AC\uD37C"
-  eng: Reaper
-  german: Reaper
-  french: 
+  key: TutorialCharacterSelect_Popup_Reaper
 --- !u!1 &3025596823137342708
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3025596823934624396}
   - component: {fileID: 3025596823934624394}
-  - component: {fileID: 3025596823934624397}
+  - component: {fileID: 2967085845054019998}
   m_Layer: 5
   m_Name: HoundLabel
   m_TagString: Untagged
@@ -513,7 +509,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3025596823934624397
+--- !u!114 &2967085845054019998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,14 +518,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3025596823934624399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD558\uC6B4\uB4DC"
-  eng: Hound
-  german: Hound
-  french: 
+  key: TutorialCharacterSelect_Popup_Hound
 --- !u!1 &3521989576693031175
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3521989577465566112}
   - component: {fileID: 3521989577465566113}
-  - component: {fileID: 3521989577465566142}
+  - component: {fileID: 1127692785869634034}
   m_Layer: 5
   m_Name: MercuryLabel
   m_TagString: Untagged
@@ -886,7 +878,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3521989577465566142
+--- !u!114 &1127692785869634034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -895,14 +887,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3521989577465566115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBA38\uD050\uB9AC"
-  eng: Mercury
-  german: Mercury
-  french: 
+  key: TutorialCharacterSelect_Popup_Mercury
 --- !u!1 &3521989577705299678
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3521989577705299679}
   - component: {fileID: 3521989577705299676}
-  - component: {fileID: 3521989577705299677}
+  - component: {fileID: 8669766611444333247}
   m_Layer: 5
   m_Name: VoltLabel
   m_TagString: Untagged
@@ -1005,7 +993,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &3521989577705299677
+--- !u!114 &8669766611444333247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1014,14 +1002,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3521989577705299678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBCFC\uD2B8"
-  eng: Volt
-  german: Volt
-  french: 
+  key: TutorialCharacterSelect_Popup_Volt
 --- !u!1 &3521989577907502970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,7 +1327,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1380,8 +1364,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3634975026649576463}
   - component: {fileID: 4902195866153146979}
+  - component: {fileID: 6446233380429547972}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Guide_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,3 +1457,16 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &6446233380429547972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089970573803315304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TutorialCharacterSelect_Popup_Guide

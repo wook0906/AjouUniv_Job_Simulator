@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8898374477639484757}
   - component: {fileID: 8898374477639484756}
-  - component: {fileID: 8898374477639484759}
+  - component: {fileID: 6723941676588832368}
   m_Layer: 5
   m_Name: Guid_Label_2
   m_TagString: Untagged
@@ -357,7 +357,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8898374477639484759
+--- !u!114 &6723941676588832368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,14 +366,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8898374477639484754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB2C9\uB124\uC784\uC740 \uBCC0\uACBD\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
-  eng: You cannot change the nickname.
-  german: "Der Nickname kann nicht ge\xE4ndert werden."
-  french: 
+  key: AccountMaker_Popup_Guide2
 --- !u!1 &8898374477697597036
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8898374477950951846}
   - component: {fileID: 8898374477950951848}
-  - component: {fileID: 8898374477950951849}
+  - component: {fileID: 3422013885830521669}
   m_Layer: 5
   m_Name: Guid_Label_0
   m_TagString: Untagged
@@ -578,7 +574,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8898374477950951849
+--- !u!114 &3422013885830521669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -587,15 +583,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8898374477950951847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC22B\uC790, \uC601\uBB38 2~12\uC790\uAE4C\uC9C0 \uC0DD\uC131\uD560 \uC218
-    \uC788\uC2B5\uB2C8\uB2E4."
-  eng: 2 ~ 12 characters in numbers and English.
-  german: Zahlen und 2 ~ 12 Zeichen in Englisch.
-  french: 
+  key: AccountMaker_Popup_Guide0
 --- !u!1 &8898374478104861455
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8898374478104861454}
   - component: {fileID: 8898374478104861681}
-  - component: {fileID: 8898374478104861680}
+  - component: {fileID: 6872715392982368158}
   m_Layer: 5
   m_Name: Guid_Label_1
   m_TagString: Untagged
@@ -698,7 +689,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8898374478104861680
+--- !u!114 &6872715392982368158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -707,14 +698,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8898374478104861455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD2B9\uC218\uBB38\uC790\uB294 \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
-  eng: Special characters cannot be created.
-  german: "Sonderzeichen k\xF6nnen nicht erstellt werden."
-  french: 
+  key: AccountMaker_Popup_Guide1
 --- !u!1 &8898374478121210893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1146,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3010
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1196,6 +1183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8898374479146628634}
   - component: {fileID: 8898374479146628637}
+  - component: {fileID: 9207362282167524674}
   m_Layer: 5
   m_Name: Ok_Label
   m_TagString: Untagged
@@ -1287,3 +1275,16 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9207362282167524674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898374479146628635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: AccountMaker_Popup_Ok

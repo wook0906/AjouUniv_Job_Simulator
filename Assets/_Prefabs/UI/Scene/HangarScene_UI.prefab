@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312547489022729206}
   - component: {fileID: 312547489022729211}
-  - component: {fileID: 312547489022729204}
+  - component: {fileID: 8046547412727953559}
   m_Layer: 5
   m_Name: Equipped_Label
   m_TagString: Untagged
@@ -231,7 +231,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &312547489022729204
+--- !u!114 &8046547412727953559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,14 +240,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 312547489022729207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC7A5\uCC29\uB428"
-  eng: Embedded
-  german: Eingebaut
-  french: 
+  key: HangarScene_UI_Equipped
 --- !u!1 &312547489044221772
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +730,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -771,7 +767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312547489366844751}
   - component: {fileID: 312547489366844750}
-  - component: {fileID: 312547489366844745}
+  - component: {fileID: 7701345561182176066}
   m_Layer: 5
   m_Name: Buy_Label
   m_TagString: Untagged
@@ -863,7 +859,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &312547489366844745
+--- !u!114 &7701345561182176066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,14 +868,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 312547489366844744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAD6C\uB9E4\uD558\uAE30"
-  eng: Purchase
-  german: Kaufes
-  french: 
+  key: HangarScene_UI_Buy
 --- !u!1 &312547489378742781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312547490229596537}
   - component: {fileID: 312547490229596541}
-  - component: {fileID: 312547490229596539}
+  - component: {fileID: 2717720916748113077}
   m_Layer: 5
   m_Name: Equip_Label
   m_TagString: Untagged
@@ -1497,7 +1489,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &312547490229596539
+--- !u!114 &2717720916748113077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1506,14 +1498,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 312547490229596538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC7A5\uCC29\uD558\uAE30"
-  eng: Equip
-  german: Besitzen
-  french: 
+  key: HangarScene_UI_Equip
 --- !u!1 &312547490300266528
 GameObject:
   m_ObjectHideFlags: 0

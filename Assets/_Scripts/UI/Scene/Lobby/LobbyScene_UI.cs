@@ -48,6 +48,7 @@ public class LobbyScene_UI : UI_Scene
         GameStart_Label,
         Training_Label,
         Level_Label,
+        CustomRoon_Label,
     }
     private Volt_LobbyRobotViewSection robotViewSection;
     private GameObject startGameBtnOutlieEffect;

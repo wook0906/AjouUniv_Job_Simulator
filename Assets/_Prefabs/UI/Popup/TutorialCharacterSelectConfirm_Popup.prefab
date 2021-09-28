@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4177815114671258342}
   - component: {fileID: 6642919928610109928}
+  - component: {fileID: 2825005457423992684}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Guide1_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +103,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &2825005457423992684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862926865424597437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TutorialCharacterSelectConfirm_Popup_Guide1
 --- !u!1 &4481963070363923202
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +189,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -212,9 +226,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4481963070619226773}
   - component: {fileID: 4481963070619226771}
-  - component: {fileID: 4481963070619226770}
+  - component: {fileID: 6239951363651689706}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Confirm_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +318,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4481963070619226770
+--- !u!114 &6239951363651689706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,14 +327,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4481963070619226772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB2E4\uC74C"
-  eng: Next
-  german: Next
-  french: 
+  key: TutorialCharacterSelectConfirm_Popup_Confirm
 --- !u!1 &4481963071013042420
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,9 +341,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4481963071013042421}
   - component: {fileID: 4481963071013042419}
-  - component: {fileID: 4481963071013042418}
+  - component: {fileID: 7605383863486228177}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Cancel_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +433,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &4481963071013042418
+--- !u!114 &7605383863486228177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,14 +442,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4481963071013042420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uCDE8\uC18C"
-  eng: Cancel
-  german: Cancel
-  french: 
+  key: TutorialCharacterSelectConfirm_Popup_Cancel
 --- !u!1 &4481963071097990733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,8 +1165,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1744761424514127304}
   - component: {fileID: 8335390300153618832}
+  - component: {fileID: 6485174385904817344}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Guide0_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,3 +1257,16 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &6485174385904817344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871731343447882817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TutorialCharacterSelectConfirm_Popup_Guide0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6249601830846059789}
   - component: {fileID: 2891448666412735093}
+  - component: {fileID: 4585507141200809367}
   m_Layer: 5
   m_Name: PlayLog
   m_TagString: Untagged
@@ -101,6 +102,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &4585507141200809367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94106102778073916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_PlayLog
 --- !u!1 &162169818423531466
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2470094187333809957}
   - component: {fileID: 445328148010895967}
+  - component: {fileID: 1454572719299903046}
   m_Layer: 5
   m_Name: Death_Label
   m_TagString: Untagged
@@ -202,6 +217,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1454572719299903046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162169818423531466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_Death
 --- !u!1 &702151763197627301
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +430,7 @@ GameObject:
   - component: {fileID: 3250938728174816445}
   - component: {fileID: 2516115665764432792}
   m_Layer: 5
-  m_Name: Game Log_BG
+  m_Name: GameLog_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970957909797802285}
   - component: {fileID: 8088307618119470300}
+  - component: {fileID: 4385000566482537402}
   m_Layer: 5
   m_Name: WinPlay_Label
   m_TagString: Untagged
@@ -580,6 +609,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &4385000566482537402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115993324832151838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_WinPlay
 --- !u!1 &1448682323748620567
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,8 +731,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8696438717368080027}
   - component: {fileID: 6570020178178148001}
+  - component: {fileID: 950277095484953916}
   m_Layer: 5
-  m_Name: Game Log
+  m_Name: GameLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,6 +823,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &950277095484953916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395542549862192977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_GameLog
 --- !u!1 &2527421990418804554
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +847,7 @@ GameObject:
   - component: {fileID: 7907950697754832210}
   - component: {fileID: 5365040399634220010}
   m_Layer: 5
-  m_Name: StateMSGSave_Btn
+  m_Name: StateMSGSave_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2015,7 +2071,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -2344,6 +2400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3722527240767298071}
   - component: {fileID: 5753673390144873273}
+  - component: {fileID: 9138135437537501489}
   m_Layer: 5
   m_Name: Kill_Label
   m_TagString: Untagged
@@ -2435,6 +2492,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9138135437537501489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951981999062002961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_Kill
 --- !u!1 &7190005554682134168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6794167162182501167}
   - component: {fileID: 6185506783355628729}
+  - component: {fileID: 1010381039993980640}
   m_Layer: 5
   m_Name: TotalPlay_Label
   m_TagString: Untagged
@@ -2536,6 +2607,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1010381039993980640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190005554682134168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_TotalPlay
 --- !u!1 &8164597930873786751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3995629998081568297}
   - component: {fileID: 4869374801876392817}
+  - component: {fileID: 9216043940337617043}
   m_Layer: 5
   m_Name: DefeatPlay_Label
   m_TagString: Untagged
@@ -2637,6 +2722,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9216043940337617043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164597930873786751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MyProfile_Popup_DefeatPlay
 --- !u!1 &9072665239577479109
 GameObject:
   m_ObjectHideFlags: 0

@@ -219,7 +219,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -357,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7419185364521319752}
   - component: {fileID: 7419185364521319758}
-  - component: {fileID: 7419185364521319759}
+  - component: {fileID: 5168490704979241902}
   m_Layer: 5
   m_Name: Msg_Label
   m_TagString: Untagged
@@ -449,7 +449,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &7419185364521319759
+--- !u!114 &5168490704979241902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -458,14 +458,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7419185364521319753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAE00\uC790 \uC218\uB294 2 ~ 12\uC790\uB85C \uC81C\uD55C\uB418\uC5B4 \uC788\uC2B5\uB2C8\uB2E4."
-  eng: The number of characters is limited to 2 ~ 12.
-  german: Die Anzahl der Buchstaben ist auf 2 ~ 12 begrenzt.
-  french: "Le nombre de caract\xE8res est limit\xE9 \xE0 2 ~ 12."
+  key: NicknameLimitLengthExceeded_Popup_Msg
 --- !u!1 &7419185364597886722
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7419185364597886721}
   - component: {fileID: 7419185364597886720}
+  - component: {fileID: 319899134653913138}
   m_Layer: 5
   m_Name: Ok_Label
   m_TagString: Untagged
@@ -567,6 +564,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &319899134653913138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419185364597886722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: NicknameLimitLengthExceeded_Popup_Ok
 --- !u!1 &7419185364966396133
 GameObject:
   m_ObjectHideFlags: 0

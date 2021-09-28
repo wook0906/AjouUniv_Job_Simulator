@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3995373686473861495}
   - component: {fileID: -6958337789086718371}
   m_Layer: 5
-  m_Name: ReconnectWaitBlcok_Popup
+  m_Name: ReconnectWaitBlock_Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8998113645223525841}
   - component: {fileID: 8998113645223525846}
-  - component: {fileID: 8998113645223525847}
+  - component: {fileID: 6300919963488480747}
   m_Layer: 5
   m_Name: Msg_Label
   m_TagString: Untagged
@@ -303,7 +303,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8998113645223525847
+--- !u!114 &6300919963488480747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,14 +312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8998113645223525840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB2E4\uC2DC \uC5F0\uACB0 \uC911..."
-  eng: Reconnecting...
-  german: Wiederverbindung...
-  french: 
+  key: ReconnectWaitBlock_Popup_Msg
 --- !u!1 &8998113645369415191
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8998113645369415188}
   - component: {fileID: 8998113645369415189}
-  - component: {fileID: 8998113645369415194}
+  - component: {fileID: 7285237382140478094}
   m_Layer: 5
   m_Name: NoticeLabel
   m_TagString: Untagged
@@ -422,7 +418,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8998113645369415194
+--- !u!114 &7285237382140478094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -431,14 +427,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8998113645369415191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uB2E4\uC74C \uB77C\uC6B4\uB4DC\uAE4C\uC9C0 \uAE30\uB2E4\uB9AC\uC138\uC694."
-  eng: Wait untill the next round.
-  german: "Warten Sie auf die \nn\xE4chste Runde."
-  french: 
+  key: ReconnectWaitBlock_Popup_Notice
 --- !u!1 &8998113645369597197
 GameObject:
   m_ObjectHideFlags: 0

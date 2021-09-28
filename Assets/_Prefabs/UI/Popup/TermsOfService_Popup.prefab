@@ -475,8 +475,9 @@ GameObject:
   m_Component:
   - component: {fileID: 849201867}
   - component: {fileID: 849201868}
+  - component: {fileID: 2064954682911767959}
   m_Layer: 5
-  m_Name: Label
+  m_Name: PC_Toggle_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,6 +567,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &2064954682911767959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849201866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TermsOfService_Popup_PC_Toggle
 --- !u!1 &911745644
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572913581}
   - component: {fileID: 1572913582}
+  - component: {fileID: 3056203487328233848}
   m_Layer: 5
   m_Name: PC_TitleLabel
   m_TagString: Untagged
@@ -841,6 +856,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &3056203487328233848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572913580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TermsOfService_Popup_PC_Title
 --- !u!1 &1836304455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,8 +1450,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3829406359124606609}
   - component: {fileID: 540565436044040230}
+  - component: {fileID: 7985851422139004873}
   m_Layer: 5
-  m_Name: Label
+  m_Name: TOS_Toggle_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,6 +1542,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &7985851422139004873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102260045623686573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TermsOfService_Popup_TOS_Toggle
 --- !u!1 &1124744523375769536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4923886484088798512}
   - component: {fileID: 1314093101000896032}
+  - component: {fileID: 9044283586303925761}
   m_Layer: 5
   m_Name: ServiceTOSTitle_Label
   m_TagString: Untagged
@@ -2131,6 +2174,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9044283586303925761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4440042785153883966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TermsOfService_Popup_ServiceTOSTitle
 --- !u!1 &4833665767489538866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,7 +2623,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3010
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -2936,6 +2992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634975026649576463}
   - component: {fileID: 4902195866153146979}
+  - component: {fileID: 1277961906562164836}
   m_Layer: 5
   m_Name: TOS_TitleLabel
   m_TagString: Untagged
@@ -3027,3 +3084,16 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1277961906562164836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089970573803315304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TermsOfService_Popup_TOS_Title

@@ -18,6 +18,7 @@ public class DataManager
 
     public VFXPoolData VFXPoolData { private set; get; } = null;
     public ObjectPoolData ObjectData { private set; get; } = null;
+
     public void Init()
     {
         skinDatasLoadHandle = Addressables.LoadAssetsAsync<RobotSkinObject>("SkinDatas",

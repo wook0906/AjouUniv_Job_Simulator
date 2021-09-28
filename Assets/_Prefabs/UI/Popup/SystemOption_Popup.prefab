@@ -341,13 +341,7 @@ MonoBehaviour:
   mValue: 1
   mFill: 0
   numberOfSteps: 0
-  onChange:
-  - mTarget: {fileID: 0}
-    mMethodName: OnValueChanged
-    mParameters:
-    - obj: {fileID: 5041157506684109014}
-      field: 
-    oneShot: 0
+  onChange: []
   foreground: {fileID: 0}
   rawValue: 1
   direction: 2
@@ -517,7 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041157506764547884}
   - component: {fileID: 5041157506764547885}
-  - component: {fileID: 5041157506764547890}
+  - component: {fileID: 649022421186385914}
   m_Layer: 5
   m_Name: Option_Label
   m_TagString: Untagged
@@ -609,7 +603,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5041157506764547890
+--- !u!114 &649022421186385914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -618,14 +612,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5041157506764547891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC635\uC158"
-  eng: Option
-  german: "Option\r"
-  french: 
+  key: SystemOption_Popup_Option
 --- !u!1 &5041157506896743672
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041157506919021427}
   - component: {fileID: 5041157506919021420}
+  - component: {fileID: 7432924254332658183}
   m_Layer: 5
   m_Name: BGM_Label
   m_TagString: Untagged
@@ -816,6 +807,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &7432924254332658183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041157506919021426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SystemOption_Popup_BGM
 --- !u!1 &5041157506927394876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041157507115069982}
   - component: {fileID: 5041157507115069983}
+  - component: {fileID: 8247472033461500942}
   m_Layer: 5
   m_Name: Volume_Label
   m_TagString: Untagged
@@ -1108,6 +1113,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &8247472033461500942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041157507115069981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SystemOption_Popup_Volume
 --- !u!1 &5041157507176805794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,13 +1321,7 @@ MonoBehaviour:
   mValue: 1
   mFill: 0
   numberOfSteps: 0
-  onChange:
-  - mTarget: {fileID: 0}
-    mMethodName: OnValueChanged
-    mParameters:
-    - obj: {fileID: 5041157507216873615}
-      field: 
-    oneShot: 0
+  onChange: []
   foreground: {fileID: 0}
   rawValue: 1
   direction: 2
@@ -1916,7 +1928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041157508510150152}
   - component: {fileID: 5041157508510150153}
-  - component: {fileID: 5041157508510150158}
+  - component: {fileID: 3053187859664710840}
   m_Layer: 5
   m_Name: ResetAccount_Label
   m_TagString: Untagged
@@ -2008,7 +2020,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5041157508510150158
+--- !u!114 &3053187859664710840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2017,14 +2029,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5041157508510150159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uACC4\uC815 \uCD08\uAE30\uD654"
-  eng: Reset the account
-  german: Reset the account
-  french: 
+  key: SystemOption_Popup_ResetAccount
 --- !u!1 &5041157508572491637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2112,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

@@ -116,13 +116,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 0}
-    mMethodName: OnPressdownCloseButton
-    mParameters:
-    - obj: {fileID: 6639584916885290468}
-      field: 
-    oneShot: 0
+  onClick: []
 --- !u!65 &6639584915708060728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164,7 +158,7 @@ GameObject:
   - component: {fileID: 6639584916386350898}
   - component: {fileID: 6639584916386350899}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Fail_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +276,7 @@ GameObject:
   - component: {fileID: 6639584916454527724}
   - component: {fileID: 6639584916454527723}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Ok_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054995428916740}
   - component: {fileID: 5120054995428916741}
+  - component: {fileID: 9214939429556471276}
   m_Layer: 5
   m_Name: Notice_Label
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &9214939429556471276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120054995428916743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: ResetAccountCompleted_Popup_Notice
 --- !u!1 &5120054995979521992
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,9 +229,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054996036119722}
   - component: {fileID: 5120054996036119723}
-  - component: {fileID: 5120054996036119720}
+  - component: {fileID: 7310630083783001325}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Ok_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +321,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5120054996036119720
+--- !u!114 &7310630083783001325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,14 +330,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5120054996036119725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD655\uC778"
-  eng: Ok
-  german: Get
-  french: 
+  key: ResetAccountCompleted_Popup_Ok
 --- !u!1 &5120054996132522112
 GameObject:
   m_ObjectHideFlags: 0

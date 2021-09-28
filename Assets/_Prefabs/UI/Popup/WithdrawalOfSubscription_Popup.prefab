@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1242643371460658379}
   - component: {fileID: 1242643371460658377}
-  - component: {fileID: 1242643371460658376}
+  - component: {fileID: 5806375142851634069}
   m_Layer: 5
-  m_Name: Content
+  m_Name: WithdrawalContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1242643371460658376
+--- !u!114 &5806375142851634069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,25 +124,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1242643371460658378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uC0C1\uD488\uC744 \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uC740 \uACBD\uC6B0 7\uC77C
-    \uB0B4 \uCCAD\uC57D\uCCA0\uD68C\uAC00 \uAC00\uB2A5\uD558\uBA70,\n\uBC95\uC815\uB300\uB9AC\uC778\uC758
-    \uB3D9\uC758\uB97C \uBC1B\uC9C0 \uC54A\uC740 \uBBF8\uC131\uB144\uC790 \uAC70\uB798\uB294
-    \uCDE8\uC18C\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n(\uB2E8, \uACB0\uC81C\uAC00
-    \uC9C4\uD589\uB41C \uD734\uB300\uD3F0 \uB610\uB294 \uC2E0\uC6A9\uCE74\uB4DC \uB4F1
-    \uACB0\uC81C \uC218\uB2E8\uC758 \uBA85\uC758\uC790\uAC00 \uC131\uB144\uC77C \uACBD\uC6B0\uC5D0\uB294
-    \uCDE8\uC18C\uAC00 \uC81C\uD55C\uB429\uB2C8\uB2E4.)\n\n[ff0000]\uB2E4\uC74C\uACFC
-    \uAC19\uC740 \uACBD\uC6B0, \uC720\uB8CC \uC11C\uBE44\uC2A4\uC758 \uCCAD\uC57D
-    \uCCA0\uD68C\uAC00 \uC81C\uD55C\uB420 \uC218 \uC788\uC2B5\uB2C8\uB2E4.[-]\n\n1.
-    \uAD6C\uB9E4 \uD6C4 \uC989\uC2DC \uC0AC\uC6A9\uC774 \uC2DC\uC791\uB418\uAC70\uB098
-    \uC11C\uBE44\uC2A4\uC5D0 \uBC14\uB85C \uC801\uC6A9\uB418\uB294 \uC544\uC774\uD15C\uC758
-    \uACBD\uC6B0 ex)\uC2A4\uD0A8"
-  eng: 
-  german: 
-  french: 
+  key: WithdrawalOfSubscription_Popup_Confirm
 --- !u!1 &1242643371537676528
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +138,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1242643371537676529}
   - component: {fileID: 1242643371537676494}
+  - component: {fileID: 8844239638844944910}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Confirm_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,6 +230,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &8844239638844944910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242643371537676528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: WithdrawalOfSubscription_Popup_Confirm
 --- !u!1 &1242643371784067434
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242643372146126042}
   - component: {fileID: 1242643372146126040}
-  - component: {fileID: 1242643372146126043}
+  - component: {fileID: 8193817364721012934}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -475,7 +474,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &1242643372146126043
+--- !u!114 &8193817364721012934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,14 +483,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1242643372146126045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uCCAD\uC57D \uCCA0\uD68C"
-  eng: "\uCCAD\uC57D \uCCA0\uD68C"
-  german: "\uCCAD\uC57D \uCCA0\uD68C"
-  french: "\uCCAD\uC57D \uCCA0\uD68C"
+  key: WithdrawalOfSubscription_Popup_Title
 --- !u!1 &1242643372502308209
 GameObject:
   m_ObjectHideFlags: 0

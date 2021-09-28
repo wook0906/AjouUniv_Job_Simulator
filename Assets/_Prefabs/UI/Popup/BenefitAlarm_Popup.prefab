@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054995428916740}
   - component: {fileID: 5120054995428916741}
+  - component: {fileID: 210306583387354662}
   m_Layer: 5
   m_Name: Notice_Label
   m_TagString: Untagged
@@ -101,6 +102,19 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &210306583387354662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120054995428916743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BenefitAlarm_Popup_Notice
 --- !u!1 &5120054995979521992
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +190,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -213,9 +227,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5120054996036119722}
   - component: {fileID: 5120054996036119723}
-  - component: {fileID: 5120054996036119720}
+  - component: {fileID: 7268465817869986741}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Get_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +319,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &5120054996036119720
+--- !u!114 &7268465817869986741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,14 +328,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5120054996036119725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uBC1B\uAE30"
-  eng: Get
-  german: Get
-  french: 
+  key: BenefitAlarm_Popup_Get
 --- !u!1 &5120054996132522112
 GameObject:
   m_ObjectHideFlags: 0

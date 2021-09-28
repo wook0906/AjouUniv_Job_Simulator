@@ -705,9 +705,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2408400686128320856}
   - component: {fileID: 2408400686128320857}
-  - component: {fileID: 2715806255412292522}
+  - component: {fileID: 6240344461840460817}
   m_Layer: 5
-  m_Name: Label (1)
+  m_Name: Purchased_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &2715806255412292522
+--- !u!114 &6240344461840460817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -806,14 +806,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2408400686128320859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAD6C\uB9E4 \uC644\uB8CC"
-  eng: Purchase completed
-  german: Kauf abgeschlossen
-  french: 
+  key: RobotSkinShopItem_Purchased
 --- !u!1 &5793391347964398983
 GameObject:
   m_ObjectHideFlags: 0
