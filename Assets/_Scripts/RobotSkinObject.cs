@@ -29,10 +29,10 @@ public class RobotSkin
     public RobotType RobotType;
     public SkinType SkinType;
     public int skinID;
-    public string skinName_KR;
-    public string skinName_EN;
-    public string skinName_GER;
-    public string skinName_Fren;
+    //public string skinName_KR;
+    //public string skinName_EN;
+    //public string skinName_GER;
+    //public string skinName_Fren;
     public GameObject skinPrefab;
 
     public static bool operator==(RobotSkin r1, RobotSkin r2)

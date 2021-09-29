@@ -88,7 +88,7 @@ public class LocalizationManager {
 
     public string GetLocalizedValue(string key)
     {
-        string result = missingTextString;
+        string result = missingTextString + $"Input Key : {key}";
         if (localizedText.ContainsKey (key)) 
         {
             result = localizedText [key].Replace("\\n","\n");

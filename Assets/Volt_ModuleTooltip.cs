@@ -25,14 +25,14 @@ public class Volt_ModuleTooltip : MonoBehaviour
     }
     public void ShowTooltip(string cardName)
     {
-        ModuleDescriptionInfo moduleInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(cardName, Application.systemLanguage);// Application.systemLanguage); //SystemLanguage.English);
+        ModuleDescriptionInfo moduleInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(cardName);
 
         if (moduleInfo.card == Card.NONE)
             return;
 
         panel.alpha = 1f;
-        moduleNameLabel.text = moduleInfo.title;
-        moduleExplainationLabel.text = moduleInfo.semiDescription;
+        moduleNameLabel.text = Managers.Localization.GetLocalizedValue($"ModuleName_{cardName}"); ;
+        moduleExplainationLabel.text = Managers.Localization.GetLocalizedValue($"ModuleDescription_{cardName}");
     }
     public void CloseTooltip()
     {

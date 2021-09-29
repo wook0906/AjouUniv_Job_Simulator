@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dd493c5b16e9e4a990ccccd71a4b37, type: 3}
   m_Name: 22
   m_EditorClassIdentifier: 
-  contents: "\uBAA8\uB4C8\uC758 \uC885\uB958\uB294 \uC67C\uCABD \uCE21\uBA74\uC758
-    ? \uBC84\uD2BC\uC744 \uD1B5\uD574\n\uD655\uC778 \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  keyForLocalize: TutorialExplainationContents_22
   width: 900
   height: 150
   windowAnchor: {x: -0.2, y: -0.125}

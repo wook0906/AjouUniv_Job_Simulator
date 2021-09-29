@@ -13,7 +13,7 @@ public class MatchingScreen_Popup : UI_Popup
 
     enum Labels
     {
-        MatchWaitPlayersLabel
+        MatchWaitPlayersLabel,
     }
 
     public override void Init()

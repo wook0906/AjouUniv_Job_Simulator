@@ -150,21 +150,22 @@ public class HangarScene_UI : UI_Scene
         GetButton((int)Buttons.Equipped_Btn).gameObject.SetActive(true);
 
         RobotSkin userCurrentSkin = Volt_PlayerData.instance.selectdRobotSkins[robotType];
-        switch (Application.systemLanguage)
-        {
-            case SystemLanguage.Korean:
-                GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_KR;
-                break;
-            case SystemLanguage.German:
-                GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_GER;
-                break;
-            case SystemLanguage.French:
-                GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_Fren;
-                break;
-            default:
-                GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_EN;
-                break;
-        }
+        GetLabel((int)Labels.SkinName_Label).text = Managers.Localization.GetLocalizedValue($"{robotType}_{userCurrentSkin.SkinType}");
+        //switch (Application.systemLanguage)
+        //{
+        //    case SystemLanguage.Korean:
+        //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_KR;
+        //        break;
+        //    case SystemLanguage.German:
+        //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_GER;
+        //        break;
+        //    case SystemLanguage.French:
+        //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_Fren;
+        //        break;
+        //    default:
+        //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_EN;
+        //        break;
+        //}
     }
 
     private void OnChangeRobot()
@@ -173,21 +174,22 @@ public class HangarScene_UI : UI_Scene
         Volt_LobbyRobotViewSection.S.SelectRobotType = robotViewSection.SelectRobotType;
         if (Volt_PlayerData.instance.selectdRobotSkins.TryGetValue(robotViewSection.SelectRobotType, out userCurrentSkin))
         {
-            switch (Application.systemLanguage)
-            {
-                case SystemLanguage.Korean:
-                    GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_KR;
-                    break;
-                case SystemLanguage.German:
-                    GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_GER;
-                    break;
-                case SystemLanguage.French:
-                    GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_Fren;
-                    break;
-                default:
-                    GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_EN;
-                    break;
-            }
+            GetLabel((int)Labels.SkinName_Label).text = Managers.Localization.GetLocalizedValue($"{userCurrentSkin.RobotType}_{userCurrentSkin.SkinType}");
+            //switch (Application.systemLanguage)
+            //{
+            //    case SystemLanguage.Korean:
+            //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_KR;
+            //        break;
+            //    case SystemLanguage.German:
+            //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_GER;
+            //        break;
+            //    case SystemLanguage.French:
+            //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_Fren;
+            //        break;
+            //    default:
+            //        GetLabel((int)Labels.SkinName_Label).text = userCurrentSkin.skinName_EN;
+            //        break;
+            //}
 
             int index = 0;
             for (index = 0; index < currentSkins.Count; ++index)

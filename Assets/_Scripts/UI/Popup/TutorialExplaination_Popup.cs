@@ -10,6 +10,7 @@ public class TutorialExplaination_Popup : UI_Popup
     UILabel guideLabel;
     UISprite bgSprite;
     UIButton bgButton;
+    UIButton blockBGBtn;
     GameObject spriteAnimation;
     string texts;
 
@@ -37,6 +38,8 @@ public class TutorialExplaination_Popup : UI_Popup
 
         bgButton = Get<GameObject>((int)GameObjects.BG).GetComponent<UIButton>();
         bgButton.onClick.Add(new EventDelegate(OnClickButton));
+        blockBGBtn = Get<GameObject>((int)GameObjects.BlockBG).GetComponent<UIButton>();
+        blockBGBtn.onClick.Add(new EventDelegate(OnClickButton));
         bgSprite = Get<GameObject>((int)GameObjects.BG).GetComponent<UISprite>();
         guideLabel = Get<UILabel>((int)Labels.GuideLabel);
         spriteAnimation = Get<GameObject>((int)(GameObjects.ArrowSpriteAnimation));
@@ -48,7 +51,7 @@ public class TutorialExplaination_Popup : UI_Popup
     {
         Transform tmp = transform.parent;
         UIRoot root = transform.root.GetComponent<UIRoot>();
-        texts = data.contents;
+        texts = Managers.Localization.GetLocalizedValue(data.keyForLocalize);
         bgSprite.width = data.width;
         bgSprite.height = data.height;
         guideLabel.fontSize = data.fontSize;
@@ -74,6 +77,7 @@ public class TutorialExplaination_Popup : UI_Popup
                 break;
         }
         bgButton.isEnabled = data.isButton;
+        blockBGBtn.isEnabled = data.isButton;
         spriteAnimation.transform.localPosition = new Vector3(root.manualWidth * data.arrowAnchor.x, root.manualHeight * data.arrowAnchor.y,0f);
         spriteAnimation.SetActive(data.isNeedArrow);
 

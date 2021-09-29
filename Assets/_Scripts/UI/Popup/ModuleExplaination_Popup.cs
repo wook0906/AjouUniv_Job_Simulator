@@ -47,8 +47,8 @@ public class ModuleExplaination_Popup : UI_Popup
     public void ShowPopup(string cardName)
     {
         GetSprite((int)Sprites.CardImage).spriteName = cardName;
-        ModuleDescriptionInfo moduleDescriptionInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(cardName, Application.systemLanguage);
-        GetLabel((int)Labels.CardName_Label).text = moduleDescriptionInfo.title;
-        GetLabel((int)Labels.Descript_Label).text = moduleDescriptionInfo.description;
+        ModuleDescriptionInfo moduleDescriptionInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(cardName);
+        GetLabel((int)Labels.CardName_Label).text = Managers.Localization.GetLocalizedValue($"ModuleName_{cardName}");
+        GetLabel((int)Labels.Descript_Label).text = Managers.Localization.GetLocalizedValue($"ModuleDescription_{cardName}");
     }
 }

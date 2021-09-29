@@ -81,8 +81,8 @@ public class ModuleUI : MonoBehaviour
     void PopupPanelInit(GameObject go)
     {
         moduleExplainationImage.GetComponent<UITexture>().mainTexture = (Texture)Resources.Load("Images/ModuleIcons/" + go.name);
-        ModuleDescriptionInfo moduleDesInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(go.name, Application.systemLanguage); //Application.systemLanguage);
-        cardTitle.text = moduleDesInfo.title;
-        cardDescription.text = moduleDesInfo.description;
+        ModuleDescriptionInfo moduleDesInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(go.name);
+        cardTitle.text = Managers.Localization.GetLocalizedValue($"ModuleName_{go.name}");
+        cardDescription.text = Managers.Localization.GetLocalizedValue($"ModuleDescription_{go.name}");
     }
 }

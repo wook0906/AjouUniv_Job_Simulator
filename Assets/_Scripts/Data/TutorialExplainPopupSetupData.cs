@@ -5,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Tutorial/PopupSetting")]
 public class TutorialExplainPopupSetupData : ScriptableObject
 {
-    [TextArea]
-    public string contents;
+    public string keyForLocalize;
     public int width;
     public int height;
 

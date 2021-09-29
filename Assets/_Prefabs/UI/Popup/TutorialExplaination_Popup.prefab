@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 8459277936088937941}
   - component: {fileID: 8459277936088937942}
   - component: {fileID: 8459277936088937943}
+  - component: {fileID: 7057539763449423954}
   m_Layer: 5
   m_Name: BlockBG
   m_TagString: Untagged
@@ -422,6 +423,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3200, y: 1440, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7057539763449423954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459277936088937940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 8459277936088937940}
+  hover: {r: 0, g: 0, b: 0, a: 0.8352941}
+  pressed: {r: 0, g: 0, b: 0, a: 0.8352941}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick: []
 --- !u!1 &8459277936981024685
 GameObject:
   m_ObjectHideFlags: 0

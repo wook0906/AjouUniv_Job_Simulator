@@ -201,7 +201,7 @@ public class Volt_PlayerUI : MonoBehaviour
     IEnumerator ModuleGuideIconFadeOut(Card newCard)
     {
         float timer = 0f;
-        ModuleDescriptionInfo moduleInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(newCard.ToString(), Application.systemLanguage);
+        ModuleDescriptionInfo moduleInfo = Volt_ModuleDescriptionInfos.GetModuleDescriptionInfo(newCard.ToString());
         switch (moduleInfo.moduleType)
         {
             case ModuleType.Attack:
@@ -245,7 +245,7 @@ public class Volt_PlayerUI : MonoBehaviour
                 break;
         }
         newModuleGuideIcon.spriteName = moduleInfo.card.ToString();
-        newModuleGuideName.text = moduleInfo.title;
+        newModuleGuideName.text = Managers.Localization.GetLocalizedValue($"ModuleName_{moduleInfo.card}");
         newModuleGuidepanel.alpha = 1f;
         while (timer < 3.5f)
         {
