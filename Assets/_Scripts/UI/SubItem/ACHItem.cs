@@ -103,7 +103,7 @@ public class ACHItem : UIBase
 
         
         GetLabel((int)Labels.Title_Label).text = Managers.Localization.GetLocalizedValue($"Achievement{this.ID}_Title");
-        GetLabel((int)Labels.Description_Label).text = Managers.Localization.GetLocalizedValue($"Achievement{this.ID}_Title");
+        GetLabel((int)Labels.Description_Label).text = Managers.Localization.GetLocalizedValue($"Achievement{this.ID}_Description");
 
 
         GetLabel((int)Labels.RewardAssetCount_Label).text = this.rewardCount.ToString();
