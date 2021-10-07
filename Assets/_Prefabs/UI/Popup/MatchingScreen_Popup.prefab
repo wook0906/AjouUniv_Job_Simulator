@@ -490,7 +490,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -950,7 +950,6 @@ GameObject:
   - component: {fileID: 4919388476530538599}
   - component: {fileID: 4919388476530538617}
   - component: {fileID: 4919388476530538618}
-  - component: {fileID: 4919388476530538616}
   m_Layer: 5
   m_Name: UnScalingBG
   m_TagString: Untagged
@@ -1048,18 +1047,6 @@ MonoBehaviour:
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
   mFixedAspect: 0
---- !u!114 &4919388476530538616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4919388476530538598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6db2386ba9066c45871f3df7743dcc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4919388476782345284
 GameObject:
   m_ObjectHideFlags: 0

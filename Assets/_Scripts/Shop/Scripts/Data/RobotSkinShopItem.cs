@@ -89,21 +89,22 @@ namespace Volt
 
                 //robotSkinSprite.mainTexture = Resources.Load<Texture>($"Images/SkinConceptShots/{this.skinImageName}");
                 robotSkinSprite.spriteName = skinImageName;
-                switch (Application.systemLanguage)
-                {
-                    case SystemLanguage.Korean:
-                        robotSkinNameLabel.text = this.skinName_KOR;
-                        break;
-                    case SystemLanguage.German:
-                        robotSkinNameLabel.text = this.skinName_GER;
-                        break;
-                    case SystemLanguage.French:
-                        robotSkinNameLabel.text = this.skinName_Fren;
-                        break;
-                    default:
-                        robotSkinNameLabel.text = this.skinName_EN;
-                        break;
-                }
+                //switch (Application.systemLanguage)
+                //{
+                //    case SystemLanguage.Korean:
+                //        robotSkinNameLabel.text = this.skinName_KOR;
+                //        break;
+                //    case SystemLanguage.German:
+                //        robotSkinNameLabel.text = this.skinName_GER;
+                //        break;
+                //    case SystemLanguage.French:
+                //        robotSkinNameLabel.text = this.skinName_Fren;
+                //        break;
+                //    default:
+                //        robotSkinNameLabel.text = this.skinName_EN;
+                //        break;
+                //}
+                robotSkinNameLabel.text = Managers.Localization.GetLocalizedValue($"RobotSkin{this.ID}");
 
                 priceTypeICONSprite.spriteName = this.priceICON;
 

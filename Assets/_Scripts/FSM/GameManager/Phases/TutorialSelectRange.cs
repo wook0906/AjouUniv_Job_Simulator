@@ -14,7 +14,7 @@ public class TutorialSelectRange : PhaseBase
 
         Volt_PlayerUI.S.BehaviourSelectOff();
 
-        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.BehaviourSelect, true, Application.systemLanguage);
+        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.BehaviourSelect);
 
         Volt_PlayerManager.S.I.playerCamRoot.enabled = false;
         StartCoroutine(Action(game.gameData));

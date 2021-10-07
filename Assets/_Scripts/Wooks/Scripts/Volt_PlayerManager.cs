@@ -242,7 +242,7 @@ public class Volt_PlayerManager : MonoBehaviour
                 //ReturnPlayerKey(I.playerNumber);
                 I.playerCamRoot.CamInit();
                 I.playerCamRoot.SaveLastInfo();
-                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.SynchronizationWait, false, Application.systemLanguage);
+                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.SynchronizationWait, false);
 
                 Managers.UI.ShowPopupUIAsync<ReconnectWaitBlock_Popup>();
                 //Volt_GMUI.S.syncWaitblockPanel.SetActive(true);

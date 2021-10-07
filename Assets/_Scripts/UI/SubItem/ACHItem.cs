@@ -101,25 +101,10 @@ public class ACHItem : UIBase
         this.rewardCountFontSize = rewardCountFontSize;
         this.conditionCountFontSize = conditionCountFontSize;
 
-        switch (Application.systemLanguage)
-        {
-            case SystemLanguage.Korean:
-                GetLabel((int)Labels.Title_Label).text = this.title_KR;
-                GetLabel((int)Labels.Description_Label).text = this.description_KR;
-                break;
-            case SystemLanguage.German:
-                GetLabel((int)Labels.Title_Label).text = this.title_GER;
-                GetLabel((int)Labels.Description_Label).text = this.description_GER;
-                break;
-            case SystemLanguage.French:
-                GetLabel((int)Labels.Title_Label).text = this.title_Fren;
-                GetLabel((int)Labels.Description_Label).text = this.description_Fren;
-                break;
-            default:
-                GetLabel((int)Labels.Title_Label).text = this.title_EN;
-                GetLabel((int)Labels.Description_Label).text = this.description_EN;
-                break;
-        }
+        
+        GetLabel((int)Labels.Title_Label).text = Managers.Localization.GetLocalizedValue($"Achievement{this.ID}_Title");
+        GetLabel((int)Labels.Description_Label).text = Managers.Localization.GetLocalizedValue($"Achievement{this.ID}_Title");
+
 
         GetLabel((int)Labels.RewardAssetCount_Label).text = this.rewardCount.ToString();
 
@@ -243,22 +228,23 @@ public class ACHItem : UIBase
         GetButton((int)Buttons.Reward_Button).normalSprite = this.getRewardButtonUnActiveSprite;
         GetButton((int)Buttons.Reward_Button).pressedSprite = null;
         GetButton((int)Buttons.Reward_Button).enabled = false;
-        switch (Application.systemLanguage)
-        {
-            case SystemLanguage.French:
-                GetLabel((int)Labels.ButtonName_Label).text = "Done";
-                break;
-            case SystemLanguage.German:
-                GetLabel((int)Labels.ButtonName_Label).text = "Fertig";
-                break;
-            case SystemLanguage.Korean:
-                GetLabel((int)Labels.ButtonName_Label).text = "완료";
-                break;
-            default:
-                GetLabel((int)Labels.ButtonName_Label).text = "Done";
-                break;
+        GetLabel((int)Labels.ButtonName_Label).text = Managers.Localization.GetLocalizedValue("Achievement_Completed");
 
-        }
+        //switch (Application.systemLanguage)
+        //{
+        //    case SystemLanguage.French:
+        //        break;
+        //    case SystemLanguage.German:
+        //        GetLabel((int)Labels.ButtonName_Label).text = "Fertig";
+        //        break;
+        //    case SystemLanguage.Korean:
+        //        GetLabel((int)Labels.ButtonName_Label).text = "완료";
+        //        break;
+        //    default:
+        //        GetLabel((int)Labels.ButtonName_Label).text = "Done";
+        //        break;
+
+        //}
         Color color = GetComponent<UISprite>().color;
         color.a = 0.5f;
         GetComponent<UISprite>().color = color;
@@ -271,21 +257,23 @@ public class ACHItem : UIBase
     {
         if (userACHCount >= this.conditionCount)
         {
-            switch (Application.systemLanguage)
-            {
-                case SystemLanguage.Korean:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_KR;
-                    break;
-                case SystemLanguage.German:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_GER;
-                    break;
-                case SystemLanguage.French:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_Fren;
-                    break;
-                default:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_EN;
-                    break;
-            }
+            GetLabel((int)Labels.ButtonName_Label).text = Managers.Localization.GetLocalizedValue("Achievement_GetReward");
+
+            //switch (Application.systemLanguage)
+            //{
+            //    case SystemLanguage.Korean:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_KR;
+            //        break;
+            //    case SystemLanguage.German:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_GER;
+            //        break;
+            //    case SystemLanguage.French:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_Fren;
+            //        break;
+            //    default:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_EN;
+            //        break;
+            //}
             if (Volt_PlayerData.instance.IsAccomplishACH(this.ID)) // 보상 수령함!
             {
                 //Debug.Log($"{this.ID}이미 보상 수령했네");
@@ -293,22 +281,24 @@ public class ACHItem : UIBase
                 GetButton((int)Buttons.Reward_Button).normalSprite = this.getRewardButtonUnActiveSprite;
                 GetButton((int)Buttons.Reward_Button).pressedSprite = null;
                 GetButton((int)Buttons.Reward_Button).enabled = false;
-                switch (Application.systemLanguage)
-                {
-                    case SystemLanguage.French:
-                        GetLabel((int)Labels.ButtonName_Label).text = "Done";
-                        break;
-                    case SystemLanguage.German:
-                        GetLabel((int)Labels.ButtonName_Label).text = "Fertig";
-                        break;
-                    case SystemLanguage.Korean:
-                        GetLabel((int)Labels.ButtonName_Label).text = "완료";
-                        break;
-                    default:
-                        GetLabel((int)Labels.ButtonName_Label).text = "Done";
-                        break;
+                GetLabel((int)Labels.ButtonName_Label).text = Managers.Localization.GetLocalizedValue("Achievement_Completed");
 
-                }
+                //switch (Application.systemLanguage)
+                //{
+                //    case SystemLanguage.French:
+                //        GetLabel((int)Labels.ButtonName_Label).text = "Done";
+                //        break;
+                //    case SystemLanguage.German:
+                //        GetLabel((int)Labels.ButtonName_Label).text = "Fertig";
+                //        break;
+                //    case SystemLanguage.Korean:
+                //        GetLabel((int)Labels.ButtonName_Label).text = "완료";
+                //        break;
+                //    default:
+                //        GetLabel((int)Labels.ButtonName_Label).text = "Done";
+                //        break;
+
+                //}
                 Color color = GetComponent<UISprite>().color;
                 color.a = 0.5f;
                 GetComponent<UISprite>().color = color;
@@ -317,21 +307,23 @@ public class ACHItem : UIBase
             else // 보상 수령 안함!
             {
                 //Debug.Log($"{this.ID}보상 수령안했네");
-                switch (Application.systemLanguage)
-                {
-                    case SystemLanguage.Korean:
-                        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_KR;
-                        break;
-                    case SystemLanguage.German:
-                        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_GER;
-                        break;
-                    case SystemLanguage.French:
-                        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_Fren;
-                        break;
-                    default:
-                        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_EN;
-                        break;
-                }
+                GetLabel((int)Labels.ButtonName_Label).text = Managers.Localization.GetLocalizedValue("Achievement_GetReward");
+
+                //switch (Application.systemLanguage)
+                //{
+                //    case SystemLanguage.Korean:
+                //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_KR;
+                //        break;
+                //    case SystemLanguage.German:
+                //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_GER;
+                //        break;
+                //    case SystemLanguage.French:
+                //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_Fren;
+                //        break;
+                //    default:
+                //        GetLabel((int)Labels.ButtonName_Label).text = this.getRewardButtonName_EN;
+                //        break;
+                //}
                 GetButton((int)Buttons.Reward_Button).GetComponent<UISprite>().spriteName = this.getRewardButtonActiveSprite;
                 GetButton((int)Buttons.Reward_Button).normalSprite = this.getRewardButtonActiveSprite;
                 GetButton((int)Buttons.Reward_Button).pressedSprite = null;
@@ -340,21 +332,23 @@ public class ACHItem : UIBase
         }
         else
         {
-            switch (Application.systemLanguage)
-            {
-                case SystemLanguage.Korean:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_KR;
-                    break;
-                case SystemLanguage.German:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_GER;
-                    break;
-                case SystemLanguage.French:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_Fren;
-                    break;
-                default:
-                    GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_EN;
-                    break;
-            }
+            GetLabel((int)Labels.ButtonName_Label).text = Managers.Localization.GetLocalizedValue("Achievement_Progress");
+
+            //switch (Application.systemLanguage)
+            //{
+            //    case SystemLanguage.Korean:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_KR;
+            //        break;
+            //    case SystemLanguage.German:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_GER;
+            //        break;
+            //    case SystemLanguage.French:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_Fren;
+            //        break;
+            //    default:
+            //        GetLabel((int)Labels.ButtonName_Label).text = this.progressButtonName_EN;
+            //        break;
+            //}
             GetButton((int)Buttons.Reward_Button).GetComponent<UISprite>().spriteName = this.getRewardButtonUnActiveSprite;
             GetButton((int)Buttons.Reward_Button).normalSprite = this.getRewardButtonUnActiveSprite;
             GetButton((int)Buttons.Reward_Button).pressedSprite = null;

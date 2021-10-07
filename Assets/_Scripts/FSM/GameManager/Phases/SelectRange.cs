@@ -17,7 +17,7 @@ public class SelectRange : PhaseBase
         Volt_GMUI.S.IsTickOn = true;
         Volt_GMUI.S.TickTimer = game.gameData.selectRangeTime;
 
-        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.BehaviourSelect, true, Application.systemLanguage);
+        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.BehaviourSelect);
         Volt_GMUI.S._3dObjectInteractable = true;
 
         Volt_PlayerManager.S.I.playerCamRoot.enabled = false;

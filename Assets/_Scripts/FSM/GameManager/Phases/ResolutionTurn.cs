@@ -85,7 +85,7 @@ public class ResolutionTurn : PhaseBase
 
             GameStateDataSet.SendTotalTurnOverGameDatas();
         }
-        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.Synchronization, false, Application.systemLanguage);
+        Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.Synchronization, false);
     }
 
     void RenewNeedSyncTile()

@@ -15,15 +15,32 @@ public class MatchingScreen_Popup : UI_Popup
     {
         MatchWaitPlayersLabel,
     }
+    enum Textures
+    {
+        UnScalingBG,
+    }
 
     public override void Init()
     {
         base.Init();
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
+        Bind<UITexture>(typeof(Textures));
+
 
         GetButton((int)Buttons.MathchingCancelBtn).onClick.Add(new EventDelegate(() => { OnClickMatchingCancelBtn(); }));
         label = Get<UILabel>((int)Labels.MatchWaitPlayersLabel);
+
+        Managers.Resource.LoadAsync<Texture2D>(Random.Range(0, 9).ToString(), (result) =>
+        {
+            Get<UITexture>((int)Textures.UnScalingBG).mainTexture = result.Result;
+            //if (Managers.Scene.CurrentScene != null &&
+            //Managers.Scene.CurrentScene.SceneType == Define.Scene.GameScene)
+            //{
+            //    GameScene gameScene = Managers.Scene.CurrentScene as GameScene;
+            //    gameScene.OnLoadedMatchingBGTexture();
+            //}
+        });
 
     }
     void OnClickMatchingCancelBtn()

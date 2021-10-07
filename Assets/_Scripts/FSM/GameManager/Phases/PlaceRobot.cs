@@ -12,8 +12,6 @@ public class PlaceRobot : PhaseBase
 
         Volt_GMUI.S._3dObjectInteractable = true;
 
-        
-
         StartCoroutine(Action(game.gameData));
     }
     public override void OnExitPhase(GameController game)
@@ -55,9 +53,9 @@ public class PlaceRobot : PhaseBase
         if (Volt_ArenaSetter.S.robotsInArena.Count != game.MaxPlayer)
         {
             if (!Volt_PlayerManager.S.I.GetRobot())
-                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.RobotSetup, true, Application.systemLanguage);
+                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.RobotSetup);
             else
-                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.WaitPlaceOtherPlayerRobot, true, Application.systemLanguage);
+                Volt_GMUI.S.guidePanel.ShowGuideTextMSG(GuideMSGType.WaitPlaceOtherPlayerRobot);
         }
 
         yield return StartCoroutine(WaitPlaceRobot(game));

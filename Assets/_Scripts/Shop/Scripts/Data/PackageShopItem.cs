@@ -62,7 +62,7 @@ namespace Volt
                 purchaseButton.GetComponent<PurchaseButton>().objectType = ObjectType.Package;
 
                 objectSprite.spriteName = this.objectICON;
-                objectNameLabel.text = this.objectName;
+                objectNameLabel.text = Managers.Localization.GetLocalizedValue($"Package{this.ID}");//this.objectName;
 
                 priceTypeSprite.spriteName = this.priceICON;
 

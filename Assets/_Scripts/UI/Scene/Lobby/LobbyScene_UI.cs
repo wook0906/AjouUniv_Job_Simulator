@@ -165,7 +165,7 @@ public class LobbyScene_UI : UI_Scene
         
     }
 
-    public void OnClickStartGame()
+    public void OnClickStartGame() //일반 대전 버튼 클릭하면 발생
     {
         Debug.Log("StartGame!");
         //Get<UIWidget>((int)Widgets.InputBlock).gameObject.SetActive(true);
@@ -181,6 +181,7 @@ public class LobbyScene_UI : UI_Scene
     {
         Volt_LobbyRobotViewSection.S.PlayLobbyAnimation();
         yield return new WaitForSeconds(2f);
+
         Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
     }
 

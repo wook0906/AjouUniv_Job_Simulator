@@ -47,7 +47,7 @@ public class Loading_Popup : UI_Popup
                 StartCoroutine(CoRunLoadAnimation());
             });
 
-        Get<UIProgressBar>((int)Progressbar.ProgressBarBG).value = 0f;
+        //Get<UIProgressBar>((int)Progressbar.ProgressBarBG).value = 0f;
     }
 
     public override void OnClose()

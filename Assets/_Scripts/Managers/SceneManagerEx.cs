@@ -57,6 +57,7 @@ public class SceneManagerEx
 
     private IEnumerator CoLoadSceneAsync(Define.Scene type)
     {
+        Debug.Log("CoLoadSceneAsync!!");
         Fade_Popup fadePopup = null;
         yield return new WaitUntil(() =>
         {
@@ -67,8 +68,9 @@ public class SceneManagerEx
 
         fadePopup.FadeOut(1f);
         yield return new WaitUntil(() => { return fadePopup.IsDone; });
-
+        Debug.Log("Popup is Done");
         sceneHandle = Addressables.LoadSceneAsync($"Assets/_Scenes/{type}.unity", LoadSceneMode.Single, false);
+        Debug.Log($"LoadScenAsync{type}");
 
         while (sceneHandle.PercentComplete < 1.0f) yield return null;
         asyncOperation = sceneHandle.Result.ActivateAsync();

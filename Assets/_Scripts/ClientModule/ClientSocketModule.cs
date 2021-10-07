@@ -576,7 +576,7 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
     {
         int packetType = ByteConverter.ToInt(buffer, 1);
 
-        //Debug.Log("PacketType : " + (EPacketType)packetType);
+        Debug.Log("PacketType : " + (EPacketType)packetType);
 
         packetToClass[packetType].UnPack(buffer);
 

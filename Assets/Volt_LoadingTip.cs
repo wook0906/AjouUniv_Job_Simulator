@@ -9,7 +9,7 @@ public class Volt_LoadingTip : MonoBehaviour
     int prevIdx;
     int currentIdx;
 
-    int maxIdx;
+    int maxIdx = 10;
     
     private void Awake()
     {

@@ -20,11 +20,11 @@ public class GameScene : BaseScene
         //GameManager = 1 << 7,
         GameController = 1 << 6,
         PrefabFactory = 1 << 7,
-        MatchingBGTexutre = 1 << 8,
+        //MatchingBGTexutre = 1 << 8,
         
         All = PostProcessing | GamePlayData | ModuleDeck |
             ParticleManager | SimulationObserver | GameScene_UI |
-            GameController | MatchingBGTexutre | PrefabFactory
+            GameController | PrefabFactory//MatchingBGTexutre |
     }
 
     private Loads load;
@@ -59,22 +59,21 @@ public class GameScene : BaseScene
 
     private IEnumerator Start()
     {
+        Debug.Log("GameScene InIn?");
         SceneType = Define.Scene.GameScene;
 
         AsyncOperationHandle<GameObject> fadePopupHandle = Managers.UI.ShowPopupUIAsync<Fade_Popup>();
         yield return new WaitUntil(() => { return fadePopupHandle.IsDone; });
         Fade_Popup fadePopup = fadePopupHandle.Result.GetComponent<Fade_Popup>();
         fadePopup.FadeIn(.5f, float.MaxValue);
-
         AsyncOperationHandle<GameObject> loadingPopupHandle = Managers.UI.ShowPopupUIAsync<Loading_Popup>();
         yield return new WaitUntil(() => { return loadingPopupHandle.IsDone; });
         Loading_Popup loadingPopup = loadingPopupHandle.Result.GetComponent<Loading_Popup>();
         yield return new WaitUntil(() => { return loadingPopup.IsInit; });
 
-        
 
         string[] preloadEnumNames = typeof(Loads).GetEnumNames();
-        int max = preloadEnumNames.Length - 3;
+        int max = preloadEnumNames.Length - 2;
         preloadHandles = new AsyncOperationHandle<GameObject>[max];
         for (int i = 1; i <= max; ++i)
         {
@@ -100,13 +99,12 @@ public class GameScene : BaseScene
         {
             return preloadHandles.Length == coreGOs.Count;
         });
-
         foreach (var coreGO in coreGOs)
         {
             coreGO.SendMessage("Init", SendMessageOptions.DontRequireReceiver);
         }
         yield return new WaitUntil(() => { return IsDone; });
-        
+       
         Managers.UI.CloseAllPopupUI();
 
         IntroVideo_Popup introVideoUI = null;
@@ -125,30 +123,20 @@ public class GameScene : BaseScene
             yield return new WaitUntil(() => !introVideoUI.IsPlaying());
             Debug.Log("Intro video End");
         }
-        else
-        {
-            MatchingScreen_Popup matchingPopup = null;
-            Managers.UI.ShowPopupUIAsync<MatchingScreen_Popup>();
-            yield return new WaitUntil(() =>
-            {
-                matchingPopup = FindObjectOfType<MatchingScreen_Popup>();
-                return matchingPopup != null;
-            });
-        }
-
-        Managers.UI.CloseAllPopupUI();
-        //gameMgr.StartMatching();
 
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
+        {
+            //Debug.Log("")
             gameController.ChangePhase<StartMatching>();
+        }
         else
             gameController.ChangePhase<TutorialMatchSetup>();
     }
 
-    public void OnLoadedMatchingBGTexture()
-    {
-        load |= Loads.MatchingBGTexutre;
-    }
+    //public void OnLoadedMatchingBGTexture()
+    //{
+    //    load |= Loads.MatchingBGTexutre;
+    //}
     public override void Clear()
     {
         Managers.Clear();
