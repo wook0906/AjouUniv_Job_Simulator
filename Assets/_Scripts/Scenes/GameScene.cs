@@ -59,7 +59,6 @@ public class GameScene : BaseScene
 
     private IEnumerator Start()
     {
-        Debug.Log("GameScene InIn?");
         SceneType = Define.Scene.GameScene;
 
         AsyncOperationHandle<GameObject> fadePopupHandle = Managers.UI.ShowPopupUIAsync<Fade_Popup>();

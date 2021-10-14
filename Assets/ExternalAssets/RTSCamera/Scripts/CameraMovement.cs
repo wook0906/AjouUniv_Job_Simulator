@@ -352,7 +352,8 @@ public class CameraMovement : MonoBehaviour
         if (camEffect.isShakePlaying ||
             isMoving ||
             Volt_GMUI.S.IsOptionPanelOn ||
-            !isInit)// ||
+            !isInit ||
+            Volt_GMUI.S.IsCheatPanelOn)// ||
             //Volt_GameManager.S.isRangeSelectCameraMoving)
             return;
 

@@ -73,14 +73,18 @@ public class SelectBehaviour : PhaseBase
             }
 
             yield return new WaitUntil(() => IsInputBehaviourAllPlayer());
-            PacketTransmission.SendBehaviorOrderCompletionPacket();
-
             foreach (var item in Volt_PlayerManager.S.I.startingTiles)
             {
                 item.BlinkOn = false;
             }
             yield return new WaitUntil(() => Volt_ArenaSetter.S.IsAllTileBlinkOff());
 
+            if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
+                PacketTransmission.SendBehaviorOrderCompletionPacket();
+            else
+                GameController.instance.ChangePhase<SelectRange>();
+
+            
             phaseDone = true;
         }
     }

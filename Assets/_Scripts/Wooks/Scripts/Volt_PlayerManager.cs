@@ -342,6 +342,14 @@ public class Volt_PlayerManager : MonoBehaviour
     }
     public void SendCharacterPositionPacket(int playerNumber, int x, int y)
     {
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+        {
+            RobotPlaceData data;
+            data.playerNumber = playerNumber;
+            data.x = x;
+            data.y = y;
+            GameController.instance.gameData.placeRobotRequestDatas.Add(data);
+        }
         //if (Volt_GameManager.S.pCurPhase == Phase.robotSetup || Volt_GameManager.S.pCurPhase == Phase.synchronization)
         if (GameController.instance.CurrentPhase.type == Define.Phase.PlaceRobot ||
             GameController.instance.CurrentPhase.type == Define.Phase.Synchronization)
@@ -350,14 +358,14 @@ public class Volt_PlayerManager : MonoBehaviour
             PacketTransmission.SendCharacterPositionPacket(playerNumber, x, y);
         }
     }
-    public void SendBehaviorOrderPacket(int playerNumber,Volt_RobotBehavior behaviour)
+    public void SendBehaviorOrderPacket(int playerNumber, Volt_RobotBehavior behaviour)
     {
         //if (Volt_GameManager.S.pCurPhase == Phase.behavoiurSelect || Volt_GameManager.S.pCurPhase == Phase.rangeSelect)
-        if(GameController.instance.CurrentPhase.type == Define.Phase.SelectBehaviour ||
-            GameController.instance.CurrentPhase.type == Define.Phase.SelectRange)
+        if (GameController.instance.CurrentPhase.type == Define.Phase.SelectBehaviour ||
+        GameController.instance.CurrentPhase.type == Define.Phase.SelectRange)
         {
             //Debug.Log("Send " + playerNumber + " BehaviourOrder");
-            if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
+            if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1 && PlayerPrefs.GetInt("Volt_TrainingMode") != 1)
                 PacketTransmission.SendBehaviorOrderPacket(playerNumber, behaviour);
             else
             {

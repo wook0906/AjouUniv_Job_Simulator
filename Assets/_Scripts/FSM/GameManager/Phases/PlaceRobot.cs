@@ -174,8 +174,12 @@ public class PlaceRobot : PhaseBase
         }
 
         Volt_GMUI.S.IsTickOn = false;
-
-        PacketTransmission.SendCharacterPositionCompletionPacket();
+        if(PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+        {
+            GameController.instance.ChangePhase<SelectBehaviour>();
+        }
+        else
+            PacketTransmission.SendCharacterPositionCompletionPacket();
     }
 
     bool IsFullStartingTiles()
@@ -228,8 +232,6 @@ public class PlaceRobot : PhaseBase
                 robot.Init(player, Volt_ArenaSetter.S.GetTile(placeData.x, placeData.y));
             }
         }
-
-        
         data.placeRobotRequestDatas.Clear();
     }
 }

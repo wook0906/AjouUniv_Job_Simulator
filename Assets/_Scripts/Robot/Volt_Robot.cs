@@ -502,15 +502,11 @@ public class Volt_Robot : MonoBehaviour
         playerInfo.playerRobot = null;
         playerInfo.isRobotAlive = false;
 
-        //if (Volt_GMUI.S.IsCheatPanelOn)
-        //    Volt_GMUI.S.cheatPanel.GetComponent<Volt_CheatPanel>().RobotDead(this);
+        if (Volt_GMUI.S.IsCheatPanelOn)
+            Volt_GMUI.S.cheater.RobotDead(this);
 
         moduleCardExcutor.DestroyCardAll();
-        //if (playerInfo.playerNumber == Volt_GameManager.S.AmargeddonPlayer)
-        //{
-        //    Volt_GameManager.S.AmargeddonPlayer = 0;
-        //    Volt_GameManager.S.AmargeddonCount = 0;
-        //}
+        
         if(playerInfo.playerNumber == GameController.instance.gameData.AmargeddonPlayer)
         {
             GameController.instance.gameData.AmargeddonCount = 8;
@@ -717,7 +713,8 @@ public class Volt_Robot : MonoBehaviour
         if (Volt_PlayerManager.S.I.playerRobot == this.gameObject)
             Volt_PlayerUI.S.NewModuleEquip(newCard);
 
-        //Volt_CheatPanel.S.NoticeGetModuleCard(playerInfo.playerNumber, newCard.card);
+        if(Volt_GMUI.S.IsCheatPanelOn)
+            Volt_GMUI.S.cheater.NoticeGetModuleCard(playerInfo.playerNumber, newCard.card);
 
     }
 
@@ -815,8 +812,8 @@ public class Volt_Robot : MonoBehaviour
             GameController.instance.gameData.AmargeddonPlayer = 0;
             GameController.instance.gameData.AmargeddonCount = 0;
         }
-        //if (Volt_GMUI.S.IsCheatPanelOn)
-        //    Volt_GMUI.S.cheatPanel.GetComponent<Volt_CheatPanel>().RobotDead(this);
+        if (Volt_GMUI.S.IsCheatPanelOn)
+            Volt_GMUI.S.cheater.RobotDead(this);
         Destroy(this.gameObject);
     }
     public void MoveEffectPlay()

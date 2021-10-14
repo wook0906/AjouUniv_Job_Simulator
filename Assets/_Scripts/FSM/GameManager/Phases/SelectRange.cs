@@ -102,9 +102,21 @@ public class SelectRange : PhaseBase
         yield return StartCoroutine(WaitSelectRangeDone());
 
         yield return StartCoroutine(WaitCameraAnimation(true));
+
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
+            PacketTransmission.SendBehaviorOrderCompletionPacket();
+        else
+        {
+            GameController.instance.gameData.randomOptionValues.Clear();
+            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
+            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
+            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
+            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
+            GameController.instance.ChangePhase<Simulation>();
+        }
         phaseDone = true;
 
-        PacketTransmission.SendBehaviorOrderCompletionPacket();
+       
     }
     IEnumerator WaitCameraAnimation(bool rewind)
     {

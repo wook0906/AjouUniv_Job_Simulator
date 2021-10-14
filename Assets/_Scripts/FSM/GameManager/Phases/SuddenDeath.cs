@@ -280,7 +280,11 @@ public class SuddenDeath : PhaseBase
         yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotBehaviourFlagOff());
 
         Volt_GamePlayData.S.ClearOtherRobotsAttackedByRobotsOnThisTurn();
-        PacketTransmission.SendSimulationCompletionPacket();
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
+            PacketTransmission.SendSimulationCompletionPacket();
+        else
+            GameController.instance.ChangePhase<ResolutionTurn>();
+        
 
         data.behaviours.Clear();
         phaseDone = true;

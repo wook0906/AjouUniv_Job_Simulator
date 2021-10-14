@@ -58,7 +58,10 @@ public class MatchingScreen_Popup : UI_Popup
         StartMatching phase = GameController.instance.CurrentPhase as StartMatching;
         if (phase == null) return;
         if (!isInit) return;
-        
-        label.text = phase.connectedPlayerCount + "/4";
+
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
+            label.text = phase.connectedPlayerCount + "/4";
+        else
+            label.text = "1/1";
     }
 }

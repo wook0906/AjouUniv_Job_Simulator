@@ -35,23 +35,21 @@ public class TutorialCharacterSelectConfirm_Popup : UI_Popup
         {
             case RobotType.Volt:
                 characterImage.spriteName = "Volt_Select";
-                characterLabel.text = "볼트";
                 break;
             case RobotType.Mercury:
                 characterImage.spriteName = "Mercury_Select";
-                characterLabel.text = "머큐리";
                 break;
             case RobotType.Hound:
                 characterImage.spriteName = "Hound_Select";
-                characterLabel.text = "하운드";
                 break;
             case RobotType.Reaper:
                 characterImage.spriteName = "Reaper_Select";
-                characterLabel.text = "리퍼";
                 break;
             default:
                 break;
         }
+        characterLabel.text = Managers.Localization.GetLocalizedValue($"TutorialCharacterSelect_Popup_{phase.SelectedRobot}");
+
 
         GetButton((int)Buttons.ConfirmBtn).onClick.Add(new EventDelegate(() =>
         {

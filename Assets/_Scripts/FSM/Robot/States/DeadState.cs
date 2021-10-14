@@ -29,8 +29,8 @@ public class DeadState : StateBase
             GameController.instance.gameData.AmargeddonPlayer = 0;
             GameController.instance.gameData.AmargeddonCount = 0;
         }
-        //if (Volt_GMUI.S.IsCheatPanelOn)
-        //    Volt_GMUI.S.cheatPanel.GetComponent<Volt_CheatPanel>().RobotDead(fsm.Owner);
+        if (Volt_GMUI.S.IsCheatPanelOn)
+            Volt_GMUI.S.cheater.RobotDead(fsm.Owner);
     }
 
     private void PlayRobotDestroyEffect(GameObject effect, Vector3 pos)

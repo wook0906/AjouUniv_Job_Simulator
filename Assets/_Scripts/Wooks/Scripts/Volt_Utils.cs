@@ -57,7 +57,31 @@ public class Volt_Utils
         {RobotType.Hound, new string[]{ "Max", "Cooper", "Buddy", "Jack", "Sindy", "Bella", "Coco" } },
         {RobotType.Reaper, new string[]{ "MasterClass", "Destroyer", "Bongoo", "Champ", "BrushCutter", "Hoon", "Sonny" } },
     };
-
+    /// <summary>
+    /// Must (inclusive)1 ~ 6(inclusive) 
+    /// </summary>
+    public static int GetVPTileNumberBySurfaceNumber(Define.MapType mapType, int number)
+    {
+        int[] tileNumberByMap;
+        switch (mapType)
+        {
+            case Define.MapType.TwinCity:
+                tileNumberByMap = new int[6] { 57, 47, 50, 30, 33, 23 };
+                return tileNumberByMap[number-1];
+            case Define.MapType.Rome:
+                tileNumberByMap = new int[6] { 58, 48, 50, 30, 32, 22 };
+                return tileNumberByMap[number - 1];
+            case Define.MapType.Ruhrgebiet:
+                tileNumberByMap = new int[6] { 56, 60, 50, 30, 20, 24 };
+                return tileNumberByMap[number - 1];
+            case Define.MapType.Tokyo:
+                tileNumberByMap = new int[6] { 56, 60, 48, 32, 20, 24 };
+                return tileNumberByMap[number - 1];
+            default:
+                Debug.LogError("GetVPTileNumberBySurfaceNumber Error");
+                return -1;
+        }
+    }
     public static bool IsForward(Transform transform)
     {
         float angle = Vector3.Angle(transform.forward, Vector3.forward);

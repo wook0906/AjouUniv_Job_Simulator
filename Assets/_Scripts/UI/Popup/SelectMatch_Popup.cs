@@ -28,6 +28,11 @@ public class SelectMatch_Popup : UI_Popup
             Managers.UI.GetSceneUI<LobbyScene_UI>().OnClickStartGame();
             OnClose();
         }));
+        Get<UIButton>((int)Buttons.MatchForAI_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Managers.UI.GetSceneUI<LobbyScene_UI>().OnClickStartGame();
+            OnClose();
+        }));
 
 
         //TODO 정보세팅

@@ -23,8 +23,43 @@ public class StartMatching : PhaseBase
         //                                    PlayerType.AI, randomKillbotType3, (SkinType)Random.Range(0, 7), Volt_Utils.GetRandomKillbotName(randomKillbotType3),
         //                                    PlayerType.AI,  randomKillbotType4, (SkinType)Random.Range(0, 7), Volt_Utils.GetRandomKillbotName(randomKillbotType4));
 
-        
-        PacketTransmission.SendMatchingRequestPacket((int)selectedRobotType, (int)Volt_PlayerData.instance.selectdRobotSkins[selectedRobotType].SkinType);
+        if (PlayerPrefs.GetInt("Volt_TrainingMode")==1)
+        {
+            Volt_PlayerManager.S.GetMyPlayerNumberFromServer(1);
+            RobotType randomRobotType1 = (RobotType)UnityEngine.Random.Range((int)RobotType.Volt, (int)RobotType.Max);
+            RobotType randomRobotType2 = (RobotType)UnityEngine.Random.Range((int)RobotType.Volt, (int)RobotType.Max);
+            RobotType randomRobotType3 = (RobotType)UnityEngine.Random.Range((int)RobotType.Volt, (int)RobotType.Max);
+            SkinType randomSkinType1;
+            do
+            {
+                randomSkinType1 = (SkinType)UnityEngine.Random.Range((int)SkinType.Origin, (int)SkinType.Max);
+            }
+            while (randomSkinType1 == SkinType.Christmas);
+            SkinType randomSkinType2;
+            do
+            {
+                randomSkinType2 = (SkinType)UnityEngine.Random.Range((int)SkinType.Origin, (int)SkinType.Max);
+            }
+            while (randomSkinType2 == SkinType.Christmas);
+            SkinType randomSkinType3;
+            do
+            {
+                randomSkinType3 = (SkinType)UnityEngine.Random.Range((int)SkinType.Origin, (int)SkinType.Max);
+            }
+            while (randomSkinType3 == SkinType.Christmas);
+            Volt_PlayerManager.S.SetupPlayersInfo(PlayerType.HOSTPLAYER, (RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT"), (SkinType)PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"), Volt_PlayerData.instance.NickName,
+                                            PlayerType.AI, randomRobotType1, randomSkinType1, Volt_Utils.GetRandomKillbotName(randomRobotType1),
+                                            PlayerType.AI, randomRobotType2, randomSkinType2, Volt_Utils.GetRandomKillbotName(randomRobotType2),
+                                            PlayerType.AI, randomRobotType3, randomSkinType3, Volt_Utils.GetRandomKillbotName(randomRobotType3));
+
+            //Volt_GameManager.S.ArenaSetupStart(mapType);
+
+
+            GameController.instance.gameData.mapType = (Define.MapType)PlayerPrefs.GetInt("SELECTED_MAP");
+            GameController.instance.ChangePhase<ArenaSetup>();
+        }
+        else
+            PacketTransmission.SendMatchingRequestPacket((int)selectedRobotType, (int)Volt_PlayerData.instance.selectdRobotSkins[selectedRobotType].SkinType);
 
 
         StartCoroutine(Action(game.gameData));

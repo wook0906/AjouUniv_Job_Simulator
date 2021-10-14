@@ -36,16 +36,16 @@ public class Volt_CheatPanel : MonoBehaviour
         playerHasModuleList.Add(new List<Card>());
         playerHasModuleList.Add(new List<Card>());
     }
-    IEnumerator CoInit()
-    {
-        yield return new WaitUntil(() => Volt_PlayerManager.S.I != null);
-        curSelectedPlayer = Volt_PlayerManager.S.GetPlayerByPlayerNumber(1);
-        //if (Volt_GameManager.S.mapType == MapType.Ruhrgebiet)
-        if(GameController.instance.gameData.mapType == Define.MapType.Ruhrgebiet)
-        {
-            suddenDeathToggle.SetActive(false);
-        }
-    }
+    //IEnumerator CoInit()
+    //{
+    //    yield return new WaitUntil(() => Volt_PlayerManager.S.I != null);
+    //    curSelectedPlayer = Volt_PlayerManager.S.GetPlayerByPlayerNumber(1);
+    //    //if (Volt_GameManager.S.mapType == MapType.Ruhrgebiet)
+    //    if(GameController.instance.gameData.mapType == Define.MapType.Ruhrgebiet)
+    //    {
+    //        suddenDeathToggle.SetActive(false);
+    //    }
+    //}
     /*
     public void OnClickPlayerSelectBtn(int playerNumber)
     {
@@ -58,29 +58,14 @@ public class Volt_CheatPanel : MonoBehaviour
                 playerBtns[i].GetComponent<Image>().color = Color.white;
         }
     }*/
-    public void OnClickPlayerSelectBtn(GameObject btn)
-    {
-        int playerNumber = int.Parse(btn.name);
-        curSelectedPlayer = Volt_PlayerManager.S.GetPlayerByPlayerNumber(playerNumber);
-        for (int i = 0; i < playerBtns.Count; i++)
-        {
-            if (i == playerNumber - 1)
-                playerBtns[i].GetComponent<UISprite>().color = Color.green;
-            //playerBtns[i].GetComponent<Image>().color = Color.green;
-            else
-                playerBtns[i].GetComponent<UISprite>().color = Color.green;
-            //playerBtns[i].GetComponent<Image>().color = Color.white;
-        }
-    }
+    
     
     public void NoticeGetModuleCard(int playerNumber, Card card)
     {
-        //if(!Volt_GameManager.S.IsTutorialMode)
-            playerHasModuleList[playerNumber - 1].Add(card);
+        playerHasModuleList[playerNumber - 1].Add(card);
     }
     public void NoticeLostModuleCard(int playerNumber, Card card)
     {
-        //if (Volt_GameManager.S.IsTutorialMode) return;
         if (IsHaveSameCard(playerNumber, card))
         {
             playerHasModuleList[playerNumber - 1].Remove(card);
@@ -572,21 +557,21 @@ public class Volt_CheatPanel : MonoBehaviour
             GameController.instance.gameData.isEndlessGame = true;
         }
     }
-    public void OnToggleSuddenDeath(UIToggle toggle)
-    {
-        //if (Volt_GameManager.S == null)
-        if (GameController.instance == null)
-            return;
-        if (!toggle)
-            return;
+    //public void OnToggleSuddenDeath(UIToggle toggle)
+    //{
+    //    //if (Volt_GameManager.S == null)
+    //    if (GameController.instance == null)
+    //        return;
+    //    if (!toggle)
+    //        return;
 
-        if (!toggle.value)
-        {
-            GameController.instance.gameData.isOnSuddenDeath = false;
-        }
-        else
-        {
-            GameController.instance.gameData.isOnSuddenDeath = true;
-        }
-    }
+    //    if (!toggle.value)
+    //    {
+    //        GameController.instance.gameData.isOnSuddenDeath = false;
+    //    }
+    //    else
+    //    {
+    //        GameController.instance.gameData.isOnSuddenDeath = true;
+    //    }
+    //}
 }

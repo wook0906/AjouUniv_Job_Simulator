@@ -43,7 +43,7 @@ public class ShowAdConfirm_Popup : UI_Popup
     }
     void DelayedOnEnable()
     {
-        GetLabel((int)Labels.RemainViewCount_Label).text = "[FFFF00]" + Volt_PlayerData.instance.RemainAdCnt + "회 남음[-]";
+        GetLabel((int)Labels.RemainViewCount_Label).text = "[FFFF00]" + Volt_PlayerData.instance.RemainAdCnt + " / 5[-]";
     }
 
     private void OnClickConfirm()

@@ -613,7 +613,8 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
 
 
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0 &&
-            Managers.Scene.CurrentScene.SceneType == Define.Scene.GameScene)
+            Managers.Scene.CurrentScene.SceneType == Define.Scene.GameScene ||
+            PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
         {
             if (packetType != EPacketType.InternetConnectionCheckPacket)
                 return;

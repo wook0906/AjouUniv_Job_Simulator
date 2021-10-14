@@ -3438,5 +3438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TermsOfService_Popup
       objectReference: {fileID: 0}
+    - target: {fileID: 6223908028024400374, guid: 7208effbf71cad848a0c83f746fc0527,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7208effbf71cad848a0c83f746fc0527, type: 3}

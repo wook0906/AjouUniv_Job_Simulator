@@ -23,7 +23,7 @@ public class BenefitAlarm_Popup : UI_Popup
         Bind<UIButton>(typeof(Buttons));
         Bind<UILabel>(typeof(Labels));
 
-        GetLabel((int)Labels.Notice_Label).text = "광고사로부터 배터리 5개가 도착했습니다.";
+        GetLabel((int)Labels.Notice_Label).text = Managers.Localization.GetLocalizedValue("BenefitAlarm_Popup_Notice");
 
         GetButton((int)Buttons.Get_Btn).onClick.Add(new EventDelegate(() =>
         {

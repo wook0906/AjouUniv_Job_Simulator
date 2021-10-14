@@ -96,12 +96,13 @@ public class Synchronization : PhaseBase
 
         Volt_GMUI.S.Synchronization(data.round);
 
+
+        if(data.round >= 10 ) data.isOnSuddenDeath = true;
         if (data.mapType == Define.MapType.Ruhrgebiet)
         {
             //SuddenDeathOn 시켜야함.
             if (data.round >= 10 && data.round < 13)
             {
-                data.isOnSuddenDeath = true;
                 foreach (var item in Volt_ArenaSetter.S.fallTiles1)
                 {
                     item.Fall();
@@ -113,7 +114,6 @@ public class Synchronization : PhaseBase
             }
             else if (data.round >= 13)
             {
-                data.isOnSuddenDeath = true;
                 foreach (var item in Volt_ArenaSetter.S.fallTiles2)
                 {
                     item.Fall();

@@ -1946,7 +1946,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3003
   mClipTexture: {fileID: 0}
   mAlpha: 0
   mClipping: 0
@@ -4082,7 +4082,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3009
+  startingRenderQueue: 3010
   mClipTexture: {fileID: 0}
   mAlpha: 0
   mClipping: 0
@@ -6974,7 +6974,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3009
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -7581,12 +7581,6 @@ MonoBehaviour:
     mMethodName: OnClickCheatPanelBtn
     mParameters: []
     oneShot: 0
-  - mTarget: {fileID: 596069302499552947}
-    mMethodName: OnPressPopupAppearWindowOnBtn
-    mParameters:
-    - obj: {fileID: 0}
-      field: 
-    oneShot: 0
 --- !u!65 &8637037368132023920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7836,7 +7830,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3003
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -8456,7 +8450,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3003
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -8754,7 +8748,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3003
   mClipTexture: {fileID: 0}
   mAlpha: 0
   mClipping: 0
@@ -8980,7 +8974,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -9035,6 +9029,7 @@ MonoBehaviour:
   guidePanel: {fileID: 8637037367862019884}
   toolTipPrefab: {fileID: 8501501000284225168, guid: a3aa40726dcd59744ad7c698d1ca78cd,
     type: 3}
+  cheater: {fileID: 0}
   newModuleNoticeLabel: {fileID: 8637037368341724977}
   isGetNewModule: 0
   _3dObjectInteractable: 0

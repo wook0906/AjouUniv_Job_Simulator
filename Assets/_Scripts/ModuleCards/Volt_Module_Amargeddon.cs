@@ -24,6 +24,6 @@ public class Volt_Module_Amargeddon : Volt_ModuleCardBase, IAddOnsModule
     public void SetOff()
     {
         GameController.instance.gameData.AmargeddonCount = 0;
-        GameController.instance.gameData.AmargeddonPlayer = 0; ;
+        GameController.instance.gameData.AmargeddonPlayer = 0;
     }
 }

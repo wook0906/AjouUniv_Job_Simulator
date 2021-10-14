@@ -97,7 +97,11 @@ public class Simulation : PhaseBase
             yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotBehaviourFlagOff());
 
             Volt_GamePlayData.S.ClearOtherRobotsAttackedByRobotsOnThisTurn();
+
+            if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
                 PacketTransmission.SendSimulationCompletionPacket();
+            else
+                GameController.instance.ChangePhase<ResolutionTurn>();
         }
         data.behaviours.Clear();
         //data.isLocalSimulationDone = true;
@@ -168,6 +172,20 @@ public class Simulation : PhaseBase
         {
             item.SetDefaultBlinkOption();
             item.BlinkOn = false;
+        }
+
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+        {
+            foreach (var item in Volt_PlayerManager.S.GetPlayers())
+            {
+                if (item.VictoryPoint >= 3)
+                {
+                    GameController.instance.gameData.winner = item.playerNumber;
+                    GameController.instance.ChangePhase<GameOver>();
+                    phaseDone = true;
+                    yield break;
+                }
+            }
         }
 
         foreach (var item in Volt_ArenaSetter.S.robotsInArena)

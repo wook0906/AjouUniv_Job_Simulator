@@ -32,9 +32,9 @@ public class GetBenefit_Popup : UI_Popup
         {
             case EBenefitType.Pack1Battery:
                 if (Managers.Data.GetBenefitResult == 0)//성공
-                    GetLabel((int)Labels.Notice_Label).text = "배터리를 획득했습니다!";
+                    GetLabel((int)Labels.Notice_Label).text = Managers.Localization.GetLocalizedValue("GetBenefit_Popup_Success_Battery");
                 else
-                    GetLabel((int)Labels.Notice_Label).text = "배터리를 획득하지 못했습니다.\n 다시 시도해주세요.";
+                    GetLabel((int)Labels.Notice_Label).text = Managers.Localization.GetLocalizedValue("GetBenefit_Popup_Fail_Battery");
                 break;
             default:
                 break;

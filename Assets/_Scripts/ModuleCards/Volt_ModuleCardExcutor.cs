@@ -219,7 +219,8 @@ public class Volt_ModuleCardExcutor : MonoBehaviour
                 }
                 Volt_ModuleDeck.S.ReturnModuleCard(curEquipedCards[i]);
 
-                //Volt_CheatPanel.S.NoticeLostModuleCard(GetComponent<Volt_Robot>().playerInfo.playerNumber, card.card);
+                if(Volt_GMUI.S.IsCheatPanelOn)
+                    Volt_GMUI.S.cheater.NoticeLostModuleCard(GetComponent<Volt_Robot>().playerInfo.playerNumber, card.card);
 
                 if (GetComponent<Volt_Robot>().playerInfo == Volt_PlayerManager.S.I)
                     Volt_PlayerUI.S.UnEquipModuleCard(i);

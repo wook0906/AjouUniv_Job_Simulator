@@ -40,40 +40,51 @@ public class ItemSetup : PhaseBase
     }
     IEnumerator ItemSetupCoroutine(GameData data)
     {
-        if (GameController.instance.gameData.remainRoundCountToVpSetup == 0)
-            SetVPInTile(Volt_ArenaSetter.S.GetTileByIdx(data.vpIdx));
+        if (data.vpIdx != 0)
+        {
+            if (GameController.instance.gameData.remainRoundCountToVpSetup == 0)
+                SetVPInTile(Volt_ArenaSetter.S.GetTileByIdx(data.vpIdx));
+            else
+                isVpSetupDone = true;
+        }
         else
             isVpSetupDone = true;
-
         //Debug.Log("VP Setup");
         yield return new WaitUntil(() => isVpSetupDone);
         //Debug.Log("VP Setup Done");
-        isVpSetupDone = false;
 
-        int totalKit = 0;
-        foreach (var tile in Volt_ArenaSetter.S.GetTileArray())
+        if (data.repairIdx != 0)
         {
-            if (tile.isHaveRepairKit)
-                totalKit += 1;
+            int totalKit = 0;
+            foreach (var tile in Volt_ArenaSetter.S.GetTileArray())
+            {
+                if (tile.isHaveRepairKit)
+                    totalKit += 1;
+            }
+            if (totalKit < 3)
+                SetRepairKitInTile(Volt_ArenaSetter.S.GetTileByIdx(data.repairIdx));
+            else
+                isRepairkitSetupDone = true;
         }
-        if (totalKit < 3)
-            SetRepairKitInTile(Volt_ArenaSetter.S.GetTileByIdx(data.repairIdx));
         else
             isRepairkitSetupDone = true;
-
         //Debug.Log("kit Setup");
         yield return new WaitUntil(() => isRepairkitSetupDone);
-        //Debug.Log("kit Setup done");
-        isRepairkitSetupDone = false;
 
-        if (Volt_ArenaSetter.S.numOfModule < 6)
-            SetModuleInTile(Volt_ArenaSetter.S.GetTileByIdx(data.moduleIdx), data.drawedCard);
+
+        if (data.moduleIdx != 0)
+        {
+            if (Volt_ArenaSetter.S.numOfModule < 6)
+                SetModuleInTile(Volt_ArenaSetter.S.GetTileByIdx(data.moduleIdx), data.drawedCard);
+            else
+                isModuleSetupDone = true;
+        }
         else
             isModuleSetupDone = true;
         //Debug.Log("module Setup");
         yield return new WaitUntil(() => isModuleSetupDone);
         //Debug.Log("module Setup done");
-        isModuleSetupDone = false;
+
 
         if (data.mapType == Define.MapType.Ruhrgebiet)
         {
@@ -86,8 +97,8 @@ public class ItemSetup : PhaseBase
                 isVoltageSpaceSetupDone = true;
 
             yield return new WaitUntil(() => isVoltageSpaceSetupDone);
-            isVoltageSpaceSetupDone = false;
         }
+
         yield return new WaitUntil(() => !Volt_PlayerManager.S.I.playerCamRoot.isMoving);
     }
 

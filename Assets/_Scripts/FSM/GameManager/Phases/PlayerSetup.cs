@@ -73,10 +73,18 @@ public class PlayerSetup : PhaseBase
         ModuleType moduleType = Volt_ModuleDeck.S.GetRandomModuleType();
         Volt_ModuleCardBase cardBase = Volt_ModuleDeck.S.DrawRandomCard(moduleType);
 
-        if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
+        if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1 && PlayerPrefs.GetInt("Volt_TrainingMode") != 1)
             PacketTransmission.SendFieldReadyCompletionPacket(cardBase.card);
-        else
+        else if(PlayerPrefs.GetInt("Volt_TutorialDone") == 0 && PlayerPrefs.GetInt("Volt_TrainingMode") != 1)
             GameController.instance.ChangePhase<TutorialItemSetup>();
+        else if(PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+        {
+            GameController.instance.gameData.drawedCard = Card.NONE;
+            GameController.instance.gameData.vpIdx = 0;
+            GameController.instance.gameData.repairIdx = 0;
+            GameController.instance.gameData.moduleIdx = 0;
+            GameController.instance.ChangePhase<ItemSetup>();
+        }
         phaseDone = true;
     }
 }

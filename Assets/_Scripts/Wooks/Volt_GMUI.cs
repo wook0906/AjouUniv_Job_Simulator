@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-
 public class Volt_GMUI : UIBase
 {
     public static Volt_GMUI S;
@@ -23,6 +22,7 @@ public class Volt_GMUI : UIBase
     public GameObject msg2dPanel;
     public Volt_GMUIGuidePanel guidePanel;
     public Volt_ModuleTooltip toolTipPrefab;
+    public Cheat_Popup cheater;
     public UILabel newModuleNoticeLabel;
     public bool isGetNewModule = false;
     Volt_ModuleTooltip currnetShowtoolTip = null;
@@ -120,8 +120,8 @@ public class Volt_GMUI : UIBase
                 //print("RoundNumber Up!");
                 GameController.instance.gameData.round = value;
                 roundNumberGo.GetComponentInChildren<UILabel>().text = GameController.instance.gameData.round.ToString();
-                if (value >= 10)
-                    GameController.instance.gameData.isOnSuddenDeath = true;
+                //if (value >= 10)
+                    //GameController.instance.gameData.isOnSuddenDeath = true;
             }
         }
     }
@@ -224,13 +224,22 @@ public class Volt_GMUI : UIBase
         else
             IsCheatModeOn = true;
     }
+   
     public void OnClickCheatPanelBtn()
     {
-        if (IsCheatPanelOn)
-            IsCheatPanelOn = false;
-        else
+        if (!IsCheatPanelOn)
+        {
             IsCheatPanelOn = true;
+            Managers.UI.ShowPopupUIAsync<Cheat_Popup>();
+        }
+        else
+        {
+            Volt_GMUI.S._3dObjectInteractable = false;
+            cheater.ClosePopupUI();
+            isCheatPanelOn = false;
+        }
     }
+
 
    
     //public void OnClickBackToLobbyBtn(GameObject btn)

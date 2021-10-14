@@ -56,7 +56,22 @@ public class ResolutionTurn : PhaseBase
             Volt_ArenaSetter.S.AppearAllWalls();
         yield return new WaitForSeconds(1.5f);
 
-        SendCurrentGameData();
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
+            SendCurrentGameData();
+        else
+        {
+            foreach (var item in Volt_PlayerManager.S.GetPlayers())
+            {
+                if (item.VictoryPoint >= 3)
+                {
+                    GameController.instance.gameData.winner = item.playerNumber;
+                    GameController.instance.ChangePhase<GameOver>();
+                    phaseDone = true;
+                    yield break;
+                }
+            }
+            GameController.instance.ChangePhase<ItemSetup>();
+        }
 
         phaseDone = true;
     }
