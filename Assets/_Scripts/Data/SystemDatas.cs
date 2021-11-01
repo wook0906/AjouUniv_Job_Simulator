@@ -29,26 +29,48 @@ public class InfoACHCondition
     public int ID;
     public int conditionType;
     public int condition; // 조건 값
-    public int rewardType;
-    public int reward;  // 보상 갯수
+    //public int rewardType;
+    //public int reward;  // 보상 갯수
+    public Define.ACHReward reward;
     public bool isAccomplish; // 보상 수령여부
 
-    public InfoACHCondition(int ID, int conditionType, int condition, int rewardType, int reward)
+    //public InfoACHCondition(int ID, int conditionType, int condition, int rewardType, int reward)
+    //{
+    //    this.ID = ID;
+    //    this.conditionType = conditionType;
+    //    this.condition = condition;
+    //    //this.rewardType = rewardType;
+    //    this.reward = reward;
+    //}
+    public InfoACHCondition(int ID, int conditionType, int condition, Define.ACHReward reward)
     {
         this.ID = ID;
         this.conditionType = conditionType;
         this.condition = condition;
-        this.rewardType = rewardType;
+        //this.rewardType = rewardType;
         this.reward = reward;
     }
+
+    //public override string ToString()
+    //{
+    //    System.Text.StringBuilder builder = new System.Text.StringBuilder();
+    //    builder.Append("ConditionType: " + this.conditionType);
+    //    builder.Append(" /Condition: " + this.condition);
+    //    builder.Append(" /RewardType: " + this.rewardType);
+    //    builder.Append(" /Reward: " + this.reward);
+
+    //    return builder.ToString();
+    //}
 
     public override string ToString()
     {
         System.Text.StringBuilder builder = new System.Text.StringBuilder();
         builder.Append("ConditionType: " + this.conditionType);
         builder.Append(" /Condition: " + this.condition);
-        builder.Append(" /RewardType: " + this.rewardType);
-        builder.Append(" /Reward: " + this.reward);
+        builder.Append(" /RewardGold: " + this.reward.gold);
+        builder.Append(" /RewardDiamond : " + this.reward.diamond);
+        builder.Append(" /RewardBattery : " + this.reward.battery);
+        builder.Append(" /RewardSkin : " + this.reward.skinType);
 
         return builder.ToString();
     }

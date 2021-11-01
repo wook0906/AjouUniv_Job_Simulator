@@ -40,7 +40,7 @@ public class ACHDataManager : MonoBehaviour
                 {
                     tempAchievementTalbe.Add(param.ID, new ACHModel(param.ID,
                         param.title_KR, param.title_EN, param.title_GER, param.title_Fren,
-                        param.description_KR, param.description_EN, param.description_GER, param.description_Fren, tInfoACHCondition.rewardType,
+                        param.description_KR, param.description_EN, param.description_GER, param.description_Fren,
                         tInfoACHCondition.reward, tInfoACHCondition.conditionType, tInfoACHCondition.condition, param.rewardICON, param.iconAtlas,
                         param.progressButtonName_KR, param.progressButtonName_EN, param.progressButtonName_GER,
                         param.progressButtonName_Fren, param.getRewardButtonName_KR, param.getRewardButtonName_EN,

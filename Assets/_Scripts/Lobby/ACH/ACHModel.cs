@@ -56,8 +56,9 @@ public class ACHModel
     public string           description_EN;
     public string           description_GER;
     public string           description_Fren;
-    public EAssetsType      rewardType;
-    public int              rewardCount;
+    //public EAssetsType      rewardType;
+    //public int              rewardCount;
+    public Define.ACHReward rewardInfo;
     public int              conditionType;
     public int              conditionCount;
     public string           rewardICON;
@@ -81,7 +82,7 @@ public class ACHModel
 
     public ACHModel(int id, string title_KR, string title_EN, string title_GER,
         string title_Fren, string description_KR, string description_EN, string description_GER,
-        string description_Fren, int reward, int rewardCount, int conditionType,
+        string description_Fren, Define.ACHReward rewardInfo, int conditionType,
         int conditionCount, string rewardICON, string iconAtlas, string progressButtonName_KR,
         string progressButtonName_EN, string progressButtonName_GER, string progressButtonName_Fren,
         string getRewardButtonName_KR, string getRewardButtonName_EN, string getRewardButtonName_GER,
@@ -98,8 +99,7 @@ public class ACHModel
         this.description_EN = description_EN;
         this.description_GER = description_GER;
         this.description_Fren = description_Fren;
-        this.rewardType = (EAssetsType)reward;
-        this.rewardCount = rewardCount;
+        this.rewardInfo = rewardInfo;
         this.conditionType = conditionType;
         this.conditionCount = conditionCount;
         this.rewardICON = rewardICON;
@@ -134,8 +134,12 @@ public class ACHModel
         builder.Append("/Description_GER: " + this.description_GER);
         builder.Append("/Title_Fren: " + this.title_Fren);
         builder.Append("/Description_Fren: " + this.description_Fren);
-        builder.Append("/RewardType: " + this.rewardType.ToString());
-        builder.Append("/RewardCount: " + this.rewardCount.ToString());
+        //builder.Append("/RewardType: " + this.rewardType.ToString());
+        //builder.Append("/RewardCount: " + this.rewardCount.ToString());
+        builder.Append(" /RewardGold : " + this.rewardInfo.gold);
+        builder.Append(" /RewardDia : " + this.rewardInfo.diamond);
+        builder.Append(" /RewardBaterry : " + this.rewardInfo.battery);
+        builder.Append(" /RewardSkinType : " + this.rewardInfo.skinType);
         builder.Append("/ConditionType: " + this.conditionType);
         builder.Append("/ConditionCount: " + this.conditionCount.ToString());
         builder.Append("/RewardICON Path: " + this.rewardICON);

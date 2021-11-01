@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3453434492469293444}
   - component: {fileID: 3079732627058828968}
   m_Layer: 5
-  m_Name: RewardAsset_Sprite (2)
+  m_Name: BaterryIcon_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3453434492469293444
 Transform:
   m_ObjectHideFlags: 0
@@ -98,12 +98,12 @@ GameObject:
   - component: {fileID: 8142228292279599061}
   - component: {fileID: 5152111123883606773}
   m_Layer: 5
-  m_Name: RewardAsset_Sprite (1)
+  m_Name: DiamondIcon_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8142228292279599061
 Transform:
   m_ObjectHideFlags: 0
@@ -185,12 +185,12 @@ GameObject:
   - component: {fileID: 6208222998447707495}
   - component: {fileID: 6190745000989230703}
   m_Layer: 5
-  m_Name: RewardAssetCount_Label (2)
+  m_Name: BatteryCount_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6208222998447707495
 Transform:
   m_ObjectHideFlags: 0
@@ -286,12 +286,12 @@ GameObject:
   - component: {fileID: 4672945545718803788}
   - component: {fileID: 5504957731162056355}
   m_Layer: 5
-  m_Name: RewardAssetCount_Label (3)
+  m_Name: SkinName_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4672945545718803788
 Transform:
   m_ObjectHideFlags: 0
@@ -387,12 +387,12 @@ GameObject:
   - component: {fileID: 2930551325235051373}
   - component: {fileID: 4662633763392507879}
   m_Layer: 5
-  m_Name: RewardAssetCount_Label (1)
+  m_Name: DiamondCount_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2930551325235051373
 Transform:
   m_ObjectHideFlags: 0
@@ -837,12 +837,12 @@ GameObject:
   - component: {fileID: 3884588580974203592}
   - component: {fileID: 3884588580974203593}
   m_Layer: 5
-  m_Name: RewardAssetCount_Label
+  m_Name: GoldCount_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3884588580974203592
 Transform:
   m_ObjectHideFlags: 0
@@ -938,12 +938,12 @@ GameObject:
   - component: {fileID: 3884588581295046561}
   - component: {fileID: 39686508630033739}
   m_Layer: 5
-  m_Name: RewardAsset_Sprite
+  m_Name: GoldIcon_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3884588581295046561
 Transform:
   m_ObjectHideFlags: 0
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   mHeight: 400
   mDepth: 1
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 3
@@ -1227,7 +1227,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1200, y: 200, z: 0}
+  m_Size: {x: 1200, y: 400, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3884588581991104593
 MonoBehaviour:
@@ -1355,12 +1355,12 @@ GameObject:
   - component: {fileID: 8071046396119266302}
   - component: {fileID: 7989277640966161412}
   m_Layer: 5
-  m_Name: RewardAsset_Sprite (3)
+  m_Name: SkinIcon_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8071046396119266302
 Transform:
   m_ObjectHideFlags: 0

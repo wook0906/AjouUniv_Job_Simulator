@@ -71,12 +71,12 @@ public class SystemInfoManager : MonoBehaviour
             }
             foreach (var item in daliy)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.rewardType, item.reward));
+                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));//item.rewardType, item.reward));
                 //Debug.Log($"Daily ACH condtionInfo {item.ToString()}");
             }
             foreach (var item in normal)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.rewardType, item.reward));
+                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));
                 //Debug.Log($"Normal ACH ConditionInfo {item.ToString()}");
             }
         }
@@ -94,12 +94,12 @@ public class SystemInfoManager : MonoBehaviour
             achConditionInfos.Clear();
             foreach (var item in daily)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.rewardType, item.reward));
+                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));
                 //Debug.Log($"Daily ACH condtionInfo {item.ToString()}");
             }
             foreach (var item in normal)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.rewardType, item.reward));
+                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));
                 //Debug.Log($"Normal ACH ConditionInfo {item.ToString()}");
             }
         }

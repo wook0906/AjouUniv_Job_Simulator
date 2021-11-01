@@ -26,7 +26,7 @@ public class ScrollViewItemCreator : MonoBehaviour
 
     private const float OFFSET = 0.08f; // 스크롤 뷰 위치 조정시 필요한 보정 값.
 
-    private const int SCROLLVIEWHEIGHTPERITEM = 170;
+    private const int SCROLLVIEWHEIGHTPERITEM = 400;
     private const int SCROLLVIEWMAXHEIGHT = 720;
     private const int SCROLLVIEWWIDTH = 1200;
 
@@ -62,7 +62,7 @@ public class ScrollViewItemCreator : MonoBehaviour
             GameObject itemGO = handle.Result;
             itemGO.GetComponent<ACHItem>().Init(param.ID, param.title_KR, param.title_EN, param.title_GER,
                 param.title_Fren, param.description_KR, param.description_EN, param.description_GER,
-                param.description_Fren, (int)param.rewardType, param.rewardCount,
+                param.description_Fren, param.rewardInfo,
                 param.conditionType, param.conditionCount, param.rewardICON,
                 param.progressButtonName_KR, param.progressButtonName_EN, param.progressButtonName_GER,
                 param.progressButtonName_Fren, param.getRewardButtonName_KR, param.getRewardButtonName_EN,
@@ -79,6 +79,8 @@ public class ScrollViewItemCreator : MonoBehaviour
             handle.Result.transform.localPosition -= moveVector;
             items.Add(handle.Result);
             ++count;
+
+            yield return new WaitUntil(() => itemGO.GetOrAddComponent<ACHItem>().IsAllInit());
         }
         float totalScrollViewHeight = SCROLLVIEWHEIGHTPERITEM * ACHTable.Count;
         float scrollViewHeight = Mathf.Min(SCROLLVIEWMAXHEIGHT, totalScrollViewHeight);

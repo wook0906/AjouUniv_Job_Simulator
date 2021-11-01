@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class Define
 {
+    public class ACHReward
+    {
+        public int gold = 0;
+        public int diamond = 0;
+        public int battery = 0;
+        public int skinType = 0;
+    }
     public enum ProfileArtItemID
     {
         ProfileArt001,

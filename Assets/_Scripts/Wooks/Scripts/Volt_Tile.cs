@@ -791,7 +791,7 @@ public class Volt_Tile : MonoBehaviour
             {
                 Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
             });
-        
+
         Vector3 pos = transform.position;
         pos.y += (1.1f * Volt_ArenaSetter.S.tileScale.y) * 1.5f;
         particle.transform.position = pos;
