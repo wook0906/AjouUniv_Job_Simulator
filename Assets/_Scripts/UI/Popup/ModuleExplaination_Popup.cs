@@ -36,12 +36,12 @@ public class ModuleExplaination_Popup : UI_Popup
 
         GetButton((int)Buttons.Card_Btn).onClick.Add(new EventDelegate(() =>
         {
-            gameObject.SetActive(false);
+            ClosePopupUI();
         }));
 
         ModuleScene_UI scene_UI = FindObjectOfType<ModuleScene_UI>();
         scene_UI.ExplainationPopup = this;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void ShowPopup(string cardName)

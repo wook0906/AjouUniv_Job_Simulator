@@ -103,7 +103,7 @@ public class LobbyScene_AssetUI : UIBase
     public void SetBatteryCountLabel(float count)
     {
         GetLabel((int)Labels.Battery_Label).text = $"{count}/{Volt_PlayerData.instance.MaxBetteryCount}";
-        if (count < 0)
+        if (count <= 0)
             lobbyScene_UI.HideStartGameBtnOutline();
         else
             lobbyScene_UI.ShowStartGameBtnOutline();

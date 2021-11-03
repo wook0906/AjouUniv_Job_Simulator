@@ -649,7 +649,7 @@ MonoBehaviour:
   mHeight: 100
   mDepth: 3
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 3
@@ -683,12 +683,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 3884588580687679455}
-  hover: {r: 1, g: 1, b: 1, a: 1}
+  hover: {r: 0, g: 0.02557993, b: 1, a: 1}
   pressed: {r: 1, g: 1, b: 1, a: 1}
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   duration: 0.1
   dragHighlight: 0
-  hoverSprite: Btn_button04_h
+  hoverSprite: Btn_button04_Yellow
   pressedSprite: Btn_button03_p
   disabledSprite: Btn_button03_n
   hoverSprite2D: {fileID: 0}
@@ -707,7 +707,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 260, y: 100, z: 0}
+  m_Size: {x: 300, y: 100, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3884588580687679453
 MonoBehaviour:

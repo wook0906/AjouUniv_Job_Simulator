@@ -153,7 +153,7 @@ public class Volt_ResultSceneManager : MonoBehaviour
 
 
 
-        if (Volt_GamePlayData.S.isPracticeMode)
+        if (Volt_GamePlayData.S.isPracticeMode || PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
         {
             totalPointLabel.text = "0";
             killScoreLabel.text = "0";

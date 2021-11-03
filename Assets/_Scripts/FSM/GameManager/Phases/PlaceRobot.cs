@@ -146,8 +146,8 @@ public class PlaceRobot : PhaseBase
                     exclusiveRobotType = RobotType.Hound;
                     break;
                 case Define.MapType.Rome:
-                    exclusiveCardType = Card.ANCHOR;
-                    exclusiveModuleType = ModuleType.Tactic;
+                    exclusiveCardType = Card.DODGE;
+                    exclusiveModuleType = ModuleType.Movement;
                     exclusiveRobotType = RobotType.Mercury;
                     break;
                 case Define.MapType.Ruhrgebiet:

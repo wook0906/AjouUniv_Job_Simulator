@@ -306,7 +306,17 @@ public class Volt_GMUI : UIBase
         GameController.instance.CurrentPhase.OnExitPhase(GameController.instance);
         isHaveControl = false;
         IsTickOn = false;
-        PacketTransmission.SendPlayerExitPacket();
+        if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
+        {
+            Debug.Log("Applicatio Quit");
+            Application.Quit();
+        }
+        else if(PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+        {
+            Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
+        }
+        else
+            PacketTransmission.SendPlayerExitPacket();
         CommunicationWaitQueue.Instance.ResetOrder();
         CommunicationInfo.IsBoardGamePlaying = false;
         Volt_PlayerData.instance.NeedReConnection = false;

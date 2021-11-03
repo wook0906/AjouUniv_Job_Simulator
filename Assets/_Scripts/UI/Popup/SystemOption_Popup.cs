@@ -73,7 +73,7 @@ public class SystemOption_Popup : UI_Popup
         }));
         GetSlider((int)Sliders.Volume_Slider_BG).onChange.Add(new EventDelegate(() =>
         {
-            PlayerPrefs.SetFloat("Volt_MusicVolume", GetSlider((int)Sliders.Volume_Slider_BG).value);
+            PlayerPrefs.SetFloat("Volt_SoundVolume", GetSlider((int)Sliders.Volume_Slider_BG).value);
             Volt_SoundManager.S.OnChangedSoundVolume(GetSlider((int)Sliders.Volume_Slider_BG).value);
         }));
     }

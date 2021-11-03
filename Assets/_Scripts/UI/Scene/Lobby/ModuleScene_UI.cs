@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class ModuleScene_UI : UI_Scene
 {
@@ -132,15 +133,22 @@ public class ModuleScene_UI : UI_Scene
 
     public override void OnActive()
     {
-        Managers.UI.ShowPopupUIAsync<ModuleExplaination_Popup>();
+        //Managers.UI.ShowPopupUIAsync<ModuleExplaination_Popup>();
         //Managers.UI.PushToUILayerStack(this);
         OnPressdownAttackTapButton();
     }
 
     private void OnClickModuleCard(UIButton button)
     {
-        ExplainationPopup.gameObject.SetActive(true);
-        ExplainationPopup.ShowPopup(button.name);
+        //ExplainationPopup.gameObject.SetActive(true);
+        //ExplainationPopup.ShowPopup(button.name);
+        StartCoroutine(CorShowModuleExplaination(button));
+    }
+    IEnumerator CorShowModuleExplaination(UIButton button)
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<ModuleExplaination_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        handle.Result.GetComponent<ModuleExplaination_Popup>().ShowPopup(button.name);
     }
 
     public void OnPressdownAttackTapButton()

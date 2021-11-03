@@ -325,7 +325,7 @@ MonoBehaviour:
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   duration: 0.1
   dragHighlight: 0
-  hoverSprite: Btn_button03_p
+  hoverSprite: Btn_button03_n
   pressedSprite: Btn_button03_p
   disabledSprite: 
   hoverSprite2D: {fileID: 0}

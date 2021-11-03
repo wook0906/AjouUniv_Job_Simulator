@@ -20,7 +20,7 @@ public class BatteryPurchasePacket : Packet
         Volt_PlayerData.instance.RenewGoldText(Volt_PlayerData.instance.GoldCount);
         Volt_PlayerData.instance.RenewBatteryText(Volt_PlayerData.instance.BatteryCount);
 
-
+        Managers.Data.SetPurchaseProductResult(EShopPurchase.Battery, true);
         Managers.UI.ShowPopupUIAsync<PurchaseComplete_Popup>();
         //Volt_ShopUIManager.S.BoughtItemConfirmPopup(EShopPurchase.Battery, true);
     }

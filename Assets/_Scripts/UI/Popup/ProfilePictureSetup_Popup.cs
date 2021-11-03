@@ -28,7 +28,7 @@ public class ProfilePictureSetup_Popup : UI_Popup
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            OnClose();
+            ClosePopupUI();
         }));
         GameObject pictureItemRoot = Get<GameObject>((int)GameObjects.PictureItemRoot);
         pictureItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
@@ -69,7 +69,6 @@ public class ProfilePictureSetup_Popup : UI_Popup
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        ClosePopupUI();
     }
     void OnClickPictureItem(UIButton pictureItem)
     {

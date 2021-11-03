@@ -1589,12 +1589,12 @@ MonoBehaviour:
   tweenTarget: {fileID: 4909243472594823785}
   hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  disabledColor: {r: 0.2924528, g: 0.28693482, b: 0.28693482, a: 1}
   duration: 0.1
   dragHighlight: 0
   hoverSprite: Btn_button04_Yellow
   pressedSprite: Btn_button04_Yellow
-  disabledSprite: 
+  disabledSprite: Btn_button04_Yellow
   hoverSprite2D: {fileID: 0}
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}

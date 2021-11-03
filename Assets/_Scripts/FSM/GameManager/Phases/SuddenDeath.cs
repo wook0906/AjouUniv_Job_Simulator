@@ -195,8 +195,8 @@ public class SuddenDeath : PhaseBase
                 }
                 // 가장자리부터 타일이 한줄씩 사라질것임. 값 필요 x;
                 break;
-            case Define.MapType.Tokyo:
 
+            case Define.MapType.Tokyo:
                 int randomSatelitePoint = (data.randomOptionValues[0] % 4);
                 Volt_Tile targetTile = null;
                 switch (randomSatelitePoint)

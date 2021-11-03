@@ -18,6 +18,7 @@ public class ShopScene_UI : UI_Scene
         Emoticon_Btn,
         DiamondAdd_Btn,
         BatteryAdd_Btn,
+        GoldAdd_Btn,
         SkinMercuryTap,
         SkinReaperTap,
         SkinHoundTap,
@@ -123,6 +124,7 @@ public class ShopScene_UI : UI_Scene
         GetButton((int)Buttons.Package_Btn).onClick.Add(new EventDelegate(OnClickPackageTapButton));
         GetButton((int)Buttons.BatteryAdd_Btn).onClick.Add(new EventDelegate(OnClickBatteryTapButton));
         GetButton((int)Buttons.DiamondAdd_Btn).onClick.Add(new EventDelegate(OnClickDiamonTapButton));
+        GetButton((int)Buttons.GoldAdd_Btn).onClick.Add(new EventDelegate(OnClickGoldTapButton));
 
         if (Application.platform == RuntimePlatform.IPhonePlayer ||
             Application.platform == RuntimePlatform.OSXPlayer)

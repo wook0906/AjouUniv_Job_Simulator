@@ -351,19 +351,41 @@ public class UIManager
         return null;
     }
 
+    //public void ClosePopupUI(UI_Popup popup)
+    //{
+    //    if (_popupStack.Count == 0)
+    //        return;
+
+    //    if (_popupStack[0] != popup)
+    //    {
+    //        Debug.Log("Close Popup Failed");
+    //        return;
+    //    }
+
+    //    ClosePopupUI();
+    //}
+
     public void ClosePopupUI(UI_Popup popup)
     {
         if (_popupStack.Count == 0)
             return;
 
-        if (_popupStack[0] != popup)
+        foreach (var item in _popupStack)
         {
-            Debug.Log("Close Popup Failed");
-            return;
+            if (item == popup)
+            {
+                _popupStack.Remove(popup);
+                _popups.Remove(popup.name);
+                popup.OnClose();
+                Managers.Resource.DestoryAndRelease(popup.gameObject);
+                _order--;
+                return;
+            }
         }
-
-        ClosePopupUI();
+        Debug.Log("Close Popup Failed");
+        return;
     }
+
     public void ClosePopupUI()
     {
         if (_popupStack.Count == 0)

@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     //public PhaseBase prevPhase;
 
 
-    public bool isOnSuddenDeath = false;
+    //public bool isOnSuddenDeath = false;
     public bool IsOnSuddenDeath
     {
         get { return gameData.isOnSuddenDeath; }

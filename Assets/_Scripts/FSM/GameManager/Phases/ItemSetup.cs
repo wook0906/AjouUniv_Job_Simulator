@@ -26,6 +26,8 @@ public class ItemSetup : PhaseBase
 
         Volt_PlayerUI.S.MyModuleSetupStateInit();
         Volt_GMUI.S.RoundNumber++;
+        if (game.round > 10)
+            game.isOnSuddenDeath = true;
 
         //noticeText.text = "Item Setting...";
 

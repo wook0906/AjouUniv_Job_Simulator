@@ -119,7 +119,7 @@ public class BuyProduct_Popup : UI_Popup
                     }
                 }
                 itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
-                GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count} + 개";
+                GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
               
                 break;
             case EShopPurchase.Gold:
@@ -129,7 +129,7 @@ public class BuyProduct_Popup : UI_Popup
                 GetSprite((int)Sprites.Product_Image).spriteName = goldTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
                 itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
 
-                GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count} + 개";
+                GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 break;
             case EShopPurchase.Diamond:
                 {
@@ -139,7 +139,7 @@ public class BuyProduct_Popup : UI_Popup
 
                     GetSprite((int)Sprites.Product_Image).spriteName = diamondTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
                     itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
-                    GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count} + 개";
+                    GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 }
                 break;
             case EShopPurchase.Battery:
@@ -150,7 +150,7 @@ public class BuyProduct_Popup : UI_Popup
                     GetSprite((int)Sprites.Product_Image).spriteName = batteryTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
                     itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
                     
-                    GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count} + 개";
+                    GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 }
                 break;
             default:

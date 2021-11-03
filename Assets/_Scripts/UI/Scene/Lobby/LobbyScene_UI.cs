@@ -167,6 +167,8 @@ public class LobbyScene_UI : UI_Scene
 
     public void OnClickStartGame() //일반 대전 버튼 클릭하면 발생
     {
+        if (Volt_PlayerData.instance.BatteryCount <= 0)
+            return;
         Debug.Log("StartGame!");
         //Get<UIWidget>((int)Widgets.InputBlock).gameObject.SetActive(true);
         FindObjectOfType<LobbyScene_AssetUI>().SetOnInputBlock();
@@ -238,14 +240,14 @@ public class LobbyScene_UI : UI_Scene
 
         startGameBtnOutlieEffect.SetActive(true);
         
-        GetButton((int)Buttons.StartGame_Btn).enabled = true;
+        GetButton((int)Buttons.StartGame_Btn).isEnabled = true;
     }
 
     public void HideStartGameBtnOutline()
     {
         startGameBtnOutlieEffect.SetActive(false);
         //TODO: 배터리가 없어 게임을 플레이할 수 없다라고 팝업 띄우는게 좋겠음
-        GetButton((int)Buttons.StartGame_Btn).enabled = false;
+        GetButton((int)Buttons.StartGame_Btn).isEnabled = false;
     }
 
     private void ChangeRobotNameLabelToSelectedRobot()

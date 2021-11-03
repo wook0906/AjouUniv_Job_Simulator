@@ -56,6 +56,7 @@ public class ResetAccount_Popup : UI_Popup
     {
         PacketTransmission.SendDeleteUserPacket(Volt_PlayerData.instance.NickName.Length,
             Volt_PlayerData.instance.NickName);
+        PlayerPrefs.DeleteAll();
         ClosePopupUI();
         Managers.UI.ShowPopupUIAsync<ResetAccountCompleted_Popup>();
     }

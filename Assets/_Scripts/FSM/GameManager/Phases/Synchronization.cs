@@ -124,7 +124,10 @@ public class Synchronization : PhaseBase
                     Volt_PlayerManager.S.RuhrgebietChangeStartingTiles(item.playerNumber, 2);
                 }
             }
+            yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotIdleState());
         }
+
+       
 
         //yield return StartCoroutine(Volt_SynchronizationHandler.S.DelayedSync(armageddonCount, armageddonPlayer));
         //yield return new WaitUntil(() => Volt_SynchronizationHandler.S.isSyncDone);

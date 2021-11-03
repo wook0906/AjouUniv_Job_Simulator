@@ -35,7 +35,7 @@ public class MyProfile_Popup : UI_Popup
         }));
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            OnClose();
+            ClosePopupUI();
         }));
 
         SetInfo();
@@ -55,6 +55,6 @@ public class MyProfile_Popup : UI_Popup
         base.OnClose();
         LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
         lobbyScene.ChangeToLobbyCamera();
-        ClosePopupUI();
+        
     }
 }
