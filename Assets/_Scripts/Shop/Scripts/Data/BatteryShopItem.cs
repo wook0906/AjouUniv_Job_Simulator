@@ -57,7 +57,7 @@ namespace Volt
                     objectCountLabel.text = "";
 
                 priceTypeSprite.spriteName = this.priceICON;
-                priceCountLabel.text = this.priceCount.ToString();
+                priceCountLabel.text = string.Format("{0:#,###}", this.priceCount);
 
                 if (this.ID != 3000005)
                 {

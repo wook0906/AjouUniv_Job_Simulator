@@ -86,7 +86,7 @@ namespace Volt
 
                 priceCountLabel.trueTypeFont = nguiFont.dynamicFont;
                 priceCountLabel.fontSize = priceFontSize;
-                priceCountLabel.text = priceCount.ToString();
+                priceCountLabel.text = string.Format("{0:#,###}", this.priceCount);
             }
         }
     }

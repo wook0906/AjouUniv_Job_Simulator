@@ -56,7 +56,7 @@ namespace Volt
 
                 objectSprite.spriteName = this.objectICON.ToString();
                 objectCountLabel.text = this.objectCount.ToString();
-                priceCountLabel.text = this.priceCount.ToString();
+                priceCountLabel.text = string.Format("{0:#,###}", this.priceCount);
 
                 //switch (Application.systemLanguage)
                 //{
@@ -67,7 +67,7 @@ namespace Volt
                 //        priceCountLabel.text = "Preparing";
                 //        break;
                 //}
-                
+
             }
 
 
