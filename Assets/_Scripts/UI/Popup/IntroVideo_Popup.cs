@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class IntroVideo_Popup : UI_Popup
 {
     VideoPlayer video;
+    public bool isPlayed = false;
 
     enum GameObjects
     {
@@ -18,17 +19,17 @@ public class IntroVideo_Popup : UI_Popup
         Bind<GameObject>(typeof(GameObjects));
 
         video = Get<GameObject>((int)GameObjects.VideoPlayer).GetComponent<VideoPlayer>();
+        video.loopPointReached += IsFinished;
     }
 
     public void Play()
     {
         video.Play();
+        
     }
-    public bool IsPlaying()
+    public void IsFinished(VideoPlayer video)
     {
-        if(video.isPlaying)
-            return true;
-        return false;
+        isPlayed = true;
     }
 
 }

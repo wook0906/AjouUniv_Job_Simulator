@@ -124,7 +124,7 @@ public class GameScene : BaseScene
             introVideoUI.Play();
 
             yield return new WaitForSeconds(1f);
-            yield return new WaitUntil(() => !introVideoUI.IsPlaying());
+            yield return new WaitUntil(() => introVideoUI.isPlayed);
             Debug.Log("Intro video End");
         }
 
