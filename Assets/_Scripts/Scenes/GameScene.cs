@@ -85,12 +85,11 @@ public class GameScene : BaseScene
                       load |= (Loads)Enum.Parse(typeof(Loads), result.Result.name);
                   }
                   coreGOs.Add(result.Result);
-                  //if (!result.Result.GetComponent<Volt_GameManager>())
-                  //    return;
-                  //gameMgr = result.Result.GetComponent<Volt_GameManager>();
-                  if (!result.Result.GetComponent<GameController>())
-                      return;
-                  gameController = result.Result.GetComponent<GameController>();
+
+                  if (result.Result.GetComponent<GameController>())
+                        gameController = result.Result.GetComponent<GameController>();
+                  if (result.Result.name == "GameScene_UI")
+                      result.Result.GetComponent<UIPanel>().alpha = 0f;
               };
         }
 
@@ -109,10 +108,16 @@ public class GameScene : BaseScene
         IntroVideo_Popup introVideoUI = null;
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
         {
+            Volt_SoundManager.S.StopBGM();
             Managers.Resource.InstantiateAsync($"Game/Core/TutorialData.prefab");
-
             AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>();
             yield return new WaitUntil(() => handle.IsDone);
+            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
+                    (result) =>
+                    {
+                        Volt_SoundManager.S.RequestSoundPlay(result.Result,false);
+                    });
+
             Debug.Log("Intro video create");
 
             introVideoUI = handle.Result.GetComponent<IntroVideo_Popup>();

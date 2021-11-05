@@ -65,7 +65,7 @@ public class Volt_GMUI : UIBase
         set{
             
             isCheatModeOn = value;
-            cheatBtn.SetActive(!isCheatModeOn);
+            cheatBtn.SetActive(value);
         }
     }
 

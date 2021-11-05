@@ -193,7 +193,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -385,14 +385,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 0.8352941}
   mPivot: 4
-  mWidth: 3200
-  mHeight: 1440
+  mWidth: 4800
+  mHeight: 2400
   mDepth: 0
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.2222223
+  aspectRatio: 2
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -407,7 +407,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 9ef0f6b468908406fad858e1036871b4, type: 2}
-  mSpriteName: Dark
+  mSpriteName: EmoticonSlotBG
   mFixedAspect: 0
   mFillCenter: 1
 --- !u!65 &8459277936088937943
@@ -421,7 +421,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3200, y: 1440, z: 0}
+  m_Size: {x: 4800, y: 2400, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7057539763449423954
 MonoBehaviour:

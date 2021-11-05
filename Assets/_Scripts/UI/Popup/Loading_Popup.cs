@@ -13,7 +13,7 @@ public class Loading_Popup : UI_Popup
     enum Sprites
     {
         ProgressBarFG_Sprite,
-        MsgBoxBG_Sprite
+        //MsgBoxBG_Sprite
     }
 
     enum Labels

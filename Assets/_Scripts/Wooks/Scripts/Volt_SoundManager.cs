@@ -130,11 +130,15 @@ public class Volt_SoundManager : MonoBehaviour
         bgm.clip = newClip;
         bgm.Play();
     }
+    public void StopBGM()
+    {
+        bgm.Stop();
+    }
     public void RequestSoundPlay(AudioClip clip, bool isLoop, float delayTime = 0f)
     {
-        if (delayTime != 0f)
+        if (delayTime == 0f)
         {
-            AudioSource audioInstance = Instantiate(audioSourcePrefab);
+            AudioSource audioInstance = Instantiate(audioSourcePrefab,this.transform);
             audioInstance.loop = isLoop;
             audioInstance.clip = clip;
             audioInstance.volume = soundVolume;

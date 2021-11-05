@@ -8,6 +8,11 @@ public class PlayerSetup : PhaseBase
     {
         Debug.Log("Enter PlayerSetup");
         type = Define.Phase.PlayerSetup;
+        Volt_GMUI.S.GetComponent<UIPanel>().alpha = 1f;
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+            Volt_GMUI.S.IsCheatModeOn = true;
+        else
+            Volt_GMUI.S.IsCheatModeOn = false;
 
         StartCoroutine(Action(game.gameData));
     }
