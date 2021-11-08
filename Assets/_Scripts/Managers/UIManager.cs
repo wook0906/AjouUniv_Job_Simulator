@@ -269,7 +269,7 @@ public class UIManager
         return popup;
     }
 
-    public AsyncOperationHandle<GameObject> ShowPopupUIAsync<T>(string name = null, bool isAddTop = true) where T : UI_Popup
+    public AsyncOperationHandle<GameObject> ShowPopupUIAsync<T>(string name = null, bool isAddTop = true, bool ignoreBackBtn = false) where T : UI_Popup
     {
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
@@ -302,6 +302,7 @@ public class UIManager
             go.transform.SetChildLayer(go.layer);
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale = Vector3.one;
+            go.GetComponent<UI_Popup>().ignoreBackBtn = ignoreBackBtn;
         });
     }
 

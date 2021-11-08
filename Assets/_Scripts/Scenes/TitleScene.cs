@@ -78,8 +78,6 @@ public class TitleScene : BaseScene
         float min = handle.PercentComplete;
         while (!handle.IsDone)
         {
-            if (Volt_DontDestroyPanel.S.NetErrorType == NetworkErrorType.InternetInstable || Volt_DontDestroyPanel.S.NetErrorType == NetworkErrorType.InternetNonReachable)
-                yield break;
             float percentComplete = Mathf.Clamp(handle.PercentComplete, min, 1.0f);
             float percent = percentComplete * 100.0f;
             downloadPercentLabel.text = $"{percent.ToString("F01")}%";
@@ -97,7 +95,13 @@ public class TitleScene : BaseScene
         if (ClientSocketModule.Instance)
             DontDestroyOnLoad(ClientSocketModule.Instance);
 
-        
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
+            //Managers.UI.ShowPopupUI<NetworkError_Popup>();
+            //Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
+            yield break;
+        }
         if (!PlayerPrefs.HasKey("TOS_Agreement"))
         {
             TOS_Popup.gameObject.SetActive(true);
@@ -160,7 +164,6 @@ public class TitleScene : BaseScene
 
     private void FixedUpdate()
     {
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {   
             if(exitPopup == null)
@@ -179,7 +182,11 @@ public class TitleScene : BaseScene
                 Managers.UI.ClosePopupUI(exitPopup);
             }
         }
-        
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
+            //Managers.UI.ShowPopupUI<NetworkError_Popup>();
+        }
         if (Input.GetKeyDown(KeyCode.T))
         {
             PlayerPrefs.SetInt("Volt_TutorialDone", 0);

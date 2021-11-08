@@ -45,7 +45,7 @@ public class SceneManagerEx
     public void LoadSceneAsync(Define.Scene type, float delayTime = 0)
     {
         //Managers.Clear();
-        Managers.UI.ShowPopupUIAsync<Fade_Popup>();
+        Managers.UI.ShowPopupUIAsync<Fade_Popup>(null, true, true);
         Managers.Instance.StartCoroutine(CoStartChangeScene(type, delayTime));
     }
 

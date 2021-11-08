@@ -61,11 +61,11 @@ public class GameScene : BaseScene
     {
         SceneType = Define.Scene.GameScene;
 
-        AsyncOperationHandle<GameObject> fadePopupHandle = Managers.UI.ShowPopupUIAsync<Fade_Popup>();
+        AsyncOperationHandle<GameObject> fadePopupHandle = Managers.UI.ShowPopupUIAsync<Fade_Popup>(null, true, true);
         yield return new WaitUntil(() => { return fadePopupHandle.IsDone; });
         Fade_Popup fadePopup = fadePopupHandle.Result.GetComponent<Fade_Popup>();
         fadePopup.FadeIn(.5f, float.MaxValue);
-        AsyncOperationHandle<GameObject> loadingPopupHandle = Managers.UI.ShowPopupUIAsync<Loading_Popup>();
+        AsyncOperationHandle<GameObject> loadingPopupHandle = Managers.UI.ShowPopupUIAsync<Loading_Popup>(null, true, true);
         yield return new WaitUntil(() => { return loadingPopupHandle.IsDone; });
         Loading_Popup loadingPopup = loadingPopupHandle.Result.GetComponent<Loading_Popup>();
         yield return new WaitUntil(() => { return loadingPopup.IsInit; });
@@ -110,21 +110,20 @@ public class GameScene : BaseScene
         {
             Volt_SoundManager.S.StopBGM();
             Managers.Resource.InstantiateAsync($"Game/Core/TutorialData.prefab");
-            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>();
+            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>(null,true,true);
             yield return new WaitUntil(() => handle.IsDone);
-            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
-                    (result) =>
-                    {
-                        Volt_SoundManager.S.RequestSoundPlay(result.Result,false);
-                    });
-
             Debug.Log("Intro video create");
 
             introVideoUI = handle.Result.GetComponent<IntroVideo_Popup>();
+            //yield return new WaitUntil(() => introVideoUI.IsReadyToPlay());
+            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
+                   (result) =>
+                   {
+                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+                   });
             introVideoUI.Play();
 
-            yield return new WaitForSeconds(1f);
-            yield return new WaitUntil(() => introVideoUI.isPlayed);
+            yield return new WaitUntil(() => introVideoUI.isFinished);
             Debug.Log("Intro video End");
         }
 
@@ -163,7 +162,7 @@ public class GameScene : BaseScene
                     };
                 }
             }
-            else
+            else if(Managers.UI.GetPopupStack()[0].ignoreBackBtn == false)
             {
                 Managers.UI.ClosePopupUI();
             }

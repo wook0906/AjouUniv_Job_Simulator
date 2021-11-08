@@ -49,7 +49,7 @@ public class TutorialSelectBehaviour : PhaseBase
             case 1:
                 while (TutorialData.S.curTutorialIdx <= 1)
                 {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null,true,true);
                     yield return new WaitUntil(() => handle.IsDone);
                     TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                     popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
@@ -59,7 +59,7 @@ public class TutorialSelectBehaviour : PhaseBase
             case 2:
                 while (TutorialData.S.curTutorialIdx <= 6)
                 {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null, true, true);
                     yield return new WaitUntil(() => handle.IsDone);
                     TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                     popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
@@ -69,7 +69,7 @@ public class TutorialSelectBehaviour : PhaseBase
             case 3:
                 while (TutorialData.S.curTutorialIdx <= 9)
                 {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null, true, true);
                     yield return new WaitUntil(() => handle.IsDone);
                     TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                     popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
@@ -79,7 +79,7 @@ public class TutorialSelectBehaviour : PhaseBase
             case 4:
                 while (TutorialData.S.curTutorialIdx <= 12)
                 {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null, true, true);
                     yield return new WaitUntil(() => handle.IsDone);
                     TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                     popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
@@ -89,7 +89,7 @@ public class TutorialSelectBehaviour : PhaseBase
             case 5:
                 while (TutorialData.S.curTutorialIdx <= 18)
                 {
-                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                    AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null, true, true);
                     yield return new WaitUntil(() => handle.IsDone);
                     TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                     popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);

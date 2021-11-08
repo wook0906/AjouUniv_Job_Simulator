@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UI_Popup : UIBase
 {
+    public bool ignoreBackBtn = false;
 
     public override void Init()
     {

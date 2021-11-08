@@ -108,7 +108,7 @@ namespace Volt
 
                 priceTypeICONSprite.spriteName = this.priceICON;
 
-                priceCountLabel.text = string.Format("{0:#,###}", this.priceCount);
+                priceCountLabel.text = this.priceCount.ToString();
             }
 
             public int GetID()

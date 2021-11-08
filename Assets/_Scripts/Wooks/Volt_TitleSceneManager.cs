@@ -212,10 +212,10 @@ public class Volt_TitleSceneManager : MonoBehaviour
         {
             Volt_SoundManager.S.ChangeBGM((AudioClip)Resources.Load("BGMS/Lobby"));
         }
-        //if (Application.internetReachability == NetworkReachability.NotReachable)
-        //{
-        //    Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
-        //}
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
+        }
 #if UNITY_ANDROID
         googleLoginBtn.SetActive(true);
         appleLoginBtn.SetActive(false);

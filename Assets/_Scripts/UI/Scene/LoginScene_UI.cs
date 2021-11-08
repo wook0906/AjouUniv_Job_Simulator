@@ -239,6 +239,9 @@ public class LoginScene_UI : UI_Scene
 
         Managers.UI.CloseAllPopupUI();
         ShowLoginPanel();
+        GetButton((int)Buttons.GameStart_Btn).gameObject.SetActive(false);
+        GetButton((int)Buttons.Logout_Btn).gameObject.SetActive(false);
+
     }
 
     public void OnPressdownTutorialSkipBtn() // tmp

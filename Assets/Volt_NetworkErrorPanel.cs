@@ -14,13 +14,11 @@ public class Volt_NetworkErrorPanel : MonoBehaviour
     public UIButton confirmButton;
     public UILabel msgLabel;
 
-
     private void Awake()
     {
         S = this;
         gameObject.SetActive(false);
     }
-    
     public void ShowErrorMsg(NetworkErrorType errorType)
     {
         switch (errorType)
@@ -38,10 +36,8 @@ public class Volt_NetworkErrorPanel : MonoBehaviour
                 break;
         }
     }
-    
     public void InternetNonReachable()
     {
-        gameObject.SetActive(true);
         msgLabel.text = "인터넷 없음";
         confirmButton.onClick.Clear();
         confirmButton.onClick.Add(new EventDelegate(Volt_DontDestroyPanel.S, "OnPressDownDisconnectConfirmBtn"));
@@ -52,9 +48,7 @@ public class Volt_NetworkErrorPanel : MonoBehaviour
     }
     public void InternetInstable()
     {
-        gameObject.SetActive(true);
         msgLabel.text = "인터넷 재접속 시도중...";
         confirmButton.onClick.Clear();
-        
     }
 }

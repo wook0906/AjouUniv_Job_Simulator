@@ -37,7 +37,7 @@ public class TutorialMatchSetup : PhaseBase
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Rome"));
 
-        Managers.UI.ShowPopupUIAsync<TutorialCharacterSelect_Popup>();
+        Managers.UI.ShowPopupUIAsync<TutorialCharacterSelect_Popup>(null,true,true);
 
         yield return new WaitUntil(() => robotSelectDone);
 

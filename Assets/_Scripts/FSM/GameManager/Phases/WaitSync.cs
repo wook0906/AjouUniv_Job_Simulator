@@ -14,7 +14,7 @@ public class WaitSync : PhaseBase
         GameController.instance.gameData.behaviours.Clear();
         //Volt_GameManager.S.screenBlockPanel.SetActive(true);
         //Volt_GMUI.S.scrrenBlockPanel.SetActive(true);
-        Managers.UI.ShowPopupUIAsync<ReconnectWaitBlock_Popup>();
+        Managers.UI.ShowPopupUIAsync<ReconnectWaitBlock_Popup>(null, true, true);
 
 
         Volt_GMUI.S.IsTickOn = false;

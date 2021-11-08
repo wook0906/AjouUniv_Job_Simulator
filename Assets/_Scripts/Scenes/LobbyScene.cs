@@ -65,7 +65,7 @@ public class LobbyScene : BaseScene
 
         SceneType = Define.Scene.Lobby;
         
-        Managers.UI.ShowPopupUIAsync<Fade_Popup>();
+        Managers.UI.ShowPopupUIAsync<Fade_Popup>(null, true, true);
 
         Fade_Popup fadeUI = null;
         yield return new WaitUntil(() =>
@@ -106,7 +106,7 @@ public class LobbyScene : BaseScene
         {
             while (TutorialData.S.curTutorialIdx <= 22)
             {
-                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>();
+                AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<TutorialExplaination_Popup>(null, true, true);
                 yield return new WaitUntil(() => handle.IsDone);
                 TutorialExplaination_Popup popUp = handle.Result.GetComponent<TutorialExplaination_Popup>();
                 popUp.SetWindow(FindObjectOfType<TutorialData>().datas[TutorialData.S.curTutorialIdx]);
@@ -255,7 +255,7 @@ public class LobbyScene : BaseScene
                     };
                 }
             }
-            else
+            else if(Managers.UI.GetPopupStack()[0].ignoreBackBtn == false)
             {
                 Managers.UI.ClosePopupUI();
             }

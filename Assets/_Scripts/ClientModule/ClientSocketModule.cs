@@ -257,12 +257,6 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
     
     private void Update()
     {
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            Debug.Log("Internet Nonreachable");
-            Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
-            return;
-        }
         if (!isSocketConnectCompleted)
             return;
 
@@ -280,7 +274,6 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
         {
             // 인터넷 연결이 불안정합니다. 패널 표시
             //Debug.LogError("인터넷 연결이 불안정한 상태");
-            Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetInstable);
             InitializeIpEndPoint();
         }
 

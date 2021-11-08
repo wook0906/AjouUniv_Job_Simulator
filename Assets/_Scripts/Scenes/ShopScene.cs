@@ -49,7 +49,7 @@ public class ShopScene : BaseScene
     {
         SceneType = Define.Scene.Shop;
 
-        Managers.UI.ShowPopupUIAsync<Fade_Popup>();
+        Managers.UI.ShowPopupUIAsync<Fade_Popup>(null, true, true);
         Fade_Popup fadePopup = null;
         yield return new WaitUntil(() =>
         {
@@ -58,7 +58,7 @@ public class ShopScene : BaseScene
         });
         fadePopup.FadeIn(1f, float.MaxValue);
 
-        Managers.UI.ShowPopupUIAsync<Loading_Popup>(null, false);
+        Managers.UI.ShowPopupUIAsync<Loading_Popup>(null, false, true);
         yield return new WaitUntil(() =>
         {
             Loading_Popup loadingPopup = FindObjectOfType<Loading_Popup>();

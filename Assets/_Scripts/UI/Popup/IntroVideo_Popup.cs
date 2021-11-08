@@ -6,7 +6,7 @@ using UnityEngine.Video;
 public class IntroVideo_Popup : UI_Popup
 {
     VideoPlayer video;
-    public bool isPlayed = false;
+    public bool isFinished = false;
 
     enum GameObjects
     {
@@ -25,11 +25,15 @@ public class IntroVideo_Popup : UI_Popup
     public void Play()
     {
         video.Play();
-        
     }
+    //public bool IsReadyToPlay()
+    //{
+    //    Debug.Log(video.isPrepared);
+    //    return video.isPrepared;
+    //}
     public void IsFinished(VideoPlayer video)
     {
-        isPlayed = true;
+        isFinished = true;
     }
 
 }
