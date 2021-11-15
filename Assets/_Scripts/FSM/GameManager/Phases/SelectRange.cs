@@ -108,10 +108,10 @@ public class SelectRange : PhaseBase
         else
         {
             GameController.instance.gameData.randomOptionValues.Clear();
-            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
-            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
-            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
-            GameController.instance.gameData.randomOptionValues.Add(Random.Range(0, 81));
+            GameController.instance.gameData.randomOptionValues.Add(Volt_Utils.GetAmargeddonTile(game.round, game.mapType));
+            GameController.instance.gameData.randomOptionValues.Add(Volt_Utils.GetAmargeddonTile(game.round, game.mapType));
+            GameController.instance.gameData.randomOptionValues.Add(Volt_Utils.GetAmargeddonTile(game.round, game.mapType));
+            GameController.instance.gameData.randomOptionValues.Add(Volt_Utils.GetAmargeddonTile(game.round, game.mapType));
             GameController.instance.ChangePhase<Simulation>();
         }
         phaseDone = true;

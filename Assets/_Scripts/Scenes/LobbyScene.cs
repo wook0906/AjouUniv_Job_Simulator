@@ -83,7 +83,7 @@ public class LobbyScene : BaseScene
         fadeUI.IsStartRightAway = true;
 
         Init();
-        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Lobby.wav",
+        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Lobby.mp3",
             (result) =>
             {
                 Volt_SoundManager.S.ChangeBGM(result.Result);

@@ -59,6 +59,7 @@ public enum ENormalConditionType
     Timebomb,
     Anchor,
     Emp,
+    EarnGold,
     End
 }
 public enum EBenefitType

@@ -60,7 +60,7 @@ public class Volt_SoundManager : MonoBehaviour
         switch (mapType)
         {
             case Define.MapType.TwinCity:
-                Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/TwinCity.wav",
+                Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/TwinCity.mp3",
                     (result) =>
                     {
                         bgm.clip = result.Result;

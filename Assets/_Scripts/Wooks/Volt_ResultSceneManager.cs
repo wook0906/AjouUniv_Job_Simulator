@@ -52,7 +52,8 @@ public class Volt_ResultSceneManager : MonoBehaviour
         //Invoke("OnClickGoToLobbyBtn", 15f);
         //Invoke("DelayedDestroy", 3f);
         Volt_SoundManager.S.environmentSound.Stop();
-        Volt_SoundManager.S.bgm.Stop();
+        Volt_SoundManager.S.StopBGM();
+        
         //결과화면 음악재생.
     }
 
@@ -130,7 +131,8 @@ public class Volt_ResultSceneManager : MonoBehaviour
         //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponentInChildren<Renderer>().materials = skin;
         if (Volt_GamePlayData.S.Rank == 1)
         {
-            
+
+            Volt_SoundManager.S.RequestSoundPlay(Managers.Resource.Load<AudioClip>("_SFX/BGMS/Win"),false);
             //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponent<Animator>().CrossFade("win", 0.1f);
             totalScore += victory;
             rankScoreLabel.text = victory.ToString();
@@ -140,7 +142,7 @@ public class Volt_ResultSceneManager : MonoBehaviour
         }
         else
         {
-            
+            Volt_SoundManager.S.RequestSoundPlay(Managers.Resource.Load<AudioClip>("_SFX/BGMS/Defeat"), false);
             //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponent<Animator>().CrossFade("lose", 0.1f);
             totalScore += lose;
             rankScoreLabel.text = lose.ToString();

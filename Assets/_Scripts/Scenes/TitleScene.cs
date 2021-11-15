@@ -148,7 +148,7 @@ public class TitleScene : BaseScene
         {
             Volt_SoundManager.S.ChangeBGM((AudioClip)Resources.Load("BGMS/Lobby"));
         }
-        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Lobby.wav",
+        Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Lobby.mp3",
             (result) =>
             {
                 Volt_SoundManager.S.ChangeBGM(result.Result);

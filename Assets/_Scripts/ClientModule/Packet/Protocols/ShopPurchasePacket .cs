@@ -18,7 +18,8 @@ public class ShopPurchasePacket : Packet
         Managers.UI.ShowPopupUIAsync<PurchaseComplete_Popup>();
         //Volt_ShopUIManager.S.BoughtItemConfirmPopup(EShopPurchase.Skin, true);
 
-        //Volt_ShopUIManager.S.RenewShopItemState(itemType, itemID);
-        //비 소모성 아이템일 경우 샵버튼 비활성화 -> 이미 구매하였음
+        ShopScene scene = Managers.Scene.CurrentScene as ShopScene;
+        scene.RenewShopItemState(itemType, itemID);
+        //구매관련업적반영
     }
 }

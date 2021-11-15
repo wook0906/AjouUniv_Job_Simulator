@@ -535,8 +535,8 @@ public class Volt_PlayerData : MonoBehaviour
     {
         if(AchievementProgresses.Count == 0 || !AchievementProgresses.ContainsKey(achievementID))
         {
-            //Debug.LogWarning("Warning!! ACH dictionary doesn't have any items or doesn't contain key!! \ncount: " + AchievementProgresses.Count
-                //+ ", key:" + achievementID);
+            Debug.LogWarning("Warning!! ACH dictionary doesn't have any items or doesn't contain key!! \ncount: " + AchievementProgresses.Count
+                + ", key:" + achievementID);
             return -1;
         }
         return (int)AchievementProgresses[achievementID].ACHProgressCount;

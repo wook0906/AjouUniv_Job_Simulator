@@ -49,6 +49,13 @@ public class CollisionData
 
 public class Volt_Utils
 {
+    static int[] twinCityAmargeddonExceptionTiles = new int[] { 0, 8, 72, 80};
+    static int[] RomeAmargeddonExceptionTiles = new int[] { 0, 1,2,3,4,5,6,7,8,9,10,16,17,18,26,27,35,36,44,45,53,54,62,63,64,70,71,72,73,74,75,76,77,78,89,80};
+    static int[] RuhrgebietAmargeddonExceptionTiles1 = new int[] { 0,1,2,6,7,8,9,17,18,26,54,62,63,71,72,73,74,78,79,80 };
+    static int[] RuhrgebietAmargeddonExceptionTiles2 = new int[] { 0, 1, 2,3,4,5,6, 7, 8, 9, 17, 18, 26,27,35,36,44,45, 53,54, 62, 63, 71, 72, 73, 74,75,76,77,78, 79, 80 };
+    static int[] RuhrgebietAmargeddonExceptionTiles3 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17, 18,19, 25,26, 27,28,34, 35, 36,37, 43,44, 45,46, 52,53, 54,55, 61,62, 63,64,65,67,68,69,70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 };
+    static int[] TokyoAmargeddonExceptionTiles = new int[] { 0, 8, 72, 80 };
+
     private const float offset = 10; // 각도 오차 범윈
     public static Dictionary<RobotType, string[]> killbotNameCandidates = new Dictionary<RobotType, string[]>()
     {
@@ -60,8 +67,10 @@ public class Volt_Utils
     /// <summary>
     /// Must (inclusive)1 ~ 6(inclusive) 
     /// </summary>
+    /// 
     public static int GetVPTileNumberBySurfaceNumber(Define.MapType mapType, int number)
     {
+        
         int[] tileNumberByMap;
         switch (mapType)
         {
@@ -395,5 +404,37 @@ public class Volt_Utils
             float.Parse(sArray[1]),
             float.Parse(sArray[2]));
         return result;
+    }
+    static int[] GetAmargeddonExceptionTile(int round, Define.MapType mapType)
+    {
+        switch (mapType)
+        {
+            case Define.MapType.TwinCity:
+                return twinCityAmargeddonExceptionTiles;
+            case Define.MapType.Rome:
+                return RomeAmargeddonExceptionTiles;
+            case Define.MapType.Ruhrgebiet:
+                if (round > 13)
+                    return RuhrgebietAmargeddonExceptionTiles3;
+                else if (round > 10)
+                    return RuhrgebietAmargeddonExceptionTiles2;
+                else
+                    return RuhrgebietAmargeddonExceptionTiles1;
+            case Define.MapType.Tokyo:
+                return TokyoAmargeddonExceptionTiles;
+        }
+        return new int[] {0};
+    }
+    public static int GetAmargeddonTile(int roundNumber, Define.MapType mapType)
+    {
+        int[] exceptionTiles = GetAmargeddonExceptionTile(roundNumber, mapType);
+        List<int> candidateTileList = new List<int>();
+        for(int i = 0; i < 81; i++)
+        {
+            if(!exceptionTiles.Contain(i))
+                candidateTileList.Add(i);
+        }
+
+        return candidateTileList[Random.Range(0, candidateTileList.Count)];
     }
 }

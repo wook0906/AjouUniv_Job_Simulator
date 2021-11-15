@@ -105,25 +105,48 @@ public class GameScene : BaseScene
        
         Managers.UI.CloseAllPopupUI();
 
-        IntroVideo_Popup introVideoUI = null;
         if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
         {
             Volt_SoundManager.S.StopBGM();
             Managers.Resource.InstantiateAsync($"Game/Core/TutorialData.prefab");
-            AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<IntroVideo_Popup>(null,true,true);
-            yield return new WaitUntil(() => handle.IsDone);
+            IntroVideo_Popup intro = Instantiate(Resources.Load<IntroVideo_Popup>("IntroVideo_Popup"),Vector3.zero,Quaternion.identity);
+            yield return new WaitUntil(() => intro);
             Debug.Log("Intro video create");
 
-            introVideoUI = handle.Result.GetComponent<IntroVideo_Popup>();
-            //yield return new WaitUntil(() => introVideoUI.IsReadyToPlay());
-            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
+
+            //intro.video.clip = Managers.Resource.Load<UnityEngine.Video.VideoClip>("Intro.mp4");
+            //intro.video.Prepare();
+            yield return new WaitUntil(() => intro.IsReadyToPlay());
+            switch (Application.systemLanguage)
+            {
+                
+                case SystemLanguage.German:
+                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Ger.wav",
                    (result) =>
                    {
                        Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
                    });
-            introVideoUI.Play();
+                    break;
+                case SystemLanguage.Korean:
+                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
+                   (result) =>
+                   {
+                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+                   });
+                    break;
+                default:
+                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Eng.wav",
+                   (result) =>
+                   {
+                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+                   });
+                    break;
+            }
 
-            yield return new WaitUntil(() => introVideoUI.isFinished);
+            intro.Play();
+
+            yield return new WaitUntil(() => intro == null);
+            
             Debug.Log("Intro video End");
         }
 

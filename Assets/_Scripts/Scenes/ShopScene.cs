@@ -86,7 +86,23 @@ public class ShopScene : BaseScene
     {
 
     }
-
+    public void RenewShopItemState(EShopPurchase itemType, int itemID)
+    {
+        switch (itemType)
+        {
+            case EShopPurchase.Package:
+                break;
+            case EShopPurchase.Skin:
+                Volt_PlayerData.instance.RenewRobotSkinData(itemID);
+                //플레이어 데이터
+                break;
+            case EShopPurchase.Emoticon:
+                //Volt_PlayerData.instance.RenewEmoticonData(itemID);
+                break;
+            default:
+                break;
+        }
+    }
     public override void Clear()
     {
         ShopScene_UI sceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
