@@ -92,7 +92,7 @@ public class LocalizedTextEditor : EditorWindow
             localizationData.items = new LocalizationItem[stringBigList.Length];
             for (var i = 1; i < stringBigList.Length; i++)
             {
-                string[] stringList = stringBigList[i].Split(',');
+                string[] stringList = stringBigList[i].Split('@');
                 for (var j = 0; j < stringList.Length; j++)
                 {
                     localizationData.items[i - 1] = new LocalizationItem(stringList[1], stringList[2]);
