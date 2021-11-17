@@ -131,8 +131,11 @@ public class Volt_ResultSceneManager : MonoBehaviour
         //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponentInChildren<Renderer>().materials = skin;
         if (Volt_GamePlayData.S.Rank == 1)
         {
-
-            Volt_SoundManager.S.RequestSoundPlay(Managers.Resource.Load<AudioClip>("_SFX/BGMS/Win"),false);
+            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Win.mp3",
+                   (result) =>
+                   {
+                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+                   });
             //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponent<Animator>().CrossFade("win", 0.1f);
             totalScore += victory;
             rankScoreLabel.text = victory.ToString();
@@ -142,7 +145,11 @@ public class Volt_ResultSceneManager : MonoBehaviour
         }
         else
         {
-            Volt_SoundManager.S.RequestSoundPlay(Managers.Resource.Load<AudioClip>("_SFX/BGMS/Defeat"), false);
+            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Defeat.mp3",
+                (result) =>
+                {
+                    Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
+                });
             //RobotModels[(int)Volt_GamePlayData.S.RobotType].GetComponent<Animator>().CrossFade("lose", 0.1f);
             totalScore += lose;
             rankScoreLabel.text = lose.ToString();

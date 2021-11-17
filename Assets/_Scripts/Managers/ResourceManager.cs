@@ -14,6 +14,11 @@ public class ResourceManager
         return Resources.Load<T>(path);
     }
 
+    public AsyncOperationHandle<T> LoadAsync<T> (string key)
+    {
+        AsyncOperationHandle<T> handle = Addressables.LoadAssetAsync<T>(key);
+        return handle;
+    }
     public void LoadAsync<T>(string key, Action<AsyncOperationHandle<T>> callback)
     {
         Addressables.LoadAssetAsync<T>(key).Completed += callback;

@@ -134,6 +134,7 @@ public class Volt_SoundManager : MonoBehaviour
     {
         bgm.Stop();
     }
+
     public void RequestSoundPlay(AudioClip clip, bool isLoop, float delayTime = 0f)
     {
         if (delayTime == 0f)

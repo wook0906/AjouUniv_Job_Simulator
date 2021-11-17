@@ -113,36 +113,24 @@ public class GameScene : BaseScene
             yield return new WaitUntil(() => intro);
             Debug.Log("Intro video create");
 
-
-            //intro.video.clip = Managers.Resource.Load<UnityEngine.Video.VideoClip>("Intro.mp4");
-            //intro.video.Prepare();
-            yield return new WaitUntil(() => intro.IsReadyToPlay());
+            AsyncOperationHandle<AudioClip> handle = new AsyncOperationHandle<AudioClip>();
             switch (Application.systemLanguage)
             {
-                
                 case SystemLanguage.German:
-                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Ger.wav",
-                   (result) =>
-                   {
-                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
-                   });
+                    handle = Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Ger.mp3");
                     break;
                 case SystemLanguage.Korean:
-                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav",
-                   (result) =>
-                   {
-                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
-                   });
+                    handle = Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Kor.wav");
                     break;
                 default:
-                    Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Eng.wav",
-                   (result) =>
-                   {
-                       Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
-                   });
+                    handle = Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/Intro_Eng.mp3");
                     break;
             }
+            //intro.video.clip = Managers.Resource.Load<UnityEngine.Video.VideoClip>("Intro.mp4");
+            //intro.video.Prepare();
+            yield return new WaitUntil(() => intro.IsReadyToPlay() && handle.IsDone);
 
+            Volt_SoundManager.S.RequestSoundPlay(handle.Result, false);
             intro.Play();
 
             yield return new WaitUntil(() => intro == null);
