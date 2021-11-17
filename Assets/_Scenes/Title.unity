@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1621,6 +1621,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &744957495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7980785544165527029, guid: 7208effbf71cad848a0c83f746fc0527,
+    type: 3}
+  m_PrefabInstance: {fileID: 2083829684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &744957498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744957495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DLCDown_OK
 --- !u!1 &746975955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +1998,7 @@ Transform:
   m_GameObject: {fileID: 892965838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 102.49, z: 0}
-  m_LocalScale: {x: 0.0018518518, y: 0.0018518518, z: 0.0018518518}
+  m_LocalScale: {x: 0.0036630037, y: 0.0036630037, z: 0.0036630037}
   m_Children:
   - {fileID: 1129074540}
   - {fileID: 8978341}
@@ -2903,14 +2922,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1566344416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uD655\uC778"
-  eng: "\uD655\uC778"
-  german: "\uD655\uC778"
-  french: "\uD655\uC778"
+  key: DLCDown_OK
 --- !u!1 &1767304533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,23 +3213,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923655455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407cae6e354a5f448ab217900fa2dc26, type: 3}
+  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDelayedTranslate: 0
-  kor: "\uAC8C\uC784 \uD50C\uB808\uC774\uB97C \uC704\uD574 \uCD94\uAC00 \uB9AC\uC18C\uC2A4\uB97C
-    \uB2E4\uC6B4 \uBC1B\uC544\uC57C\uD569\uB2C8\uB2E4.\n[FF0000](WIFI\uB97C \uC774\uC6A9\uD558\uC9C0
-    \uC54A\uC744 \uC2DC,\n\uB370\uC774\uD130 \uC694\uAE08\uC774 \uBD80\uACFC \uB420
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4.)[-]"
-  eng: "\uAC8C\uC784 \uD50C\uB808\uC774\uB97C \uC704\uD574 \uCD94\uAC00 \uB9AC\uC18C\uC2A4\uB97C
-    \uB2E4\uC6B4 \uBC1B\uC544\uC57C\uD569\uB2C8\uB2E4.\n[FF0000](WIFI\uB97C \uC774\uC6A9\uD558\uC9C0
-    \uC54A\uC744 \uC2DC,\n\uB370\uC774\uD130 \uC694\uAE08\uC774 \uBD80\uACFC \uB420
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4.)[-]"
-  german: "\uAC8C\uC784 \uD50C\uB808\uC774\uB97C \uC704\uD574 \uCD94\uAC00 \uB9AC\uC18C\uC2A4\uB97C
-    \uB2E4\uC6B4 \uBC1B\uC544\uC57C\uD569\uB2C8\uB2E4.\n[FF0000](WIFI\uB97C \uC774\uC6A9\uD558\uC9C0
-    \uC54A\uC744 \uC2DC,\n\uB370\uC774\uD130 \uC694\uAE08\uC774 \uBD80\uACFC \uB420
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4.)[-]"
-  french: 
+  key: DLCDown_Popup_Guide
 --- !u!114 &1923655458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3379,6 +3381,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 115487682}
     m_Modifications:
+    - target: {fileID: 102243211, guid: 7208effbf71cad848a0c83f746fc0527, type: 3}
+      propertyPath: key
+      value: TOS_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916765012, guid: 7208effbf71cad848a0c83f746fc0527, type: 3}
+      propertyPath: key
+      value: TOS_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 5168295881907736733, guid: 7208effbf71cad848a0c83f746fc0527,
         type: 3}
       propertyPath: m_LocalPosition.x
