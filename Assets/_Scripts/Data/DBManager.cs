@@ -23,8 +23,9 @@ public enum LoadDatas
     UserEmoticonCondition = 1 << 14,
     UserPackageCondition = 1<<15,
     UserBenefitCondition = 1<<16,
+    InfoLevel = 1<<17,
     All = InfoPackageShop | InfoBatteryShop | InfoDiamondShop | InfoGoldShop | InfoRobotSkinShop | InfoEmoticonShop | InfoDaliyACHCondition | InfoNormalACHCondition | UserData |
-          UserDaliyACHCondition | UserDaliyACHSuccess | UserNormalACHCondition | UserNormalACHSuccess | UserSkinCondition | UserEmoticonCondition | UserPackageCondition | UserBenefitCondition
+          UserDaliyACHCondition | UserDaliyACHSuccess | UserNormalACHCondition | UserNormalACHSuccess | UserSkinCondition | UserEmoticonCondition | UserPackageCondition | UserBenefitCondition | InfoLevel
 };
 
 public class DBManager : MonoBehaviour
@@ -48,6 +49,7 @@ public class DBManager : MonoBehaviour
     public Dictionary<int, bool> userEmoticonCondition = new Dictionary<int, bool>();
     public Dictionary<int, bool> userBenefitCondition = new Dictionary<int, bool>();
     public Dictionary<int, Define.PackageProductState> userPackageCondition = new Dictionary<int, Define.PackageProductState>();
+    public Dictionary<int, int> infoLevelDict = new Dictionary<int, int>();
     
 
     private LoadDatas loadDatas = LoadDatas.None;
@@ -110,9 +112,12 @@ public class DBManager : MonoBehaviour
         userEmoticonCondition.Clear();
         userPackageCondition.Clear();
         userBenefitCondition.Clear();
+        infoLevelDict.Clear();
+
     }
     private IEnumerator Start()
     {
+        
         //PacketTransmission.SendSignInPacket("aaa");
         yield return new WaitUntil(() => { return pLoadDatas == LoadDatas.All; });
 
@@ -186,7 +191,7 @@ public class DBManager : MonoBehaviour
 
         //Debug.LogError("됐냐?");
 
-        Volt_PlayerData.instance.Init(userData.nickname, userData.battery, userData.diamond, userData.gold, userSkinCondition, userEmoticonCondition, userPackageCondition, userBenefitCondition);
+        Volt_PlayerData.instance.Init(userData.level, userData.exp, userData.nickname, userData.battery, userData.diamond, userData.gold, userSkinCondition, userEmoticonCondition, userPackageCondition, userBenefitCondition);
 
         if(!SystemInfoManager.instance.InitSystemInfo(packageShopInfos, batteryShopInfos, diamondShopInfos, goldShopInfos, frameDecorationShopInfos, robotSkinShopInfos, emoticonShopInfos, daliyACHConditionInfos, normalACHConditionInfos))
         {
@@ -287,6 +292,10 @@ public class DBManager : MonoBehaviour
     public void OnLoadedUserBenefitCondition()
     {
         pLoadDatas |= LoadDatas.UserBenefitCondition;
+    }
+    public void OnLoadedInfoLevel()
+    {
+        pLoadDatas |= LoadDatas.InfoLevel;
     }
    
     #endregion

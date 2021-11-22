@@ -21,15 +21,21 @@ public class SignInSuccessPacket : Packet
         int battery = ByteConverter.ToInt(buffer, ref startIndex);
         int gold = ByteConverter.ToInt(buffer, ref startIndex);
         int diamond = ByteConverter.ToInt(buffer, ref startIndex);
-        //int rankPoint = ByteConverter.ToInt(buffer, ref startIndex);
+        int rankPoint = ByteConverter.ToInt(buffer, ref startIndex);
+        int level = ByteConverter.ToInt(buffer, ref startIndex);
+        int exp = ByteConverter.ToInt(buffer, ref startIndex);
 
-        //Debug.Log(nicknameLength);
-        //Debug.Log("Nickname : " + nickname);
-        //Debug.Log("Battery : " + battery);
-        //Debug.Log("Gold : " + gold);
-        //Debug.Log("Diamond : " + diamond);
-        //Debug.Log("RankPoint : " + rankPoint);
-        DBManager.instance.userData = new UserData(nickname, battery, gold, diamond);
+        Debug.Log(nicknameLength);
+        Debug.Log("Nickname : " + nickname);
+        Debug.Log("Battery : " + battery);
+        Debug.Log("Gold : " + gold);
+        Debug.Log("Diamond : " + diamond);
+        Debug.Log("RankPoint : " + rankPoint);
+        Debug.Log($"level : {level}");
+        Debug.Log($"Exp : {exp}");
+
+
+        DBManager.instance.userData = new UserData(nickname, battery, gold, diamond, level,exp);
 
         DBManager.instance.OnLoadedUserData();
 

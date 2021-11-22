@@ -175,7 +175,7 @@ public enum EPacketType
     ResultBenefitPacket,
     UserGetBenefitPacket,
     GameUserInfoInitPacket,
-
+    LevelInfoPacket,
 }
 
 

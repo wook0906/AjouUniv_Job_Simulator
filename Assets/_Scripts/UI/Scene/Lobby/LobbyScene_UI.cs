@@ -156,6 +156,7 @@ public class LobbyScene_UI : UI_Scene
         }));
 
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
+
         RenewExpValue();
         RenewLevel();
 
@@ -315,7 +316,8 @@ public class LobbyScene_UI : UI_Scene
 
     public void RenewExpValue()
     {
-        GetSlider((int)Sliders.EXP_Slider).value = (float)Volt_PlayerData.instance.Exp / Volt_PlayerData.instance.MaxExp;
+        Volt_PlayerData.instance.MaxExp = DBManager.instance.infoLevelDict[Volt_PlayerData.instance.Level];
+        GetSlider((int)Sliders.EXP_Slider).value = (float)Volt_PlayerData.instance.Exp / DBManager.instance.infoLevelDict[Volt_PlayerData.instance.Level];
     }
     public void RenewLevel()
     {

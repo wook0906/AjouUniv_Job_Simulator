@@ -6,13 +6,12 @@ public class TextListAssist : MonoBehaviour
 {
     UITextList textList;
 
-    [TextArea]
-    public string contents;
+    public string key;
 
     void Start()
     {
         textList = GetComponent<UITextList>();
-        textList.Add(contents);
+        textList.Add(Managers.Localization.GetLocalizedValue(key));
     }
 
 }

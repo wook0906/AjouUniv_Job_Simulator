@@ -169,12 +169,12 @@ public class Volt_ResultSceneManager : MonoBehaviour
             rankScoreLabel.text = "0";
             vpScoreLabel.text = "0";
         }
-        else
-        {
-            //Debug.LogError("Total Score : " + totalScore);
-            if(PlayerPrefs.GetInt("Volt_TutorialDone") != 0)
-                PacketTransmission.SendGoldPacket(totalScore);
-        }
+        //else
+        //{
+        //    //Debug.LogError("Total Score : " + totalScore);
+        //    //if(PlayerPrefs.GetInt("Volt_TutorialDone") != 0)
+        //    //    PacketTransmission.SendGoldPacket(totalScore);
+        //}
     }
     void DelayedDestroy()
     {

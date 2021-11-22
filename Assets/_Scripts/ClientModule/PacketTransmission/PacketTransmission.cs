@@ -1282,4 +1282,19 @@ public static class PacketTransmission
 
         IOBuffer.Enqueue(buffer);
     }
+    public static void SendLevelInfoPacket()
+    {
+        byte[] buffer = IOBuffer.Dequeue();
+
+        buffer[0] = PacketInfo.PacketStartNumber;
+        int startIndex = 1;
+
+        ByteConverter.FromInt((int)EPacketType.LevelInfoPacket, buffer, ref startIndex);
+
+        ByteConverter.FromInt(0, buffer, ref startIndex);
+
+        ClientSocketModule.Send(buffer, startIndex);
+
+        IOBuffer.Enqueue(buffer);
+    }
 }

@@ -8,13 +8,17 @@ public class UserData
     public int battery;
     public int gold;
     public int diamond;
+    public int level;
+    public int exp;
     
-    public UserData(string nickname, int battery, int gold, int diamond)
+    public UserData(string nickname, int battery, int gold, int diamond, int level, int exp)
     {
         this.nickname = nickname;
         this.battery = battery;
         this.gold = gold;
         this.diamond = diamond;
+        this.level = level;
+        this.exp = exp; 
     }
 
     public override string ToString()
@@ -24,6 +28,8 @@ public class UserData
         builder.Append(" /Battery: " + this.battery);
         builder.Append(" /Gold: " + this.gold);
         builder.Append(" /Diamond: " + this.diamond);
+        builder.Append(" /Level: " + this.level);
+        builder.Append(" /exp: " + this.exp);
         return builder.ToString();
     }
 }

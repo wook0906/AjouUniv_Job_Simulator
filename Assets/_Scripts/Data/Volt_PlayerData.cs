@@ -108,19 +108,28 @@ public class Volt_PlayerData : MonoBehaviour
 
     //TMP 21.07.16==================================
     [SerializeField]
-    private int level = 5;
+    private int level = 1;
     public int Level
     {
         get { return level; }
         set { level = value; }
     }
-    private int exp = 20000;
+    private int exp = 0;
     public int Exp
     {
         get { return exp; }
         set 
-        { 
-            exp = value;
+        {
+            int tmpExp = value;
+
+            while (tmpExp > MaxExp)
+            {
+                tmpExp -= MaxExp;
+                Level++;
+                MaxExp = DBManager.instance.infoLevelDict[Level];
+            }
+
+            exp = tmpExp;
             LobbyScene_UI ui = Managers.UI.GetSceneUI<LobbyScene_UI>();
             if (ui != null)
             {
@@ -128,7 +137,7 @@ public class Volt_PlayerData : MonoBehaviour
             }
         }
     }
-    private int maxExp = 23456;
+    private int maxExp = 0;
     public int MaxExp
     {
         get { return maxExp; }
@@ -305,11 +314,13 @@ public class Volt_PlayerData : MonoBehaviour
         }
     }
 
-    public void Init(string nickName, int betteryCount,
+    public void Init(int level, int exp, string nickName, int betteryCount,
         int diamondCount, int goldCount, Dictionary<int, bool> userSkinCondition,
         Dictionary<int, bool> userEmoticonCondition, Dictionary<int, Define.PackageProductState> userPackageCondition,
         Dictionary<int,bool> userBenefitCondition)
     {
+        this.level = level;
+        this.exp = exp;
         this.nickName = nickName;
         this.BatteryCount = betteryCount;
         this.DiamondCount = diamondCount;

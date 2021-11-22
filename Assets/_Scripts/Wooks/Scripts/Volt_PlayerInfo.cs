@@ -248,7 +248,6 @@ public class Volt_PlayerInfo : MonoBehaviour
         //DB 적 처치수 상승
         if (Volt_PlayerManager.S.I == this)
         {
-            Volt_GamePlayData.S.Kill++;
             Volt_GMUI.S.Create2DMsg(MSG2DEventType.Kill, other.playerInfo.playerNumber);
         }
 
@@ -275,6 +274,7 @@ public class Volt_PlayerInfo : MonoBehaviour
                     PacketTransmission.SendVictoryPointPacket(other.playerInfo.playerNumber, other.playerInfo.VictoryPoint);
                     //Debug.Log($"{other.playerInfo.NickName}이 {NickName}에게 점수 뺏김");
                     PacketTransmission.SendKillPacket(Volt_GMUI.S.RoundNumber, playerNumber, other.playerInfo.playerNumber); //DB
+                    Volt_GamePlayData.S.Kill++;
                     Volt_GMUI.S.Create3DMsg(MSG3DEventType.PointUp, this);
                 }
                 else
@@ -288,6 +288,7 @@ public class Volt_PlayerInfo : MonoBehaviour
             VictoryPoint++;
             Debug.Log($"{NickName}이 {other.playerInfo.NickName}을 죽이고 점수 획득");
             PacketTransmission.SendKillPacket(Volt_GMUI.S.RoundNumber, playerNumber, other.playerInfo.playerNumber); //DB
+            Volt_GamePlayData.S.Kill++;
             Volt_GMUI.S.Create3DMsg(MSG3DEventType.PointUp, this);
         }
     }

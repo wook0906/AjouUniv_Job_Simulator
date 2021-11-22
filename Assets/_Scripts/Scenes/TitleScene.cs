@@ -95,6 +95,8 @@ public class TitleScene : BaseScene
         if (ClientSocketModule.Instance)
             DontDestroyOnLoad(ClientSocketModule.Instance);
 
+        
+
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
             Volt_DontDestroyPanel.S.NetworkErrorHandle(NetworkErrorType.InternetNonReachable);
@@ -160,6 +162,8 @@ public class TitleScene : BaseScene
 
         yield return new WaitUntil(() => { return loads == Loads.All; });
         Managers.UI.CloseAllPopupUI();
+
+       
     }
 
     private void FixedUpdate()
