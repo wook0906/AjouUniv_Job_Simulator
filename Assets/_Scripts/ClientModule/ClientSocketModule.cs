@@ -176,7 +176,20 @@ public enum EPacketType
     UserGetBenefitPacket,
     GameUserInfoInitPacket,
     LevelInfoPacket,
-    LevelUpPacket
+    LevelUpPacket,
+
+    RequestFriendAdd,
+    ConfirmFriendAdd,
+    DeleteFriend,
+    FriendRequestList,
+    LoginFriendList,
+    FriendList,
+    CreateWaitingRoom,
+    InviteMyWaitingRoom,
+    InviteWaitingRoom,
+    JoinWaitingRoom,
+    ExitWaitingRoom,
+    CloseWaitingRoom,
 
 }
 
