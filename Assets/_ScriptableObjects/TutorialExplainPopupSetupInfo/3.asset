@@ -15,7 +15,7 @@ MonoBehaviour:
   keyForLocalize: TutorialExplainationContents_3
   width: 900
   height: 150
-  windowAnchor: {x: 0, y: -0.0625}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
   isNeedArrow: 1

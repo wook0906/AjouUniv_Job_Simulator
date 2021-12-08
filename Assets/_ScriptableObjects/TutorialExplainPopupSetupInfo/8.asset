@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 8
   m_EditorClassIdentifier: 
   keyForLocalize: TutorialExplainationContents_8
-  width: 600
+  width: 900
   height: 180
-  windowAnchor: {x: -0.3, y: 0.312}
+  windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
   isNeedArrow: 1
-  arrowAnchor: {x: 0.1, y: 0.06}
+  arrowAnchor: {x: -0.33, y: 0.18}
