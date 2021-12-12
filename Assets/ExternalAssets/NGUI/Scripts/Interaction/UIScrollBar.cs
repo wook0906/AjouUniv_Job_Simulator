@@ -43,7 +43,7 @@ public class UIScrollBar : UISlider
 		}
 		set
 		{
-			float val = Mathf.Clamp01(value);
+			float val = Mathf.Clamp(value, 0.1f, 1f);//Mathf.Clamp01(value);
 
 			if (mSize != val)
 			{
