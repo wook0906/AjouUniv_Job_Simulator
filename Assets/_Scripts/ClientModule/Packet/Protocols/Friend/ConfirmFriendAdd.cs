@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 
 
@@ -13,8 +14,14 @@ public class ConfirmFriendAdd : Packet
         int startIndex = PacketInfo.FromServerPacketDataStartIndex;
 
         EConfirmFriendAddResult result = (EConfirmFriendAddResult)ByteConverter.ToInt(buffer, ref startIndex);
-       
 
+        int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
+        string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
+
+        
+        Debug.Log($"친구 요청에대한 답변의 결과 : {result}");
+
+        Managers.UI.GetPopupUI<Community_Popup>().ShowRequestConfirmPopup(result,nickname);
 
     }
 }

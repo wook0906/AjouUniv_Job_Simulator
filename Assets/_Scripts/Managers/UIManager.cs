@@ -339,8 +339,11 @@ public class UIManager
         });
     }
 
-    public T GetPopupUI<T>(string name) where T : UI_Popup
+    public T GetPopupUI<T>(string name = null) where T : UI_Popup
     {
+        if (string.IsNullOrEmpty(name))
+            name = typeof(T).Name;
+
         if (_popupStack.Count == 0) return null;
 
         UI_Popup popup = _popupStack[0];

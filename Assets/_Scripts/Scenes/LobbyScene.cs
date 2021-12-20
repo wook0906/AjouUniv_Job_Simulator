@@ -64,7 +64,7 @@ public class LobbyScene : BaseScene
         PlayerPrefs.SetInt("Volt_TrainingMode", 0);
 
         SceneType = Define.Scene.Lobby;
-        
+
         Managers.UI.ShowPopupUIAsync<Fade_Popup>(null, true, true);
 
         Fade_Popup fadeUI = null;
@@ -115,6 +115,9 @@ public class LobbyScene : BaseScene
             PlayerPrefs.SetInt("Volt_TutorialDone", 1);
             Destroy(TutorialData.S.gameObject);
         }
+
+        PacketTransmission.SendFriendListPacket();
+        //PacketTransmission.SendFriendRequestListPacket();
     }
 
     protected override void Init()

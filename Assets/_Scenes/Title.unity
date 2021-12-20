@@ -2681,6 +2681,7 @@ MonoBehaviour:
   playCount: 0
   victoryCount: 0
   level: 1
+  friendsRequestList: []
   killCount: 0
   coinCount: 0
   deathCount: 0

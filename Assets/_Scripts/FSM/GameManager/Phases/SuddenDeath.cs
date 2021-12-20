@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SuddenDeath : PhaseBase
 {
@@ -152,11 +153,9 @@ public class SuddenDeath : PhaseBase
                     switch (data.round)
                     {
                         case 10:
-                            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/VOLT_Soundsource_20200623/suddendeath_factory.mp3",
-                                (result) =>
-                                {
-                                    Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
-                                });
+                            AsyncOperationHandle<AudioClip> clip = Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/VOLT_Soundsource_20200623/suddendeath_factory.mp3");
+                            yield return new WaitUntil(() => clip.IsDone);
+                            Volt_SoundManager.S.RequestSoundPlay(clip.Result, false);
 
                             foreach (var item in Volt_ArenaSetter.S.fallTiles1)
                             {
@@ -172,11 +171,10 @@ public class SuddenDeath : PhaseBase
 
                             break;
                         case 13:
-                            Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/VOLT_Soundsource_20200623/suddendeath_factory.mp3",
-                                (result) =>
-                                {
-                                    Volt_SoundManager.S.RequestSoundPlay(result.Result, false);
-                                });
+                            AsyncOperationHandle<AudioClip> clip1 = Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/VOLT_Soundsource_20200623/suddendeath_factory.mp3");
+                            yield return new WaitUntil(() => clip1.IsDone);
+                            Volt_SoundManager.S.RequestSoundPlay(clip1.Result, false);
+
                             foreach (var item in Volt_ArenaSetter.S.fallTiles2)
                             {
                                 item.Fall();

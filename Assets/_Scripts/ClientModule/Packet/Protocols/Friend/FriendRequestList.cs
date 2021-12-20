@@ -23,6 +23,8 @@ public class FriendRequestList : Packet
             string nickname = ByteConverter.ToString(buffer, startIndex, nicknameLength);
             
             //각 행 별 처리
+
+            //친구 요청을 리스트업 하는 UI를 만든 후, 로비 진입할때 친구요청목록을 서버에 요청, 이 패킷을 받아 UI에 리스트업.
         }
 
     }

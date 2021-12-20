@@ -12,10 +12,15 @@ public class Community_Popup : UI_Popup
     {
         Exit_Btn,
         AddFriends_Btn,
+        FriendsRequestList_Btn,
     }
     enum GameObjects
     {
         FriendsItemRoot
+    }
+    enum Labels
+    {
+        AddFriends_InputField,
     }
 
     private LobbyScene lobbyScene;
@@ -26,6 +31,7 @@ public class Community_Popup : UI_Popup
 
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
+        Bind<UILabel>(typeof(Labels));
 
         
 
@@ -33,40 +39,55 @@ public class Community_Popup : UI_Popup
 
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
-            OnClose();
+            ClosePopupUI();
+            
         }));
         Get<UIButton>((int)Buttons.AddFriends_Btn).onClick.Add(new EventDelegate(() =>
         {
+            PacketTransmission.SendRequestFriendAddPacket(GetLabel((int)Labels.AddFriends_InputField).text);
+            //TODO : 현재 입력되어있는 닉네임(혹은 고유값)으로 친추추가 요청 패킷전송
+        }));
+        Get<UIButton>((int)Buttons.FriendsRequestList_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Managers.UI.ShowPopupUIAsync<FriendsRequestList_Popup>();
             //TODO : 현재 입력되어있는 닉네임(혹은 고유값)으로 친추추가 요청 패킷전송
         }));
 
         friendsItemRoot = Get<GameObject>((int)GameObjects.FriendsItemRoot);
         friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
-        SetFriendsInfo();
+        RenewFriendsInfo();
     }
 
-    public void SetFriendsInfo()
+    public void RenewFriendsInfo()
     {
-        //플레이어 데이터를 긁어와서 그만큼 FriendsItem을 생성한다.
-        StartCoroutine(CorSetFriendsInfo());
+        //플레이어 데이터를 긁어와서 그만큼 FriendsItem을 생성한다
+        foreach (Transform item in friendsItemRoot.transform)
+        {
+            Managers.Resource.Destroy(item.gameObject);
+        }
+        StartCoroutine(CorRenewFriendsInfo());
     }
-    IEnumerator CorSetFriendsInfo()
+    IEnumerator CorRenewFriendsInfo()
     {
-        for (int i = 0; i < Volt_PlayerData.instance.friendsProfileDataDic.Count; i++)
+        foreach (var item in Volt_PlayerData.instance.friendsProfileDataDict)
         {
             AsyncOperationHandle<GameObject> handle = Managers.UI.MakeSubItemAsync<FriendsItem>(friendsItemRoot.transform);
             yield return new WaitUntil(() => { return handle.IsDone; });
-            
-            FriendsItem item = handle.Result.GetComponent<FriendsItem>();
+
+            FriendsItem friendsitem = handle.Result.GetComponent<FriendsItem>();
             //item.GetComponent<UIPanel>().depth = friendsItemRoot.transform.parent.GetComponent<UIPanel>().depth + 1;
-            item.SetInfo(Volt_PlayerData.instance.friendsProfileDataDic[i]);
-            item.gameObject.layer = transform.root.gameObject.layer;
-            item.transform.localPosition = Vector3.zero;
-            item.transform.localScale = Vector3.one;
+            friendsitem.SetInfo(item.Value);
+            friendsitem.gameObject.layer = transform.root.gameObject.layer;
+            friendsitem.transform.localPosition = Vector3.zero;
+            friendsitem.transform.localScale = Vector3.one;
             //Vector3 moveVector = Vector3.up * friendsItemRoot.GetComponent<UIGrid>().cellHeight * i;
 
             //item.transform.localPosition -= moveVector;
         }
+        //for (int i = 0; i < Volt_PlayerData.instance.friendsProfileDataDict.Count; i++)
+        //{
+            
+        //}
         friendsItemRoot.GetComponent<UIGrid>().Reposition();
         GetComponent<UIPanel>().gameObject.SetActive(false);
         Invoke("Redraw",0f);
@@ -81,11 +102,24 @@ public class Community_Popup : UI_Popup
     {
         base.OnClose();
         lobbyScene.ChangeToLobbyCamera();
-        ClosePopupUI();
+
     }
     //public override void OnActive()
     //{
     //    base.OnActive();
     //    //Managers.UI.PushToUILayerStack(this);
     //}
+
+    public void ShowRequestConfirmPopup(EConfirmFriendAddResult result, string nickname)
+    {
+        StartCoroutine(CorShowRequestConfirmPopup(result, nickname));
+    }
+    IEnumerator CorShowRequestConfirmPopup(EConfirmFriendAddResult result, string nickname)
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<FriendsConfirmResult_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        handle.Result.GetComponent<FriendsConfirmResult_Popup>().SetInfo(nickname, result);
+    }
+
+
 }

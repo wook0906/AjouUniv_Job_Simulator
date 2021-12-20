@@ -26,6 +26,7 @@ public class FriendsItem : UIBase
         Bind<UIButton>(typeof(Buttons));
 
         Get<UIButton>((int)Buttons.Profile_Btn).onClick.Add(new EventDelegate(OnClickProfileButton));
+        Get<UIButton>((int)Buttons.Delete_Btn).onClick.Add(new EventDelegate(OnClickDeleteButton));
         
     }
     public void SetInfo(Define.ProfileData profileData)
@@ -45,6 +46,10 @@ public class FriendsItem : UIBase
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<OtherPlayerProfile_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
         handle.Result.GetComponent<OtherPlayerProfile_Popup>().SetInfo(profileData);
+    }
+    void OnClickDeleteButton()
+    {
+        PacketTransmission.SendDeleteFriendPacket(nickName);
     }
 
     

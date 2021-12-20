@@ -139,20 +139,20 @@ public class LobbyScene_UI : UI_Scene
             Managers.UI.ShowPopupUIAsync<MyProfile_Popup>();
         }));
 
-        GetButton((int)Buttons.Community_Btn).gameObject.SetActive(false);
-        GetButton((int)Buttons.CustomRoom_Btn).gameObject.SetActive(false);
-        
-        //GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
-        //{
-        //     Managers.UI.ShowPopupUIAsync<Community_Popup>();
-            
-        //}));
-        //GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
-        //{
-        //    lobbyScene.SetOffAllRobotCameras();
-        //    Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+        //GetButton((int)Buttons.Community_Btn).gameObject.SetActive(false);
+        //GetButton((int)Buttons.CustomRoom_Btn).gameObject.SetActive(false);
 
-        //}));
+        GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Managers.UI.ShowPopupUIAsync<Community_Popup>();
+
+        }));
+        GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            lobbyScene.SetOffAllRobotCameras();
+            Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+
+        }));
         GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
         {
             Managers.UI.ShowPopupUIAsync<ProfilePictureSetup_Popup>();
