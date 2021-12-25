@@ -5,7 +5,7 @@ using UnityEngine;
 
 //친구를 내 방에 초대 했을 때, 초대가 잘 전송 되었는지
 
-public enum EInviteMyWaitingRoomResult { Success,
+public enum EInviteMyWaitingRoomResult { Success=1,
     /// <summary>존재하지 않는 유저 </summary>
     NotExist,
     /// <summary>이미 다른 게임 플레이중인 유저 </summary>
@@ -13,7 +13,9 @@ public enum EInviteMyWaitingRoomResult { Success,
     /// <summary>게임을 종료한 플레이어 </summary>
     ExitGame,
     /// <summary>이미 초대를 전송했습니다. </summary>
-    AlreadyInvite
+    AlreadyInvite,
+    /// <summary>이미 들어와 있습니다. </summary>
+    AlreadyEnter
 }
 
 
