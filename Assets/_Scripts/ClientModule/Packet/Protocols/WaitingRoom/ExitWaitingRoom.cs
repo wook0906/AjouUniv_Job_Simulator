@@ -15,6 +15,13 @@ public class ExitWaitingRoom : Packet
         int length = ByteConverter.ToInt(buffer, startIndex);
         //지금 방에서 나간 친구
         string nickname = ByteConverter.ToString(buffer, startIndex, length);
+        int seatIdx = ByteConverter.ToInt(buffer, startIndex);
 
+        LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
+
+        if (nickname == Volt_PlayerData.instance.NickName)
+            scene.customRoomManagement.CloseRoom();
+        else
+            scene.customRoomManagement.SetEmptySlotState(seatIdx + 1);
     }
 }

@@ -37,7 +37,7 @@ public class InviteItem : UIBase
     }
     void OnClickInviteBtn()
     {
-        //TODO 초대패킷 전송 발송자 닉네임 포함시켜서
-        Get<UIButton>((int)Buttons.Invite_Btn).isEnabled = false;
+        LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
+        scene.customRoomManagement.InvitePlayer(nickName);
     }
 }

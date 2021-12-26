@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class Define
 {
+    public enum CustomRoomSlotState
+    {
+        Empty,
+        WaitPlayer,
+        Ready,
+        Host,
+    }
     public class ACHReward
     {
         public int gold = 0;

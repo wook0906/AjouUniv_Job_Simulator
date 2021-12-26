@@ -26,15 +26,18 @@ public class InviteWaitingRoom : Packet
         int roomid = ByteConverter.ToInt(buffer, startIndex);
         int seatIdx = ByteConverter.ToInt(buffer, startIndex);
 
+        LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
         //받은 사람이 본인 일경우
-        if(InvitedNickname == "내닉네임")
+        if (InvitedNickname == Volt_PlayerData.instance.NickName)
         {
+            lobbyScene.customRoomManagement.ShowInviteResponse(roomid, hostNickname);
             //방에 드가시겠습니까? 
             //초대 다이얼로그를 띄운다.
         }
         //받은 사람이 호스트 일경우
-        else if(hostNickname == "내닉네임")
+        else if(hostNickname == Volt_PlayerData.instance.NickName)
         {
+            lobbyScene.customRoomManagement.SetSlotState(seatIdx + 1, InvitedNickname, Define.CustomRoomSlotState.WaitPlayer);
             //seatIdx 자리에 InvitedNickname을 초대 대기중인 상태로 채워넣는다.
             
             //(초대된 사람은 거부하거나 15초(임의)가 지나면 JoinWaitingRoom(result:거절)패킷이 날라온다.
@@ -45,6 +48,7 @@ public class InviteWaitingRoom : Packet
         //받은 사람이 방에 들어와 있는 다른 친구일경우
         else
         {
+            lobbyScene.customRoomManagement.SetSlotState(seatIdx + 1, InvitedNickname, Define.CustomRoomSlotState.WaitPlayer);
             //seatIdx 자리에 InvitedNickname을 초대 대기중인 상태로 채워넣는다.
             //호스트 일 때와 상동.
         }

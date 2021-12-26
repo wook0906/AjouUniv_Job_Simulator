@@ -14,8 +14,12 @@ public class RequestFriendAdd : Packet
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         ERequestFriendAddResult result = (ERequestFriendAddResult)ByteConverter.ToInt(buffer, ref startIndex);
-       
 
+        Debug.Log($"Friends add result : {result}");
+        int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
+        string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
+
+        Managers.UI.GetPopupUI<Community_Popup>().ShowRequestAddPopup(result,nickname);
 
     }
 }

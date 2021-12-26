@@ -11,6 +11,7 @@ public class CloseWaitingRoom : Packet
     public override void UnPack(byte[] buffer)
     {
         //Data 부분없음.
-
+        LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
+        scene.customRoomManagement.CloseRoom();
     }
 }

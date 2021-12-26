@@ -27,5 +27,8 @@ public class InviteMyWaitingRoom : Packet
 
         EInviteMyWaitingRoomResult result = (EInviteMyWaitingRoomResult)ByteConverter.ToInt(buffer, ref startIndex);
 
+        LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
+        scene.customRoomManagement.ShowInviteTryResult(result);
+
     }
 }

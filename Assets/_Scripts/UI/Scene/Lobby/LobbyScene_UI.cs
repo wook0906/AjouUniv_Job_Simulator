@@ -149,8 +149,9 @@ public class LobbyScene_UI : UI_Scene
         }));
         GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
         {
-            lobbyScene.SetOffAllRobotCameras();
-            Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+            lobbyScene.customRoomManagement.SendCreateRoomRequest();
+            
+            
 
         }));
         GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
@@ -335,6 +336,11 @@ public class LobbyScene_UI : UI_Scene
         pictureBtn.GetComponent<UISprite>().spriteName = PAID;
         //TODO 프로필사진 변경을 서버에다 저장해야함.
     }
+    public void CreateCustomRoomUI()
+    {
+        lobbyScene.SetOffAllRobotCameras();
+        Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+    }
 
-    
+
 }

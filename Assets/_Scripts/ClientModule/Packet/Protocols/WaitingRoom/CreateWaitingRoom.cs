@@ -14,5 +14,15 @@ public class CreateWaitingRoom : Packet
 
         ECreateWaitingRoomResult result = (ECreateWaitingRoomResult)ByteConverter.ToInt(buffer, ref startIndex);
 
+        if(result == ECreateWaitingRoomResult.Success)
+        {
+            LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
+            lobbyScene.customRoomManagement.CreateCustomRoomUI();
+        }
+        else
+        {
+            Managers.UI.ShowPopupUI<CustomRoomCreateFail_Popup>();
+        }
+
     }
 }

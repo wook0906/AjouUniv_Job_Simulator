@@ -7,6 +7,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class LobbyScene : BaseScene
 {
     private Exit_Popup exitPopup;
+    public CustomRoomManagement customRoomManagement;
 
     enum Loads
     {
@@ -115,7 +116,8 @@ public class LobbyScene : BaseScene
             PlayerPrefs.SetInt("Volt_TutorialDone", 1);
             Destroy(TutorialData.S.gameObject);
         }
-
+        customRoomManagement = gameObject.AddComponent<CustomRoomManagement>();
+        
         PacketTransmission.SendFriendListPacket();
         //PacketTransmission.SendFriendRequestListPacket();
     }

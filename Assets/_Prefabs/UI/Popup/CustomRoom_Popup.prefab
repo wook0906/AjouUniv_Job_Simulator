@@ -200,7 +200,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3007
+  startingRenderQueue: 3006
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1535,6 +1535,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4593048078285685097}
     m_Modifications:
+    - target: {fileID: 3884588580685216326, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: NickName_Label1
+      objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1593,7 +1598,17 @@ PrefabInstance:
     - target: {fileID: 3884588581991104595, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_Name
-      value: CustomRoomPlayerInfoItem
+      value: Slot1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643724076729329202, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Level_Label1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909508135968724297, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: State_Label1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62359f81936ee5c4b8d11ab92f5817dd, type: 3}
@@ -1610,6 +1625,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4593048078285685097}
     m_Modifications:
+    - target: {fileID: 3884588580685216326, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: NickName_Label4
+      objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1668,7 +1688,17 @@ PrefabInstance:
     - target: {fileID: 3884588581991104595, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_Name
-      value: CustomRoomPlayerInfoItem (3)
+      value: Slot4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643724076729329202, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Level_Label4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909508135968724297, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: State_Label4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62359f81936ee5c4b8d11ab92f5817dd, type: 3}
@@ -1685,6 +1715,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4593048078285685097}
     m_Modifications:
+    - target: {fileID: 3884588580685216326, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: NickName_Label3
+      objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1743,7 +1778,17 @@ PrefabInstance:
     - target: {fileID: 3884588581991104595, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_Name
-      value: CustomRoomPlayerInfoItem (2)
+      value: Slot3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643724076729329202, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Level_Label3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909508135968724297, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: State_Label3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62359f81936ee5c4b8d11ab92f5817dd, type: 3}
@@ -1760,6 +1805,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4593048078285685097}
     m_Modifications:
+    - target: {fileID: 3884588580685216326, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: NickName_Label2
+      objectReference: {fileID: 0}
     - target: {fileID: 3884588581991104592, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1818,7 +1868,17 @@ PrefabInstance:
     - target: {fileID: 3884588581991104595, guid: 62359f81936ee5c4b8d11ab92f5817dd,
         type: 3}
       propertyPath: m_Name
-      value: CustomRoomPlayerInfoItem (1)
+      value: Slot2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643724076729329202, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Level_Label2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909508135968724297, guid: 62359f81936ee5c4b8d11ab92f5817dd,
+        type: 3}
+      propertyPath: m_Name
+      value: State_Label2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62359f81936ee5c4b8d11ab92f5817dd, type: 3}

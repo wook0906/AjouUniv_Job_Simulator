@@ -45,6 +45,7 @@ public class Community_Popup : UI_Popup
         Get<UIButton>((int)Buttons.AddFriends_Btn).onClick.Add(new EventDelegate(() =>
         {
             PacketTransmission.SendRequestFriendAddPacket(GetLabel((int)Labels.AddFriends_InputField).text);
+            GetLabel((int)Labels.AddFriends_InputField).text = string.Empty;
             //TODO : 현재 입력되어있는 닉네임(혹은 고유값)으로 친추추가 요청 패킷전송
         }));
         Get<UIButton>((int)Buttons.FriendsRequestList_Btn).onClick.Add(new EventDelegate(() =>
@@ -119,6 +120,16 @@ public class Community_Popup : UI_Popup
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<FriendsConfirmResult_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
         handle.Result.GetComponent<FriendsConfirmResult_Popup>().SetInfo(nickname, result);
+    }
+    public void ShowRequestAddPopup(ERequestFriendAddResult result, string nickname)
+    {
+        StartCoroutine(CorShowRequestAddPopup(result, nickname));
+    }
+    IEnumerator CorShowRequestAddPopup(ERequestFriendAddResult result, string nickname)
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<FriendsAddResult_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        handle.Result.GetComponent<FriendsAddResult_Popup>().SetInfo(nickname, result);
     }
 
 
