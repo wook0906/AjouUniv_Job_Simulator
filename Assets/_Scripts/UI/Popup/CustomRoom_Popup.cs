@@ -12,6 +12,7 @@ public class CustomRoom_Popup : UI_Popup
     {
         Exit_Btn,
         AddFriends_Btn,
+        Start_Btn,
     }
     enum GameObjects
     {
@@ -19,10 +20,10 @@ public class CustomRoom_Popup : UI_Popup
     }
     enum Labels
     {
-        Nickname_Label1,
-        Nickname_Label2,
-        Nickname_Label3,
-        Nickname_Label4,
+        NickName_Label1,
+        NickName_Label2,
+        NickName_Label3,
+        NickName_Label4,
         
         State_Label1,
         State_Label2,
@@ -50,7 +51,7 @@ public class CustomRoom_Popup : UI_Popup
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
 
-        for (Labels i = Labels.Nickname_Label1; i <= Labels.Level_Label4; i++)
+        for (Labels i = Labels.NickName_Label1; i <= Labels.Level_Label4; i++)
         {
             GetLabel((int)i).text = "-";
         }
@@ -59,6 +60,13 @@ public class CustomRoom_Popup : UI_Popup
         {
             lobbyScene.customRoomManagement.SendExitRoomRequest();
         }));
+        UIButton startButton = Get<UIButton>((int)Buttons.Start_Btn);
+        startButton.onClick.Add(new EventDelegate(()=>
+        {
+            lobbyScene.customRoomManagement.StartMatch();
+        }));
+        if(lobbyScene.customRoomManagement.mySlotNumber != 1)
+            startButton.isEnabled = false;
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
         inviteItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
@@ -105,27 +113,28 @@ public class CustomRoom_Popup : UI_Popup
             case 1:
                 GetLabel((int)Labels.Level_Label1).text = "1";
                 GetLabel((int)Labels.State_Label1).text = slotState.ToString();
-                GetLabel((int)Labels.Nickname_Label1).text = nickname;
+                GetLabel((int)Labels.NickName_Label1).text = nickname;
                 break;
             case 2:
                 GetLabel((int)Labels.Level_Label2).text = "1";
                 GetLabel((int)Labels.State_Label2).text = slotState.ToString();
-                GetLabel((int)Labels.Nickname_Label2).text = nickname;
+                GetLabel((int)Labels.NickName_Label2).text = nickname;
                 break;
             case 3:
                 GetLabel((int)Labels.Level_Label3).text = "1";
                 GetLabel((int)Labels.State_Label3).text = slotState.ToString();
-                GetLabel((int)Labels.Nickname_Label3).text = nickname;
+                GetLabel((int)Labels.NickName_Label3).text = nickname;
                 break;
             case 4:
                 GetLabel((int)Labels.Level_Label4).text = "1";
                 GetLabel((int)Labels.State_Label4).text = slotState.ToString();
-                GetLabel((int)Labels.Nickname_Label4).text = nickname;
+                GetLabel((int)Labels.NickName_Label4).text = nickname;
                 break;
             default:
                 Debug.LogError($"SetSlotState Error slot Type : {slotIdx}");
                 break;
         }
+        lobbyScene.customRoomManagement.slotStateDict[slotIdx] = true;
     }
     public void SetEmptySlotState(int slotIdx)
     {
@@ -134,27 +143,28 @@ public class CustomRoom_Popup : UI_Popup
             case 1:
                 GetLabel((int)Labels.Level_Label1).text = "-";
                 GetLabel((int)Labels.State_Label1).text = "-";
-                GetLabel((int)Labels.Nickname_Label1).text = "-";
+                GetLabel((int)Labels.NickName_Label1).text = "-";
                 break;
             case 2:
                 GetLabel((int)Labels.Level_Label2).text = "-";
                 GetLabel((int)Labels.State_Label2).text = "-";
-                GetLabel((int)Labels.Nickname_Label2).text = "-";
+                GetLabel((int)Labels.NickName_Label2).text = "-";
                 break;
             case 3:
                 GetLabel((int)Labels.Level_Label3).text = "-";
                 GetLabel((int)Labels.State_Label3).text = "-";
-                GetLabel((int)Labels.Nickname_Label3).text = "-";
+                GetLabel((int)Labels.NickName_Label3).text = "-";
                 break;
             case 4:
                 GetLabel((int)Labels.Level_Label4).text = "-";
                 GetLabel((int)Labels.State_Label4).text = "-";
-                GetLabel((int)Labels.Nickname_Label4).text = "-";
+                GetLabel((int)Labels.NickName_Label4).text = "-";
                 break;
             default:
                 Debug.LogError($"SetEmptySlotState Error slot Type : {slotIdx}");
                 break;
         }
+        lobbyScene.customRoomManagement.slotStateDict[slotIdx] = false;
     }
     public void SetWaitPlayerInfo()
     {

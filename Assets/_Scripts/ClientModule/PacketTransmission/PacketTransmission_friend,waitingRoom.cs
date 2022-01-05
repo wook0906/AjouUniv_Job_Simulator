@@ -194,7 +194,7 @@ public static partial class PacketTransmission
 
         IOBuffer.Enqueue(buffer);
     }
-    public static void SendExitWaitingRoomPacket(int seatIdx)
+    public static void SendExitWaitingRoomPacket(int roomid, int seatIdx)
     {
         byte[] buffer = IOBuffer.Dequeue();
 
@@ -205,13 +205,16 @@ public static partial class PacketTransmission
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
+
+        ByteConverter.FromInt(roomid, buffer, ref startIndex);
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
+
+        buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt(Volt_PlayerData.instance.NickName.Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(Volt_PlayerData.instance.NickName, buffer, ref startIndex);
-        buffer[startIndex++] = PacketInfo.IntNumber;
-        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
-        
-        
+
         ClientSocketModule.Send(buffer, startIndex);
     }
 

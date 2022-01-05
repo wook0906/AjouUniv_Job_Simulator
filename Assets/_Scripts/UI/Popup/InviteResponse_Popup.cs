@@ -23,12 +23,12 @@ public class InviteResponse_Popup : UI_Popup
 
         GetButton((int)Buttons.Accept_Button).onClick.Add(new EventDelegate(() =>
         {
-            PacketTransmission.SendJoinWaitingRoomPacket(roomID, 0, EJoinWaitingRoomResult.Ok);
+            PacketTransmission.SendJoinWaitingRoomPacket(roomID, 0, EJoinWaitingRoomResult.Ok, PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
             ClosePopupUI();
         })); 
         GetButton((int)Buttons.Deny_Button).onClick.Add(new EventDelegate(() =>
         {
-            PacketTransmission.SendJoinWaitingRoomPacket(roomID, 0, EJoinWaitingRoomResult.Reject);
+            PacketTransmission.SendJoinWaitingRoomPacket(roomID, 0, EJoinWaitingRoomResult.Reject, PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
             ClosePopupUI();
         }));
     }

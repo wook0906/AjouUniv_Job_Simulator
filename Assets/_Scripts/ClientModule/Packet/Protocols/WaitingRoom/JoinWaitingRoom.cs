@@ -6,7 +6,7 @@ using UnityEngine;
 //초대 받고 수락하면 방에 들어가게되고, 방에 있는 다른이에게 이 패킷이 전송된다.
 //본인의 경우 이 패킷을 받고. 추가적으로 InfoWaitingPacket을 받는다.
 
-public enum EEnterWaitingRoomResult { Success, Fail, HostOut, Timeout }
+public enum EEnterWaitingRoomResult { Success =1 , Fail, HostOut, Timeout }
 
 public class JoinWaitingRoom : Packet
 {
@@ -17,9 +17,11 @@ public class JoinWaitingRoom : Packet
         int length = ByteConverter.ToInt(buffer, startIndex);
         //지금 방에 들어온 친구
         string nickname = ByteConverter.ToString(buffer, startIndex, length);
+        int roomID = ByteConverter.ToInt(buffer, startIndex);
         int seatIdx = ByteConverter.ToInt(buffer, startIndex);
         EJoinWaitingRoomResult joinResult = (EJoinWaitingRoomResult)ByteConverter.ToInt(buffer, startIndex);
         EEnterWaitingRoomResult enterResult = (EEnterWaitingRoomResult)ByteConverter.ToInt(buffer, startIndex);
+        
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         //1.본인이 수락/거절에 대한 결과값을 받은 경우
@@ -35,7 +37,7 @@ public class JoinWaitingRoom : Packet
                 switch (enterResult)
                 {
                     case EEnterWaitingRoomResult.Success:
-                        Managers.UI.ShowPopupUI<CustomRoom_Popup>();
+                        scene.customRoomManagement.CreateCustomRoomUI(roomID);
                         //성공. 방에 enter했음. 추가적으로 InfoWaitingPacket을 주겠음.
                         break;
                     case EEnterWaitingRoomResult.Fail:

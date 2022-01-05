@@ -6,11 +6,11 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class CustomRoomManagement : MonoBehaviour
 {
     CustomRoom_Popup customRoomUI;
-
+    public int curRoomID;
     public int mySlotNumber;
    
     //Empty == false
-    Dictionary<int, bool> slotStateDict = new Dictionary<int, bool>()
+    public Dictionary<int, bool> slotStateDict = new Dictionary<int, bool>()
     {
         {1,false },
         {2,false },
@@ -21,15 +21,39 @@ public class CustomRoomManagement : MonoBehaviour
 
     public void SendCreateRoomRequest()
     {
-        PacketTransmission.SendCreateWaitingRoomPacket();
+        PacketTransmission.SendCreateWaitingRoomPacket(PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
     }
-    public void CreateCustomRoomUI()
+    public void CreateCustomRoomUI(int roomID)
     {
-        customRoomUI = Managers.UI.ShowPopupUI<CustomRoom_Popup>();
+        this.curRoomID = roomID;
+        StartCoroutine(CorCreateCustomRoomUI());
+    }
+    IEnumerator CorCreateCustomRoomUI()
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        customRoomUI = handle.Result.GetComponent<CustomRoom_Popup>();
+
+    }
+    public void SelfCreateCustomRoomUI(int roomID)
+    {
+        this.curRoomID = roomID;
+        this.mySlotNumber = 1;
+        StartCoroutine(CorSelfCreateCustomRoomUI());
+    }
+    IEnumerator CorSelfCreateCustomRoomUI()
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        customRoomUI = handle.Result.GetComponent<CustomRoom_Popup>();
+        customRoomUI.SetSlotState(1, Volt_PlayerData.instance.NickName, Define.CustomRoomSlotState.Host);
+
     }
     public void SendExitRoomRequest()
     {
-        PacketTransmission.SendExitWaitingRoomPacket(mySlotNumber);
+        Debug.Log($"Exit Room ID : {curRoomID}");
+        Debug.Log($"mySeatNumber : {mySlotNumber - 1 }");
+        PacketTransmission.SendExitWaitingRoomPacket(curRoomID,mySlotNumber-1);
     }
     public void CloseRoom()
     {
@@ -103,6 +127,12 @@ public class CustomRoomManagement : MonoBehaviour
         yield return new WaitUntil(() => handle.IsDone);
         handle.Result.GetComponent<InviteTryResult_Popup>().SetInfo(result);
 
+    }
+    public void StartMatch()
+    {
+        PlayerPrefs.SetInt("isCustomGame", 1);
+        Volt_PlayerData.instance.currnetCustomRoomID = curRoomID;
+        Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
     }
     //1. 방생성, 삭제
     //2. 갱신

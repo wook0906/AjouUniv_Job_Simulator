@@ -234,6 +234,8 @@ public class Volt_PlayerData : MonoBehaviour
         set { remainAdCnt = value; }
     }
 
+    public int currnetCustomRoomID = -1;
+
     private void Awake()
     {
         if (instance == null)

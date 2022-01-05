@@ -58,6 +58,12 @@ public class StartMatching : PhaseBase
             GameController.instance.gameData.mapType = (Define.MapType)PlayerPrefs.GetInt("SELECTED_MAP");
             GameController.instance.ChangePhase<ArenaSetup>();
         }
+        else if (PlayerPrefs.GetInt("isCustomGame") == 1)
+        {
+            PacketTransmission.SendStartWaitingRoomPacket(Volt_PlayerData.instance.currnetCustomRoomID);
+            PlayerPrefs.SetInt("isCustomGame", 0);
+            //TODO 나중에 뭐... Result씬에서 필요할 수도 있는데... 일단은
+        }
         else
             PacketTransmission.SendMatchingRequestPacket((int)selectedRobotType, (int)Volt_PlayerData.instance.selectdRobotSkins[selectedRobotType].SkinType);
 

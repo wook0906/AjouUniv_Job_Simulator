@@ -63,6 +63,7 @@ public class LobbyScene : BaseScene
     private IEnumerator Start()
     {
         PlayerPrefs.SetInt("Volt_TrainingMode", 0);
+        PlayerPrefs.SetInt("isCustomGame", 0);
 
         SceneType = Define.Scene.Lobby;
 

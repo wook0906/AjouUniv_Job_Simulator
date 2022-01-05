@@ -120,11 +120,24 @@ public static class Util
 
         if (!isReculsive)
         {
-            for (int i = 0; i < go.transform.childCount; i++)            {                Transform transform = go.transform.GetChild(i);                if (string.IsNullOrEmpty(name) || transform.name == name)                {                    T component = transform.GetComponent<T>();                    if (component != null)                        return component;                }            }
+            for (int i = 0; i < go.transform.childCount; i++)
+            {
+                Transform transform = go.transform.GetChild(i);
+                if (string.IsNullOrEmpty(name) || transform.name == name)
+                {
+                    T component = transform.GetComponent<T>();
+                    if (component != null)
+                        return component;
+                }
+            }
         }
         else
         {
-            foreach (T component in go.GetComponentsInChildren<T>())            {                if (string.IsNullOrEmpty(name) || component.name == name)                    return component;            }
+            foreach (T component in go.GetComponentsInChildren<T>())
+            {
+                if (string.IsNullOrEmpty(name) || component.name == name)
+                    return component;
+            }
         }
 
         return null;

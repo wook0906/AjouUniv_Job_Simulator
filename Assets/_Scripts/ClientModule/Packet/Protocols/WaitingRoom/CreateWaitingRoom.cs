@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 //방만들기 하였을 때 방이 잘 만들어졌는지 응답 패킷
-public enum ECreateWaitingRoomResult { Success, Error }
+public enum ECreateWaitingRoomResult { Success = 1, Error }
 
 public class CreateWaitingRoom : Packet
 {
@@ -13,15 +13,19 @@ public class CreateWaitingRoom : Packet
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         ECreateWaitingRoomResult result = (ECreateWaitingRoomResult)ByteConverter.ToInt(buffer, ref startIndex);
+        int roomId = ByteConverter.ToInt(buffer, ref startIndex);
 
-        if(result == ECreateWaitingRoomResult.Success)
+        Debug.Log(result);
+        Debug.Log($"Created room ID : {roomId}");
+
+        if (result == ECreateWaitingRoomResult.Success)
         {
             LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
-            lobbyScene.customRoomManagement.CreateCustomRoomUI();
+            lobbyScene.customRoomManagement.SelfCreateCustomRoomUI(roomId);
         }
         else
         {
-            Managers.UI.ShowPopupUI<CustomRoomCreateFail_Popup>();
+            Managers.UI.ShowPopupUIAsync<CustomRoomCreateFail_Popup>();
         }
 
     }
