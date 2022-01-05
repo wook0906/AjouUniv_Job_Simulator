@@ -119,7 +119,7 @@ public static partial class PacketTransmission
         IOBuffer.Enqueue(buffer);
     }
 
-    public static void SendCreateWaitingRoomPacket()
+    public static void SendCreateWaitingRoomPacket(int characterNumber, int skinType)
     {
         byte[] buffer = IOBuffer.Dequeue();
 
@@ -129,7 +129,9 @@ public static partial class PacketTransmission
         ByteConverter.FromInt((int)EPacketType.CreateWaitingRoom, buffer, ref startIndex);
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
-
+        ByteConverter.FromInt(characterNumber, buffer, ref startIndex); 
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(skinType, buffer, ref startIndex);
         ClientSocketModule.Send(buffer, startIndex);
 
         IOBuffer.Enqueue(buffer);
@@ -168,7 +170,7 @@ public static partial class PacketTransmission
     /// </summary>
     /// <param name="roomid"></param>
     /// <param name="result"></param>
-    public static void SendJoinWaitingRoomPacket(int roomid,int seatIdx, EJoinWaitingRoomResult result)
+    public static void SendJoinWaitingRoomPacket(int roomid,int seatIdx, EJoinWaitingRoomResult result, int characterNumber, int skinType)
     {
         byte[] buffer = IOBuffer.Dequeue();
 
@@ -184,7 +186,10 @@ public static partial class PacketTransmission
         ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt((int)result, buffer, ref startIndex);
-
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(characterNumber, buffer, ref startIndex);
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(skinType, buffer, ref startIndex);
         ClientSocketModule.Send(buffer, startIndex);
 
         IOBuffer.Enqueue(buffer);
@@ -208,5 +213,22 @@ public static partial class PacketTransmission
         
         
         ClientSocketModule.Send(buffer, startIndex);
+    }
+
+    public static void SendStartWaitingRoomPacket(int roomid)
+    {
+        byte[] buffer = IOBuffer.Dequeue();
+
+        buffer[0] = PacketInfo.PacketStartNumber;
+        int startIndex = 1;
+
+        ByteConverter.FromInt((int)EPacketType.StartWaitingRoom, buffer, ref startIndex);
+
+        ByteConverter.FromInt(0, buffer, ref startIndex);
+
+        ByteConverter.FromInt(roomid, buffer, ref startIndex);
+        ClientSocketModule.Send(buffer, startIndex);
+
+        IOBuffer.Enqueue(buffer);
     }
 }

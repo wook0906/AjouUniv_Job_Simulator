@@ -13,7 +13,7 @@ public class InviteWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         //초대한 호스트 닉네임
         int length = ByteConverter.ToInt(buffer, startIndex);

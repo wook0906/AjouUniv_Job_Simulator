@@ -10,7 +10,7 @@ public class FriendRequestList : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         int count = ByteConverter.ToInt(buffer, ref startIndex);
        

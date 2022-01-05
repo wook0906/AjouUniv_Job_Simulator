@@ -12,7 +12,7 @@ public class JoinWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         int length = ByteConverter.ToInt(buffer, startIndex);
         //지금 방에 들어온 친구

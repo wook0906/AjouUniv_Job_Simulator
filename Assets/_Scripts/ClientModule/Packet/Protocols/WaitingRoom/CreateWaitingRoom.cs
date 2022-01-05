@@ -10,7 +10,7 @@ public class CreateWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         ECreateWaitingRoomResult result = (ECreateWaitingRoomResult)ByteConverter.ToInt(buffer, ref startIndex);
 

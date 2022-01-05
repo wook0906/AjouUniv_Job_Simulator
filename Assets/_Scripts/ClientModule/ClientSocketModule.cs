@@ -190,7 +190,8 @@ public enum EPacketType
     JoinWaitingRoom,
     ExitWaitingRoom,
     CloseWaitingRoom,
-
+    InfoWaitingRoom,
+    StartWaitingRoom
 }
 
 

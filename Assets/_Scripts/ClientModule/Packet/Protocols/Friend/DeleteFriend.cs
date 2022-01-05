@@ -11,7 +11,7 @@ public class DeleteFriend : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         EDeleteFriendResult result = (EDeleteFriendResult)ByteConverter.ToInt(buffer, ref startIndex);
 

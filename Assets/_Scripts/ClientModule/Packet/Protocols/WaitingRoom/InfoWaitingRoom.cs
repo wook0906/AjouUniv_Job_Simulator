@@ -9,7 +9,7 @@ public class InfoWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
 

@@ -10,7 +10,7 @@ public class ExitWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         int length = ByteConverter.ToInt(buffer, startIndex);
         //지금 방에서 나간 친구

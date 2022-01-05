@@ -23,7 +23,7 @@ public class InviteMyWaitingRoom : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         EInviteMyWaitingRoomResult result = (EInviteMyWaitingRoomResult)ByteConverter.ToInt(buffer, ref startIndex);
 

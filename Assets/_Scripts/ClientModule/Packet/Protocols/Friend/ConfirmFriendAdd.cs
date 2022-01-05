@@ -11,7 +11,7 @@ public class ConfirmFriendAdd : Packet
 {
     public override void UnPack(byte[] buffer)
     {
-        int startIndex = PacketInfo.FromServerPacketDataStartIndex;
+        int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         EConfirmFriendAddResult result = (EConfirmFriendAddResult)ByteConverter.ToInt(buffer, ref startIndex);
 
