@@ -152,13 +152,13 @@ public static partial class PacketTransmission
         ByteConverter.FromInt((int)EPacketType.InviteMyWaitingRoom, buffer, ref startIndex);
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
-
+        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
+        buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt(nickname.Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(nickname, buffer, ref startIndex);
-        buffer[startIndex++] = PacketInfo.IntNumber;
-        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
-
+        
+        
         ClientSocketModule.Send(buffer, startIndex);
 
         IOBuffer.Enqueue(buffer);

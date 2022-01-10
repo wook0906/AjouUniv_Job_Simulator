@@ -29,6 +29,7 @@ public class FriendList : Packet
             friendProfile.totalPlayCnt = 2;
             friendProfile.winCnt = 3;
 
+            Debug.Log(friendProfile.nickname);
             Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, friendProfile);
             //각 행 별 처리
         }
