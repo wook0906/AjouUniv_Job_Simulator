@@ -12,10 +12,10 @@ public class ExitWaitingRoom : Packet
     {
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
-        int length = ByteConverter.ToInt(buffer, startIndex);
+        int length = ByteConverter.ToInt(buffer,ref startIndex);
         //지금 방에서 나간 친구
-        string nickname = ByteConverter.ToString(buffer, startIndex, length);
-        int seatIdx = ByteConverter.ToInt(buffer, startIndex);
+        string nickname = ByteConverter.ToString(buffer,ref startIndex, length);
+        int seatIdx = ByteConverter.ToInt(buffer,ref startIndex);
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
 

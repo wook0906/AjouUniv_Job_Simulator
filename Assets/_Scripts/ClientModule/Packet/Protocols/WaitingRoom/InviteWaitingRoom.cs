@@ -16,15 +16,15 @@ public class InviteWaitingRoom : Packet
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         //초대한 호스트 닉네임
-        int length = ByteConverter.ToInt(buffer, startIndex);
-        string hostNickname = ByteConverter.ToString(buffer, startIndex, length);
+        int length = ByteConverter.ToInt(buffer,ref startIndex);
+        string hostNickname = ByteConverter.ToString(buffer,ref startIndex, length);
 
         //초대된 친구
-        int inviteLength = ByteConverter.ToInt(buffer, startIndex);
-        string InvitedNickname = ByteConverter.ToString(buffer, startIndex, inviteLength);
+        int inviteLength = ByteConverter.ToInt(buffer,ref startIndex);
+        string InvitedNickname = ByteConverter.ToString(buffer,ref startIndex, inviteLength);
 
-        int roomid = ByteConverter.ToInt(buffer, startIndex);
-        int seatIdx = ByteConverter.ToInt(buffer, startIndex);
+        int roomid = ByteConverter.ToInt(buffer,ref startIndex);
+        int seatIdx = ByteConverter.ToInt(buffer,ref startIndex);
 
         LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
         //받은 사람이 본인 일경우

@@ -14,13 +14,13 @@ public class JoinWaitingRoom : Packet
     {
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
-        int length = ByteConverter.ToInt(buffer, startIndex);
+        int length = ByteConverter.ToInt(buffer,ref startIndex);
         //지금 방에 들어온 친구
-        string nickname = ByteConverter.ToString(buffer, startIndex, length);
-        int roomID = ByteConverter.ToInt(buffer, startIndex);
-        int seatIdx = ByteConverter.ToInt(buffer, startIndex);
-        EJoinWaitingRoomResult joinResult = (EJoinWaitingRoomResult)ByteConverter.ToInt(buffer, startIndex);
-        EEnterWaitingRoomResult enterResult = (EEnterWaitingRoomResult)ByteConverter.ToInt(buffer, startIndex);
+        string nickname = ByteConverter.ToString(buffer,ref startIndex, length);
+        int roomID = ByteConverter.ToInt(buffer,ref startIndex);
+        int seatIdx = ByteConverter.ToInt(buffer,ref startIndex);
+        EJoinWaitingRoomResult joinResult = (EJoinWaitingRoomResult)ByteConverter.ToInt(buffer,ref startIndex);
+        EEnterWaitingRoomResult enterResult = (EEnterWaitingRoomResult)ByteConverter.ToInt(buffer,ref startIndex);
         
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;

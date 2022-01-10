@@ -19,7 +19,7 @@ public class FriendList : Packet
         for (int i = 0; i<count; i++)
         {
             int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
-            string nickname = ByteConverter.ToString(buffer, startIndex, nicknameLength);
+            string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
 
             Define.ProfileData friendProfile = new Define.ProfileData();
             friendProfile.nickname = nickname;

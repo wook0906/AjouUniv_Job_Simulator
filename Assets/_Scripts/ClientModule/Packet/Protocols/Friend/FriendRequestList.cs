@@ -20,7 +20,7 @@ public class FriendRequestList : Packet
             int timeLengh = ByteConverter.ToInt(buffer, ref startIndex);
             string time = ByteConverter.ToString(buffer, startIndex, timeLengh);
             int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
-            string nickname = ByteConverter.ToString(buffer, startIndex, nicknameLength);
+            string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
 
             Debug.Log($"{time} : {nickname}");
 

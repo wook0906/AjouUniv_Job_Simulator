@@ -17,7 +17,7 @@ public static partial class PacketTransmission
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
-        ByteConverter.FromInt(nickname.Length, buffer, ref startIndex);
+        ByteConverter.FromInt(Encoding.UTF8.GetBytes(nickname).Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(nickname, buffer, ref startIndex);
 
@@ -39,7 +39,7 @@ public static partial class PacketTransmission
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
-        ByteConverter.FromInt(nickname.Length, buffer, ref startIndex);
+        ByteConverter.FromInt(Encoding.UTF8.GetBytes(nickname).Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(nickname, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.IntNumber;
@@ -61,7 +61,7 @@ public static partial class PacketTransmission
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
-        ByteConverter.FromInt(nickname.Length, buffer, ref startIndex);
+        ByteConverter.FromInt(Encoding.UTF8.GetBytes(nickname).Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(nickname, buffer, ref startIndex);
 
@@ -129,7 +129,7 @@ public static partial class PacketTransmission
         ByteConverter.FromInt((int)EPacketType.CreateWaitingRoom, buffer, ref startIndex);
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
-        ByteConverter.FromInt(characterNumber, buffer, ref startIndex); 
+        ByteConverter.FromInt(characterNumber, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt(skinType, buffer, ref startIndex);
         ClientSocketModule.Send(buffer, startIndex);
@@ -152,13 +152,13 @@ public static partial class PacketTransmission
         ByteConverter.FromInt((int)EPacketType.InviteMyWaitingRoom, buffer, ref startIndex);
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
-        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
-        buffer[startIndex++] = PacketInfo.IntNumber;
-        ByteConverter.FromInt(nickname.Length, buffer, ref startIndex);
+
+        ByteConverter.FromInt(Encoding.UTF8.GetBytes(nickname).Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(nickname, buffer, ref startIndex);
-        
-        
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
+
         ClientSocketModule.Send(buffer, startIndex);
 
         IOBuffer.Enqueue(buffer);
@@ -170,7 +170,7 @@ public static partial class PacketTransmission
     /// </summary>
     /// <param name="roomid"></param>
     /// <param name="result"></param>
-    public static void SendJoinWaitingRoomPacket(int roomid,int seatIdx, EJoinWaitingRoomResult result, int characterNumber, int skinType)
+    public static void SendJoinWaitingRoomPacket(int roomid, int seatIdx, EJoinWaitingRoomResult result, int characterNumber, int skinType)
     {
         byte[] buffer = IOBuffer.Dequeue();
 
@@ -181,7 +181,7 @@ public static partial class PacketTransmission
 
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
-        ByteConverter.FromInt(roomid, buffer, ref startIndex); 
+        ByteConverter.FromInt(roomid, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.IntNumber;
@@ -211,7 +211,7 @@ public static partial class PacketTransmission
         ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
 
         buffer[startIndex++] = PacketInfo.IntNumber;
-        ByteConverter.FromInt(Volt_PlayerData.instance.NickName.Length, buffer, ref startIndex);
+        ByteConverter.FromInt(Encoding.UTF8.GetBytes(Volt_PlayerData.instance.NickName).Length, buffer, ref startIndex);
         buffer[startIndex++] = PacketInfo.StringNumber;
         ByteConverter.FromString(Volt_PlayerData.instance.NickName, buffer, ref startIndex);
 
