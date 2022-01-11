@@ -33,6 +33,5 @@ public class FriendList : Packet
             Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, friendProfile);
             //각 행 별 처리
         }
-
     }
 }

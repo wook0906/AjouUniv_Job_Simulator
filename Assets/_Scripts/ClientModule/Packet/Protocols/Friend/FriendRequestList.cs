@@ -18,7 +18,7 @@ public class FriendRequestList : Packet
         for(int i = 0; i<count; i++)
         {
             int timeLengh = ByteConverter.ToInt(buffer, ref startIndex);
-            string time = ByteConverter.ToString(buffer, startIndex, timeLengh);
+            string time = ByteConverter.ToString(buffer, ref startIndex, timeLengh);
             int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
             string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
 
@@ -33,7 +33,7 @@ public class FriendRequestList : Packet
             data.StateMSG = "Empty";
             data.winCnt = 0;
 
-            Volt_PlayerData.instance.friendsRequestList.Add(data);
+            Volt_PlayerData.instance.friendsRequestList.Add(data.nickname, data);
             //각 행 별 처리
 
             //친구 요청을 리스트업 하는 UI를 만든 후, 로비 진입할때 친구요청목록을 서버에 요청, 이 패킷을 받아 UI에 리스트업.

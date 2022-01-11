@@ -22,6 +22,6 @@ public class ExitWaitingRoom : Packet
         if (nickname == Volt_PlayerData.instance.NickName)
             scene.customRoomManagement.CloseRoom();
         else
-            scene.customRoomManagement.SetEmptySlotState(seatIdx + 1);
+            scene.customRoomManagement.SetEmptySlotState(seatIdx);
     }
 }

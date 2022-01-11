@@ -8,17 +8,27 @@ public class CustomRoomManagement : MonoBehaviour
     CustomRoom_Popup customRoomUI;
     public int curRoomID;
     public int mySlotNumber;
-   
-    //Empty == false
-    public Dictionary<int, bool> slotStateDict = new Dictionary<int, bool>()
+    
+
+    public Dictionary<int, Define.CustomRoomItemSlotStateInfo> roomInfoDict = new Dictionary<int, Define.CustomRoomItemSlotStateInfo>()
     {
-        {1,false },
-        {2,false },
-        {3,false },
-        {4,false }
+        {0,new Define.CustomRoomItemSlotStateInfo()},
+        {1,new Define.CustomRoomItemSlotStateInfo()},
+        {2,new Define.CustomRoomItemSlotStateInfo()},
+        {3,new Define.CustomRoomItemSlotStateInfo()}
     };
 
-
+    public void JoinWaitingRoom()
+    {
+        StartCoroutine(CorJoinWaitingRoom());
+    }
+    IEnumerator CorJoinWaitingRoom()
+    {
+        AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
+        yield return new WaitUntil(() => handle.IsDone);
+        customRoomUI = handle.Result.GetComponent<CustomRoom_Popup>();
+        customRoomUI.RenewRoomInfo();
+    }
     public void SendCreateRoomRequest()
     {
         PacketTransmission.SendCreateWaitingRoomPacket(PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
@@ -38,7 +48,7 @@ public class CustomRoomManagement : MonoBehaviour
     public void SelfCreateCustomRoomUI(int roomID)
     {
         this.curRoomID = roomID;
-        this.mySlotNumber = 1;
+        this.mySlotNumber = 0;
         StartCoroutine(CorSelfCreateCustomRoomUI());
     }
     IEnumerator CorSelfCreateCustomRoomUI()
@@ -46,46 +56,47 @@ public class CustomRoomManagement : MonoBehaviour
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
         customRoomUI = handle.Result.GetComponent<CustomRoom_Popup>();
-        customRoomUI.SetSlotState(1, Volt_PlayerData.instance.NickName, Define.CustomRoomSlotState.Host);
+        customRoomUI.SetSlotState(0, Volt_PlayerData.instance.NickName, Define.CustomRoomSlotState.Host);
 
     }
     public void SendExitRoomRequest()
     {
         Debug.Log($"Exit Room ID : {curRoomID}");
-        Debug.Log($"mySeatNumber : {mySlotNumber - 1 }");
-        PacketTransmission.SendExitWaitingRoomPacket(curRoomID,mySlotNumber-1);
+        Debug.Log($"mySeatNumber : {mySlotNumber}");
+        PacketTransmission.SendExitWaitingRoomPacket(curRoomID,mySlotNumber);
     }
     public void CloseRoom()
     {
         customRoomUI.ClosePopupUI();
-        for (int i = 1; i < 4; i++)
+        roomInfoDict.Clear();
+        for (int i = 0; i < 4; i++)
         {
-            slotStateDict[i] = false;
+            roomInfoDict[i] = new Define.CustomRoomItemSlotStateInfo();
         }
     }
     public void InvitePlayer(string nickname)
     {
         int slotNumber = GetEmptySlotNumber();
         PacketTransmission.SendInviteMyWaitingRoomPacket(nickname, slotNumber);
-        customRoomUI.SetSlotState(slotNumber, nickname, Define.CustomRoomSlotState.WaitPlayer);
+        //customRoomUI.SetSlotState(slotNumber, nickname, Define.CustomRoomSlotState.WaitPlayer);
     }
-    public void ShowInviteResponse(int roomid, string hostName)
+    public void ShowInviteResponse(int roomid, string hostName, int seatIdx)
     {
-        StartCoroutine(CorShowInviteResponse(roomid,hostName));
+        StartCoroutine(CorShowInviteResponse(roomid,hostName,seatIdx));
     }
-    IEnumerator CorShowInviteResponse(int roomid, string hostName)
+    IEnumerator CorShowInviteResponse(int roomid, string hostName, int seatIdx)
     {
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<InviteResponse_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
-        handle.Result.GetComponent<InviteResponse_Popup>().SetInfo(roomid, hostName);
+        handle.Result.GetComponent<InviteResponse_Popup>().SetInfo(roomid, hostName, seatIdx);
     }
     int GetEmptySlotNumber()
     {
-        for (int i = 1; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
-            if (!slotStateDict[i])
+            if (!roomInfoDict[i].isEmpty)
             {
-                slotStateDict[i] = true;
+                roomInfoDict[i].isEmpty = true;
                 return i;
             }
         }
@@ -95,7 +106,7 @@ public class CustomRoomManagement : MonoBehaviour
     public void SetEmptySlotState(int slotIdx)
     {
         customRoomUI.SetEmptySlotState(slotIdx);
-        slotStateDict[slotIdx] = false;
+        roomInfoDict[slotIdx].isEmpty = false;
     }
     public void SetSlotState(int slotNumber, string nickname, Define.CustomRoomSlotState slotState)
     {
@@ -117,15 +128,15 @@ public class CustomRoomManagement : MonoBehaviour
         handle.Result.GetComponent<CustomRoomJoinResult_Popup>().SetInfo(result);
 
     }
-    public void ShowInviteTryResult(EInviteMyWaitingRoomResult result)
+    public void ShowInviteTryResult(EInviteMyWaitingRoomResult result, string nickname, int seatIdx )
     {
-        StartCoroutine(CorShowInviteTryResult(result));
+        StartCoroutine(CorShowInviteTryResult(result, nickname, seatIdx));
     }
-    IEnumerator CorShowInviteTryResult(EInviteMyWaitingRoomResult result)
+    IEnumerator CorShowInviteTryResult(EInviteMyWaitingRoomResult result, string nickname, int seatIdx)
     {
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<InviteTryResult_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
-        handle.Result.GetComponent<InviteTryResult_Popup>().SetInfo(result);
+        handle.Result.GetComponent<InviteTryResult_Popup>().SetInfo(result,nickname,seatIdx);
 
     }
     public void StartMatch()

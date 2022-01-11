@@ -5,6 +5,20 @@ using UnityEngine;
 
 public class Define
 {
+    public class CustomRoomItemSlotStateInfo
+    {
+        public CustomRoomItemSlotStateInfo()
+        {
+            isEmpty = false;
+            state = CustomRoomSlotState.Empty;
+            level = 1;
+            nickname = "-";
+        }
+        public bool isEmpty;
+        public CustomRoomSlotState state;
+        public int level;
+        public string nickname;
+    }
     public enum CustomRoomSlotState
     {
         Empty,

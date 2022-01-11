@@ -210,5 +210,9 @@ public class TitleScene : BaseScene
         isStartDownloadDLC = true;
         dlcDownPopup.SetActive(false);
     }
+    public void TutorialSkip()
+    {
+        PlayerPrefs.SetInt("Volt_TutorialDone", 1);
+    }
 
 }

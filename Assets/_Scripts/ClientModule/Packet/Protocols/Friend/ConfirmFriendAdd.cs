@@ -20,20 +20,25 @@ public class ConfirmFriendAdd : Packet
 
         Debug.Log($"친구 요청에대한 답변의 결과 : {result}");
 
+        Define.ProfileData data;
+
+        data.killCnt = 0;
+        data.defeatCnt = 0;
+        data.deathCnt = 0;
+        data.level = 1;
+        data.nickname = nickname;
+        data.StateMSG = "Empty";
+        data.totalPlayCnt = 0;
+        data.winCnt = 0;
+
         if (result == EConfirmFriendAddResult.Success)
         {
-            Define.ProfileData data;
-            data.killCnt = 0;
-            data.defeatCnt = 0;
-            data.deathCnt = 0;
-            data.level = 1;
-            data.nickname = nickname;
-            data.StateMSG = "Empty";
-            data.totalPlayCnt = 0;
-            data.winCnt = 0;
             Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, data);
         }
-        Managers.UI.GetPopupUI<Community_Popup>().ShowRequestConfirmPopup(result,nickname);
-
+        Volt_PlayerData.instance.friendsRequestList.Remove(data.nickname);
+        Managers.UI.GetPopupUI<FriendsRequestList_Popup>().RenewFriendsInfo();
+        Managers.UI.GetPopupUI<Community_Popup>().RenewFriendsInfo();
+        Managers.UI.GetPopupUI<Community_Popup>().ShowRequestConfirmPopup(result, nickname);
+        
     }
 }

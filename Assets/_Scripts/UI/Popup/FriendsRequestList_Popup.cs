@@ -46,7 +46,7 @@ public class FriendsRequestList_Popup : UI_Popup
             yield return new WaitUntil(() => { return handle.IsDone; });
 
             FriendsRequestItem friendsitem = handle.Result.GetComponent<FriendsRequestItem>();
-            friendsitem.SetInfo(item.nickname);
+            friendsitem.SetInfo(item.Key);
             friendsitem.gameObject.layer = transform.root.gameObject.layer;
             friendsitem.transform.localPosition = Vector3.zero;
             friendsitem.transform.localScale = Vector3.one;

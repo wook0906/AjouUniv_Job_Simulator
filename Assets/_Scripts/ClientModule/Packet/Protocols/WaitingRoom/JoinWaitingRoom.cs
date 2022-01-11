@@ -58,13 +58,13 @@ public class JoinWaitingRoom : Packet
         //2.본인이외의 사람이 브로드캐스팅 받아 nickname이 방에 들어왔음을 알게 된 경우
         if (joinResult == EJoinWaitingRoomResult.Ok)
         {
-            scene.customRoomManagement.SetSlotState(seatIdx + 1, nickname, Define.CustomRoomSlotState.Ready);
+            scene.customRoomManagement.SetSlotState(seatIdx, nickname, Define.CustomRoomSlotState.Ready);
             //해당 seatIdx자리에 nickname유저가 성공적으로 들어왔음.
             //EEnterWaitingRoomResult가 Success가 아니면 브로드캐스팅이 되지않으므로 신경 X
         }
         else if(joinResult == EJoinWaitingRoomResult.Reject)
         {
-            scene.customRoomManagement.SetEmptySlotState(seatIdx + 1);
+            scene.customRoomManagement.SetEmptySlotState(seatIdx);
             //해당 seatIdx자리에 초대중이던 nickname유저를 삭제
         }
     }

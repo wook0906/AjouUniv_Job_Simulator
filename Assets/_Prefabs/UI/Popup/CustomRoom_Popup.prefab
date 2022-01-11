@@ -71,7 +71,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.0952381
+  aspectRatio: 0.12195122
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -204,7 +204,7 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: 0, y: 0, z: 734.67, w: 535.32}
+  mClipRange: {x: 0, y: 0, z: 734.67, w: 437.06}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 4
   mSortingOrder: 0

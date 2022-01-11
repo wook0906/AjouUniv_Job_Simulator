@@ -50,12 +50,6 @@ public class CustomRoom_Popup : UI_Popup
 
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
-
-        for (Labels i = Labels.NickName_Label1; i <= Labels.Level_Label4; i++)
-        {
-            GetLabel((int)i).text = "-";
-        }
-
         Get<UIButton>((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
             lobbyScene.customRoomManagement.SendExitRoomRequest();
@@ -65,7 +59,7 @@ public class CustomRoom_Popup : UI_Popup
         {
             lobbyScene.customRoomManagement.StartMatch();
         }));
-        if(lobbyScene.customRoomManagement.mySlotNumber != 1)
+        if(lobbyScene.customRoomManagement.mySlotNumber != 0)
             startButton.isEnabled = false;
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
@@ -100,6 +94,7 @@ public class CustomRoom_Popup : UI_Popup
         GetComponent<UIPanel>().gameObject.SetActive(true);
         GetComponent<UIPanel>().alpha = 1f;
     }
+
     public override void OnClose()
     {
         base.OnClose();
@@ -110,22 +105,22 @@ public class CustomRoom_Popup : UI_Popup
     {
         switch (slotIdx)
         {
-            case 1:
+            case 0:
                 GetLabel((int)Labels.Level_Label1).text = "1";
                 GetLabel((int)Labels.State_Label1).text = slotState.ToString();
                 GetLabel((int)Labels.NickName_Label1).text = nickname;
                 break;
-            case 2:
+            case 1:
                 GetLabel((int)Labels.Level_Label2).text = "1";
                 GetLabel((int)Labels.State_Label2).text = slotState.ToString();
                 GetLabel((int)Labels.NickName_Label2).text = nickname;
                 break;
-            case 3:
+            case 2:
                 GetLabel((int)Labels.Level_Label3).text = "1";
                 GetLabel((int)Labels.State_Label3).text = slotState.ToString();
                 GetLabel((int)Labels.NickName_Label3).text = nickname;
                 break;
-            case 4:
+            case 3:
                 GetLabel((int)Labels.Level_Label4).text = "1";
                 GetLabel((int)Labels.State_Label4).text = slotState.ToString();
                 GetLabel((int)Labels.NickName_Label4).text = nickname;
@@ -134,28 +129,28 @@ public class CustomRoom_Popup : UI_Popup
                 Debug.LogError($"SetSlotState Error slot Type : {slotIdx}");
                 break;
         }
-        lobbyScene.customRoomManagement.slotStateDict[slotIdx] = true;
+        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isEmpty = true;
     }
     public void SetEmptySlotState(int slotIdx)
     {
         switch (slotIdx)
         {
-            case 1:
+            case 0:
                 GetLabel((int)Labels.Level_Label1).text = "-";
                 GetLabel((int)Labels.State_Label1).text = "-";
                 GetLabel((int)Labels.NickName_Label1).text = "-";
                 break;
-            case 2:
+            case 1:
                 GetLabel((int)Labels.Level_Label2).text = "-";
                 GetLabel((int)Labels.State_Label2).text = "-";
                 GetLabel((int)Labels.NickName_Label2).text = "-";
                 break;
-            case 3:
+            case 2:
                 GetLabel((int)Labels.Level_Label3).text = "-";
                 GetLabel((int)Labels.State_Label3).text = "-";
                 GetLabel((int)Labels.NickName_Label3).text = "-";
                 break;
-            case 4:
+            case 3:
                 GetLabel((int)Labels.Level_Label4).text = "-";
                 GetLabel((int)Labels.State_Label4).text = "-";
                 GetLabel((int)Labels.NickName_Label4).text = "-";
@@ -164,11 +159,27 @@ public class CustomRoom_Popup : UI_Popup
                 Debug.LogError($"SetEmptySlotState Error slot Type : {slotIdx}");
                 break;
         }
-        lobbyScene.customRoomManagement.slotStateDict[slotIdx] = false;
+        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isEmpty = false;
     }
     public void SetWaitPlayerInfo()
     {
         //TODO : 다른곳에다가 현재 방정보를 저장할 클래스를 제작해서 그 클래스로부터 정보를 받아와서 세팅하는걸로
+    }
+    public void RenewRoomInfo()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Define.CustomRoomItemSlotStateInfo info = lobbyScene.customRoomManagement.roomInfoDict[i];
+            if (info.isEmpty)
+                SetEmptySlotState(i);
+            else
+            {
+                if(i == 0)
+                    SetSlotState(i, info.nickname, Define.CustomRoomSlotState.Host);
+                else
+                    SetSlotState(i, info.nickname, info.state);
+            }
+        }
     }
     
 }

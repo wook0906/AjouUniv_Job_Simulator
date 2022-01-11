@@ -149,7 +149,7 @@ public class Volt_PlayerData : MonoBehaviour
         get { return stateMSG; }
         set { stateMSG = value; }
     }
-    public List<Define.ProfileData> friendsRequestList = new List<Define.ProfileData>();
+    public Dictionary<string, Define.ProfileData> friendsRequestList = new Dictionary<string, Define.ProfileData>();
     public Dictionary<string, Define.ProfileData> friendsProfileDataDict = new Dictionary<string, Define.ProfileData>();
     //TMP 21.07.16 END================================
 
