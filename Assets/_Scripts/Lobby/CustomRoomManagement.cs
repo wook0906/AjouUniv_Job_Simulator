@@ -6,8 +6,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class CustomRoomManagement : MonoBehaviour
 {
     CustomRoom_Popup customRoomUI;
-    public int curRoomID;
-    public int mySlotNumber;
+    //public int curRoomID;
+    //public int mySlotNumber;
     
 
     public Dictionary<int, Define.CustomRoomItemSlotStateInfo> roomInfoDict = new Dictionary<int, Define.CustomRoomItemSlotStateInfo>()
@@ -35,7 +35,7 @@ public class CustomRoomManagement : MonoBehaviour
     }
     public void CreateCustomRoomUI(int roomID)
     {
-        this.curRoomID = roomID;
+        PlayerPrefs.SetInt("CustomRoomID", roomID);
         StartCoroutine(CorCreateCustomRoomUI());
     }
     IEnumerator CorCreateCustomRoomUI()
@@ -47,8 +47,8 @@ public class CustomRoomManagement : MonoBehaviour
     }
     public void SelfCreateCustomRoomUI(int roomID)
     {
-        this.curRoomID = roomID;
-        this.mySlotNumber = 0;
+        PlayerPrefs.SetInt("CustomRoomID", roomID);
+        PlayerPrefs.SetInt("CustomRoomMySlotNumber", 0);
         StartCoroutine(CorSelfCreateCustomRoomUI());
     }
     IEnumerator CorSelfCreateCustomRoomUI()
@@ -61,9 +61,9 @@ public class CustomRoomManagement : MonoBehaviour
     }
     public void SendExitRoomRequest()
     {
-        Debug.Log($"Exit Room ID : {curRoomID}");
-        Debug.Log($"mySeatNumber : {mySlotNumber}");
-        PacketTransmission.SendExitWaitingRoomPacket(curRoomID,mySlotNumber);
+        Debug.Log($"Exit Room ID : {PlayerPrefs.GetInt("CustomRoomID")}");
+        Debug.Log($"mySeatNumber : {PlayerPrefs.GetInt("CustomRoomMySlotNumber")}");
+        PacketTransmission.SendExitWaitingRoomPacket(PlayerPrefs.GetInt("CustomRoomID"), PlayerPrefs.GetInt("CustomRoomMySlotNumber"));
     }
     public void CloseRoom()
     {
@@ -141,9 +141,8 @@ public class CustomRoomManagement : MonoBehaviour
     }
     public void StartMatch()
     {
-        PlayerPrefs.SetInt("isCustomGame", 1);
-        Volt_PlayerData.instance.currnetCustomRoomID = curRoomID;
-        Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+        //Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+        PacketTransmission.SendStartWaitingRoomPacket(PlayerPrefs.GetInt("CustomRoomID"));
     }
     //1. 방생성, 삭제
     //2. 갱신

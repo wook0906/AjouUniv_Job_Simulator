@@ -29,7 +29,8 @@ public class InfoWaitingRoom : Packet
             Debug.Log($"slot{i} : state : {state} nickname : {nickname}");
 
 
-            scene.customRoomManagement.curRoomID = roomid;
+            PlayerPrefs.SetInt("CustomRoomID", roomid);
+
             scene.customRoomManagement.roomInfoDict[i].state = (Define.CustomRoomSlotState)state;
             scene.customRoomManagement.roomInfoDict[i].nickname = nickname;
         }

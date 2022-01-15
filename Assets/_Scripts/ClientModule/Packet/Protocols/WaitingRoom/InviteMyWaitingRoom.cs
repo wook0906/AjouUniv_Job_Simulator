@@ -32,6 +32,10 @@ public class InviteMyWaitingRoom : Packet
         string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
         int seatIdx = ByteConverter.ToInt(buffer, ref startIndex);
 
+        Debug.Log(result);
+
+
+
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         scene.customRoomManagement.ShowInviteTryResult(result,nickname,seatIdx);
 

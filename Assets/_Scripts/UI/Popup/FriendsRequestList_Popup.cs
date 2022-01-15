@@ -10,6 +10,7 @@ public class FriendsRequestList_Popup : UI_Popup
     enum Buttons
     {
         Close_Btn,
+        Refresh_Btn,
     }
     enum GameObjects
     {
@@ -24,6 +25,10 @@ public class FriendsRequestList_Popup : UI_Popup
         GetButton((int)Buttons.Close_Btn).onClick.Add(new EventDelegate(() =>
         {
             ClosePopupUI();
+        }));
+        GetButton((int)Buttons.Refresh_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            PacketTransmission.SendFriendRequestListPacket();
         }));
         requestItemRoot = Get<GameObject>((int)GameObjects.RequestItemRoot);
         requestItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
@@ -61,5 +66,6 @@ public class FriendsRequestList_Popup : UI_Popup
         GetComponent<UIPanel>().gameObject.SetActive(true);
         GetComponent<UIPanel>().alpha = 1f;
     }
+    
 
 }

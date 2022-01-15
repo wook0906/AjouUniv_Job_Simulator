@@ -29,7 +29,8 @@ public class FriendsRequestItem : UIBase
     }
     public void SetInfo(string nickname)
     {
-        this.nickname = nickname; 
+        this.nickname = nickname;
+        GetLabel((int)Labels.NickName_Label).text = nickname;
     }
     void OnClickAcceptButton()
     {

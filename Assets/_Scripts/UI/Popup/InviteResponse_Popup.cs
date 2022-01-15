@@ -28,11 +28,13 @@ public class InviteResponse_Popup : UI_Popup
         {
             
             PacketTransmission.SendJoinWaitingRoomPacket(roomID, seatIdx, EJoinWaitingRoomResult.Ok, PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
+            PlayerPrefs.SetInt("CustomRoomMySlotNumber", seatIdx);
             ClosePopupUI();
         })); 
         GetButton((int)Buttons.Deny_Button).onClick.Add(new EventDelegate(() =>
         {
             PacketTransmission.SendJoinWaitingRoomPacket(roomID, seatIdx, EJoinWaitingRoomResult.Reject, PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
+            PlayerPrefs.SetInt("CustomRoomMySlotNumber", -1);
             ClosePopupUI();
         }));
     }
@@ -43,7 +45,7 @@ public class InviteResponse_Popup : UI_Popup
         this.hostName = hostName;
         this.seatIdx = seatIdx;
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
-        scene.customRoomManagement.mySlotNumber = seatIdx;
+        
         GetLabel((int)Labels.Notice_Label).text = $"{hostName} 님이 초대하셨습니다.";
     }
 }

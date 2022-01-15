@@ -58,10 +58,11 @@ public class StartMatching : PhaseBase
             GameController.instance.gameData.mapType = (Define.MapType)PlayerPrefs.GetInt("SELECTED_MAP");
             GameController.instance.ChangePhase<ArenaSetup>();
         }
-        else if (PlayerPrefs.GetInt("isCustomGame") == 1)
+        else if (PlayerPrefs.GetInt("CustomRoomID") != -1)
         {
-            PacketTransmission.SendStartWaitingRoomPacket(Volt_PlayerData.instance.currnetCustomRoomID);
-            PlayerPrefs.SetInt("isCustomGame", 0);
+            PacketTransmission.SendReadyToWaitingRoom(PlayerPrefs.GetInt("CustomRoomID"), PlayerPrefs.GetInt("CustomRoomMySlotNumber"));
+            PlayerPrefs.SetInt("CustomRoomID", -1);
+            PlayerPrefs.SetInt("CustomRoomMySlotNumber", -1);
             //TODO 나중에 뭐... Result씬에서 필요할 수도 있는데... 일단은
         }
         else

@@ -59,7 +59,7 @@ public class CustomRoom_Popup : UI_Popup
         {
             lobbyScene.customRoomManagement.StartMatch();
         }));
-        if(lobbyScene.customRoomManagement.mySlotNumber != 0)
+        if(PlayerPrefs.GetInt("CustomRoomMySlotNumber") != 0)
             startButton.isEnabled = false;
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
@@ -174,6 +174,8 @@ public class CustomRoom_Popup : UI_Popup
                 SetEmptySlotState(i);
             else
             {
+                if (info.nickname == Volt_PlayerData.instance.NickName)
+                    PlayerPrefs.SetInt("CustomRoomMySlotNumber", i);
                 if(i == 0)
                     SetSlotState(i, info.nickname, Define.CustomRoomSlotState.Host);
                 else

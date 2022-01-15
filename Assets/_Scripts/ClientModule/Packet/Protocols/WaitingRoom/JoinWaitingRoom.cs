@@ -21,11 +21,13 @@ public class JoinWaitingRoom : Packet
         int seatIdx = ByteConverter.ToInt(buffer,ref startIndex);
         EJoinWaitingRoomResult joinResult = (EJoinWaitingRoomResult)ByteConverter.ToInt(buffer,ref startIndex);
         EEnterWaitingRoomResult enterResult = (EEnterWaitingRoomResult)ByteConverter.ToInt(buffer,ref startIndex);
-        
+
+        Debug.Log(joinResult);
+        Debug.Log(enterResult);
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         //1.본인이 수락/거절에 대한 결과값을 받은 경우
-        if (nickname == "본인닉네임")
+        if (nickname == Volt_PlayerData.instance.NickName)
         {
             if(joinResult == EJoinWaitingRoomResult.Reject)
             {
@@ -37,7 +39,7 @@ public class JoinWaitingRoom : Packet
                 switch (enterResult)
                 {
                     case EEnterWaitingRoomResult.Success:
-                        scene.customRoomManagement.CreateCustomRoomUI(roomID);
+                        //scene.customRoomManagement.CreateCustomRoomUI(roomID);
                         //성공. 방에 enter했음. 추가적으로 InfoWaitingPacket을 주겠음.
                         break;
                     case EEnterWaitingRoomResult.Fail:

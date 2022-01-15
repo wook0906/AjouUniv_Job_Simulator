@@ -13,7 +13,8 @@ public class FriendRequestList : Packet
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         int count = ByteConverter.ToInt(buffer, ref startIndex);
-       
+
+        Volt_PlayerData.instance.friendsRequestList.Clear();
         
         for(int i = 0; i<count; i++)
         {
@@ -38,6 +39,8 @@ public class FriendRequestList : Packet
 
             //친구 요청을 리스트업 하는 UI를 만든 후, 로비 진입할때 친구요청목록을 서버에 요청, 이 패킷을 받아 UI에 리스트업.
         }
-
+        FriendsRequestList_Popup popup = Managers.UI.GetPopupUI<FriendsRequestList_Popup>();
+        if (popup)
+            popup.RenewFriendsInfo();
     }
 }
