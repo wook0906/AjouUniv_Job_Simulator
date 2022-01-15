@@ -234,4 +234,23 @@ public static partial class PacketTransmission
 
         IOBuffer.Enqueue(buffer);
     }
+
+    public static void SendReadyToWaitingRoom(int roomid, int seatIdx)
+    {
+        byte[] buffer = IOBuffer.Dequeue();
+
+        buffer[0] = PacketInfo.PacketStartNumber;
+        int startIndex = 1;
+
+        ByteConverter.FromInt((int)EPacketType.ReadyToWaitingRoom, buffer, ref startIndex);
+
+        ByteConverter.FromInt(0, buffer, ref startIndex);
+
+        ByteConverter.FromInt(roomid, buffer, ref startIndex);
+        buffer[startIndex++] = PacketInfo.IntNumber;
+        ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
+        ClientSocketModule.Send(buffer, startIndex);
+
+        IOBuffer.Enqueue(buffer);
+    }
 }

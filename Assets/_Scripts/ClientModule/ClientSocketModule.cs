@@ -191,7 +191,8 @@ public enum EPacketType
     ExitWaitingRoom,
     CloseWaitingRoom,
     InfoWaitingRoom,
-    StartWaitingRoom
+    StartWaitingRoom,
+    ReadyToWaitingRoom
 }
 
 
