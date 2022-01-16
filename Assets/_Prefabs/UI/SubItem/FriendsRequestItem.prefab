@@ -493,7 +493,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7092350850609105171}
   - component: {fileID: 5021420142086262706}
-  - component: {fileID: 836537877834614593}
   m_Layer: 5
   m_Name: ButtonName_Label
   m_TagString: Untagged
@@ -585,19 +584,6 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &836537877834614593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5540321423729053940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: FriendsItem_Profile
 --- !u!1 &5830494787597356420
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +594,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1197012432865887806}
   - component: {fileID: 3816851614139689124}
-  - component: {fileID: 8487555510120852977}
   m_Layer: 5
   m_Name: ButtonName_Label
   m_TagString: Untagged
@@ -700,16 +685,3 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &8487555510120852977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830494787597356420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: FriendsItem_Remove

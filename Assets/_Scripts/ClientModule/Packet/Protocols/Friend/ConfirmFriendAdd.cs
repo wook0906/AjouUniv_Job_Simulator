@@ -33,7 +33,10 @@ public class ConfirmFriendAdd : Packet
 
         if (result == EConfirmFriendAddResult.Success)
         {
-            Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, data);
+            if (!Volt_PlayerData.instance.friendsProfileDataDict.ContainsKey(nickname))
+            {
+                Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, data);
+            }
         }
         Volt_PlayerData.instance.friendsRequestList.Remove(data.nickname);
         Managers.UI.GetPopupUI<FriendsRequestList_Popup>().RenewFriendsInfo();

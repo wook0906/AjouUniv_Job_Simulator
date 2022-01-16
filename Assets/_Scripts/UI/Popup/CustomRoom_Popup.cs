@@ -64,23 +64,27 @@ public class CustomRoom_Popup : UI_Popup
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
         inviteItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
-        SetInviteInfo();
+        //SetInviteInfo();
     }
 
-    void SetInviteInfo()
+    public void SetInviteInfo(Dictionary<string, Define.ProfileData> dict)
     {
-        StartCoroutine(CorSetInviteInfo());
+        foreach (Transform item in inviteItemRoot.transform)
+        {
+            Managers.Resource.Destroy(item.gameObject);
+        }
+        StartCoroutine(CorSetInviteInfo(dict));
     }
-    IEnumerator CorSetInviteInfo()
+    IEnumerator CorSetInviteInfo(Dictionary<string, Define.ProfileData > dict)
     {
-        foreach (var item in Volt_PlayerData.instance.friendsProfileDataDict)
+        foreach (var item in dict)
         {
             AsyncOperationHandle<GameObject> handle = Managers.UI.MakeSubItemAsync<InviteItem>(inviteItemRoot.transform);
             yield return new WaitUntil(() => { return handle.IsDone; });
 
             InviteItem inviteItem = handle.Result.GetComponent<InviteItem>();
 
-            inviteItem.SetInfo($"{item.Key}", Random.Range(0, 100));
+            inviteItem.SetInfo(item.Value);
 
             inviteItem.transform.localPosition = Vector3.zero;
             inviteItem.transform.localScale = Vector3.one;
@@ -88,6 +92,8 @@ public class CustomRoom_Popup : UI_Popup
         inviteItemRoot.GetComponent<UIGrid>().Reposition();
         GetComponent<UIPanel>().gameObject.SetActive(false);
         Invoke("Redraw", 0f);
+        yield return new WaitForSeconds(3f);
+        PacketTransmission.SendLoginFriendListPacket();
     }
     void Redraw()
     {

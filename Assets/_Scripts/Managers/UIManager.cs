@@ -346,12 +346,17 @@ public class UIManager
 
         if (_popupStack.Count == 0) return null;
 
-        UI_Popup popup = _popupStack[0];
-        if (popup.name != name)
-            return null;
+        //UI_Popup popup = _popupStack[0];
+        //if (popup.name != name)
+        //    return null;
 
-        if (popup is T)
-            return popup as T;
+        //if (popup is T)
+        //    return popup as T;
+        foreach (var item in _popupStack)
+        {
+            if (item is T)
+                return item as T;
+        }
         return null;
     }
 

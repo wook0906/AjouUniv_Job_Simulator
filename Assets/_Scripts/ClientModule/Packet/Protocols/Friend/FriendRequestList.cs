@@ -18,21 +18,33 @@ public class FriendRequestList : Packet
         
         for(int i = 0; i<count; i++)
         {
+            Define.ProfileData data = new Define.ProfileData();
+
             int timeLengh = ByteConverter.ToInt(buffer, ref startIndex);
             string time = ByteConverter.ToString(buffer, ref startIndex, timeLengh);
             int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);
             string nickname = ByteConverter.ToString(buffer, ref startIndex, nicknameLength);
+            int level = ByteConverter.ToInt(buffer, ref startIndex);
+            int totalPlayCnt = ByteConverter.ToInt(buffer, ref startIndex);
+            int defeatCnt = ByteConverter.ToInt(buffer, ref startIndex);
+            int winCnt = ByteConverter.ToInt(buffer, ref startIndex);
+            int killCnt = ByteConverter.ToInt(buffer, ref startIndex);
+            int deathCnt = ByteConverter.ToInt(buffer, ref startIndex);
+            int msgLength = ByteConverter.ToInt(buffer, ref startIndex);
+            string msg = ByteConverter.ToString(buffer, ref startIndex, msgLength);
+
+            data.nickname = nickname;
+            data.level = level;
+            data.totalPlayCnt = totalPlayCnt;
+            data.defeatCnt = defeatCnt;
+            data.winCnt = winCnt;
+            data.killCnt = killCnt;
+            data.deathCnt = deathCnt;
+            data.StateMSG = msg;
+
+            Volt_PlayerData.instance.friendsRequestList.Add(nickname, data);
 
             Debug.Log($"{time} : {nickname}");
-
-            Define.ProfileData data = new Define.ProfileData();
-            data.killCnt = 0;
-            data.defeatCnt = 0;
-            data.deathCnt = 0;
-            data.level = 1;
-            data.nickname = nickname;
-            data.StateMSG = "Empty";
-            data.winCnt = 0;
 
             Volt_PlayerData.instance.friendsRequestList.Add(data.nickname, data);
             //각 행 별 처리

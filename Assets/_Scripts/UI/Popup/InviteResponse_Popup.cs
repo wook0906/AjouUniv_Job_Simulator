@@ -37,6 +37,8 @@ public class InviteResponse_Popup : UI_Popup
             PlayerPrefs.SetInt("CustomRoomMySlotNumber", -1);
             ClosePopupUI();
         }));
+
+        StartCoroutine(DelayedDestroy());
     }
 
     public void SetInfo(int roomID, string hostName, int seatIdx)
@@ -47,5 +49,10 @@ public class InviteResponse_Popup : UI_Popup
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         
         GetLabel((int)Labels.Notice_Label).text = $"{hostName} 님이 초대하셨습니다.";
+    }
+    IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(15f);
+        ClosePopupUI();
     }
 }

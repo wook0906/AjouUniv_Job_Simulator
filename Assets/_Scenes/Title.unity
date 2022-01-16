@@ -2818,7 +2818,6 @@ MonoBehaviour:
   deathCount: 0
   attackTryCount: 0
   attackSuccessCount: 0
-  currnetCustomRoomID: -1
 --- !u!4 &1514679520
 Transform:
   m_ObjectHideFlags: 0

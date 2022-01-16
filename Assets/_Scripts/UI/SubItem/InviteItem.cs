@@ -28,10 +28,10 @@ public class InviteItem : UIBase
             OnClickInviteBtn();
         }));
     }
-    public void SetInfo(string nickName, int level)
+    public void SetInfo(Define.ProfileData data)
     {
-        this.nickName = nickName;
-        this.level = level;
+        this.nickName = data.nickname;
+        this.level = data.level;
         Get<UILabel>((int)Labels.NickName_Label).text = nickName;
         Get<UILabel>((int)Labels.Level_Label).text = ($"Lv.{ level.ToString()}");
     }

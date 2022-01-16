@@ -23,8 +23,8 @@ public class FriendsRequestItem : UIBase
         Bind<UILabel>(typeof(Labels));
         Bind<UIButton>(typeof(Buttons));
 
-        Get<UIButton>((int)Buttons.Deny_Btn).onClick.Add(new EventDelegate(OnClickAcceptButton));
-        Get<UIButton>((int)Buttons.Accept_Btn).onClick.Add(new EventDelegate(OnClickDenyButton));
+        Get<UIButton>((int)Buttons.Deny_Btn).onClick.Add(new EventDelegate(OnClickDenyButton));
+        Get<UIButton>((int)Buttons.Accept_Btn).onClick.Add(new EventDelegate(OnClickAcceptButton));
         
     }
     public void SetInfo(string nickname)
