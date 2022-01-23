@@ -41,7 +41,10 @@ public class FriendList : Packet
             friendProfile.defeatCnt = defeatCnt;
 
             Debug.Log(friendProfile.nickname);
-            Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, friendProfile);
+            if (!Volt_PlayerData.instance.friendsProfileDataDict.ContainsKey(nickname))
+            {
+                Volt_PlayerData.instance.friendsProfileDataDict.Add(nickname, friendProfile);
+            }
             //각 행 별 처리
         }
     }

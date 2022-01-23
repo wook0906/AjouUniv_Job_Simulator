@@ -65,6 +65,7 @@ public class CustomRoom_Popup : UI_Popup
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
         inviteItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
         //SetInviteInfo();
+        PacketTransmission.SendLoginFriendListPacket();
     }
 
     public void SetInviteInfo(Dictionary<string, Define.ProfileData> dict)

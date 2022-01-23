@@ -123,7 +123,10 @@ public class UserNormalAchConditionStatePacket : Packet
         }
 
         int idx = 14;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+        {
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+        }        
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(allEnemyKillOneGame);
         idx++;
         Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());

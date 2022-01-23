@@ -39,6 +39,9 @@ public class FriendsAddResult_Popup : UI_Popup
             case ERequestFriendAddResult.DBError:
                 GetLabel((int)Labels.Notice_Label).text = $"서버 에러로 인해 {otherPlayerNickname} 님과 친구요청을 보내지 못했습니다.";
                 break;
+            case ERequestFriendAddResult.AlreadyFriend:
+                GetLabel((int)Labels.Notice_Label).text = $"{otherPlayerNickname} 님은 이미 친구 입니다.";
+                break;
             default:
                 break;
         }
