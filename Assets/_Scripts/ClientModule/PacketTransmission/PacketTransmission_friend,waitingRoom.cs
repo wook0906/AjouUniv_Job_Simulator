@@ -247,6 +247,7 @@ public static partial class PacketTransmission
         ByteConverter.FromInt(0, buffer, ref startIndex);
 
         ByteConverter.FromInt(roomid, buffer, ref startIndex);
+        Debug.Log(roomid+" Send Room ID");
         buffer[startIndex++] = PacketInfo.IntNumber;
         ByteConverter.FromInt(seatIdx, buffer, ref startIndex);
         ClientSocketModule.Send(buffer, startIndex);

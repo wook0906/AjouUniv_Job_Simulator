@@ -7,6 +7,7 @@ public class CustomRoom_Popup : UI_Popup
 {
     [SerializeField]
     GameObject inviteItemRoot;
+    public List<InviteItem> inviteItems = new List<InviteItem>();
 
     enum Buttons
     {
@@ -34,6 +35,7 @@ public class CustomRoom_Popup : UI_Popup
         Level_Label2,
         Level_Label3,
         Level_Label4,
+        OnlyHost_Label,
     }
    
     
@@ -59,13 +61,20 @@ public class CustomRoom_Popup : UI_Popup
         {
             lobbyScene.customRoomManagement.StartMatch();
         }));
-        if(PlayerPrefs.GetInt("CustomRoomMySlotNumber") != 0)
+        if (PlayerPrefs.GetInt("CustomRoomMySlotNumber") != 0)
+        {
             startButton.isEnabled = false;
+            GetLabel((int)Labels.OnlyHost_Label).color = Color.white;
+        }
+        else
+        {
+            PacketTransmission.SendLoginFriendListPacket();
+            GetLabel((int)Labels.OnlyHost_Label).color = Color.clear;
+        }
 
         inviteItemRoot = Get<GameObject>((int)GameObjects.InviteItemRoot);
         inviteItemRoot.transform.parent.GetComponent<UIPanel>().depth = GetComponent<UIPanel>().depth + 1;
         //SetInviteInfo();
-        PacketTransmission.SendLoginFriendListPacket();
     }
 
     public void SetInviteInfo(Dictionary<string, Define.ProfileData> dict)
@@ -84,11 +93,12 @@ public class CustomRoom_Popup : UI_Popup
             yield return new WaitUntil(() => { return handle.IsDone; });
 
             InviteItem inviteItem = handle.Result.GetComponent<InviteItem>();
-
+            
             inviteItem.SetInfo(item.Value);
 
             inviteItem.transform.localPosition = Vector3.zero;
             inviteItem.transform.localScale = Vector3.one;
+            inviteItems.Add(inviteItem);
         }
         inviteItemRoot.GetComponent<UIGrid>().Reposition();
         GetComponent<UIPanel>().gameObject.SetActive(false);
@@ -136,7 +146,7 @@ public class CustomRoom_Popup : UI_Popup
                 Debug.LogError($"SetSlotState Error slot Type : {slotIdx}");
                 break;
         }
-        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isEmpty = true;
+        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isNotEmpty = true;
     }
     public void SetEmptySlotState(int slotIdx)
     {
@@ -166,7 +176,7 @@ public class CustomRoom_Popup : UI_Popup
                 Debug.LogError($"SetEmptySlotState Error slot Type : {slotIdx}");
                 break;
         }
-        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isEmpty = false;
+        lobbyScene.customRoomManagement.roomInfoDict[slotIdx].isNotEmpty = false;
     }
     public void SetWaitPlayerInfo()
     {
@@ -177,7 +187,7 @@ public class CustomRoom_Popup : UI_Popup
         for (int i = 0; i < 4; i++)
         {
             Define.CustomRoomItemSlotStateInfo info = lobbyScene.customRoomManagement.roomInfoDict[i];
-            if (info.isEmpty)
+            if (info.isNotEmpty)
                 SetEmptySlotState(i);
             else
             {

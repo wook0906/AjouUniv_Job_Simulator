@@ -47,5 +47,6 @@ public class FriendList : Packet
             }
             //각 행 별 처리
         }
+        Managers.UI.ShowPopupUIAsync<Community_Popup>();
     }
 }

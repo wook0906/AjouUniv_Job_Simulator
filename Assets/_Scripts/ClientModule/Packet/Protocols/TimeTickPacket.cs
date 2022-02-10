@@ -51,7 +51,7 @@ public class TimeTickPacket : Packet
         // 모듈 변경여부
 
         // 주사위 설정
-        //Debug.Log("Tick");
+        Debug.Log("Tick");
         Volt_GMUI.S.ReceiveTick();
     }
 }

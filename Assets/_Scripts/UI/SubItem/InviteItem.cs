@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InviteItem : UIBase
 {
-    string nickName;
+    public string nickName;
+    public UIButton inviteButton;
     int level;
 
     enum Labels
@@ -23,7 +24,8 @@ public class InviteItem : UIBase
 
         GetComponent<UIDragScrollView>().scrollView = transform.parent.parent.GetComponent<UIScrollView>();
 
-        Get<UIButton>((int)Buttons.Invite_Btn).onClick.Add(new EventDelegate(() =>
+        inviteButton = Get<UIButton>((int)Buttons.Invite_Btn);
+        inviteButton.onClick.Add(new EventDelegate(() =>
         {
             OnClickInviteBtn();
         }));
@@ -39,5 +41,6 @@ public class InviteItem : UIBase
     {
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         scene.customRoomManagement.InvitePlayer(nickName);
+        GetButton((int)Buttons.Invite_Btn).isEnabled = false;
     }
 }

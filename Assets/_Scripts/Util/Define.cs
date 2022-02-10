@@ -9,12 +9,12 @@ public class Define
     {
         public CustomRoomItemSlotStateInfo()
         {
-            isEmpty = false;
+            isNotEmpty = false;
             state = CustomRoomSlotState.Empty;
             level = 1;
             nickname = "-";
         }
-        public bool isEmpty;
+        public bool isNotEmpty;
         public CustomRoomSlotState state;
         public int level;
         public string nickname;

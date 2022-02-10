@@ -38,6 +38,25 @@ public class InviteMyWaitingRoom : Packet
 
         LobbyScene scene = Managers.Scene.CurrentScene as LobbyScene;
         scene.customRoomManagement.ShowInviteTryResult(result,nickname,seatIdx);
+        //foreach (var item in Managers.UI.GetPopupUI<CustomRoom_Popup>().inviteItems)
+        //{
+        //    if(item.nickName == nickname)
+        //    {
+        //        switch (result)
+        //        {
+        //            case EInviteMyWaitingRoomResult.Success:
+        //            case EInviteMyWaitingRoomResult.NotExist:
+        //            case EInviteMyWaitingRoomResult.AlreadyPlayUser:
+        //            case EInviteMyWaitingRoomResult.ExitGame:
+        //            case EInviteMyWaitingRoomResult.AlreadyInvite:
+        //            case EInviteMyWaitingRoomResult.AlreadyEnter:
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //    }
+        //}
+        
 
     }
 }

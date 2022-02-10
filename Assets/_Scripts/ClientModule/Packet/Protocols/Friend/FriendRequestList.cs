@@ -10,6 +10,7 @@ public class FriendRequestList : Packet
 {
     public override void UnPack(byte[] buffer)
     {
+        Debug.Log("FriendRequestList Unpack");
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
 
         int count = ByteConverter.ToInt(buffer, ref startIndex);
@@ -42,7 +43,7 @@ public class FriendRequestList : Packet
             data.deathCnt = deathCnt;
             data.StateMSG = msg;
 
-            Volt_PlayerData.instance.friendsRequestList.Add(nickname, data);
+            //Volt_PlayerData.instance.friendsRequestList.Add(nickname, data);
 
             Debug.Log($"{time} : {nickname}");
 

@@ -94,9 +94,9 @@ public class CustomRoomManagement : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            if (!roomInfoDict[i].isEmpty)
+            if (!roomInfoDict[i].isNotEmpty)
             {
-                roomInfoDict[i].isEmpty = true;
+                roomInfoDict[i].isNotEmpty = true;
                 return i;
             }
         }
@@ -106,7 +106,8 @@ public class CustomRoomManagement : MonoBehaviour
     public void SetEmptySlotState(int slotIdx)
     {
         customRoomUI.SetEmptySlotState(slotIdx);
-        roomInfoDict[slotIdx].isEmpty = false;
+        
+        roomInfoDict[slotIdx].isNotEmpty = false;
     }
     public void SetSlotState(int slotNumber, string nickname, Define.CustomRoomSlotState slotState)
     {
@@ -116,6 +117,12 @@ public class CustomRoomManagement : MonoBehaviour
     {
         yield return new WaitUntil(() => customRoomUI);
         customRoomUI.SetSlotState(slotNumber, nickname, slotState);
+        Define.CustomRoomItemSlotStateInfo info = new Define.CustomRoomItemSlotStateInfo();
+        info.nickname = nickname;
+        info.isNotEmpty = true;
+        info.level = 0;
+        info.state = slotState;
+        roomInfoDict[slotNumber] = info;
     }
     public void ShowJoinResult(EEnterWaitingRoomResult result)
     {

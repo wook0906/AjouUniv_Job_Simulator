@@ -61,6 +61,7 @@ public class StartMatching : PhaseBase
         else if (PlayerPrefs.GetInt("CustomRoomID") != -1)
         {
             PacketTransmission.SendReadyToWaitingRoom(PlayerPrefs.GetInt("CustomRoomID"), PlayerPrefs.GetInt("CustomRoomMySlotNumber"));
+            Volt_PlayerManager.S.GetMyPlayerNumberFromServer(1);
             PlayerPrefs.SetInt("CustomRoomID", -1);
             PlayerPrefs.SetInt("CustomRoomMySlotNumber", -1);
             //TODO 나중에 뭐... Result씬에서 필요할 수도 있는데... 일단은

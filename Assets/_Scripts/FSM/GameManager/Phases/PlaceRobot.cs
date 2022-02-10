@@ -111,26 +111,33 @@ public class PlaceRobot : PhaseBase
 
 
         StartCoroutine(FlushPlaceRobotRequest(data));
+        Debug.Log("flush start");
         yield return new WaitUntil(() => IsAllUserHasRobot() || Volt_GMUI.S.TickTimer == 0);
+        Debug.Log("111111111111111111");
 
         //로봇은 모두 배치되지 않았지만, 타이머가 모두 돌아서 코드가 진행된 경우.
         if (!IsAllUserHasRobot() && Volt_PlayerManager.S.I.PlayerType == PlayerType.HOSTPLAYER)
         {
-
+            Debug.Log("2222222222222222");
             foreach (var item in Volt_PlayerManager.S.GetPlayers()) //나말고 다른애들이 로봇이 없으니까 자동배치 시켜주고.
             {
-                if ((!item.playerRobot && !item.IsMobileActivated) || (!item.playerRobot && item.isNeedSynchronization))
-                    //item.AutoRobotPlace();
-                    AutoRobotSetup(item.playerNumber);
-            }
-
-            if (!Volt_PlayerManager.S.I.playerRobot) //내꺼 없으면 자동생성하고
-            {
-                //Volt_PlayerManager.S.I.AutoRobotPlace();
-                AutoRobotSetup(Volt_PlayerManager.S.I.playerNumber);
-            }
+                if (item.playerNumber == Volt_PlayerManager.S.myPlayerNumber) continue;
+                if (!item.playerRobot)
+                {
+                    if (!item.IsMobileActivated || item.isNeedSynchronization)
+                    {
+                        //item.AutoRobotPlace();
+                        AutoRobotSetup(item.playerNumber);
+                    }
+                }
+            }    
         }
 
+        if (!Volt_PlayerManager.S.I.playerRobot) //내꺼 없으면 자동생성하고
+        {
+            //Volt_PlayerManager.S.I.AutoRobotPlace();
+            AutoRobotSetup(Volt_PlayerManager.S.I.playerNumber);
+        }
         yield return new WaitUntil(() => IsAllUserHasRobot() && SimulationObserver.Instance.IsAllRobotIdleState());
 
         if (data.round == 1)
@@ -212,7 +219,13 @@ public class PlaceRobot : PhaseBase
     }
     IEnumerator FlushPlaceRobotRequest(GameData data)
     {
+        Debug.Log(data.placeRobotRequestDatas.Count + " Place robot data Count");
+        Debug.Log(Volt_ArenaSetter.S.robotsInArena.Count + " cur robot count");
+
         yield return new WaitUntil(() => data.placeRobotRequestDatas.Count + Volt_ArenaSetter.S.robotsInArena.Count >= data.MaxPlayer);
+
+        Debug.Log(data.placeRobotRequestDatas.Count + " Place robot data Count");
+        Debug.Log(Volt_ArenaSetter.S.robotsInArena.Count + " cur robot count");
 
         for (int i = 0; i < data.placeRobotRequestDatas.Count; i++)
         {
@@ -230,6 +243,10 @@ public class PlaceRobot : PhaseBase
 
                 Volt_Robot robot = player.playerRobot.GetOrAddComponent<Volt_Robot>();
                 robot.Init(player, Volt_ArenaSetter.S.GetTile(placeData.x, placeData.y));
+            }
+            foreach (var item in player.startingTiles)
+            {
+                item.BlinkOn = false;
             }
         }
         data.placeRobotRequestDatas.Clear();

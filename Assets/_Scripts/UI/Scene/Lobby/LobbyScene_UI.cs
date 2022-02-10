@@ -144,7 +144,8 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowPopupUIAsync<Community_Popup>();
+            PacketTransmission.SendFriendListPacket();
+            //Managers.UI.ShowPopupUIAsync<Community_Popup>();
 
         }));
         GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>

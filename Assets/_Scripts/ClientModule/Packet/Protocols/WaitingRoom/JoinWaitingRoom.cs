@@ -66,7 +66,17 @@ public class JoinWaitingRoom : Packet
         }
         else if(joinResult == EJoinWaitingRoomResult.Reject)
         {
+            Debug.Log(nickname);
+
             scene.customRoomManagement.SetEmptySlotState(seatIdx);
+            foreach (var item in Managers.UI.GetPopupUI<CustomRoom_Popup>().inviteItems)
+            {
+                if (item.nickName == scene.customRoomManagement.roomInfoDict[seatIdx].nickname)
+                {
+                    item.inviteButton.isEnabled = true;
+                    break;
+                }
+            }
             //해당 seatIdx자리에 초대중이던 nickname유저를 삭제
         }
     }

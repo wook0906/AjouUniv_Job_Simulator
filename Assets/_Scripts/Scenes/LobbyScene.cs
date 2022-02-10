@@ -64,6 +64,7 @@ public class LobbyScene : BaseScene
     {
         PlayerPrefs.SetInt("Volt_TrainingMode", 0);
         PlayerPrefs.SetInt("isCustomGame", 0);
+        PlayerPrefs.SetInt("CustomRoomID", -1);
 
         SceneType = Define.Scene.Lobby;
 
@@ -119,7 +120,6 @@ public class LobbyScene : BaseScene
         }
         customRoomManagement = gameObject.AddComponent<CustomRoomManagement>();
         
-        PacketTransmission.SendFriendListPacket();
         PacketTransmission.SendFriendRequestListPacket();
     }
 
