@@ -117,7 +117,6 @@ namespace Volt
 
                 foreach (PackageShopTable.Sheet sheet in packageShop.sheets)
                 {
-                    
                     foreach (PackageShopTable.Param param in sheet.list)
                     {
                         InfoShop tShopInfo;
@@ -128,7 +127,6 @@ namespace Volt
                                 tShopInfo.count, param.objectICON, param.priceICON, param.iconAtlas, param.getBuyButtonNormalSprite,
                                 param.getBuyButtonPushedSprite, param.atlas, param.font, param.priceFontSize,
                                 param.objectFontSize));
-                            //Debug.Log(packageShopItemTable[param.ID].ToString());
                         }
                         else
                         {

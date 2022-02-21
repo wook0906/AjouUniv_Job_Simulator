@@ -59,7 +59,7 @@ namespace Volt
                 priceTypeSprite.spriteName = this.priceICON;
                 priceCountLabel.text = this.priceCount.ToString();
 
-                if (this.ID != 3000005)
+                if (this.ID != 3000006)
                 {
                     if (!GetComponent<Volt_RewardedAds>())
                     {
@@ -88,7 +88,7 @@ namespace Volt
 
             private void Update()
             {
-                if (this.ID != 3000005) return;
+                if (this.ID != 3000006) return;
 
                 if (Volt_PlayerData.instance.RemainAdCnt == 0 ||
                     Volt_PlayerData.instance.IsHavePackage(8000001))

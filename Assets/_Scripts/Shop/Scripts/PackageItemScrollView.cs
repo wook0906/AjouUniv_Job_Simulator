@@ -46,7 +46,6 @@ namespace Volt
                     return;
                 }
 
-
                 foreach (var package in packageItemTable)
                 {
                     MakeSubItem();

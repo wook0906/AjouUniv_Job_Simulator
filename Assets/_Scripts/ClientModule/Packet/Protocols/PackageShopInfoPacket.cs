@@ -19,6 +19,7 @@ public class PackageShopInfoPacket : Packet
             assetType = ByteConverter.ToInt(buffer, ref startIndex);
             price = ByteConverter.ToInt(buffer, ref startIndex);
 
+            Debug.Log($"package id : {id}");
             DBManager.instance.packageShopInfos.Add(new InfoShop(id, assetType, price, 1));
         }
         DBManager.instance.OnLoadedPackageShopInfo();

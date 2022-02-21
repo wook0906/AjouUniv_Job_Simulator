@@ -152,7 +152,7 @@ public class PurchaseButton : MonoBehaviour
     //}
     public void OnClickButton()
     {
-        if(targetProductId == 3000005)
+        if(targetProductId == 3000006)
         {
             Managers.UI.ShowPopupUIAsync<ShowAdConfirm_Popup>();
             return;

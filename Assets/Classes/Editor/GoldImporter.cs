@@ -20,6 +20,7 @@ public class GoldImporter : AssetPostprocessor
     {
         foreach (string asset in importedAssets)
         {
+            //
             if (!filePath.Equals(asset))
                 continue;
 

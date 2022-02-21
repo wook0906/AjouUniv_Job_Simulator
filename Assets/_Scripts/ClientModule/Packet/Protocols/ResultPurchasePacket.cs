@@ -20,12 +20,12 @@ public class ResultPurchasePacket : Packet
             return;
         }
 
-        if(id == 8000001)//package1
-        {
+        //if(id == 8000001)//package1
+        //{
             Volt_PlayerData.instance.RenewPackageData(Managers.Data.CurrentProductInfoShop.ID);
             ShopScene_UI shopSceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
             shopSceneUI.OnPurchasedPackage(Managers.Data.CurrentProductInfoShop.ID);
-            Volt_PlayerData.instance.OnPurchasedPackage(8000001);
-        }
+            Volt_PlayerData.instance.OnPurchasedPackage(id);
+        //}
     }
 }

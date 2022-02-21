@@ -14,9 +14,10 @@ public class BatteryImporter : AssetPostprocessor {
 	private static readonly string fileKey = "Volt_Mobile";
     private static readonly string IDTypeFilePath = "Assets/Editor/ACHIDTypeTemplate.txt";
     private static readonly string dataType = "Battery";
-
+	
 	static void OnPostprocessAllAssets (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
 	{
+		
 		foreach (string asset in importedAssets) {
 			if (!filePath.Equals (asset))
 				continue;
@@ -42,7 +43,8 @@ public class BatteryImporter : AssetPostprocessor {
 						ICell cell = null;
 						
 						BatteryShopTable.Param p = new BatteryShopTable.Param ();
-						
+
+						Debug.Log($"¸Õµ¥ {p.ID}");
 					cell = row.GetCell(0); p.ID = (int)(cell == null ? 0 : cell.NumericCellValue);
 					cell = row.GetCell(1); p.objectName = (cell == null ? "" : cell.StringCellValue);
 					cell = row.GetCell(2); p.objectICON = (cell == null ? "" : cell.StringCellValue);

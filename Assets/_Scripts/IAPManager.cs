@@ -13,8 +13,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
     //public const string productBattery = "battery"; //소모성
     //public static readonly string[] productBatterys = { "battery1", "battery3", "battery5", "battery10" };
     //public const string productDiamond = "diamond"; //소모성
-    public static readonly string[] productDiamonds = { "diamond25", "diamond50", "diamond125", "diamond250" };
-    public static readonly string[] productPackages = { "package8000001" };
+    public static readonly string[] productDiamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
+    public static readonly string[] productPackages = { "package8000001", "package8000002", "package8000003", "package8000004", "package8000005", "package8000006" };
 
     //public const string productCharacterSkin = "character_skin";//비소모성
     //public static readonly string[] productCharacterSkins = { "skin1", "skin2", "skin3", "skin4", "skin5", "skin6" };
@@ -26,12 +26,12 @@ public class IAPManager : MonoBehaviour, IStoreListener
     //private const string _IOS_SkinId = "com.GFS.Mobile_Volt.skin";
     //private const string _android_SkinId = "com.GFS.Mobile_Volt.skin";
 
-    private readonly string[] _IOS_Packages = { "package8000001" };
-    private readonly string[] _android_Packages = { "package8000001" };
+    private readonly string[] _IOS_Packages = { "package8000001", "package8000002", "package8000003", "package8000004", "package8000005", "package8000006"};
+    private readonly string[] _android_Packages = { "package8000001", "package8000002", "package8000003", "package8000004", "package8000005", "package8000006" };
 
 
-    private readonly string[] _IOS_Diamonds = { "diamond25", "diamond50", "diamond125", "diamond250" };
-    private readonly string[] _android_Diamonds = { "diamond25", "diamond50", "diamond125", "diamond250" };
+    private readonly string[] _IOS_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
+    private readonly string[] _android_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
 
     private static IAPManager instance;
     public static IAPManager Instance
@@ -282,15 +282,27 @@ public class IAPManager : MonoBehaviour, IStoreListener
         switch (itemID)
         {
             case "4000001":
-                return "diamond25";
+                return "diamond150";
             case "4000002":
-                return "diamond50";
+                return "diamond300";
             case "4000003":
-                return "diamond125";
+                return "diamond_500";
             case "4000004":
-                return "diamond250";
+                return "diamond800";
+            case "4000005":
+                return "diamond1500";
             case "8000001":
                 return "package8000001";
+            case "8000002":
+                return "package8000002";
+            case "8000003":
+                return "package8000003";
+            case "8000004":
+                return "package8000004";
+            case "8000005":
+                return "package8000005";
+            case "8000006":
+                return "package8000006";
             default:
                 //Debug.LogError("ChangeItemIDToStoreID Error");
                 return "";
@@ -300,16 +312,28 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         switch (storeID)
         {
-            case "diamond25":
+            case "diamond150":
                 return 4000001;
-            case "diamond50":
+            case "diamond300":
                 return 4000002;
-            case "diamond125":
+            case "diamond_500":
                 return 4000003;
-            case "diamond250":
+            case "diamond800":
                 return 4000004;
+            case "diamond1500":
+                return 4000005;
             case "package8000001":
                 return 8000001;
+            case "package8000002":
+                return 8000002;
+            case "package8000003":
+                return 8000003;
+            case "package8000004":
+                return 8000004;
+            case "package8000005":
+                return 8000005;
+            case "package8000006":
+                return 8000006;
             default:
                 //Debug.LogError("ChangeStoreIDToProjectItemID Error");
                 return 0;

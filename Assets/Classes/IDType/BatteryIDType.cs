@@ -10,5 +10,6 @@ public enum BatteryIDType
     Battery3000003 = 3000003,
     Battery3000004 = 3000004,
     Battery3000005 = 3000005,
+    Battery3000006 = 3000006,
 }
 

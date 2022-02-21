@@ -32,7 +32,7 @@ public class SystemInfoManager : MonoBehaviour
             foreach (var item in packageShop)
             {
                 shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
-                //Debug.Log($"PackageShop Info {item.ToString()}");
+                Debug.Log($"PackageShop Info {item.ToString()}");
             }
             foreach (var item in batteyShop)
             {
