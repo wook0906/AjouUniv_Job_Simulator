@@ -38,12 +38,12 @@ public class DuplicateNickname_Popup : UI_Popup
 
         Get<UIButton>((int)Buttons.Ok_Btn).onClick.Add(new EventDelegate(() =>
         {
-            OnClose();
+            ClosePopupUI();
         }));
     }
     public override void OnClose()
     {
         base.OnClose();
-        ClosePopupUI();
+        Managers.UI.ShowPopupUIAsync<AccountMaker_Popup>();
     }
 }

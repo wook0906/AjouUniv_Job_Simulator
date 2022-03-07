@@ -42,8 +42,12 @@ public class Volt_LobbyRobotViewSection : MonoBehaviour
         for (int i = 0; i < (int)RobotType.Max; ++i)
         {
             RobotType robotType = (RobotType)i;
-            SkinType skinType = Volt_PlayerData.instance.selectdRobotSkins[robotType].SkinType;
-
+            SkinType skinType;
+            RobotSkin value;
+            if (Volt_PlayerData.instance.selectdRobotSkins.TryGetValue(robotType, out value))
+                skinType = Volt_PlayerData.instance.selectdRobotSkins[robotType].SkinType;
+            else
+                skinType = SkinType.Origin;
             robots.Add(robotType, null);
             CreateRobot(robotType, skinType);
         }

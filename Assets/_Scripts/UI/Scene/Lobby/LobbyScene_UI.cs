@@ -205,6 +205,7 @@ public class LobbyScene_UI : UI_Scene
     private void OnEnable()
     {
         if (GetSprite((int)Sprites.ExclamationMark) == null) return;
+        ChangeRobotNameLabelToSelectedRobot();
 
         if (IsAnyAchHasntBeenRewardedYet())
             ShowACHExclamationMark();

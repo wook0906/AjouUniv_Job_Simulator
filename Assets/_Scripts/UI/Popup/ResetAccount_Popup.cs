@@ -49,7 +49,20 @@ public class ResetAccount_Popup : UI_Popup
         }));
 
         GetButton((int)Buttons.Yes_Btn).onClick.Add(new EventDelegate(OnClickConfirmResetUsers));
-        GetInputField((int)Inputs.ResetConfirm_Input).onSubmit.Add(new EventDelegate(OnClickConfirmResetUsers));
+        GetButton((int)Buttons.Yes_Btn).isEnabled = false;
+        GetInputField((int)Inputs.ResetConfirm_Input).onChange.Add(new EventDelegate(CompareNickname));
+    }
+    private void CompareNickname()
+    {
+        if(GetInputField((int)Inputs.ResetConfirm_Input).label.text == Volt_PlayerData.instance.NickName)
+        {
+            GetButton((int)Buttons.Yes_Btn).isEnabled = true;
+        }
+        else
+        {
+            GetButton((int)Buttons.Yes_Btn).isEnabled = false;
+        }
+            
     }
 
     private void OnClickConfirmResetUsers()

@@ -93,7 +93,7 @@ namespace Volt
                 if (Volt_PlayerData.instance.RemainAdCnt == 0 ||
                     Volt_PlayerData.instance.IsHavePackage(8000001))
                 {
-                    Debug.Log(Volt_PlayerData.instance.IsGetBenefit(8000001));
+                    //Debug.Log(Volt_PlayerData.instance.IsGetBenefit(8000001));
 
                     purchaseButton.GetComponent<UIButton>().SetState(UIButtonColor.State.Disabled,true);
                     purchaseButton.GetComponent<UIButton>().isEnabled = false;

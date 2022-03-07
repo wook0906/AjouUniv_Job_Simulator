@@ -119,7 +119,10 @@ public class EmoticonScene_UI : UI_Scene
 
         for (int i = 0; i < 6; i++)
         {
-            GetSprite(i).spriteName = Volt_PlayerData.instance.GetEmoticonSet()[i];
+            if (Volt_PlayerData.instance.GetEmoticonSet()[i] != null)
+                GetSprite(i).spriteName = Volt_PlayerData.instance.GetEmoticonSet()[i];
+            else
+                GetSprite(i).spriteName = "EmoticonNone";
         }
 
         lobbyScene.OnLoadedEmoticonSceneUI();
