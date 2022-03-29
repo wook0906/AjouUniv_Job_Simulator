@@ -9,7 +9,7 @@ public class DataManager
 {
     public Dictionary<RobotType, RobotSkinObject> SkinDatas = new Dictionary<RobotType, RobotSkinObject>();
 
-    private AsyncOperationHandle skinDatasLoadHandle;
+    //private AsyncOperationHandle skinDatasLoadHandle;
     public EBenefitType CurrentGetBenefitType { private set; get; }
     public int GetBenefitResult { private set; get; }
     public InfoShop CurrentProductInfoShop { private set; get; }
@@ -19,18 +19,35 @@ public class DataManager
     public VFXPoolData VFXPoolData { private set; get; } = null;
     public ObjectPoolData ObjectData { private set; get; } = null;
 
+    private object _lockObj = new object();
     public void Init()
     {
-        skinDatasLoadHandle = Addressables.LoadAssetsAsync<RobotSkinObject>("SkinDatas",
-            (result) =>
-            {
-                SkinDatas.Add(result.robotType, result);
-            });
-
-        skinDatasLoadHandle.Completed += (result) =>
+        Debug.Log("Init DataManager");
+        int maxRobotType = (int)RobotType.Max;
+        for(int i = 0; i < maxRobotType; ++i)
         {
-            Volt_PlayerData.instance.LoadUserSkinData();
-        };
+            RobotType type = (RobotType)i;
+            Addressables.LoadAssetAsync<RobotSkinObject>($"Assets/SkinDatas/{type}_SkinData.asset").Completed += 
+                (result) =>
+                {
+                    lock(_lockObj)
+                    {
+                        Debug.Log($"Load Robot SkinData {result.Result.robotType}");
+                        SkinDatas.Add(result.Result.robotType, result.Result);
+                        Volt_PlayerData.instance.LoadUserSkinData(result.Result.robotType);
+                    }
+                };
+        }
+        //skinDatasLoadHandle = Addressables.LoadAssetsAsync<RobotSkinObject>("SkinDatas",
+        //    (result) =>
+        //    {
+        //        SkinDatas.Add(result.robotType, result);
+        //    });
+
+        //skinDatasLoadHandle.Completed += (result) =>
+        //{
+        //    Volt_PlayerData.instance.LoadUserSkinData();
+        //};
 
         Addressables.LoadAssetAsync<VFXPoolData>("VFXPoolData").Completed +=
             (result) =>

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using Facebook.Unity;
 
 public class SignInSuccessPacket : Packet
 {

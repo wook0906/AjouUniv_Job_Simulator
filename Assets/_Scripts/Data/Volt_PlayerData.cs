@@ -287,6 +287,29 @@ public class Volt_PlayerData : MonoBehaviour
             selectdRobotSkins.Add(type, skinData.RobotSkins[skinIndex]);
         }
     }
+
+    public void LoadUserSkinData(RobotType type)
+    {
+        string key = $"{type}_skin";
+        if(!PlayerPrefs.HasKey(key))
+        {
+            PlayerPrefs.SetInt(key, 0);
+        }
+        int skinIndex = PlayerPrefs.GetInt(key);
+        RobotSkinObject skinData;
+        if (Managers.Data.SkinDatas.TryGetValue(type, out skinData))
+        {
+            if (skinIndex < 0 || skinIndex >= skinData.RobotSkins.Count)
+            {
+                Debug.LogError($"[Volt_PlayerData::LoadUserSkinData(RobotType)] SkinIndex OutOfRange index[{skinIndex}] : Skin count:[{skinData.RobotSkins.Count}]");
+                return;
+            }
+            selectdRobotSkins.Add(type, skinData.RobotSkins[skinIndex]);
+        }
+        else
+            Debug.LogError($"[Volt_PlayerData::LoadUserSKinData(RobotType)] Key doesn't exist!! Key[{type}]");
+    }
+
     public void EmoticonSetInit()
     {
         for (int i = 0; i < 6; i++)

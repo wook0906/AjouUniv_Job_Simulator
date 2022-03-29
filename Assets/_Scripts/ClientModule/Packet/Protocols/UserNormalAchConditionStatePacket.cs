@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-using Facebook.Unity;
+
 
 public class UserNormalAchConditionStatePacket : Packet
 {

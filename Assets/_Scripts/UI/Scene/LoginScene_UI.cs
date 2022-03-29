@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Facebook.Unity;
+//using Facebook.Unity;
 using System;
 using System.Xml;
 using UnityEngine.AddressableAssets;
@@ -78,7 +78,7 @@ public class LoginScene_UI : UI_Scene
         Get<UIButton>((int)Buttons.GameStart_Btn).gameObject.SetActive(false);
 
         Get<UIButton>((int)Buttons.Google_Btn).onClick.Add(new EventDelegate(OnPressedGoogleLoginBtn));
-        Get<UIButton>((int)Buttons.Facebook_Btn).onClick.Add(new EventDelegate(OnPressedFacebookLoginBtn));
+        //Get<UIButton>((int)Buttons.Facebook_Btn).onClick.Add(new EventDelegate(OnPressedFacebookLoginBtn));
         Get<UIButton>((int)Buttons.SignInApple_Btn).onClick.Add(new EventDelegate(OnClickSignInWithAppleBtn));
         Get<UIButton>((int)Buttons.Logout_Btn).onClick.Add(new EventDelegate(OnPressdownLogOutBtn));
         Get<UIButton>((int)Buttons.GameStart_Btn).onClick.Add(new EventDelegate(OnClickStartGame));
@@ -107,15 +107,15 @@ public class LoginScene_UI : UI_Scene
             loginType = (LoginType)PlayerPrefs.GetInt("Volt_LoginType");
         }
 
-        if (!FB.IsInitialized)
-        {
-            FB.Init(FacebookInitCallback, OnHideUnity);
-            Debug.Log("Init Facebook sdk");
-        }
-        else
-        {
-            FB.ActivateApp();
-        }
+        //if (!FB.IsInitialized)
+        //{
+        //    FB.Init(FacebookInitCallback, OnHideUnity);
+        //    Debug.Log("Init Facebook sdk");
+        //}
+        //else
+        //{
+        //    FB.ActivateApp();
+        //}
 
         switch (loginType)
         {
@@ -220,11 +220,11 @@ public class LoginScene_UI : UI_Scene
     {
 
 #if UNITY_ANDROID
-        if (Volt_PlayerData.instance.LoginType == LoginType.Facebook)
-        {
-            FB.LogOut();
-        }
-        else if (Volt_PlayerData.instance.LoginType == LoginType.Google)
+        //if (Volt_PlayerData.instance.LoginType == LoginType.Facebook)
+        //{
+        //    FB.LogOut();
+        //}
+        if (Volt_PlayerData.instance.LoginType == LoginType.Google)
         {
             ((PlayGamesPlatform)Social.Active).SignOut();
         }
@@ -273,87 +273,87 @@ public class LoginScene_UI : UI_Scene
     }
 
     #region facebook sdk
-    private void FacebookInitCallback()
-    {
-        if (FB.IsInitialized)
-        {
-            FB.ActivateApp();
-            //Debug.Log("Facebook Activate App 2");
-            if (FB.IsLoggedIn)
-            {
-                Volt_PlayerData.instance.LoginType = LoginType.Facebook;
-                //Debug.Log("Already Logged in");
-                Debug.Log($"Token:{AccessToken.CurrentAccessToken.UserId}");
-                //infoLog.text = AccessToken.CurrentAccessToken.UserId;
-                Volt_PlayerData.instance.UserToken = AccessToken.CurrentAccessToken.UserId;
+    //private void FacebookInitCallback()
+    //{
+    //    if (FB.IsInitialized)
+    //    {
+    //        FB.ActivateApp();
+    //        //Debug.Log("Facebook Activate App 2");
+    //        if (FB.IsLoggedIn)
+    //        {
+    //            Volt_PlayerData.instance.LoginType = LoginType.Facebook;
+    //            //Debug.Log("Already Logged in");
+    //            Debug.Log($"Token:{AccessToken.CurrentAccessToken.UserId}");
+    //            //infoLog.text = AccessToken.CurrentAccessToken.UserId;
+    //            Volt_PlayerData.instance.UserToken = AccessToken.CurrentAccessToken.UserId;
 
-                PacketTransmission.SendSignInPacket(AccessToken.CurrentAccessToken.UserId.Length, AccessToken.CurrentAccessToken.UserId);
-            }
-        }
-        else
-        {
-            Debug.Log("Failed to Init facebook sdk");
-        }
-    }
+    //            PacketTransmission.SendSignInPacket(AccessToken.CurrentAccessToken.UserId.Length, AccessToken.CurrentAccessToken.UserId);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Failed to Init facebook sdk");
+    //    }
+    //}
 
-    private void OnHideUnity(bool isGameShown)
-    {
-        if (!isGameShown)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
-    }
+    //private void OnHideUnity(bool isGameShown)
+    //{
+    //    if (!isGameShown)
+    //    {
+    //        Time.timeScale = 0;
+    //    }
+    //    else
+    //    {
+    //        Time.timeScale = 1;
+    //    }
+    //}
 
-    public void OnPressedFacebookLoginBtn()
-    {
-        Managers.UI.ShowPopupUIAsync<LoginProgress_Popup>();
-        //loginProgressPanel.SetActive(true);
-        if (!FB.IsInitialized)
-        {
-            FB.Init(FacebookInitCallback, OnHideUnity);
-            //Debug.Log("Init Facebook sdk");
-        }
-        else
-        {
-            FB.ActivateApp();
-            //Debug.Log("시부레뭐였더라");
-        }
+    //public void OnPressedFacebookLoginBtn()
+    //{
+    //    Managers.UI.ShowPopupUIAsync<LoginProgress_Popup>();
+    //    //loginProgressPanel.SetActive(true);
+    //    if (!FB.IsInitialized)
+    //    {
+    //        FB.Init(FacebookInitCallback, OnHideUnity);
+    //        //Debug.Log("Init Facebook sdk");
+    //    }
+    //    else
+    //    {
+    //        FB.ActivateApp();
+    //        //Debug.Log("시부레뭐였더라");
+    //    }
 
 
-        //List<string> permissions = new List<string>() { "public_profile", "email", "user_friends" };
-        //FB.LogInWithReadPermissions(permissions, FacebookAuthCallback);
-        StartCoroutine(FBInit());
+    //    //List<string> permissions = new List<string>() { "public_profile", "email", "user_friends" };
+    //    //FB.LogInWithReadPermissions(permissions, FacebookAuthCallback);
+    //    StartCoroutine(FBInit());
 
-    }
-    IEnumerator FBInit()
-    {
-        yield return new WaitUntil(() => FB.IsInitialized);
-        FB.LogInWithPublishPermissions(null, FacebookAuthCallback);
-    }
+    //}
+    //IEnumerator FBInit()
+    //{
+    //    yield return new WaitUntil(() => FB.IsInitialized);
+    //    FB.LogInWithPublishPermissions(null, FacebookAuthCallback);
+    //}
 
-    private void FacebookAuthCallback(ILoginResult result)
-    {
-        if (FB.IsLoggedIn)
-        {
-            var aToken = AccessToken.CurrentAccessToken;
-            myID = aToken.UserId;
-            Volt_PlayerData.instance.UserToken = myID;
-            Debug.Log($"Welcome,{myID}");
+    //private void FacebookAuthCallback(ILoginResult result)
+    //{
+    //    if (FB.IsLoggedIn)
+    //    {
+    //        var aToken = AccessToken.CurrentAccessToken;
+    //        myID = aToken.UserId;
+    //        Volt_PlayerData.instance.UserToken = myID;
+    //        Debug.Log($"Welcome,{myID}");
 
-            PlayerPrefs.SetInt("Volt_LoginType", (int)LoginType.Facebook);
-            PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken);
-        }
-        else
-        {
-            LoginProgress_Popup popup = FindObjectOfType<LoginProgress_Popup>();
-            Managers.UI.ClosePopupUI(popup);
-            Debug.Log("User cancelled login");
-        }
-    }
+    //        PlayerPrefs.SetInt("Volt_LoginType", (int)LoginType.Facebook);
+    //        PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken);
+    //    }
+    //    else
+    //    {
+    //        LoginProgress_Popup popup = FindObjectOfType<LoginProgress_Popup>();
+    //        Managers.UI.ClosePopupUI(popup);
+    //        Debug.Log("User cancelled login");
+    //    }
+    //}
     #endregion
 
     #region google sdk
