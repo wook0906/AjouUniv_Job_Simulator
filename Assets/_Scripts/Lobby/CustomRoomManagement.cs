@@ -53,6 +53,9 @@ public class CustomRoomManagement : MonoBehaviour
     }
     IEnumerator CorSelfCreateCustomRoomUI()
     {
+        // 여기.... invalid handle 문제...
+        // invalid handle 문제는 보통 앞 선 패킷 타입 값이 정상 범위를 넘어선
+        // 문제 이 후에 생기는 것으로 추정됨...
         AsyncOperationHandle<GameObject> handle = Managers.UI.ShowPopupUIAsync<CustomRoom_Popup>();
         yield return new WaitUntil(() => handle.IsDone);
         customRoomUI = handle.Result.GetComponent<CustomRoom_Popup>();

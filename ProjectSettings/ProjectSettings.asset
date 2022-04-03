@@ -174,9 +174,9 @@ PlayerSettings:
     iPhone: com.GFS.VoltMobile
   buildNumber:
     iPhone: 20
-  AndroidBundleVersionCode: 47
+  AndroidBundleVersionCode: 48
   AndroidMinSdkVersion: 24
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -236,6 +236,7 @@ PlayerSettings:
   metalEditorSupport: 1
   metalAPIValidation: 1
   iOSRenderExtraFrameOnPause: 0
+  iosCopyPluginsCodeInsteadOfSymlink: 0
   appleDeveloperTeamID: B8X6UT37DQ
   iOSManualSigningProvisioningProfileID: ff7e15e2-78a4-4934-9542-9f96ddf3fd28
   tvOSManualSigningProvisioningProfileID: 
@@ -251,7 +252,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: KeyStore/VOLT.keystore'
+  AndroidKeystoreName: "D:/Rep/Volt_\uBC31\uC5C5_2022_03_27_Unity_v4.9f/KeyStore/VOLT.keystore"
   AndroidKeyaliasName: wook
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

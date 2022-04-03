@@ -594,6 +594,7 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
     {
         int packetType = ByteConverter.ToInt(buffer, 1);
 
+        //패킷 타입 값이 정상적이지 않은 경우가 종종 발생...
         Debug.Log("PacketType : " + (EPacketType)packetType);
 
         packetToClass[packetType].UnPack(buffer);

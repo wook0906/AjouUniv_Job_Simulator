@@ -1,17 +1,53 @@
 {
     "m_SelectedDeviceId": "R3CM302HD1D",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "R3CM302HD1D",
+        "name": "com.GFS.Mobile_Volt",
+        "processId": 10605,
         "exited": false
     },
-    "m_SelectedPriority": 0,
+    "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CM302HD1D",
-            "name": "com.kakao.talk",
-            "processId": 30588,
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 28972,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.sec.android.app.launcher",
+            "processId": 7808,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 30018,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 10133,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 11341,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 18265,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 10605,
             "exited": false
         }
     ],

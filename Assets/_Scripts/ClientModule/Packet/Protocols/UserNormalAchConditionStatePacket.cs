@@ -129,156 +129,103 @@ public class UserNormalAchConditionStatePacket : Packet
         }        
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(allEnemyKillOneGame);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+        
+        // 패킷 데이터 내용 순서 상 어쩔 수 없이 하드 코딩 해야하는 부분...
+        // 고치려면 서버와 패킷 내용 맞출 필요 있음..
+        if(!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(peaceWin);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(noDeathWin);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(tacticModule);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(attackModule);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(moveModule);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(allModule);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(allEnemyAttack);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(rapidAttack);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(bombing);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(saw);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(hologram);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(dodge);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(teleport);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(shield);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(bomb);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(hacking);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(timeBomb);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(anchor);
         idx++;
-        Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
+
+        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + idx))
+            Volt_PlayerData.instance.AchievementProgresses.Add(id + idx, new ACHProgress());
         Volt_PlayerData.instance.AchievementProgresses[id + idx].SetAchievementProgress(emp);
-        idx++;
-        //DBManager.instance.userExtraData = new UserExtraData(gamePlay, kill, victoryCoin, dead,
-        //attackTry, attackSuccess, victoryCount);
-
-        //DBManager.instance.OnLoadedUserACHConditionState();
-        /*
-         UserDaily(Normal)Condition 2개 관련 코드들 전부 제거
-         UserDaily(Normal)ConditionState를 추가하였음
-         해당 클래스에서 UserDaily(Normal)Condition에서 진행하던 코드를 실행시키면 됨.
-         */
-
-
-        //int startIndex = PacketInfo.FromServerPacketSettingIndex;
-        //int id = 2000001;
-        //int length = 0;
-
-        //for (int i = 0; i < (int)ENormalConditionType.End; i++)
-        //{
-
-        //    int value = ByteConverter.ToInt(buffer, ref startIndex);
-        //    if (i == 0) // 게임 플레이 횟수가 들어온다.
-        //    {
-        //        Volt_PlayerData.instance.PlayCount = value;
-
-        //        for (int j = 0; j < 2; ++j)
-        //        {
-        //            if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + length))
-        //                Volt_PlayerData.instance.AchievementProgresses.Add(id + length, new ACHProgress());
-
-        //            Volt_PlayerData.instance.AchievementProgresses[id + length].SetAchievementProgress(value);
-        //            length++;
-        //        }
-        //    }
-        //    else if (i == 1) // 적을 죽인 횟수
-        //    {
-        //        Volt_PlayerData.instance.KillCount = value;
-
-        //        for (int j = 0; j < 2; ++j)
-        //        {
-        //            if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + length))
-        //                Volt_PlayerData.instance.AchievementProgresses.Add(id + length, new ACHProgress());
-
-        //            Volt_PlayerData.instance.AchievementProgresses[id + length].SetAchievementProgress(value);
-        //            length++;
-        //        }
-
-        //    }
-        //    else if (i == 2) // 승점 코인 획득 갯수
-        //    {
-        //        Volt_PlayerData.instance.CoinCount = value;
-        //        for (int j = 0; j < 3; ++j)
-        //        {
-
-        //            if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + length))
-        //                Volt_PlayerData.instance.AchievementProgresses.Add(id + length, new ACHProgress());
-
-        //            Volt_PlayerData.instance.AchievementProgresses[id + length].SetAchievementProgress(value);
-        //            length++;
-        //        }
-        //    }
-        //    else if (i == 3) // 죽은 횟수
-        //    {
-        //        Volt_PlayerData.instance.DeathCount = value;
-        //    }
-        //    else if (i == 4) // 공격 횟수
-        //    {
-        //        Volt_PlayerData.instance.AttackTryCount = value;
-        //    }
-        //    else if (i == 5) // 공격 성공횟수{
-        //    {
-        //        Volt_PlayerData.instance.AttackSuccessCount = value;
-        //    }
-        //    else if (i == 6) // 승리 횟수
-        //    {
-        //        Volt_PlayerData.instance.VictoryCount = value;
-
-        //        for(int j = 0; j < 3; j++)
-        //        {
-        //            if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + length))
-        //                Volt_PlayerData.instance.AchievementProgresses.Add(id + length, new ACHProgress());
-
-        //            Volt_PlayerData.instance.AchievementProgresses[id + length].SetAchievementProgress(value);
-        //            length++;
-        //        }
-        //    }
-        //    else // 나머지....
-        //    {
-        //        if (!Volt_PlayerData.instance.AchievementProgresses.ContainsKey(id + length))
-        //            Volt_PlayerData.instance.AchievementProgresses.Add(id + length, new ACHProgress());
-
-        //        Volt_PlayerData.instance.AchievementProgresses[id + length].SetAchievementProgress(value);
-        //        length++;
-        //    }
-        //}
+        
         DBManager.instance.OnLoadedUserNormalACHCondition();
     }
 }
