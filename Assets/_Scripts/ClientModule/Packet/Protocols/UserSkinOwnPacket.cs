@@ -15,11 +15,30 @@ class UserSkinOwnPacket : Packet
 
         int columCount = ByteConverter.ToInt(buffer, ref startIndex);
 
-        int id = 5000001;
+        
         bool value;
 
         //List<UserACHCondition.InfoACH> achInfos = DBManager.instance.userNormalACHCondition.achInfos;
-        for (int i = 0; i < columCount; i++)
+        int id = 5000001;
+        for (int i = 0; i < 5; i++)
+        {
+            value = ByteConverter.ToBool(buffer, ref startIndex);
+            DBManager.instance.userSkinCondition.Add(id + i, value);
+        }
+        id = 5000010;
+        for (int i = 0; i < 5; i++)
+        {
+            value = ByteConverter.ToBool(buffer, ref startIndex);
+            DBManager.instance.userSkinCondition.Add(id + i, value);
+        }
+        id = 5000020;
+        for (int i = 0; i < 5; i++)
+        {
+            value = ByteConverter.ToBool(buffer, ref startIndex);
+            DBManager.instance.userSkinCondition.Add(id + i, value);
+        }
+        id = 5000030;
+        for (int i = 0; i < 5; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);
             DBManager.instance.userSkinCondition.Add(id + i, value);

@@ -102,7 +102,6 @@ public class SelectRange : PhaseBase
         yield return StartCoroutine(WaitSelectRangeDone());
 
         yield return StartCoroutine(WaitCameraAnimation(true));
-
         if (PlayerPrefs.GetInt("Volt_TrainingMode") == 0)
             PacketTransmission.SendBehaviorOrderCompletionPacket();
         else

@@ -27,6 +27,7 @@ public class InviteWaitingRoom : Packet
         int roomid = ByteConverter.ToInt(buffer,ref startIndex);
         int seatIdx = ByteConverter.ToInt(buffer,ref startIndex);
 
+        
         LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
         Debug.Log(hostNickname);
@@ -39,6 +40,9 @@ public class InviteWaitingRoom : Packet
         if (InvitedNickname == Volt_PlayerData.instance.NickName)
         {
             lobbyScene.customRoomManagement.ShowInviteResponse(roomid, hostNickname, seatIdx);
+            PlayerPrefs.SetInt("CurInvitedRoomID", roomid);
+            PlayerPrefs.SetString("CurInvitedRoomHost", hostNickname);
+            PlayerPrefs.SetInt("CurInvitedRoomSeatIdx", seatIdx);
             //방에 드가시겠습니까? 
             //초대 다이얼로그를 띄운다.
         }

@@ -25,7 +25,7 @@ public class LobbyScene_UI : UI_Scene
 
     enum Buttons
     {
-        Community_Btn,
+        //Community_Btn,
         Hanger_Btn,
         Module_Btn,
         Ach_Btn,
@@ -39,7 +39,7 @@ public class LobbyScene_UI : UI_Scene
         RobotInfo_Btn,
         Profile_Btn,
         ProfilePicture_Btn,
-        CustomRoom_Btn,
+        //CustomRoom_Btn,
     }
 
     enum Labels
@@ -142,19 +142,19 @@ public class LobbyScene_UI : UI_Scene
         //GetButton((int)Buttons.Community_Btn).gameObject.SetActive(false);
         //GetButton((int)Buttons.CustomRoom_Btn).gameObject.SetActive(false);
 
-        GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
-        {
-            PacketTransmission.SendFriendListPacket();
-            //Managers.UI.ShowPopupUIAsync<Community_Popup>();
+        //GetButton((int)Buttons.Community_Btn).onClick.Add(new EventDelegate(() =>
+        //{
+        //    PacketTransmission.SendFriendListPacket();
+        //    //Managers.UI.ShowPopupUIAsync<Community_Popup>();
 
-        }));
-        GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
-        {
-            lobbyScene.customRoomManagement.SendCreateRoomRequest();
+        //}));
+        //GetButton((int)Buttons.CustomRoom_Btn).onClick.Add(new EventDelegate(() =>
+        //{
+        //    lobbyScene.customRoomManagement.SendCreateRoomRequest();
             
             
 
-        }));
+        //}));
         GetButton((int)Buttons.ProfilePicture_Btn).onClick.Add(new EventDelegate(() =>
         {
             Managers.UI.ShowPopupUIAsync<ProfilePictureSetup_Popup>();

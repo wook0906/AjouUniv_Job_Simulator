@@ -351,35 +351,42 @@ public class Volt_PlayerData : MonoBehaviour
         this.DiamondCount = diamondCount;
         this.GoldCount = goldCount;
 
-        foreach (var item in AchievementProgresses)
-        {
-            //Debug.Log($"ACH ID:{item.Key}, ACH Count:{item.Value.ACHProgressCount}, ACH Accomplish:{item.Value.IsAccomplishACH}");
-        }
         robotSkins = userSkinCondition;
+        if (IsAllSkin(robotSkins, 5000001))
+            userPackageCondition[8000004] = new Define.PackageProductState(true);
+        if (IsAllSkin(robotSkins, 5000010))
+            userPackageCondition[8000005] = new Define.PackageProductState(true);
+        if (IsAllSkin(robotSkins, 5000030))
+            userPackageCondition[8000003] = new Define.PackageProductState(true);
+        if (IsAllSkin(robotSkins, 5000020))
+            userPackageCondition[8000006] = new Define.PackageProductState(true);
         emoticons = userEmoticonCondition;
+        if (IsAllEmoticon(emoticons))
+            userPackageCondition[8000002] = new Define.PackageProductState(true);
         packages = userPackageCondition;
         Benefits = userBenefitCondition;
 
-
-        //Debug.Log("PlayerData Init Complete");
-        //Debug.Log(this.ToString());
-
-
-        //tmp
         EmoticonSetInit();
-        //for (int i = 0; i < 8; i++)
-        //{
-        //    Define.ProfileData tmpProfileData = new Define.ProfileData();
-        //    tmpProfileData.nickname = $"friends{i}";
-        //    tmpProfileData.level = i + UnityEngine.Random.Range(0,999);
-        //    tmpProfileData.totalPlayCnt = i + UnityEngine.Random.Range(0, 999);
-        //    tmpProfileData.defeatCnt = i + UnityEngine.Random.Range(0, 999);
-        //    tmpProfileData.winCnt = i + UnityEngine.Random.Range(0, 999);
-        //    tmpProfileData.killCnt = i + UnityEngine.Random.Range(0, 999);
-        //    tmpProfileData.deathCnt = i + UnityEngine.Random.Range(0, 999);
-        //    tmpProfileData.StateMSG = $"friends{i}'s State Message string";
-        //    friendsProfileDataDict.Add(i, tmpProfileData);
-        //}
+
+    }
+    bool IsAllSkin(Dictionary<int,bool> skinDict, int startID)
+    {
+        for (int i = startID; i <= startID+4; i++)
+        {
+            if(!skinDict[i])
+                return false;
+        }
+        return true;
+    }
+
+    bool IsAllEmoticon(Dictionary<int,bool> emoticonDict)
+    {
+        foreach (var item in emoticonDict.Values)
+        {
+            if (!item)
+                return false;
+        }
+        return true;
     }
 
     public override string ToString()
@@ -620,7 +627,7 @@ public class Volt_PlayerData : MonoBehaviour
     {
         if(!robotSkins.ContainsKey(skinID))
         {
-            //Debug.LogWarning("Warning!! skin dictionary doesn't contain key!! : " + skinID);
+            Debug.LogWarning("Warning!! skin dictionary doesn't contain key!! : " + skinID);
             return;
         }
         robotSkins[skinID] = true;

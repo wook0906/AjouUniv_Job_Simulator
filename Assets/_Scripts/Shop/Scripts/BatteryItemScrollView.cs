@@ -98,6 +98,7 @@ namespace Volt
                                 //    items[idx++].SetActive(false);
                                 //    continue;
                                 //}
+                                
                                 items[idx].GetComponent<BatteryShopItem>().Init(param.ID, param.objectName, param.priceType, param.priceCount,
                                 param.objectType, param.objectCount, param.objectICON, param.priceICON, param.getBuyButtonNormalSprite,
                                 param.getBuyButtonPushedSprite);

@@ -26,7 +26,16 @@ public class InviteResponse_Popup : UI_Popup
 
         GetButton((int)Buttons.Accept_Button).onClick.Add(new EventDelegate(() =>
         {
-            
+            if (Managers.Scene.CurrentScene.SceneType == Define.Scene.Lobby)
+            {
+                Managers.UI.ShowSceneUI<LobbyScene_UI>();
+            }
+            else
+            {
+                Managers.UI.ShowPopupUIAsync<AutoInviteDenyConfirm_Popup>("FriendsConfirmResult_Popup");
+                ClosePopupUI();
+                return;
+            }
             PacketTransmission.SendJoinWaitingRoomPacket(roomID, seatIdx, EJoinWaitingRoomResult.Ok, PlayerPrefs.GetInt("SELECTED_ROBOT"), PlayerPrefs.GetInt($"{(RobotType)PlayerPrefs.GetInt("SELECTED_ROBOT")}_skin"));
             PlayerPrefs.SetInt("CustomRoomMySlotNumber", seatIdx);
             ClosePopupUI();

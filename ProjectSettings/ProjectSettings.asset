@@ -252,7 +252,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "D:/Rep/Volt_\uBC31\uC5C5_2022_03_27_Unity_v4.9f/KeyStore/VOLT.keystore"
+  AndroidKeystoreName: '{inproject}: KeyStore/VOLT.keystore'
   AndroidKeyaliasName: wook
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

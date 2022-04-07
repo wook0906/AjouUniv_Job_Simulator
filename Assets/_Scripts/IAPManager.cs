@@ -13,7 +13,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     //public const string productBattery = "battery"; //소모성
     //public static readonly string[] productBatterys = { "battery1", "battery3", "battery5", "battery10" };
     //public const string productDiamond = "diamond"; //소모성
-    public static readonly string[] productDiamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
+    public static readonly string[] productDiamonds = { "diamond150", "diamond300", "diamond_500", "diamond800", "diamond1500" };
     public static readonly string[] productPackages = { "package8000001", "package8000002", "package8000003", "package8000004", "package8000005", "package8000006" };
 
     //public const string productCharacterSkin = "character_skin";//비소모성
@@ -30,8 +30,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
     private readonly string[] _android_Packages = { "package8000001", "package8000002", "package8000003", "package8000004", "package8000005", "package8000006" };
 
 
-    private readonly string[] _IOS_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
-    private readonly string[] _android_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800, diamond1500" };
+    private readonly string[] _IOS_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800", "diamond1500" };
+    private readonly string[] _android_Diamonds = { "diamond150", "diamond300", "diamond_500", "diamond800", "diamond1500" };
 
     private static IAPManager instance;
     public static IAPManager Instance
@@ -106,17 +106,17 @@ public class IAPManager : MonoBehaviour, IStoreListener
         Debug.Log("유니티 IAP 초기화 성공");
         storeController = controller;
         storeExtensionProvider = extensions;
-        //foreach (var item in controller.products.all)
-        //{
-        //    if (item.availableToPurchase)
-        //    {
-        //        Debug.Log(item.metadata.localizedTitle + " 사용가능");
-        //    }
-        //    else
-        //    {
-        //        Debug.LogError(item.metadata.localizedTitle + " 사용불가");
-        //    }
-        //}
+        foreach (var item in controller.products.all)
+        {
+            if (item.availableToPurchase)
+            {
+                Debug.Log(item.metadata.localizedTitle + " 사용가능");
+            }
+            else
+            {
+                Debug.LogError(item.metadata.localizedTitle + " 사용불가");
+            }
+        }
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)

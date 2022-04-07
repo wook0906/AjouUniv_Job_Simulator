@@ -66,11 +66,13 @@ namespace Volt
 
                 if (Volt_PlayerData.instance.IsHaveSkin(this.ID))
                 {
+                    //Debug.Log($"{ID}는 갖고있어");
                     purchaseButtonGO.SetActive(false);
                     purchasedButtonGO.SetActive(true);
                 }
                 else
                 {
+                   // Debug.Log($"{ID}는 없어");
                     purchaseButtonGO.SetActive(true);
                     purchasedButtonGO.SetActive(false);
 

@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R3CM302HD1D",
+    "m_SelectedDeviceId": "R54N103EARX",
     "m_SelectedPackage": {
-        "deviceId": "R3CM302HD1D",
+        "deviceId": "R54N103EARX",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 10605,
+        "processId": 13117,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -48,6 +48,60 @@
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
             "processId": 10605,
+            "exited": false
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2309,
+            "exited": false
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 28474,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 28930,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 2886,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 3164,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 4542,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 7575,
+            "exited": false
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 8966,
+            "exited": true
+        },
+        {
+            "deviceId": "R54N103EARX",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 13117,
             "exited": false
         }
     ],

@@ -54,6 +54,8 @@ public class Volt_ModuleBtn : MonoBehaviour
     }
     public void OnClickModuleBtn()
     {
+        Volt_Robot robot = Volt_PlayerManager.S.I.playerRobot.GetComponent<Volt_Robot>();
+
         if (curModuleCard.skillType == SkillType.Passive)
             return;
         if (Time.time - lastInteractionTime > 1f)
@@ -68,7 +70,6 @@ public class Volt_ModuleBtn : MonoBehaviour
                     }
                     else
                     {
-                        Volt_Robot robot = Volt_PlayerManager.S.I.playerRobot.GetComponent<Volt_Robot>();
                         robot.moduleCardExcutor.SetOnActiveCard(robot.moduleCardExcutor.GetCurEquipCards()[slotNumber], slotNumber);
                     }
                     lastInteractionTime = Time.time;
@@ -82,7 +83,6 @@ public class Volt_ModuleBtn : MonoBehaviour
                     }
                     else
                     {
-                        Volt_Robot robot = Volt_PlayerManager.S.I.playerRobot.GetComponent<Volt_Robot>();
                         robot.moduleCardExcutor.SetOffActiveCard(slotNumber);
                     }
                     lastInteractionTime = Time.time;
@@ -90,7 +90,6 @@ public class Volt_ModuleBtn : MonoBehaviour
             }
             else if(GameController.instance.CurrentPhase.type == Define.Phase.SelectBehaviour)
             {
-
                 if (PlayerPrefs.GetInt("Volt_TutorialDone") == 1)
                 {
                     SelectBehaviour phase = GameController.instance.CurrentPhase as SelectBehaviour;
@@ -100,20 +99,24 @@ public class Volt_ModuleBtn : MonoBehaviour
                 {
                     TutorialSelectBehaviour phase = GameController.instance.CurrentPhase as TutorialSelectBehaviour;
                     phase.SelectBehaviourDoneCallbackForModule(curModuleCard.behaviourType, slotNumber);
-                    return;
+                    //return;
                 }
 
                 if (!isActive)
                 {
-
-                    PacketTransmission.SendModuleActivePacket(Volt_PlayerUI.S.owner.playerNumber, slotNumber);
+                    if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+                        robot.moduleCardExcutor.SetOnActiveCard(robot.moduleCardExcutor.GetCurEquipCards()[slotNumber], slotNumber);
+                    else
+                        PacketTransmission.SendModuleActivePacket(Volt_PlayerUI.S.owner.playerNumber, slotNumber);
                     lastInteractionTime = Time.time;
 
                 }
                 else
                 {
-
-                    PacketTransmission.SendModuleUnActivePacket(Volt_PlayerUI.S.owner.playerNumber, slotNumber);
+                    if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1)
+                        robot.moduleCardExcutor.SetOffActiveCard(slotNumber);
+                    else
+                        PacketTransmission.SendModuleUnActivePacket(Volt_PlayerUI.S.owner.playerNumber, slotNumber);
                     lastInteractionTime = Time.time;
                 }
             }

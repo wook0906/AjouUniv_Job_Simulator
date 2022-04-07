@@ -19,13 +19,67 @@ public class ResultPurchasePacket : Packet
             //fail( because not enough money)
             return;
         }
-
-        //if(id == 8000001)//package1
-        //{
+        ShopScene_UI shopSceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
+        if (id >= 8000001 && id <= 8000006)
+        {
             Volt_PlayerData.instance.RenewPackageData(Managers.Data.CurrentProductInfoShop.ID);
-            ShopScene_UI shopSceneUI = Managers.UI.GetSceneUI<ShopScene_UI>();
             shopSceneUI.OnPurchasedPackage(Managers.Data.CurrentProductInfoShop.ID);
             Volt_PlayerData.instance.OnPurchasedPackage(id);
-        //}
+        }
+        switch (id)
+        {
+            case 8000002:
+                for (int i = 9000001; i <= 9000011; i++)
+                {
+                    //shopSceneUI.OnPurchasedEmoticon(i);
+                    Volt_PlayerData.instance.OnPurchasedEmoticon(i);
+                }
+                for (int i = 9000101; i <= 9000111; i++)
+                {
+                    //shopSceneUI.OnPurchasedEmoticon(i);
+                    Volt_PlayerData.instance.OnPurchasedEmoticon(i);
+                }
+                for (int i = 9000201; i <= 9000211; i++)
+                {
+                    //shopSceneUI.OnPurchasedEmoticon(i);
+                    Volt_PlayerData.instance.OnPurchasedEmoticon(i);
+                }
+                for (int i = 9000301; i <= 9000311; i++)
+                {
+                    //shopSceneUI.OnPurchasedEmoticon(i);
+                    Volt_PlayerData.instance.OnPurchasedEmoticon(i);
+                }
+                break;
+            case 8000003://볼트
+                for (int i = 5000030; i <= 5000034; i++)
+                {
+                    //shopSceneUI.OnPurchasedRobotSkin(i);
+                    Volt_PlayerData.instance.OnPurchasedSkin(i);
+                }
+                break;
+            case 8000004://머큐리
+                for (int i = 5000001; i <= 5000005; i++)
+                {
+                    //shopSceneUI.OnPurchasedRobotSkin(i);
+                    Volt_PlayerData.instance.OnPurchasedSkin(i);
+                }
+                break;
+            case 8000005://리퍼
+                for (int i = 5000010; i <= 5000014; i++)
+                {
+                    //shopSceneUI.OnPurchasedRobotSkin(i);
+                    Volt_PlayerData.instance.OnPurchasedSkin(i);
+                }
+                break;
+            case 8000006://하운드
+                for (int i = 5000020; i <= 5000024; i++)
+                {
+                    //shopSceneUI.OnPurchasedRobotSkin(i);
+                    Volt_PlayerData.instance.OnPurchasedSkin(i);
+                }
+                break;
+            default:
+                break;
+        }
     }
 }

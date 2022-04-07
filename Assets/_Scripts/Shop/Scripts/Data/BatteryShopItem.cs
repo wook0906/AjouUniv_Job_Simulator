@@ -57,7 +57,10 @@ namespace Volt
                     objectCountLabel.text = "";
 
                 priceTypeSprite.spriteName = this.priceICON;
-                priceCountLabel.text = this.priceCount.ToString();
+                if (priceCount > 0)
+                    priceCountLabel.text = this.priceCount.ToString();
+                else
+                    priceCountLabel.text = "FREE";
 
                 if (this.ID != 3000006)
                 {
