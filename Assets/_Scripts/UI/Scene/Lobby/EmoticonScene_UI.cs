@@ -31,10 +31,10 @@ public class EmoticonScene_UI : UI_Scene
         slot4,
         slot5,
         Back_Btn,
-        EmoMercuryTap,
-        EmoReaperTap,
-        EmoHoundTap,
         EmoVoltTap,
+        EmoMercuryTap,
+        EmoHoundTap,
+        EmoReaperTap,
         CommonTap
 
     }
@@ -113,23 +113,23 @@ public class EmoticonScene_UI : UI_Scene
         }));
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().onCompletedInit += () =>
         {
-            
+            GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().Init();
         };
-        GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().Init();
 
         for (int i = 0; i < 6; i++)
         {
-            if (Volt_PlayerData.instance.GetEmoticonSet()[i] != null)
-                GetSprite(i).spriteName = Volt_PlayerData.instance.GetEmoticonSet()[i];
+            string value = "EmoticonNone";
+            if (Volt_PlayerData.instance.GetEmoticonSet().TryGetValue(i, out value))
+                GetSprite(i).spriteName = value;
             else
-                GetSprite(i).spriteName = "EmoticonNone";
+                GetSprite(i).spriteName = value;
         }
 
         lobbyScene.OnLoadedEmoticonSceneUI();
     }
     public override void OnActive()
     {
-        OnClickEmoMercuryTap();
+        OnClickEmoVoltTap();
         //Managers.UI.PushToUILayerStack(this);
     }
     private void OnClickEmoVoltTap()
@@ -138,7 +138,7 @@ public class EmoticonScene_UI : UI_Scene
             GetComponent<EmoticonInventory_ScrollView>().
             OnClickEmoticonTapButton(EmoticonSelectType.Volt);
 
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.CommonTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.CommonTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -151,7 +151,7 @@ public class EmoticonScene_UI : UI_Scene
             GetComponent<EmoticonInventory_ScrollView>().
             OnClickEmoticonTapButton(EmoticonSelectType.Hound);
 
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.CommonTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.CommonTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -163,7 +163,7 @@ public class EmoticonScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).
             GetComponent<EmoticonInventory_ScrollView>().
             OnClickEmoticonTapButton(EmoticonSelectType.Reaper);
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.CommonTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.CommonTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -175,7 +175,7 @@ public class EmoticonScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).
             GetComponent<EmoticonInventory_ScrollView>().
             OnClickEmoticonTapButton(EmoticonSelectType.Mercury);
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.CommonTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.CommonTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }

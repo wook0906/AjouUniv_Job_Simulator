@@ -51,28 +51,28 @@ public class ResultPurchasePacket : Packet
                 }
                 break;
             case 8000003://볼트
-                for (int i = 5000030; i <= 5000034; i++)
-                {
-                    //shopSceneUI.OnPurchasedRobotSkin(i);
-                    Volt_PlayerData.instance.OnPurchasedSkin(i);
-                }
-                break;
-            case 8000004://머큐리
                 for (int i = 5000001; i <= 5000005; i++)
                 {
                     //shopSceneUI.OnPurchasedRobotSkin(i);
                     Volt_PlayerData.instance.OnPurchasedSkin(i);
                 }
                 break;
+            case 8000004://머큐리
+                for (int i = 5000011; i <= 5000015; i++)
+                {
+                    //shopSceneUI.OnPurchasedRobotSkin(i);
+                    Volt_PlayerData.instance.OnPurchasedSkin(i);
+                }
+                break;
             case 8000005://리퍼
-                for (int i = 5000010; i <= 5000014; i++)
+                for (int i = 5000031; i <= 5000035; i++)
                 {
                     //shopSceneUI.OnPurchasedRobotSkin(i);
                     Volt_PlayerData.instance.OnPurchasedSkin(i);
                 }
                 break;
             case 8000006://하운드
-                for (int i = 5000020; i <= 5000024; i++)
+                for (int i = 5000021; i <= 5000025; i++)
                 {
                     //shopSceneUI.OnPurchasedRobotSkin(i);
                     Volt_PlayerData.instance.OnPurchasedSkin(i);

@@ -353,14 +353,15 @@ public class Volt_PlayerData : MonoBehaviour
 
         robotSkins = userSkinCondition;
         if (IsAllSkin(robotSkins, 5000001))
-            userPackageCondition[8000004] = new Define.PackageProductState(true);
-        if (IsAllSkin(robotSkins, 5000010))
-            userPackageCondition[8000005] = new Define.PackageProductState(true);
-        if (IsAllSkin(robotSkins, 5000030))
             userPackageCondition[8000003] = new Define.PackageProductState(true);
-        if (IsAllSkin(robotSkins, 5000020))
+        if (IsAllSkin(robotSkins, 5000011))
+            userPackageCondition[8000004] = new Define.PackageProductState(true);
+        if (IsAllSkin(robotSkins, 5000021))
+            userPackageCondition[8000005] = new Define.PackageProductState(true);
+        if (IsAllSkin(robotSkins, 5000031))
             userPackageCondition[8000006] = new Define.PackageProductState(true);
         emoticons = userEmoticonCondition;
+        
         if (IsAllEmoticon(emoticons))
             userPackageCondition[8000002] = new Define.PackageProductState(true);
         packages = userPackageCondition;
@@ -368,6 +369,7 @@ public class Volt_PlayerData : MonoBehaviour
 
         EmoticonSetInit();
 
+        Debug.Log("PlayerData Init Done");
     }
     bool IsAllSkin(Dictionary<int,bool> skinDict, int startID)
     {

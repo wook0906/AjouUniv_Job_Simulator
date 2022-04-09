@@ -19,14 +19,14 @@ public class ShopScene_UI : UI_Scene
         DiamondAdd_Btn,
         BatteryAdd_Btn,
         GoldAdd_Btn,
-        SkinMercuryTap,
-        SkinReaperTap,
-        SkinHoundTap,
         SkinVoltTap,
-        EmoMercuryTap,
-        EmoReaperTap,
-        EmoHoundTap,
+        SkinMercuryTap,
+        SkinHoundTap,
+        SkinReaperTap,
         EmoVoltTap,
+        EmoMercuryTap,
+        EmoHoundTap,
+        EmoReaperTap,
         RestorePurchase_Btn
     }
 
@@ -191,7 +191,7 @@ public class ShopScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.Skin_ScrollView).
             GetComponent<RobotSkinItemScrollView>().
             OnClickSkinTapButton(ShopRobotSelectType.Volt);
-        for (int i = (int)Buttons.SkinMercuryTap; i <= (int)Buttons.SkinVoltTap; ++i)
+        for (int i = (int)Buttons.SkinVoltTap; i <= (int)Buttons.SkinReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -203,7 +203,7 @@ public class ShopScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.Skin_ScrollView).
             GetComponent<RobotSkinItemScrollView>().
             OnClickSkinTapButton(ShopRobotSelectType.Hound);
-        for (int i = (int)Buttons.SkinMercuryTap; i <= (int)Buttons.SkinVoltTap; ++i)
+        for (int i = (int)Buttons.SkinVoltTap; i <= (int)Buttons.SkinReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -215,7 +215,7 @@ public class ShopScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.Skin_ScrollView).
             GetComponent<RobotSkinItemScrollView>().
             OnClickSkinTapButton(ShopRobotSelectType.Reaper);
-        for (int i = (int)Buttons.SkinMercuryTap; i <= (int)Buttons.SkinVoltTap; ++i)
+        for (int i = (int)Buttons.SkinVoltTap; i <= (int)Buttons.SkinReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -227,7 +227,7 @@ public class ShopScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.Skin_ScrollView).
             GetComponent<RobotSkinItemScrollView>().
             OnClickSkinTapButton(ShopRobotSelectType.Mercury);
-        for (int i = (int)Buttons.SkinMercuryTap; i <= (int)Buttons.SkinVoltTap; ++i)
+        for (int i = (int)Buttons.SkinVoltTap; i <= (int)Buttons.SkinReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -240,7 +240,7 @@ public class ShopScene_UI : UI_Scene
             GetComponent<EmoticonItemScrollView>().
             OnClickEmoticonTapButton(ShopRobotSelectType.Volt);
 
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.EmoVoltTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.EmoReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -253,7 +253,7 @@ public class ShopScene_UI : UI_Scene
             GetComponent<EmoticonItemScrollView>().
             OnClickEmoticonTapButton(ShopRobotSelectType.Hound);
 
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.EmoVoltTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.EmoReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -265,7 +265,7 @@ public class ShopScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.Emoticon_ScrollView).
             GetComponent<EmoticonItemScrollView>().
             OnClickEmoticonTapButton(ShopRobotSelectType.Reaper);
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.EmoVoltTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.EmoReaperTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }
@@ -360,7 +360,7 @@ public class ShopScene_UI : UI_Scene
         }
 
         GetGameObject((int)GameObjects.Emoticon).SetActive(true);
-        OnClickEmoMercuryTap();
+        OnClickEmoVoltTap();
     }
 
     private void OnClickSkinTapButton()
@@ -388,7 +388,7 @@ public class ShopScene_UI : UI_Scene
         }
 
         GetGameObject((int)GameObjects.RobotSkin).SetActive(true);
-        OnClickSkinMercuryTap();
+        OnClickSkinVoltTap();
     }
 
     private void OnClickPackageTapButton()

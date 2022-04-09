@@ -25,19 +25,19 @@ class UserSkinOwnPacket : Packet
             value = ByteConverter.ToBool(buffer, ref startIndex);
             DBManager.instance.userSkinCondition.Add(id + i, value);
         }
-        id = 5000010;
+        id = 5000011;
         for (int i = 0; i < 5; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);
             DBManager.instance.userSkinCondition.Add(id + i, value);
         }
-        id = 5000020;
+        id = 5000021;
         for (int i = 0; i < 5; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);
             DBManager.instance.userSkinCondition.Add(id + i, value);
         }
-        id = 5000030;
+        id = 5000031;
         for (int i = 0; i < 5; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);

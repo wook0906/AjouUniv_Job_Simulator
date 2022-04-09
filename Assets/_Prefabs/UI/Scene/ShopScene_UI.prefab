@@ -1197,7 +1197,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uB9AC\uD37C"
+  mText: "\uBA38\uD050\uB9AC"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -1238,9 +1238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDelayedTranslate: 0
-  kor: "\uB9AC\uD37C"
-  eng: Reaper
-  german: Reaper
+  kor: "\uBA38\uD050\uB9AC"
+  eng: Mercury
+  german: Mercury
   french: 
 --- !u!1 &3459852923202921196
 GameObject:
@@ -1645,7 +1645,7 @@ GameObject:
   - component: {fileID: 3459852923351482391}
   - component: {fileID: 3459852923351482390}
   m_Layer: 5
-  m_Name: SkinReaperTap
+  m_Name: SkinMercuryTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1990,7 +1990,7 @@ GameObject:
   - component: {fileID: 3459852923472102596}
   - component: {fileID: 3459852923472102603}
   m_Layer: 5
-  m_Name: EmoVoltTap
+  m_Name: EmoReaperTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2136,7 +2136,7 @@ GameObject:
   - component: {fileID: 3459852923491780080}
   - component: {fileID: 3459852923491780087}
   m_Layer: 5
-  m_Name: EmoMercuryTap
+  m_Name: EmoVoltTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3280,7 +3280,7 @@ GameObject:
   - component: {fileID: 3459852923981421709}
   - component: {fileID: 3459852923981421708}
   m_Layer: 5
-  m_Name: SkinVoltTap
+  m_Name: SkinReaperTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4485,7 +4485,7 @@ GameObject:
   - component: {fileID: 3459852924287442251}
   - component: {fileID: 4142056640206854716}
   m_Layer: 5
-  m_Name: Reaper_Label
+  m_Name: Mercury_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4547,7 +4547,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uB9AC\uD37C"
+  mText: "\uBA38\uD050\uB9AC"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -4587,7 +4587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: ShopScene_UI_Reaper
+  key: ShopScene_UI_Mercury
 --- !u!1 &3459852924334973110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBA38\uD050\uB9AC"
+  mText: "\uBCFC\uD2B8"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -5482,9 +5482,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDelayedTranslate: 0
-  kor: "\uBA38\uD050\uB9AC"
-  eng: Mercury
-  german: Mercury
+  kor: "\uBCFC\uD2B8"
+  eng: Volt
+  german: Volt
   french: 
 --- !u!1 &3459852924423918450
 GameObject:
@@ -5615,7 +5615,7 @@ GameObject:
   - component: {fileID: 3459852924477086274}
   - component: {fileID: 3459852924477086273}
   m_Layer: 5
-  m_Name: EmoReaperTap
+  m_Name: EmoMercuryTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5761,7 +5761,7 @@ GameObject:
   - component: {fileID: 3459852924550775738}
   - component: {fileID: 3459852924550775737}
   m_Layer: 5
-  m_Name: SkinMercuryTap
+  m_Name: SkinVoltTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5905,7 +5905,7 @@ GameObject:
   - component: {fileID: 3459852924556318781}
   - component: {fileID: 3602083963830453182}
   m_Layer: 5
-  m_Name: Mercury_Label
+  m_Name: Volt_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5967,7 +5967,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBA38\uD050\uB9AC"
+  mText: "\uBCFC\uD2B8"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -6007,7 +6007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: ShopScene_UI_Mercury
+  key: ShopScene_UI_Volt
 --- !u!1 &3459852924610239186
 GameObject:
   m_ObjectHideFlags: 0
@@ -6709,7 +6709,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBCFC\uD2B8"
+  mText: "\uB9AC\uD37C"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -6750,9 +6750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDelayedTranslate: 0
-  kor: "\uBCFC\uD2B8"
-  eng: Volt
-  german: Volt
+  kor: "\uB9AC\uD37C"
+  eng: Reaper
+  german: Reaper
   french: 
 --- !u!1 &3459852924746724832
 GameObject:
@@ -7260,7 +7260,7 @@ GameObject:
   - component: {fileID: 3459852924831987568}
   - component: {fileID: 8111077166758651949}
   m_Layer: 5
-  m_Name: Volt_Label
+  m_Name: Reaper_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7322,7 +7322,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBCFC\uD2B8"
+  mText: "\uB9AC\uD37C"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -7362,7 +7362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: ShopScene_UI_Volt
+  key: ShopScene_UI_Reaper
 --- !u!1 &3459852924839592232
 GameObject:
   m_ObjectHideFlags: 0

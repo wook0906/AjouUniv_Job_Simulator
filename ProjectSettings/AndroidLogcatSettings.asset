@@ -1,10 +1,10 @@
 {
-    "m_SelectedDeviceId": "R54N103EARX",
+    "m_SelectedDeviceId": "R39M10DLYEF",
     "m_SelectedPackage": {
-        "deviceId": "R54N103EARX",
+        "deviceId": "R39M10DLYEF",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 13117,
-        "exited": false
+        "processId": 24371,
+        "exited": true
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -103,6 +103,48 @@
             "name": "com.GFS.Mobile_Volt",
             "processId": 13117,
             "exited": false
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 9515,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 11790,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 15607,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 16748,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 21796,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.sec.android.app.launcher",
+            "processId": 4559,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 24371,
+            "exited": true
         }
     ],
     "m_Tags": {
