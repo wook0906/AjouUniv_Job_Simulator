@@ -8,7 +8,8 @@ public class Volt_PurchaseFeedbackPanel : MonoBehaviour
 
     public void Feedback(EShopPurchase assetsType, bool isSuccess)
     {
-        feedbackMsg.text = Volt_Utils.GetItemNameByLanguage(assetsType);   
+        //feedbackMsg.text = Volt_Utils.GetItemNameByLanguage(assetsType);   
+        feedbackMsg.text = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
         feedbackMsg.text += " ";
 
         switch (Application.systemLanguage)

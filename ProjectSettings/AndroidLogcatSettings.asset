@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "R39M10DLYEF",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 24371,
-        "exited": true
+        "processId": 14198,
+        "exited": false
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -106,36 +106,6 @@
         },
         {
             "deviceId": "R39M10DLYEF",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 9515,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M10DLYEF",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 11790,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M10DLYEF",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 15607,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M10DLYEF",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 16748,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M10DLYEF",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 21796,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M10DLYEF",
             "name": "com.sec.android.app.launcher",
             "processId": 4559,
             "exited": false
@@ -143,8 +113,110 @@
         {
             "deviceId": "R39M10DLYEF",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 24371,
+            "processId": 21278,
             "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 23447,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 26240,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 29020,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 32737,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 3647,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 6161,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 9846,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 12524,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 16742,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 18614,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 22704,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 25018,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 30042,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 2840,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 6847,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 12010,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M10DLYEF",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 14198,
+            "exited": false
         }
     ],
     "m_Tags": {

@@ -59,6 +59,10 @@ public class Simulation : PhaseBase
                 yield return StartCoroutine(WaitAmargeddon(data));
                 Volt_GamePlayData.S.ClearOtherRobotsAttackedByRobotsOnThisTurn();
             }
+            else
+            {
+                Debug.LogError(data.AmargeddonPlayer +" : " + data.AmargeddonCount);
+            }
 
             yield return new WaitUntil(() => Volt_PlayerManager.S.I.playerCamRoot.isMoving == false);
             yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotBehaviourFlagOff());
@@ -199,7 +203,8 @@ public class Simulation : PhaseBase
         Volt_Robot armageddonRobot = Volt_PlayerManager.S.GetPlayerByPlayerNumber(data.AmargeddonPlayer).playerRobot.GetComponent<Volt_Robot>();
         int[] randomTargetTileIdx = data.randomOptionValues.ToArray();
 
-        --data.AmargeddonCount;
+        data.AmargeddonCount--;
+        Debug.Log($"amar cnt : {data.AmargeddonCount}");
         isPlayAmargeddon = true;
         Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/SFx_200703/Amargeddon.wav",
             (result) =>

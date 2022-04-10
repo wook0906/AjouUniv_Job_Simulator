@@ -18,15 +18,15 @@ public class SynchronizationElsePacket : Packet
         int remainVpSetupCount = ByteConverter.ToInt(buffer, ref startIndex);
 
         //Debug.Log("roundNumber : " + roundNumber);
-        //Debug.Log("armageddonCount : " + armageddonCount);
-        //Debug.Log("armageddonPlayer : " + armageddonPlayer);
+        //Debug.LogError("armageddonCount : " + armageddonCount);
+        //Debug.LogError("armageddonPlayer : " + armageddonPlayer);
         //Debug.Log("remainVpSetupCount : " + remainVpSetupCount);
 
         //CommunicationWaitQueue.Instance.SetOrder(order);
         //Debug.Log("Order : " + order);
 
+        GameController.instance.tmpAmargeddonCount = armageddonCount;
         GameController.instance.gameData.round = roundNumber;
-        GameController.instance.gameData.AmargeddonCount = armageddonCount;
         GameController.instance.gameData.AmargeddonPlayer = armageddonPlayer;
         GameController.instance.gameData.remainRoundCountToVpSetup = remainVpSetupCount;
 

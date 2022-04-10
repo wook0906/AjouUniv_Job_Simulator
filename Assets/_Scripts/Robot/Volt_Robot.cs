@@ -509,7 +509,7 @@ public class Volt_Robot : MonoBehaviour
         
         if(playerInfo.playerNumber == GameController.instance.gameData.AmargeddonPlayer)
         {
-            GameController.instance.gameData.AmargeddonCount = 8;
+            GameController.instance.gameData.AmargeddonCount = 0;
             GameController.instance.gameData.AmargeddonPlayer = 0;
         }
     }

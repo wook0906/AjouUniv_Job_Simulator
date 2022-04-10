@@ -14,11 +14,11 @@ public class Volt_Module_Amargeddon : Volt_ModuleCardBase, IAddOnsModule
         //    Volt_GameManager.S.AmargeddonCount = 8;
         //    Volt_GameManager.S.AmargeddonPlayer = owner.playerInfo.playerNumber;
         //}
-        if(GameController.instance.gameData.AmargeddonCount == 0)
-        {
+        //if(GameController.instance.gameData.AmargeddonCount == 0)
+        //{
             GameController.instance.gameData.AmargeddonCount = 8;
             GameController.instance.gameData.AmargeddonPlayer = owner.playerInfo.playerNumber;
-        }
+        //}
     }
 
     public void SetOff()

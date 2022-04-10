@@ -131,7 +131,8 @@ public class LobbyScene_UI : UI_Scene
 
         GetButton((int)Buttons.StartGame_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Managers.UI.ShowPopupUIAsync<SelectMatch_Popup>();
+            OnClickStartGame();
+            //Managers.UI.ShowPopupUIAsync<SelectMatch_Popup>();
         }));
 
         GetButton((int)Buttons.Profile_Btn).onClick.Add(new EventDelegate(() =>
@@ -159,7 +160,8 @@ public class LobbyScene_UI : UI_Scene
         {
             Managers.UI.ShowPopupUIAsync<ProfilePictureSetup_Popup>();
         }));
-
+        if (PlayerPrefs.HasKey("ProfilePictureInfo"))
+            ChangeProfilePicture(PlayerPrefs.GetString("ProfilePictureInfo"));
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
 
         RenewExpValue();
@@ -336,6 +338,8 @@ public class LobbyScene_UI : UI_Scene
         pictureBtn.hoverSprite = PAID;
         pictureBtn.pressedSprite = PAID;
         pictureBtn.GetComponent<UISprite>().spriteName = PAID;
+
+        PlayerPrefs.SetString("ProfilePictureInfo", PAID);
         //TODO 프로필사진 변경을 서버에다 저장해야함.
     }
     public void CreateCustomRoomUI()

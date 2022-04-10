@@ -172,7 +172,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 7711672372409992231}
   - component: {fileID: 3853328286876027508}
   m_Layer: 5
-  m_Name: EmoVoltTap
+  m_Name: EmoReaperTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 2180612679716148601}
   - component: {fileID: 2544128325906995180}
   m_Layer: 5
-  m_Name: EmoReaperTap
+  m_Name: EmoMercuryTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 8167486771453780730}
   - component: {fileID: 2105399810442261822}
   m_Layer: 5
-  m_Name: EmoMercuryTap
+  m_Name: EmoVoltTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1861,7 +1861,7 @@ GameObject:
   - component: {fileID: 8099654026268615388}
   - component: {fileID: 3239293180079907950}
   m_Layer: 5
-  m_Name: Reaper_Label
+  m_Name: Mercury_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uB9AC\uD37C"
+  mText: "\uBA38\uD050\uB9AC"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: EmoticonScene_UI_Reaper
+  key: EmoticonScene_UI_Mercury
 --- !u!1 &3516497277495512187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 1619690267446486641}
   - component: {fileID: 8384338651011878295}
   m_Layer: 5
-  m_Name: Mercury_Label
+  m_Name: Volt_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBA38\uD050\uB9AC"
+  mText: "\uBCFC\uD2B8"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: EmoticonScene_UI_Mercury
+  key: EmoticonScene_UI_Volt
 --- !u!1 &4003250312265887407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,7 +2391,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -4171,7 +4171,7 @@ GameObject:
   - component: {fileID: 4577536403715828593}
   - component: {fileID: 2955857234679477648}
   m_Layer: 5
-  m_Name: Volt_Label
+  m_Name: Reaper_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4233,7 +4233,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBCFC\uD2B8"
+  mText: "\uB9AC\uD37C"
   mFontSize: 33
   mFontStyle: 0
   mAlignment: 0
@@ -4273,4 +4273,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: EmoticonScene_UI_Volt
+  key: EmoticonScene_UI_Reaper

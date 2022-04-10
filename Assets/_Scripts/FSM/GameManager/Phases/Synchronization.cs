@@ -127,7 +127,10 @@ public class Synchronization : PhaseBase
             yield return new WaitUntil(() => SimulationObserver.Instance.IsAllRobotIdleState());
         }
 
-       
+        yield return new WaitForSeconds(1f);
+        GameController.instance.gameData.AmargeddonCount = GameController.instance.tmpAmargeddonCount;
+        GameController.instance.tmpAmargeddonCount = 0;
+
 
         //yield return StartCoroutine(Volt_SynchronizationHandler.S.DelayedSync(armageddonCount, armageddonPlayer));
         //yield return new WaitUntil(() => Volt_SynchronizationHandler.S.isSyncDone);

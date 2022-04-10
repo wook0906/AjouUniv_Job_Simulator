@@ -37,8 +37,8 @@ namespace Volt
 
         public enum ShopRobotSelectType
         {
-            Mercury,
             Volt,
+            Mercury,
             Hound,
             Reaper,
             SkinType_End

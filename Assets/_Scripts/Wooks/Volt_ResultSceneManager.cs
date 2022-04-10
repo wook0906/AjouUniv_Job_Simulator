@@ -162,19 +162,20 @@ public class Volt_ResultSceneManager : MonoBehaviour
 
 
 
-        if (Volt_GamePlayData.S.isPracticeMode || PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
+        if (PlayerPrefs.GetInt("Volt_TrainingMode") == 1 || PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
         {
             totalPointLabel.text = "0";
             killScoreLabel.text = "0";
             rankScoreLabel.text = "0";
             vpScoreLabel.text = "0";
         }
-        //else
-        //{
-        //    //Debug.LogError("Total Score : " + totalScore);
-        //    //if(PlayerPrefs.GetInt("Volt_TutorialDone") != 0)
-        //    //    PacketTransmission.SendGoldPacket(totalScore);
-        //}
+        else
+        {
+            Volt_PlayerData.instance.AddGold(totalScore);
+            //Debug.LogError("Total Score : " + totalScore);
+            //if(PlayerPrefs.GetInt("Volt_TutorialDone") != 0)
+            //    PacketTransmission.SendGoldPacket(totalScore);
+        }
     }
     void DelayedDestroy()
     {

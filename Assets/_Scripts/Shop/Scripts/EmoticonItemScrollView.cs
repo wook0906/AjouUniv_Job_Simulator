@@ -56,6 +56,8 @@ namespace Volt
                 for (int i = 0; i < robotEmoticonShopModels.Length; ++i)
                 {
                     EmoticonShopModel param = robotEmoticonShopModels[i];
+                    if (param == null) Debug.Log("Param null"); continue;
+                    if (items[i] == null) Debug.Log("item null"); continue;
                     items[i].GetComponent<EmoticonShopItem>().Init(param.ID, param.emoticonName_KOR, param.emoticonName_EN, param.emoticonName_GER,
                         param.emoticonName_Fren, param.priceType, param.priceCount, param.shopRobotSelectType, param.objectType, param.emoticonModel, param.objectCount,
                         param.priceICON, param.emoticonSprite, param.BuyButtonName_KR, param.BuyButtonName_EN, param.BuyButtonName_GER, param.BuyButtonName_Fren,

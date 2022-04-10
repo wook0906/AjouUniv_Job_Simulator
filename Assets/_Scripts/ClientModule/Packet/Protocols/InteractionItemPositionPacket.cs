@@ -18,7 +18,10 @@ public class InteractionItemPositionPacket : Packet
 
         //Debug.Log("moduleType : " + cardType.ToString());
 
-        GameController.instance.gameData.drawedCard = cardType;
+        //if (GameController.instance.gameData.round == 1)
+            //GameController.instance.gameData.drawedCard = Card.AMARGEDDON;//cardType;
+        //else
+            GameController.instance.gameData.drawedCard = cardType;
         GameController.instance.gameData.vpIdx = vpIdx;
         GameController.instance.gameData.repairIdx = repairKitIdx;
         GameController.instance.gameData.moduleIdx = moduleIdx;

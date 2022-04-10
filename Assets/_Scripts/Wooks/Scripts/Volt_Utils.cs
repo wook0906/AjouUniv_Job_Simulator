@@ -282,87 +282,92 @@ public class Volt_Utils
         Debug.Log("EShopPurchase Type Error!");
         return EShopPurchase.EShopPurchase;
     }
-    public static string GetItemNameByLanguage(EShopPurchase purchaseItemType)
+
+    public static string GetItemNameByIDType(int id)
     {
-        switch (Application.systemLanguage)
-        {
-            case SystemLanguage.French:
-                switch (purchaseItemType)
-                {
-                    case EShopPurchase.Emoticon:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Skin:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Package:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Gold:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Diamond:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Battery:
-                        return purchaseItemType.ToString();
-                    default:
-                        return "";
-                }
-            case SystemLanguage.German:
-                switch (purchaseItemType)
-                {
-                    case EShopPurchase.Emoticon:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Skin:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Package:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Gold:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Diamond:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Battery:
-                        return purchaseItemType.ToString();
-
-                    default:
-                        return "";
-                }
-            case SystemLanguage.Korean:
-                switch (purchaseItemType)
-                {
-                    case EShopPurchase.Emoticon:
-                        return "감정 표현";
-                    case EShopPurchase.Skin:
-                        return "스킨";
-                    case EShopPurchase.Package:
-                        return "패키지";
-                    case EShopPurchase.Gold:
-                        return "골드";
-                    case EShopPurchase.Diamond:
-                        return "다이아몬드";
-                    case EShopPurchase.Battery:
-                        return "배터리";
-
-                    default:
-                        return "";
-                }
-            default:
-                switch (purchaseItemType)
-                {
-                    case EShopPurchase.Emoticon:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Skin:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Package:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Gold:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Diamond:
-                        return purchaseItemType.ToString();
-                    case EShopPurchase.Battery:
-                        return purchaseItemType.ToString();
-
-                    default:
-                        return "";
-                }
-        }
+        return Managers.Localization.GetLocalizedValue(id.ToString());
     }
+    //public static string GetItemNameByLanguage(EShopPurchase purchaseItemType)
+    //{
+    //    switch (Application.systemLanguage)
+    //    {
+    //        case SystemLanguage.French:
+    //            switch (purchaseItemType)
+    //            {
+    //                case EShopPurchase.Emoticon:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Skin:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Package:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Gold:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Diamond:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Battery:
+    //                    return purchaseItemType.ToString();
+    //                default:
+    //                    return "";
+    //            }
+    //        case SystemLanguage.German:
+    //            switch (purchaseItemType)
+    //            {
+    //                case EShopPurchase.Emoticon:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Skin:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Package:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Gold:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Diamond:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Battery:
+    //                    return purchaseItemType.ToString();
+
+    //                default:
+    //                    return "";
+    //            }
+    //        case SystemLanguage.Korean:
+    //            switch (purchaseItemType)
+    //            {
+    //                case EShopPurchase.Emoticon:
+    //                    return "감정 표현";
+    //                case EShopPurchase.Skin:
+    //                    return "스킨";
+    //                case EShopPurchase.Package:
+    //                    return "패키지";
+    //                case EShopPurchase.Gold:
+    //                    return "골드";
+    //                case EShopPurchase.Diamond:
+    //                    return "다이아몬드";
+    //                case EShopPurchase.Battery:
+    //                    return "배터리";
+
+    //                default:
+    //                    return "";
+    //            }
+    //        default:
+    //            switch (purchaseItemType)
+    //            {
+    //                case EShopPurchase.Emoticon:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Skin:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Package:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Gold:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Diamond:
+    //                    return purchaseItemType.ToString();
+    //                case EShopPurchase.Battery:
+    //                    return purchaseItemType.ToString();
+
+    //                default:
+    //                    return "";
+    //            }
+    //    }
+    //}
 
     public static string GetGoldCountLabel(float count)
     {

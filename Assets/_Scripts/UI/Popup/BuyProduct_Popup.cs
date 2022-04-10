@@ -72,7 +72,7 @@ public class BuyProduct_Popup : UI_Popup
                 Dictionary<int, Volt.Shop.PackageShopModel> packageTable = Volt.Shop.ShopDataManager.instance.GetPackageShopItemTable();
 
                 GetSprite((int)Sprites.Product_Image).spriteName = packageTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
-                itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
+                itemName = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
                 GetLabel((int)Labels.ProductName_Label).text = $"{itemName}";
 
                 break;
@@ -118,7 +118,7 @@ public class BuyProduct_Popup : UI_Popup
                         }
                     }
                 }
-                itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
+                itemName = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
                 GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
               
                 break;
@@ -127,7 +127,7 @@ public class BuyProduct_Popup : UI_Popup
                 GetSprite((int)Sprites.Product_Image).height = 300;
                 Dictionary<int, Volt.Shop.GoldShopModel> goldTable = Volt.Shop.ShopDataManager.instance.GetGoldShopItemTable();
                 GetSprite((int)Sprites.Product_Image).spriteName = goldTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
-                itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
+                itemName = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
 
                 GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 break;
@@ -138,7 +138,7 @@ public class BuyProduct_Popup : UI_Popup
                     Dictionary<int, Volt.Shop.DiamondShopModel> diamondTable = Volt.Shop.ShopDataManager.instance.GetDiamondShopItemTable();
 
                     GetSprite((int)Sprites.Product_Image).spriteName = diamondTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
-                    itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
+                    itemName = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
                     GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 }
                 break;
@@ -148,8 +148,8 @@ public class BuyProduct_Popup : UI_Popup
                     GetSprite((int)Sprites.Product_Image).height = 300;
                     Dictionary<int, Volt.Shop.BatteryShopModel> batteryTable = Volt.Shop.ShopDataManager.instance.GetBatteryShopItemTable();
                     GetSprite((int)Sprites.Product_Image).spriteName = batteryTable[Managers.Data.CurrentProductInfoShop.ID].objectICON;
-                    itemName = Volt_Utils.GetItemNameByLanguage(Managers.Data.CurrentProductType);
-                    
+                    itemName = Volt_Utils.GetItemNameByIDType(Managers.Data.CurrentProductInfoShop.ID);
+
                     GetLabel((int)Labels.ProductName_Label).text = $"{itemName} {Managers.Data.CurrentProductInfoShop.count}";
                 }
                 break;

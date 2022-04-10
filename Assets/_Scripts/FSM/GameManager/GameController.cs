@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
+    public int tmpAmargeddonCount = 0;
     public GameData gameData;
 
     public PhaseBase CurrentPhase

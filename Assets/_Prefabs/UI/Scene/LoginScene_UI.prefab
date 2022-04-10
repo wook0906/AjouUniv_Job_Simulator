@@ -593,7 +593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5464749322324929177
 Transform:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464749322660517187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 85, z: 0}
+  m_LocalPosition: {x: 0, y: 7.0000076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5464749323420410557}
@@ -1004,7 +1004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464749322882564900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 85, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5464749323420410557}
@@ -1287,13 +1287,13 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 772
-  mHeight: 504
+  mHeight: 259
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.531746
+  aspectRatio: 2.980695
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -1322,7 +1322,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 772, y: 504, z: 0}
+  m_Size: {x: 772, y: 259, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5464749323433233730
 GameObject:
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

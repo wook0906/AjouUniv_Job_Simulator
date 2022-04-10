@@ -657,6 +657,7 @@ public static partial class PacketTransmission
         buffer[startIndex++] = PacketInfo.IntNumber;
         //ByteConverter.FromInt(Volt_GameManager.S.AmargeddonCount, buffer, ref startIndex);
         ByteConverter.FromInt(GameController.instance.gameData.AmargeddonCount, buffer, ref startIndex);
+        //Debug.LogError(GameController.instance.gameData.AmargeddonCount + "회를 보냄!");
         buffer[startIndex++] = PacketInfo.IntNumber;
 
         int amargeddonPlayerNumber = 0;
@@ -664,6 +665,7 @@ public static partial class PacketTransmission
         //amargeddonPlayerNumber = Volt_GameManager.S.AmargeddonPlayer;
         if (GameController.instance.gameData.AmargeddonPlayer != 0)
             amargeddonPlayerNumber = GameController.instance.gameData.AmargeddonPlayer;
+        //Debug.LogError(amargeddonPlayerNumber + "가 아마겟돈 주인!");
         ByteConverter.FromInt(amargeddonPlayerNumber, buffer, ref startIndex);
             
 

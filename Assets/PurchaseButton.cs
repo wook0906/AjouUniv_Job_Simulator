@@ -160,6 +160,7 @@ public class PurchaseButton : MonoBehaviour
 
         Managers.Data.SetPurchaseProductInfo(thisItemInfo, Volt_Utils.GetEShopPurchaseWithId(thisItemInfo.ID));
         Managers.UI.ShowPopupUIAsync<BuyProduct_Popup>();
+        
 
         //Volt_ShopUIManager.S.OnPressdownPopupWindowButton(Volt_ShopUIManager.S.purchaseConfirmPopupPanel.gameObject);
         //Volt_ShopUIManager.S.purchaseConfirmPopupPanel.RenewCurrentItem(this);

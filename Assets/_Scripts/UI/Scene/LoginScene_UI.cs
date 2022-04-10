@@ -20,7 +20,7 @@ public class LoginScene_UI : UI_Scene
         Logout_Btn,
         TutorialSkip_Btn,
         Google_Btn,
-        Facebook_Btn,
+        //Facebook_Btn,
         SignInApple_Btn
     }
 

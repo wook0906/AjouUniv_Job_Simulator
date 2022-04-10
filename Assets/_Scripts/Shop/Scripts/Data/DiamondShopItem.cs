@@ -56,7 +56,7 @@ namespace Volt
 
                 objectSprite.spriteName = this.objectICON.ToString();
                 objectCountLabel.text = this.objectCount.ToString();
-                priceCountLabel.text = this.priceCount.ToString();
+                priceCountLabel.text = $"￦{this.priceCount.ToString()}";
 
                 //switch (Application.systemLanguage)
                 //{

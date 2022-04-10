@@ -109,8 +109,8 @@ public class Volt_ShopConfirmPopupPanel : MonoBehaviour
                 Dictionary<int, Volt.Shop.DiamondShopModel> diamondTable = Volt.Shop.ShopDataManager.instance.GetDiamondShopItemTable();
                 itemSprite.atlas = AtlasManager.instance.GetAtlas(diamondTable[info.ID].iconAtlas);
                 itemSprite.spriteName = diamondTable[info.ID].objectICON;
-                itemName = Volt_Utils.GetItemNameByLanguage(itemType);
-                itemNameLabel.text = itemName + " "+ info.count.ToString()+"개";
+                itemName = Volt_Utils.GetItemNameByIDType(info.ID);
+                itemNameLabel.text = itemName;// + " "+ info.count.ToString()+"개";
                 break;
             case EShopPurchase.Battery:
                 Debug.Log("Battery Renew");
@@ -119,9 +119,9 @@ public class Volt_ShopConfirmPopupPanel : MonoBehaviour
                 Dictionary<int, Volt.Shop.BatteryShopModel> batteryTable = Volt.Shop.ShopDataManager.instance.GetBatteryShopItemTable();
                 itemSprite.atlas = AtlasManager.instance.GetAtlas(batteryTable[info.ID].iconAtlas);
                 itemSprite.spriteName = batteryTable[info.ID].objectICON;
-                itemName = Volt_Utils.GetItemNameByLanguage(itemType);
-                Debug.Log(itemName+info.count.ToString());
-                itemNameLabel.text = itemName + " "+ info.count.ToString() + "개";
+                itemName = Volt_Utils.GetItemNameByIDType(info.ID);
+                //Debug.Log(itemName+info.count.ToString());
+                itemNameLabel.text = itemName;// + " "+ info.count.ToString() + "개";
                 break;
             default:
                 break;

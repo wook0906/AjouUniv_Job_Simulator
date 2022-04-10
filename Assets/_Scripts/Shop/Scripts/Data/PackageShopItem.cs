@@ -67,7 +67,7 @@ namespace Volt
                 priceTypeSprite.spriteName = this.priceICON;
 
                 priceCountLabel.fontSize = this.priceFontSize;
-                priceCountLabel.text = this.priceCount.ToString();
+                priceCountLabel.text = $"￦{this.priceCount.ToString()}";
 
                 if (Volt_PlayerData.instance.IsHavePackage(this.ID))
                 {
