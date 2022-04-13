@@ -22,6 +22,8 @@ public class TitleScene : BaseScene
     public UILabel downloadPercentLabel;
     public UILabel dlcSizeLabel;
 
+    public string googleEmail;
+
     private Exit_Popup exitPopup;
 
     private AsyncOperationHandle dlcDownHandle;

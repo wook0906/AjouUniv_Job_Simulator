@@ -75,9 +75,9 @@ public class AchScene_UI : UI_Scene
             {
                 LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
                 lobbyScene.OnLoadedAchSceneUI();
-                Debug.Log("callback 을 했음 1");
+                //Debug.Log("callback 을 했음 1");
             }
-            Debug.Log("Init을 했음 1");
+           // Debug.Log("Init을 했음 1");
         });
         Get<UIScrollView>((int)ScrollViews.NormalACHView).GetComponent<ScrollViewItemCreator>().Init(() =>
         {
@@ -86,11 +86,11 @@ public class AchScene_UI : UI_Scene
             {
                 LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
                 lobbyScene.OnLoadedAchSceneUI();
-                Debug.Log("callback을 했음 2");
+                //Debug.Log("callback을 했음 2");
             }
-            Debug.Log("Init을 했음 2");
+            //Debug.Log("Init을 했음 2");
         });
-        Debug.Log("왜이러니?");
+        //Debug.Log("왜이러니?");
     }
 
     public override void OnActive()

@@ -47,7 +47,7 @@ public class ShopScene_UI : UI_Scene
         GoldCount_Label,
         DiamondCount_Label,
         BatteryCount_Label,
-        BatteryTime_Label
+        //BatteryTime_Label
     }
 
     enum GameObjects
@@ -539,14 +539,14 @@ public class ShopScene_UI : UI_Scene
 
     private void Update()
     {
-        if (BatteryCharge.instance.Timer.IsStartTimer)
-        {
-            GetLabel((int)Labels.BatteryTime_Label).text = BatteryCharge.instance.Timer.ToString();
-        }
-        else
-        {
-            GetLabel((int)Labels.BatteryTime_Label).text = "20:00";
-        }
+        //if (BatteryCharge.instance.Timer.IsStartTimer)
+        //{
+        //    GetLabel((int)Labels.BatteryTime_Label).text = BatteryCharge.instance.Timer.ToString();
+        //}
+        //else
+        //{
+        //    GetLabel((int)Labels.BatteryTime_Label).text = "20:00";
+        //}
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnClose();

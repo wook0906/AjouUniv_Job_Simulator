@@ -26,7 +26,7 @@ public class EmoticonShopInfoPacket : Packet
             price = ByteConverter.ToInt(buffer, ref startIndex);
 
             DBManager.instance.emoticonShopInfos.Add(new InfoShop(id, assetType, price, 1));
-            //Debug.Log("ID : " + id);
+            Debug.Log("ID : " + id);
             //Debug.Log("AssetType : " + assetType.ToString());
             //Debug.Log("Price : " + price);
             //Debug.Log("Battery: " + diamond);

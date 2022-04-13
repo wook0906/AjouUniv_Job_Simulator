@@ -3476,6 +3476,7 @@ MonoBehaviour:
   TOS_Popup: {fileID: 485392259}
   downloadPercentLabel: {fileID: 109629412}
   dlcSizeLabel: {fileID: 1767304535}
+  googleEmail: ohpksos@gmail.com
 --- !u!4 &1932243430
 Transform:
   m_ObjectHideFlags: 0

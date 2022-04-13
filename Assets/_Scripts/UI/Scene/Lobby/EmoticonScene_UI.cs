@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum EmoticonSelectType
 {
-    Mercury,
     Volt,
+    Mercury,
     Hound,
     Reaper,
     Common
@@ -113,9 +113,9 @@ public class EmoticonScene_UI : UI_Scene
         }));
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().onCompletedInit += () =>
         {
-            GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().Init();
+            
         };
-
+        GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).GetComponent<EmoticonInventory_ScrollView>().Init();
         for (int i = 0; i < 6; i++)
         {
             string value = "EmoticonNone";
@@ -187,7 +187,7 @@ public class EmoticonScene_UI : UI_Scene
         GetScrollView((int)ScrollViews.EmoticonInventory_ScrollView).
             GetComponent<EmoticonInventory_ScrollView>().
             OnClickEmoticonTapButton(EmoticonSelectType.Common);
-        for (int i = (int)Buttons.EmoMercuryTap; i <= (int)Buttons.CommonTap; ++i)
+        for (int i = (int)Buttons.EmoVoltTap; i <= (int)Buttons.CommonTap; ++i)
         {
             GetButton(i).normalSprite = "Btn_button03_n";
         }

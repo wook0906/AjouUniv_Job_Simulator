@@ -361,7 +361,13 @@ public class LoginScene_UI : UI_Scene
     {
         Managers.UI.CloseAllPopupUI();
         ShowLoginPanel(false);
+#if UNITY_EDITOR
+        string googleEmail = FindObjectOfType<TitleScene>().googleEmail;
+        PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail);
+#endif
+#if UNITY_ANDROID
         StartCoroutine(GoogleLoginProgress());
+#endif
     }
     IEnumerator GoogleLoginProgress()
     {
@@ -397,9 +403,9 @@ public class LoginScene_UI : UI_Scene
         yield break;
 #endif
     }
-    #endregion
+#endregion
 
-    #region Apple sdk
+#region Apple sdk
     public void OnClickSignInWithAppleBtn()
     {
         Managers.UI.ShowPopupUIAsync<LoginProgress_Popup>();
@@ -430,5 +436,5 @@ public class LoginScene_UI : UI_Scene
         PlayerPrefs.SetString("APPLE_SIGNIN", userInfo.userId);
         PacketTransmission.SendSignInPacket(userId.Length, userId);
     }
-    #endregion
+#endregion
 }

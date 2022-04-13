@@ -39,6 +39,7 @@ public class EmoticonInventory_ScrollView : MonoBehaviour
         {
             MakeSubItem();
         }
+        Debug.Log("이닛 안함?");
     }
 
     private void MakeSubItem()
@@ -136,12 +137,14 @@ public class EmoticonInventory_ScrollView : MonoBehaviour
         }
         else
         {
+            Debug.Log((ShopRobotSelectType)emoticonType);
             if (!ShopDataManager.instance.GetEmoticonShopItemTable().TryGetValue((ShopRobotSelectType)emoticonType, out robotEmoticonShopModels))
             {
                 Debug.LogError("Emotion테이블에 없는 값");
                 return;
             }
-
+        
+            
 
             for (int i = 0; i < robotEmoticonShopModels.Length; ++i)
             {
