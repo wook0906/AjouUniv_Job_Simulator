@@ -54,7 +54,7 @@ public class ShopScene_UI : UI_Scene
     {
         RobotSkin,
         Emoticon,
-        Battery_Time,
+        //Battery_Time,
         BlockPanel
     }
 
@@ -527,14 +527,14 @@ public class ShopScene_UI : UI_Scene
 
     private void ShowBatteryChargeTime()
     {
-        if (!GetGameObject((int)GameObjects.Battery_Time).activeSelf)
-        {
-            GetGameObject((int)GameObjects.Battery_Time).SetActive(true);
-        }
-        else
-        {
-            GetGameObject((int)GameObjects.Battery_Time).SetActive(false);
-        }
+        //if (!GetGameObject((int)GameObjects.Battery_Time).activeSelf)
+        //{
+        //    GetGameObject((int)GameObjects.Battery_Time).SetActive(true);
+        //}
+        //else
+        //{
+        //    GetGameObject((int)GameObjects.Battery_Time).SetActive(false);
+        //}
     }
 
     private void Update()
