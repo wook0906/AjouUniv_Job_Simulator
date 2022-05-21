@@ -9,9 +9,9 @@ public class Volt_RewardedAds : MonoBehaviour
     public static Volt_RewardedAds S;
     public RewardedAd rewardedVideoAd;
     
-    string adUnitId = "ca-app-pub-3940256099942544/5224354917"; //Test ID
+    //string adUnitId = "ca-app-pub-3940256099942544/5224354917"; //Test ID
     //스토어 공개시 위 아이디는 주석처리, 밑 아이디는 주석 풀고 빌드할것.
-    //string adUnitId = "ca-app-pub-7889081100357038/3031026591";
+    string adUnitId = "ca-app-pub-7889081100357038/3031026591";
 
     private void Awake()
     {
@@ -21,9 +21,9 @@ public class Volt_RewardedAds : MonoBehaviour
     public void CreateAd()
     {
         rewardedVideoAd = new RewardedAd(adUnitId);
-        AdRequest request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).Build();
+        //AdRequest request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).Build();
         //스토어 공개시 위 문장은 주석처리, 밑 문장은 주석 풀고 빌드할것.
-        //AdRequest request = new AdRequest.Builder().Build();
+        AdRequest request = new AdRequest.Builder().Build();
         rewardedVideoAd.LoadAd(request);
         rewardedVideoAd.OnAdClosed += HandleOnAdClosed;
         rewardedVideoAd.OnAdLoaded += HandleOnAdLoaded;
