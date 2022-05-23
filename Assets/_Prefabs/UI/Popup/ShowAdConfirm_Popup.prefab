@@ -571,8 +571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useDelayedTranslate: 0
   kor: "\uC218\uB77D"
-  eng: "\uC218\uB77D"
-  german: "\uC218\uB77D"
+  eng: OK
+  german: "Best\xE4tigen"
   french: 
 --- !u!1 &5120054996132522112
 GameObject:
