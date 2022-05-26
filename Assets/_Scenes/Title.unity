@@ -2130,7 +2130,7 @@ Transform:
   m_GameObject: {fileID: 892965838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 102.49, z: 0}
-  m_LocalScale: {x: 0.0018518518, y: 0.0018518518, z: 0.0018518518}
+  m_LocalScale: {x: 0.0024509805, y: 0.0024509805, z: 0.0024509805}
   m_Children:
   - {fileID: 1129074540}
   - {fileID: 8978341}
@@ -3476,7 +3476,7 @@ MonoBehaviour:
   TOS_Popup: {fileID: 485392259}
   downloadPercentLabel: {fileID: 109629412}
   dlcSizeLabel: {fileID: 1767304535}
-  googleEmail: ohpksos@gmail.com
+  googleEmail: alseh1920@gmail.com
 --- !u!4 &1932243430
 Transform:
   m_ObjectHideFlags: 0

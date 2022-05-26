@@ -1,10 +1,10 @@
 {
-    "m_SelectedDeviceId": "R39M10DLYEF",
+    "m_SelectedDeviceId": "R3CRC0P07JJ",
     "m_SelectedPackage": {
-        "deviceId": "R39M10DLYEF",
+        "deviceId": "R3CRC0P07JJ",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 14198,
-        "exited": false
+        "processId": 32009,
+        "exited": true
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -216,6 +216,54 @@
             "deviceId": "R39M10DLYEF",
             "name": "com.GFS.Mobile_Volt",
             "processId": 14198,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 2269,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 18307,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.android.vending",
+            "processId": 24781,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 26502,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 30252,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 32009,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2672,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 1659,
             "exited": false
         }
     ],

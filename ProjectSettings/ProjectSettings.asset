@@ -174,7 +174,7 @@ PlayerSettings:
     iPhone: com.GFS.VoltMobile
   buildNumber:
     iPhone: 20
-  AndroidBundleVersionCode: 50
+  AndroidBundleVersionCode: 53
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
@@ -900,10 +900,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: a2e51204-8aef-4ae9-a2cf-485cd68d69ba
+  cloudProjectId: 7e8e8e0a-e3e9-4079-8bf9-a9681ce4215c
   framebufferDepthMemorylessMode: 0
-  projectName: Mobile_Volt
-  organizationId: wook0906
+  projectName: 'VOLT : Mobile'
+  organizationId: park-seo-hui
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

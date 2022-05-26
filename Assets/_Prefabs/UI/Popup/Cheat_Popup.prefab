@@ -3582,6 +3582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13eb6ecaedbe4010a4e9b33cc57e169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreBackBtn: 0
 --- !u!1 &3784327223165549577
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,7 +8693,7 @@ MonoBehaviour:
   rawValue: 1
   direction: 2
   mInverted: 0
-  mSize: 0.38526314
+  mSize: 0.3852632
   mScroll: 0.6
   mDir: 2
 --- !u!65 &4808282580520194247

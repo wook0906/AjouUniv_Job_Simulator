@@ -11,7 +11,7 @@ public class Volt_RewardedAds : MonoBehaviour
     
     //string adUnitId = "ca-app-pub-3940256099942544/5224354917"; //Test ID
     //스토어 공개시 위 아이디는 주석처리, 밑 아이디는 주석 풀고 빌드할것.
-    string adUnitId = "ca-app-pub-7889081100357038/3031026591";
+    string adUnitId = "ca-app-pub-9868066161682340/3890854330";
 
     private void Awake()
     {
