@@ -73,8 +73,8 @@ public class LoginScene_UI : UI_Scene
         Get<GameObject>((int)GameObjects.LoginButtons_BG).SetActive(false);
         Get<UISlider>((int)ProgressBars.ResourcesLoadingBar).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.Logout_Btn).gameObject.SetActive(false);
-        if(Get<UIButton>((int)Buttons.TutorialSkip_Btn))
-            Get<UIButton>((int)Buttons.TutorialSkip_Btn).gameObject.SetActive(false);
+        //if(Get<UIButton>((int)Buttons.TutorialSkip_Btn))
+        //    Get<UIButton>((int)Buttons.TutorialSkip_Btn).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.GameStart_Btn).gameObject.SetActive(false);
 
         Get<UIButton>((int)Buttons.Google_Btn).onClick.Add(new EventDelegate(OnPressedGoogleLoginBtn));

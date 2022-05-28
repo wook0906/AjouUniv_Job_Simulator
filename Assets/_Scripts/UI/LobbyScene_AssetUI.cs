@@ -123,12 +123,12 @@ public class LobbyScene_AssetUI : UIBase
 
     private void Update()
     {
-        if (BatteryCharge.instance == null)
+        if (BatteryCharge.Instance == null)
             return;
 
-        if (BatteryCharge.instance.Timer.IsStartTimer)
+        if (BatteryCharge.Instance.Timer.IsStartTimer)
         {
-            GetLabel((int)Labels.BatteryTime_Label).text = BatteryCharge.instance.Timer.ToString();
+            GetLabel((int)Labels.BatteryTime_Label).text = BatteryCharge.Instance.Timer.ToString();
         }
         else
         {

@@ -121,6 +121,8 @@ public class LobbyScene : BaseScene
         customRoomManagement = gameObject.AddComponent<CustomRoomManagement>();
         
         PacketTransmission.SendFriendRequestListPacket();
+
+        BatteryCharge.Instance.Init();
     }
 
     protected override void Init()

@@ -23,8 +23,8 @@ public class BatteryTimeResponsePacket : Packet
         //Debug.Log("second : "+ second);
 
         Volt_PlayerData.instance.lastDateTime = new System.DateTime(year, month, day, hour, minute, second);
-        if (BatteryCharge.instance)
-            BatteryCharge.instance.OnLoadedLastTimerStartTime();
+        if (BatteryCharge.Instance)
+            BatteryCharge.Instance.OnLoadedLastTimerStartTime();
         //else
         //    Debug.LogError("인스턴스가 없는데...?");
     }

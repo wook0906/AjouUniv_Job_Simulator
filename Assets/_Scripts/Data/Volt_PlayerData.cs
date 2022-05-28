@@ -444,9 +444,9 @@ public class Volt_PlayerData : MonoBehaviour
             return;
         }
         
-        if(BatteryCharge.instance != null)
+        if(BatteryCharge.Instance != null)
         {
-            BatteryCharge.instance.Timer.Reset();
+            BatteryCharge.Instance.Timer.Reset();
         }
         //Debug.Log($"Add Battey count @ {count}");
         //TODO: 현재 배터리 개수 DB에 저장

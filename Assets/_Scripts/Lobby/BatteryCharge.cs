@@ -51,6 +51,7 @@ public class BatteryCharge : MonoBehaviour
 
         public void StartTimer(float seconds, DateTime timerStartTime)
         {
+            Debug.Log($"StartTimer seconds:{seconds}");
             RegisterTime(timerStartTime);
             this.Seconds = seconds;
             IsStartTimer = true;
@@ -75,8 +76,18 @@ public class BatteryCharge : MonoBehaviour
         }
     }
 
-    public static BatteryCharge instance;
-
+    private static BatteryCharge instance;
+    public static BatteryCharge Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<BatteryCharge>();
+            }
+            return instance;
+        }
+    }
     BatteryChargeTimer timer = new BatteryChargeTimer();
     public BatteryChargeTimer Timer { get { return timer; } }
 
@@ -98,11 +109,15 @@ public class BatteryCharge : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    // 아래 코드를 start() 함수에서 처리하면
+    // LobbyScene.cs에 Start()가 완료되기 전에 불려질 수 있어서 위험함.
+    // 왜냐하면 초기화 작업 중에 Scene 객체를 사용하기 때문에
+    // 항상 Scene 객체가 먼저 초기화가 완료된 후에 초기화 되도록해야함.
+    public void Init()
     {
         if (Volt_PlayerData.instance.GetBatteryCount() >= maxBatteryCount)
             return;
-        
+
         //Debug.LogWarning("Send battery time request packet");
         //마지막으로 타이머를 가동한 시간을 요청한다.
         SendBatteryTimeRequestPacket();
@@ -114,20 +129,21 @@ public class BatteryCharge : MonoBehaviour
     /// </summary>
     public void AddBatteryAndStartTimer()
     {
-        if(lastTimerStartTime.Year == 1)
+        if(Volt_PlayerData.instance.lastDateTime.Year == 1)
         {
             //Debug.LogWarning($"Warning wrong DateTime @ {lastTimerStartTime.ToString()}");
             return;
         }
 
         DateTime now = Volt.Time.GetGoogleDateTime();
-        TimeSpan timeSpan = now - lastTimerStartTime;
+        TimeSpan timeSpan = now - Volt_PlayerData.instance.lastDateTime;
 
         //Debug.LogWarning($"Now: {now.ToString()}, TimerStartTIme: {lastTimerStartTime.ToString()}");
 
         int batteryCount = Mathf.Abs((int)(timeSpan.TotalSeconds / delayPerChargeBattey));
         int remainSecond = (int)delayPerChargeBattey - Mathf.Abs((int)(timeSpan.TotalSeconds % delayPerChargeBattey));
 
+        Debug.Log($"delayPerChargeBattery:{delayPerChargeBattey}, timeSpanTotalSeconds:{timeSpan.TotalSeconds}, remainSecond:{remainSecond}");
         // 배터리를 추가하기 전 추가되는 양 + 현재 배터리 개수의 값이
         // 최대 충전 가능한 양보다 많으면 배터리 개수를 최대 개수까지만 추가되도록 조정한다.
         if (Volt_PlayerData.instance.GetBatteryCount() + batteryCount > maxBatteryCount)
@@ -204,6 +220,7 @@ public class BatteryCharge : MonoBehaviour
         {
             if(timer.Seconds > 0f)
             {
+                //Debug.Log($"남은 배터리 충전 타임: {timer.ToString()}");
                 timer.Play();
                 //timerLabel.text = timer.ToString();
                 // Debug.Log($"Timer @ {timer.ToString()}");
@@ -219,7 +236,7 @@ public class BatteryCharge : MonoBehaviour
     private void SendBatteryTimeRequestPacket()
     {
         isRequestTime = true;
-        //PacketTransmission.SendBatteryTimeRequestPacket();
+        PacketTransmission.SendBatteryTimeRequestPacket();
     }
 
     private void OnApplicationPause(bool pause)

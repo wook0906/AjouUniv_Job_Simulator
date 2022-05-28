@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CRC0P07JJ",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 32009,
+        "processId": 13440,
         "exited": true
     },
     "m_SelectedPriority": 1,
@@ -221,30 +221,6 @@
         {
             "deviceId": "R3CRC0P07JJ",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 2269,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CRC0P07JJ",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 18307,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CRC0P07JJ",
-            "name": "com.android.vending",
-            "processId": 24781,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CRC0P07JJ",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 26502,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CRC0P07JJ",
-            "name": "com.GFS.Mobile_Volt",
             "processId": 30252,
             "exited": true
         },
@@ -252,6 +228,30 @@
             "deviceId": "R3CRC0P07JJ",
             "name": "com.GFS.Mobile_Volt",
             "processId": 32009,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 337,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 5528,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 9624,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 13440,
             "exited": true
         },
         {
