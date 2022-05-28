@@ -132,7 +132,7 @@ public class LobbyScene_AssetUI : UIBase
         }
         else
         {
-            GetLabel((int)Labels.BatteryTime_Label).text = "30:00";
+            GetLabel((int)Labels.BatteryTime_Label).text = "40:00";
         }
     }
 }

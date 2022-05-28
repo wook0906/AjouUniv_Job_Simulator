@@ -52,7 +52,7 @@ public class BatteryCharge : MonoBehaviour
         public void StartTimer(float seconds, DateTime timerStartTime)
         {
             Debug.Log($"StartTimer seconds:{seconds}");
-            RegisterTime(timerStartTime);
+            //RegisterTime(timerStartTime);
             this.Seconds = seconds;
             IsStartTimer = true;
         }
@@ -93,7 +93,7 @@ public class BatteryCharge : MonoBehaviour
 
     public static int maxBatteryCount = 5;
     [SerializeField]
-    float delayPerChargeBattey = 20;
+    float delayPerChargeBattey = 40;
     [SerializeField]
     bool isLoadedLastTimerStartTime = false;
 
@@ -138,7 +138,7 @@ public class BatteryCharge : MonoBehaviour
         DateTime now = Volt.Time.GetGoogleDateTime();
         TimeSpan timeSpan = now - Volt_PlayerData.instance.lastDateTime;
 
-        //Debug.LogWarning($"Now: {now.ToString()}, TimerStartTIme: {lastTimerStartTime.ToString()}");
+        Debug.LogWarning($"Now: {now.ToString()}, TimerStartTIme: {lastTimerStartTime.ToString()}");
 
         int batteryCount = Mathf.Abs((int)(timeSpan.TotalSeconds / delayPerChargeBattey));
         int remainSecond = (int)delayPerChargeBattey - Mathf.Abs((int)(timeSpan.TotalSeconds % delayPerChargeBattey));
@@ -151,8 +151,8 @@ public class BatteryCharge : MonoBehaviour
             batteryCount = maxBatteryCount - Volt_PlayerData.instance.GetBatteryCount();
         }
         Volt_PlayerData.instance.AddBattery(batteryCount);
-        //Debug.LogWarning($"Battery count:{batteryCount}");
-        //Debug.LogWarning($"Remain second {remainSecond}");
+        Debug.LogWarning($"Battery count:{batteryCount}");
+        Debug.LogWarning($"Remain second {remainSecond}");
         
         // 플레이어의 현재 배터리 소지 개수가 최대 충전 개수보다 적으면 타이머 재생
         if (Volt_PlayerData.instance.GetBatteryCount() < maxBatteryCount)
@@ -164,7 +164,7 @@ public class BatteryCharge : MonoBehaviour
             if (timer.IsRun())
                 timer.Reset();
             timer.StartTimer(remainSecond, timerStartTime);
-            //Debug.LogWarning($"Time: {timer.ToString()}");
+            Debug.LogWarning($"Time: {timer.ToString()}");
         }
         else
         {
@@ -196,7 +196,7 @@ public class BatteryCharge : MonoBehaviour
                 curTime.Hour, curTime.Minute, curTime.Second);
             return;
         }
-        //Debug.Log("Don't registertime because timer is already running");
+        Debug.Log("Don't registertime because timer is already running");
     }
     
     public static void RegisterTime()

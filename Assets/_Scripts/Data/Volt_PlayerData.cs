@@ -249,7 +249,7 @@ public class Volt_PlayerData : MonoBehaviour
     public void Clear()
     {
         LoginType = LoginType.None;
-        lastDateTime = new DateTime();
+        //lastDateTime = new DateTime();
         UserToken = string.Empty;
         BatteryCount = 0;
         GoldCount = 0;
