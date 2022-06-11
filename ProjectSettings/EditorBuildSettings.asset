@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/MiniGame_Avoid.unity
     guid: 461aa955b8c01804184114c07a8f67af
+  - enabled: 0
+    path: Assets/_Scenes/AppLovinAdsTestScene.unity
+    guid: 433d0633b2ad35d4282f57b7957afb01
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b935f78bb417e46dcbd62569c154cce5,
       type: 2}

@@ -62,14 +62,15 @@ namespace Volt
                 else
                     priceCountLabel.text = "FREE";
 
-                if (this.ID != 3000006)
-                {
-                    if (!GetComponent<Volt_RewardedAds>())
-                    {
-                        gameObject.AddComponent<Volt_RewardedAds>();
-                        GetComponent<Volt_RewardedAds>().CreateAd();
-                    }
-                }
+                //TODO: AppLovin 광고 잘되면 삭제 필요
+                //if (this.ID != 3000006)
+                //{
+                //    if (!GetComponent<Volt_RewardedAds>())
+                //    {
+                //        gameObject.AddComponent<Volt_RewardedAds>();
+                //        GetComponent<Volt_RewardedAds>().CreateAd();
+                //    }
+                //}
             }
 
             public int GetID()
