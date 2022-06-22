@@ -29,6 +29,7 @@ public class LocalizationManager {
     //}
     public void Init()
     {
+        //fileName = "eng_Translation";
         switch (Application.systemLanguage)
         {
             case SystemLanguage.German:

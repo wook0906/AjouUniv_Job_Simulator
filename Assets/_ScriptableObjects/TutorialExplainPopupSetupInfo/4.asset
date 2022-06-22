@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyForLocalize: TutorialExplainationContents_4
   width: 900
-  height: 150
-  windowAnchor: {x: 0.43, y: -0.2}
+  height: 200
+  windowAnchor: {x: 0.3, y: -0.2}
   fontSize: 40
   isButton: 1
   isNeedArrow: 1
