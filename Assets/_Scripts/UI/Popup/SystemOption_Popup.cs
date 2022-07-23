@@ -83,12 +83,12 @@ public class SystemOption_Popup : UI_Popup
         exitGameButton.SetActive(true);
         GetButton((int)Buttons.ExitGame_Btn).onClick.Add(new EventDelegate(() =>
         {
-            Application.Quit();
+            Managers.UI.ShowPopupUIAsync<Exit_Popup>();
         }));
         GameObject resetAccountButton = GetButton((int)Buttons.RestAccount_Btn).gameObject;
 
         Vector3 pos = exitGameButton.transform.position;
-        // 하드 코딩 대략 배치해보니 이정도가 적당
+        // 하드 코딩 배치해보니 이정도가 적당
         exitGameButton.transform.position = pos + Vector3.right * 210;
         resetAccountButton.transform.position = pos + Vector3.left * 210;
 #else

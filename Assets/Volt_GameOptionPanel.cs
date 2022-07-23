@@ -9,6 +9,7 @@ public class Volt_GameOptionPanel : MonoBehaviour
     public UISlider musicSlider;
     public UIToggle frameRateControlToggle;
     public GameObject cheatActiveToggle;
+    public UIButton exitGameButton;
 
     bool isToggleInit = false;
 
@@ -33,6 +34,10 @@ public class Volt_GameOptionPanel : MonoBehaviour
         musicSlider.gameObject.SetActive(true);
         soundSlider.gameObject.SetActive(true);
         //Invoke("LateInit", 0.1f);
+
+#if !UNITY_IOS
+    exitGameButton.gameObject.SetActive(false);
+#endif
     }
 
     private void Awake()
@@ -93,5 +98,10 @@ public class Volt_GameOptionPanel : MonoBehaviour
             IsCheatModeOn = true;
             Volt_GMUI.S.cheatBtn.GetComponent<UIRect>().alpha = 1f;
         }
+    }
+
+    public void OnClickExitGameButton()
+    {
+        Managers.UI.ShowPopupUIAsync<Exit_Popup>();
     }
 }

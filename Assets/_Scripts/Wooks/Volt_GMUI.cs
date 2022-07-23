@@ -17,6 +17,7 @@ public class Volt_GMUI : UIBase
     //public GameObject cheatPanel;
     public GameObject optionPanel;
     public GameObject roundNumberGo;
+    public GameObject exitGameButton;
     public Volt_PlayerPanel[] playerPanels;
     public Volt_2dUIMsgHandler msg2dHandler;
     public GameObject msg2dPanel;
@@ -141,6 +142,10 @@ public class Volt_GMUI : UIBase
         transform.SetParent(GameObject.Find("UI Root").transform);
         transform.localPosition = new Vector3(0f, 0f, 0f);
         transform.localScale = Vector3.one;
+
+#if !UNITY_IOS
+        exitGameButton.SetActive(false);
+#endif
     }
 
     //public void Init()
@@ -360,5 +365,8 @@ public class Volt_GMUI : UIBase
         newModuleNoticeLabel.color = Color.clear;
     }
 
-    
+    public void OnClickExitGameButton()
+    {
+        Managers.UI.ShowPopupUIAsync<Exit_Popup>();
+    }
 }

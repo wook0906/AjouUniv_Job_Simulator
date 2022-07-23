@@ -443,6 +443,6 @@ public class LoginScene_UI : UI_Scene
 
     private void OnClickExitGameButton()
     {
-        Application.Quit();
+        Managers.UI.ShowPopupUIAsync<Exit_Popup>();
     }
 }
