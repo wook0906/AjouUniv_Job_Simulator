@@ -21,7 +21,8 @@ public class LoginScene_UI : UI_Scene
         TutorialSkip_Btn,
         Google_Btn,
         //Facebook_Btn,
-        SignInApple_Btn
+        SignInApple_Btn,
+        ExitGame_Btn
     }
 
     enum ProgressBars
@@ -76,12 +77,13 @@ public class LoginScene_UI : UI_Scene
         //if(Get<UIButton>((int)Buttons.TutorialSkip_Btn))
         //    Get<UIButton>((int)Buttons.TutorialSkip_Btn).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.GameStart_Btn).gameObject.SetActive(false);
-
+        Get<UIButton>((int)Buttons.ExitGame_Btn).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.Google_Btn).onClick.Add(new EventDelegate(OnPressedGoogleLoginBtn));
         //Get<UIButton>((int)Buttons.Facebook_Btn).onClick.Add(new EventDelegate(OnPressedFacebookLoginBtn));
         Get<UIButton>((int)Buttons.SignInApple_Btn).onClick.Add(new EventDelegate(OnClickSignInWithAppleBtn));
         Get<UIButton>((int)Buttons.Logout_Btn).onClick.Add(new EventDelegate(OnPressdownLogOutBtn));
         Get<UIButton>((int)Buttons.GameStart_Btn).onClick.Add(new EventDelegate(OnClickStartGame));
+        Get<UIButton>((int)Buttons.ExitGame_Btn).onClick.Add(new EventDelegate(OnClickExitGameButton));
         if (Get<UIButton>((int)Buttons.TutorialSkip_Btn))
             Get<UIButton>((int)Buttons.TutorialSkip_Btn).onClick.Add(new EventDelegate(OnPressdownTutorialSkipBtn));
 #if UNITY_ANDROID
@@ -94,6 +96,7 @@ public class LoginScene_UI : UI_Scene
 #elif UNITY_IOS
         Get<UIButton>((int)Buttons.Google_Btn).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.SignInApple_Btn).gameObject.SetActive(true);
+        Get<UIButton>((int)Buttons.ExitGame_Btn).gameObject.SetActive(true);
 #endif
 
         if (!PlayerPrefs.HasKey("Volt_TutorialDone"))
@@ -437,4 +440,9 @@ public class LoginScene_UI : UI_Scene
         PacketTransmission.SendSignInPacket(userId.Length, userId);
     }
 #endregion
+
+    private void OnClickExitGameButton()
+    {
+        Application.Quit();
+    }
 }

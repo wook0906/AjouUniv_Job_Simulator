@@ -258,12 +258,19 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         
         if (!IsInitialized) return;
-        if(Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer)
+        if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer)
         {
             //Debug.Log("구매 복구 시도");
             var appleExt = storeExtensionProvider.GetExtension<IAppleExtensions>();
             appleExt.RestoreTransactions(
-                result => Debug.Log($"구매 복구 시도 결과 - {result}"));
+                result =>
+                {
+                    Debug.Log($"구매 복구 시도 결과 - {result}");
+                    if (result)
+                        Managers.UI.ShowPopupUIAsync<SuccessRestorePurchase_Popup>();
+                    else
+                        Managers.UI.ShowPopupUIAsync<FailRestorePurchase_Popup>();
+                });
         }
     }
     public bool HadPurchased(string productId)

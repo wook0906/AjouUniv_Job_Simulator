@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 7419185363964470500}
   - component: {fileID: 5946897120374695203}
   m_Layer: 5
-  m_Name: NicknameLimitLengthExceeded_Popup
+  m_Name: SuccessRestorePurchase_Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uC911\uBCF5\uB41C \uB2C9\uB124\uC784\uC785\uB2C8\uB2E4."
+  mText: "\uAD6C\uB9E4 \uBCF5\uC6D0 \uC131\uACF5"
   mFontSize: 35
   mFontStyle: 0
   mAlignment: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: NicknameLimitLengthExceeded_Popup_Msg
+  key: SuccessRestorePurchase_Popup_Msg
 --- !u!1 &7419185364597886722
 GameObject:
   m_ObjectHideFlags: 0

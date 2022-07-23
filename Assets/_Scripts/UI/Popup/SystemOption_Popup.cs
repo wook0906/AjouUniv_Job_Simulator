@@ -21,7 +21,8 @@ public class SystemOption_Popup : UI_Popup
         Exit_Btn,
         RestAccount_Btn,
         Volume_Slider_Arrow,
-        BGM_Slider_Arrow
+        BGM_Slider_Arrow,
+        ExitGame_Btn
     }
 
     enum Labels
@@ -47,7 +48,7 @@ public class SystemOption_Popup : UI_Popup
         Bind<UISlider>(typeof(Sliders));
 
         //Managers.UI.PushToUILayerStack(this);
-
+        
         GetButton((int)Buttons.Exit_Btn).onClick.Add(new EventDelegate(() =>
         {
             OnClose();
@@ -76,6 +77,23 @@ public class SystemOption_Popup : UI_Popup
             PlayerPrefs.SetFloat("Volt_SoundVolume", GetSlider((int)Sliders.Volume_Slider_BG).value);
             Volt_SoundManager.S.OnChangedSoundVolume(GetSlider((int)Sliders.Volume_Slider_BG).value);
         }));
+
+#if UNITY_IOS
+        GameObject exitGameButton = GetButton((int)Buttons.ExitGame_Btn).gameObject;
+        exitGameButton.SetActive(true);
+        GetButton((int)Buttons.ExitGame_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Application.Quit();
+        }));
+        GameObject resetAccountButton = GetButton((int)Buttons.RestAccount_Btn).gameObject;
+
+        Vector3 pos = exitGameButton.transform.position;
+        // 하드 코딩 대략 배치해보니 이정도가 적당
+        exitGameButton.transform.position = pos + Vector3.right * 210;
+        resetAccountButton.transform.position = pos + Vector3.left * 210;
+#else
+        GetButton((int)Buttons.ExitGame_Btn).gameObject.SetActive(false);
+#endif
     }
     public override void OnClose()
     {
