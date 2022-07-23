@@ -50,7 +50,9 @@ public class ShowAdConfirm_Popup : UI_Popup
     {
         //Debug.Log("SendAdWatch");
         //PacketTransmission.SendAdsWatch();
-        Volt_RewardedAds.S.ShowRewardBasedAd();
+        //TODO: AppLovin 광고 잘되면 삭제 필요
+        //Volt_RewardedAds.S.ShowRewardBasedAd();
+        AppLovinRewardAd.Instance.ShowRewardAdButton();
         ShopScene_UI scene_UI = Managers.UI.GetSceneUI<ShopScene_UI>();
         ClosePopupUI();
         scene_UI.ActiveBlock();
