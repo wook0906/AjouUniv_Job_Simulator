@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fdeabd4209274aa57662f8fccf66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: BenefitAlarm_Popup_Notice
+  key: FailLogin_Timeout
 --- !u!1 &5120054995979521992
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 5120054995979521990}
   - component: {fileID: 8427840363998204753}
   m_Layer: 5
-  m_Name: BenefitAlarm_Popup
+  m_Name: SigninFailTimeOut_Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 5120054996036119723}
   - component: {fileID: 7268465817869986741}
   m_Layer: 5
-  m_Name: Get_Label
+  m_Name: Ok_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 7ad18085a4736f144b9c08891c758838, type: 3}
   mFont: {fileID: 0}
-  mText: "\uBC1B\uAE30"
+  mText: Ok
   mFontSize: 30
   mFontStyle: 0
   mAlignment: 0
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 5120054996538175875}
   - component: {fileID: 5120054996538175874}
   m_Layer: 5
-  m_Name: Get_Btn
+  m_Name: Ok_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

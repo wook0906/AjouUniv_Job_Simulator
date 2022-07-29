@@ -53,5 +53,6 @@ public class Managers : MonoBehaviour
     {
         UI.Clear();
         Pool.Clear();
+        TimerManager.Instance.Clear();
     }
 }

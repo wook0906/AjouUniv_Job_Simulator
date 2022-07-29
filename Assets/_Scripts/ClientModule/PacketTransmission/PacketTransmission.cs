@@ -39,8 +39,9 @@ public static partial class PacketTransmission
         IOBuffer.Enqueue(buffer);
     }
 
-    public static void SendSignInPacket(int tokenLength, string token)
+    public static void SendSignInPacket(int tokenLength, string token, Timer loginTimeoutTimer)
     {
+        TimerManager.Instance.RegisterTimer(loginTimeoutTimer, Define.LoginTimeOutTime);
         byte[] buffer = IOBuffer.Dequeue();
 
         buffer[0] = PacketInfo.PacketStartNumber;

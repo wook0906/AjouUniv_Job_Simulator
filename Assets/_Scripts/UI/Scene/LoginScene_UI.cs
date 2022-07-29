@@ -49,11 +49,12 @@ public class LoginScene_UI : UI_Scene
 
     private string myID;
     private bool isClickStartGameBtn = false;
-
+    private LoginTimer _loginTimeoutTimer;
     public override void Init()
     {
         base.Init();
 
+        _loginTimeoutTimer = new LoginTimer();
 #if UNITY_EDITOR
         PlayerPrefs.DeleteKey("Volt_LoginType");
 #endif
@@ -96,7 +97,6 @@ public class LoginScene_UI : UI_Scene
 #elif UNITY_IOS
         Get<UIButton>((int)Buttons.Google_Btn).gameObject.SetActive(false);
         Get<UIButton>((int)Buttons.SignInApple_Btn).gameObject.SetActive(true);
-        Get<UIButton>((int)Buttons.ExitGame_Btn).gameObject.SetActive(true);
 #endif
 
         if (!PlayerPrefs.HasKey("Volt_TutorialDone"))
@@ -148,7 +148,9 @@ public class LoginScene_UI : UI_Scene
                             {
                                 case UserCredentialState.Authorized:
                                     Debug.Log("Authorized");
-                                    PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken);
+                                    PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length
+                                        , Volt_PlayerData.instance.UserToken
+                                        , _loginTimeoutTimer);
                                     break;
                                 case UserCredentialState.NotFound:
                                 case UserCredentialState.Revoked:
@@ -203,6 +205,10 @@ public class LoginScene_UI : UI_Scene
 
     public void OnSuccessSignIn()
     {
+#if UNITY_IOS
+        Get<UIButton>((int)Buttons.ExitGame_Btn).gameObject.SetActive(true);
+#endif 
+        TimerManager.Instance.RemoveTimer(_loginTimeoutTimer.Uid);
         Managers.UI.CloseAllPopupUI();
         ShowLoginPanel(false);
         PacketTransmission.SendRequestGameUserInfoInitPacket();
@@ -366,7 +372,7 @@ public class LoginScene_UI : UI_Scene
         ShowLoginPanel(false);
 #if UNITY_EDITOR
         string googleEmail = FindObjectOfType<TitleScene>().googleEmail;
-        PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail);
+        PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail, _loginTimeoutTimer);
 #endif
 #if UNITY_ANDROID
         StartCoroutine(GoogleLoginProgress());
@@ -437,7 +443,7 @@ public class LoginScene_UI : UI_Scene
 
         PlayerPrefs.SetInt("Volt_LoginType", (int)LoginType.Apple);
         PlayerPrefs.SetString("APPLE_SIGNIN", userInfo.userId);
-        PacketTransmission.SendSignInPacket(userId.Length, userId);
+        PacketTransmission.SendSignInPacket(userId.Length, userId, _loginTimeoutTimer);
     }
 #endregion
 

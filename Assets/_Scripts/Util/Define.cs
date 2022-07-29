@@ -242,4 +242,6 @@ public class Define
             this.count = count;
         }
     }
+
+    public static readonly float LoginTimeOutTime = 5.0f;
 }

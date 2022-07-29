@@ -242,7 +242,7 @@ public class Volt_TitleSceneManager : MonoBehaviour
                     switch (args.credentialState)
                     {
                         case UserCredentialState.Authorized:
-                            PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken);
+//                            PacketTransmission.SendSignInPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken);
                             break;
                         case UserCredentialState.NotFound:
                         case UserCredentialState.Revoked:
@@ -539,7 +539,7 @@ public class Volt_TitleSceneManager : MonoBehaviour
 
         PlayerPrefs.SetString("APPLE_SIGNIN", userInfo.userId);
         Debug.Log($"Token:{userId}");
-        PacketTransmission.SendSignInPacket(userId.Length, userId);
+        //PacketTransmission.SendSignInPacket(userId.Length, userId);
     }
     //public void SendTmpToken()
     //{
