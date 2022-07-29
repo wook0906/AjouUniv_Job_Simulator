@@ -87,10 +87,10 @@ public class SystemOption_Popup : UI_Popup
         }));
         GameObject resetAccountButton = GetButton((int)Buttons.RestAccount_Btn).gameObject;
 
-        Vector3 pos = exitGameButton.transform.position;
+        Vector3 pos = exitGameButton.transform.localPosition;
         // 하드 코딩 배치해보니 이정도가 적당
-        exitGameButton.transform.position = pos + Vector3.right * 210;
-        resetAccountButton.transform.position = pos + Vector3.left * 210;
+        exitGameButton.transform.localPosition = pos + Vector3.right * 210;
+        resetAccountButton.transform.localPosition = pos + Vector3.left * 210;
 #else
         GetButton((int)Buttons.ExitGame_Btn).gameObject.SetActive(false);
 #endif

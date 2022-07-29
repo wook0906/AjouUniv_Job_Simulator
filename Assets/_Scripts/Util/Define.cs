@@ -225,4 +225,21 @@ public class Define
             this.isPurchased = isPurchased;;
         }
     }
+
+    [Serializable]
+    public struct ShopPriceInfo
+    {
+        public int id;
+        public int price;
+        public int assetType;
+        public int count;
+
+        public ShopPriceInfo(int id, int price, int assetType, int count)
+        {
+            this.id = id;
+            this.price = price;
+            this.assetType = assetType;
+            this.count = count;
+        }
+    }
 }

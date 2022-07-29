@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -20,6 +21,20 @@ public class DataManager
     public ObjectPoolData ObjectData { private set; get; } = null;
 
     private object _lockObj = new object();
+
+    [System.Serializable]
+    public class ShopPriceInfoWrapper : IDisposable
+    {
+        public List<Define.ShopPriceInfo> shopPriceInfo_iOS;
+
+        public void Dispose()
+        {
+            shopPriceInfo_iOS.Clear();
+            GC.SuppressFinalize(this);
+        }
+    }
+    public Dictionary<int /*id*/, ShopPriceInfo> ShopPriceInfos { get; private set; }
+
     public void Init()
     {
         Debug.Log("Init DataManager");
@@ -62,6 +77,16 @@ public class DataManager
                 ObjectData = result.Result;
                 ObjectData.Init();
             };
+
+        TextAsset jsonText = Resources.Load<TextAsset>("Data/ShopPriceInfo");
+        using(ShopPriceInfoWrapper wrapper = JsonUtility.FromJson<ShopPriceInfoWrapper>(jsonText.text))
+        {
+            ShopPriceInfos = new Dictionary<int, ShopPriceInfo>();
+            foreach(var shopPriceInfo in wrapper.shopPriceInfo_iOS)
+            {
+                ShopPriceInfos.Add(shopPriceInfo.id, shopPriceInfo);
+            }
+        }
     }
 
     public void SetBenefitInfo(EBenefitType benefitType, int result)
