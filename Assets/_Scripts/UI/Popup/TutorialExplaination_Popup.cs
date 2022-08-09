@@ -10,9 +10,13 @@ public class TutorialExplaination_Popup : UI_Popup
     UILabel guideLabel;
     UISprite bgSprite;
     UIButton bgButton;
+    
+    UISprite blockBGSprite;
     UIButton blockBGBtn;
     GameObject spriteAnimation;
     string texts;
+    [SerializeField]
+    private string tutorialDataRef;
 
     enum Labels
     {
@@ -40,6 +44,7 @@ public class TutorialExplaination_Popup : UI_Popup
         bgButton.onClick.Add(new EventDelegate(OnClickButton));
         blockBGBtn = Get<GameObject>((int)GameObjects.BlockBG).GetComponent<UIButton>();
         blockBGBtn.onClick.Add(new EventDelegate(OnClickButton));
+        blockBGSprite = Get<GameObject>((int)GameObjects.BlockBG).GetComponent<UISprite>();
         bgSprite = Get<GameObject>((int)GameObjects.BG).GetComponent<UISprite>();
         guideLabel = Get<UILabel>((int)Labels.GuideLabel);
         spriteAnimation = Get<GameObject>((int)(GameObjects.ArrowSpriteAnimation));
@@ -52,6 +57,11 @@ public class TutorialExplaination_Popup : UI_Popup
         Transform tmp = transform.parent;
         UIRoot root = transform.root.GetComponent<UIRoot>();
         texts = Managers.Localization.GetLocalizedValue(data.keyForLocalize);
+        tutorialDataRef = data.keyForLocalize;
+       
+        blockBGSprite.width = Screen.width;
+        blockBGSprite.height = Screen.height;
+
         bgSprite.width = data.width;
         bgSprite.height = data.height;
         guideLabel.fontSize = data.fontSize;
@@ -60,18 +70,30 @@ public class TutorialExplaination_Popup : UI_Popup
             case Define.Scene.Title:
             case Define.Scene.Lobby:
             case Define.Scene.Shop:
-                transform.localPosition = new Vector3(root.manualWidth * data.windowAnchor.x, root.manualHeight * data.windowAnchor.y, 0f);
-                Debug.Log($"BasedWidth : {root.manualWidth} , BasedHeight : {root.manualHeight}, result : {transform.position}");
-                break;
-
             case Define.Scene.Twincity:
             case Define.Scene.Rome:
             case Define.Scene.Ruhrgebiet:
             case Define.Scene.Tokyo:
             case Define.Scene.ResultScene:
             case Define.Scene.GameScene:
-                transform.localPosition = new Vector3(Screen.width * data.windowAnchor.x, Screen.height * data.windowAnchor.y, 0f);
-                Debug.Log($"BasedWidth : {Screen.width} , BasedHeight : {Screen.height}, result : {transform.position}");
+                transform.localPosition = Vector3.zero;
+                bgSprite.transform.localPosition = new Vector3(Screen.width * data.windowAnchor.x, Screen.height * data.windowAnchor.y, 0f);
+                if (bgSprite.transform.localPosition.x + (data.width) > (Screen.width / 2))
+                {  
+                    float overXValue = bgSprite.transform.localPosition.x + (data.width) - (Screen.width / 2);
+                    Vector3 pos = bgSprite.transform.localPosition;
+                    pos.x -= overXValue;
+                    bgSprite.transform.localPosition = pos;
+                }
+                else if(bgSprite.transform.localPosition.x - (data.width) < (Screen.width / -2))
+                {
+                    float overXValue = bgSprite.transform.localPosition.x - (data.width) + (Screen.width / 2);
+                    Vector3 pos = bgSprite.transform.localPosition;
+                    pos.x += Mathf.Abs(overXValue);
+                    bgSprite.transform.localPosition = pos;
+                }
+                Debug.Log($"BasedWidth : {Screen.width} , BasedHeight : {Screen.height}, result : {bgSprite.transform.localPosition}");
+
                 break;
             default:
                 break;
