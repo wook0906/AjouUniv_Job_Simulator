@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "R3CRC0P07JJ",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 13440,
-        "exited": true
+        "processId": 25666,
+        "exited": false
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -221,12 +221,6 @@
         {
             "deviceId": "R3CRC0P07JJ",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 30252,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CRC0P07JJ",
-            "name": "com.GFS.Mobile_Volt",
             "processId": 32009,
             "exited": true
         },
@@ -255,16 +249,58 @@
             "exited": true
         },
         {
-            "deviceId": "R3CR10ZLAYK",
+            "deviceId": "R3CRC0P07JJ",
             "name": "com.sec.android.app.launcher",
-            "processId": 2672,
+            "processId": 3906,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CRC0P07JJ",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 25666,
             "exited": false
         },
         {
             "deviceId": "R3CR10ZLAYK",
             "name": "com.GFS.Mobile_Volt",
             "processId": 1659,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 3502,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.kakao.talk",
+            "processId": 19003,
             "exited": false
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2409,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 12173,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 12902,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 21580,
+            "exited": true
         }
     ],
     "m_Tags": {

@@ -19,4 +19,4 @@ MonoBehaviour:
   fontSize: 40
   isButton: 1
   isNeedArrow: 1
-  arrowAnchor: {x: -0.33, y: 0.18}
+  arrowAnchor: {x: -0.33, y: 0.58}
