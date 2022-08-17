@@ -51,24 +51,59 @@ public class TutorialExplaination_Popup : UI_Popup
 
         Volt_GMUI.S._3dObjectInteractable = false;
     }
-
+    
     public void SetWindow(TutorialExplainPopupSetupData data)
     {
         Transform tmp = transform.parent;
         UIRoot root = transform.root.GetComponent<UIRoot>();
         texts = Managers.Localization.GetLocalizedValue(data.keyForLocalize);
         tutorialDataRef = data.keyForLocalize;
-       
-        blockBGSprite.width = Screen.width;
-        blockBGSprite.height = Screen.height;
 
-        bgSprite.width = data.width;
-        bgSprite.height = data.height;
-        guideLabel.fontSize = data.fontSize;
+        int screenWidth = Screen.width;
+        int screenHeight = Screen.height;
+        int gcd = Util.gcd(screenWidth, screenHeight);
+        int widthRatio = screenWidth / gcd;
+        int heightRatio = screenHeight / gcd;
+
+        while (screenWidth < 1920)
+            screenWidth += widthRatio;
+        while (screenHeight < 1080)
+            screenHeight += heightRatio;
+
+        int widthOffset = screenWidth / Screen.width;
+        int heightOffset = screenHeight / Screen.height;
+        
+
+        blockBGSprite.width = screenWidth;
+        blockBGSprite.height = screenHeight;
+
+        bgSprite.width = data.width * widthOffset;
+        bgSprite.height = data.height * heightOffset;
+        
+        guideLabel.fontSize = data.fontSize * widthOffset;
+        
         switch (Managers.Scene.CurrentScene.SceneType)
         {
             case Define.Scene.Title:
             case Define.Scene.Lobby:
+                transform.localPosition = Vector3.zero;
+                bgSprite.transform.localPosition = new Vector3(screenWidth * data.windowAnchor.x, screenHeight * data.windowAnchor.y, 0f);
+                if (bgSprite.transform.localPosition.x + (data.width) > (screenWidth / 2))
+                {
+                    float overXValue = bgSprite.transform.localPosition.x + (data.width) - (screenWidth / 2);
+                    Vector3 pos = bgSprite.transform.localPosition;
+                    pos.x -= overXValue;
+                    bgSprite.transform.localPosition = pos;
+                }
+                else if (bgSprite.transform.localPosition.x - (data.width) < (screenWidth / -2))
+                {
+                    float overXValue = bgSprite.transform.localPosition.x - (data.width) + (screenWidth / 2);
+                    Vector3 pos = bgSprite.transform.localPosition;
+                    pos.x += Mathf.Abs(overXValue);
+                    bgSprite.transform.localPosition = pos;
+                }
+                Debug.Log($"BasedWidth : {screenWidth} , BasedHeight : {screenHeight}, result : {bgSprite.transform.localPosition}");
+                break;
             case Define.Scene.Shop:
             case Define.Scene.Twincity:
             case Define.Scene.Rome:
@@ -77,22 +112,22 @@ public class TutorialExplaination_Popup : UI_Popup
             case Define.Scene.ResultScene:
             case Define.Scene.GameScene:
                 transform.localPosition = Vector3.zero;
-                bgSprite.transform.localPosition = new Vector3(Screen.width * data.windowAnchor.x, Screen.height * data.windowAnchor.y, 0f);
-                if (bgSprite.transform.localPosition.x + (data.width) > (Screen.width / 2))
+                bgSprite.transform.localPosition = new Vector3(screenWidth * data.windowAnchor.x, screenHeight * data.windowAnchor.y, 0f);
+                if (bgSprite.transform.localPosition.x + (data.width) > (screenWidth / 2))
                 {  
-                    float overXValue = bgSprite.transform.localPosition.x + (data.width) - (Screen.width / 2);
+                    float overXValue = bgSprite.transform.localPosition.x + (data.width) - (screenWidth / 2);
                     Vector3 pos = bgSprite.transform.localPosition;
                     pos.x -= overXValue;
                     bgSprite.transform.localPosition = pos;
                 }
-                else if(bgSprite.transform.localPosition.x - (data.width) < (Screen.width / -2))
+                else if(bgSprite.transform.localPosition.x - (data.width) < (screenWidth / -2))
                 {
-                    float overXValue = bgSprite.transform.localPosition.x - (data.width) + (Screen.width / 2);
+                    float overXValue = bgSprite.transform.localPosition.x - (data.width) + (screenWidth / 2);
                     Vector3 pos = bgSprite.transform.localPosition;
                     pos.x += Mathf.Abs(overXValue);
                     bgSprite.transform.localPosition = pos;
                 }
-                Debug.Log($"BasedWidth : {Screen.width} , BasedHeight : {Screen.height}, result : {bgSprite.transform.localPosition}");
+                Debug.Log($"BasedWidth : {screenWidth} , BasedHeight : {screenHeight}, result : {bgSprite.transform.localPosition}");
 
                 break;
             default:
@@ -100,7 +135,7 @@ public class TutorialExplaination_Popup : UI_Popup
         }
         bgButton.isEnabled = data.isButton;
         blockBGBtn.isEnabled = data.isButton;
-        spriteAnimation.transform.localPosition = new Vector3(root.manualWidth * data.arrowAnchor.x, root.manualHeight * data.arrowAnchor.y,0f);
+        spriteAnimation.transform.localPosition = new Vector3(screenWidth * data.arrowAnchor.x, screenHeight * data.arrowAnchor.y,0f);
         spriteAnimation.SetActive(data.isNeedArrow);
 
         ShowText(data);
