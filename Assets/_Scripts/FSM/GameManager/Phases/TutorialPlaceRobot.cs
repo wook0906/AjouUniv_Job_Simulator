@@ -98,6 +98,7 @@ public class TutorialPlaceRobot : PhaseBase
 
             foreach (var item in Volt_ArenaSetter.S.robotsInArena)
             {
+                if (item.playerInfo == Volt_PlayerManager.S.I) continue;
                 if (item.playerInfo.RobotType != exclusiveRobotType) continue;
                 Volt_ModuleCardBase exclusiveModule = Instantiate(Volt_ModuleDeck.S.GetModulePrefab(exclusiveModuleType, exclusiveCardType));
                 exclusiveModule.isNeedReturnToDeck = false;

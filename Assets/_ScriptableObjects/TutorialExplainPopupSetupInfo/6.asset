@@ -20,3 +20,5 @@ MonoBehaviour:
   isButton: 1
   isNeedArrow: 1
   arrowAnchor: {x: 0.3, y: -0.58}
+  targetObjName: ModuleBtn1
+  alignment: 0

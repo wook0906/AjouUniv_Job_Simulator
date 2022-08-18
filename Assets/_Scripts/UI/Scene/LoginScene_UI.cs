@@ -362,8 +362,22 @@ public class LoginScene_UI : UI_Scene
         Managers.UI.CloseAllPopupUI();
         ShowLoginPanel(false);
 #if UNITY_EDITOR
-        string googleEmail = FindObjectOfType<TitleScene>().googleEmail;
-        PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail);
+        //string googleEmail = FindObjectOfType<TitleScene>().googleEmail;
+        //PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail);
+        PlayerPrefs.SetInt("Volt_TrainingMode", 0);
+        Debug.Log("Load Scene!!");
+        if (PlayerPrefs.HasKey("Volt_TutorialDone"))
+        {
+            if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
+                Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+            else
+                Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Volt_TutorialDone", 0);
+            Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+        }
 #endif
 #if UNITY_ANDROID
         StartCoroutine(GoogleLoginProgress());
