@@ -18,5 +18,5 @@ MonoBehaviour:
   windowAnchor: {x: 0, y: 0.25}
   fontSize: 40
   isButton: 1
-  isNeedArrow: 1
+  isNeedArrow: 0
   arrowAnchor: {x: 0.2, y: 0.06}

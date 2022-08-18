@@ -170,7 +170,7 @@ public class PlaceRobot : PhaseBase
                 default:
                     break;
             }
-            
+             
             foreach (var item in Volt_ArenaSetter.S.robotsInArena)
             {
                 if (item.playerInfo.RobotType != exclusiveRobotType) continue;

@@ -67,6 +67,7 @@ public class DataManager
         Addressables.LoadAssetAsync<VFXPoolData>("VFXPoolData").Completed +=
             (result) =>
             {
+                Debug.Log("Load Complete VFXPoolData");
                 VFXPoolData = result.Result;
                 VFXPoolData.Init();
             };
@@ -74,6 +75,7 @@ public class DataManager
         Addressables.LoadAssetAsync<ObjectPoolData>("ObjectPoolData").Completed +=
             (result) =>
             {
+                Debug.Log("Load Complete ObjectPoolData");
                 ObjectData = result.Result;
                 ObjectData.Init();
             };
@@ -86,6 +88,7 @@ public class DataManager
             {
                 ShopPriceInfos.Add(shopPriceInfo.id, shopPriceInfo);
             }
+            Debug.Log("Load Complete ShopPriceInfo");
         }
     }
 

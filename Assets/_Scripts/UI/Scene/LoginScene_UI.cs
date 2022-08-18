@@ -417,10 +417,29 @@ public class LoginScene_UI : UI_Scene
 #region Apple sdk
     public void OnClickSignInWithAppleBtn()
     {
+#if UNITY_EDITOR
+        Debug.Log("Load Scene!!");
+        PlayerPrefs.SetInt("Volt_TrainingMode", 0);
+        if (PlayerPrefs.HasKey("Volt_TutorialDone"))
+        {
+            if (PlayerPrefs.GetInt("Volt_TutorialDone") == 0)
+                Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+            else
+                Managers.Scene.LoadSceneAsync(Define.Scene.Lobby);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Volt_TutorialDone", 0);
+            Managers.Scene.LoadSceneAsync(Define.Scene.GameScene);
+        }
+        //string googleEmail = FindObjectOfType<TitleScene>().googleEmail;
+        //PacketTransmission.SendSignInPacket(googleEmail.Length, googleEmail, _loginTimeoutTimer);
+#else
         Managers.UI.ShowPopupUIAsync<LoginProgress_Popup>();
         //loginProgressPanel.SetActive(true);
         var siwa = FindObjectOfType<SignInWithApple>();
         siwa.Login(OnLogin);
+#endif
     }
 
     private void OnLogin(SignInWithApple.CallbackArgs args)

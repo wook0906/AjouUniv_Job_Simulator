@@ -6,6 +6,7 @@ public class ResultPurchasePacket : Packet
 {
     public override void UnPack(byte[] buffer)
     {
+        Managers.UI.ClosePopupUI();
         Debug.Log("ResultPurchasePacket Unpack");
         int startindex = PacketInfo.FromServerPacketSettingIndex;
 

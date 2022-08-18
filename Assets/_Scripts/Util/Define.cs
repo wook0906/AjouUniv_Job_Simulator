@@ -244,4 +244,17 @@ public class Define
     }
 
     public static readonly float LoginTimeOutTime = 5.0f;
+
+    public enum AlignmentType
+    {
+        Center,
+        LeftCenter,
+        RightCenter,
+        Top,
+        LeftTop,
+        RightTop,
+        Bottom,
+        LeftBottom,
+        RightBottom
+    }
 }

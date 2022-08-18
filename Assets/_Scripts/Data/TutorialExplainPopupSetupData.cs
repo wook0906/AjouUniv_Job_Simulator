@@ -13,5 +13,9 @@ public class TutorialExplainPopupSetupData : ScriptableObject
     public int fontSize;
     public bool isButton;
     public bool isNeedArrow;
+
+    [Header("arrow settings")]
     public Vector2 arrowAnchor;
+    public string targetObjName;
+    public Define.AlignmentType alignment;
 }

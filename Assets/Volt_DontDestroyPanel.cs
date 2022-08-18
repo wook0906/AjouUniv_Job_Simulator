@@ -36,6 +36,7 @@ public class Volt_DontDestroyPanel : MonoBehaviour
 
     public void OnDisconnected()
     {
+        Debug.Log("OnDisconnected");
         Volt_NetworkErrorPanel.S.ShowErrorMsg(NetworkErrorType.InternetNonReachable);
     }
     public EventDelegate OnPressDownDisconnectConfirmBtn()

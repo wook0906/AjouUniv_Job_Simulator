@@ -422,6 +422,8 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
 
     private void Connect()
     {
+#if UNITY_EDITOR
+#else
         try
         {
             clientSocket.Connect(ipEndPoint);
@@ -433,6 +435,7 @@ public class ClientSocketModule : MonoSingleton<ClientSocketModule>
         }
 
         isSocketConnectCompleted = true;
+#endif
     }
 
     private void Receive()

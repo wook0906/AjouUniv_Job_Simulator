@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class UI_Popup : UIBase
 {
     public bool ignoreBackBtn = false;
+
+    public Action OnOpened;
+    public Action OnInit;
 
     public override void Init()
     {

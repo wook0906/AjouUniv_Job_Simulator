@@ -55,7 +55,7 @@ MonoBehaviour:
       - m_Id: 212bcd897f6c04290b984e2231978152
         m_Value: ServerData/[BuildTarget]
       - m_Id: 15e712fda403549b4bf375b7cdb704ee
-        m_Value: https://s3.ap-northeast-2.amazonaws.com/voltcontents/[BuildTarget]
+        m_Value: https://s3.ap-northeast-2.amazonaws.com/voltcontentstest/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: c04ec219ae8cf442c945a2361f7235a6
       m_Name: BuildTarget

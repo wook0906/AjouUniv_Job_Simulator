@@ -132,7 +132,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs e)
     {
-
+#if UNITY_IOS
+        Managers.UI.ShowPopupUIAsync<Waiting_Popup>();
+#endif
         Debug.Log($"구매 성공 - ID : {e.purchasedProduct.definition.id}");
         //여기해야한다....!!!!
         //if(IsContainspurchasedProduct(productBatterys,e.purchasedProduct.definition.id))
@@ -192,6 +194,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
                     PacketTransmission.SendIAPPacket(1, 1, projectItemID, googlePlatForm, productId, purchaseToken, payload);
                 else
                 {
+                    Debug.Log($"Product ID:{productId}");
                     int endSerial = ((payload.Length / 900) + 1);
 
                     for (int serial = 1; serial <= endSerial; serial++)
@@ -256,7 +259,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
     }
     public void RestorePurchase()
     {
-        
+        Managers.UI.ShowPopupUIAsync<Waiting_Popup>();
+
         if (!IsInitialized) return;
         if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer)
         {
@@ -266,6 +270,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 result =>
                 {
                     Debug.Log($"구매 복구 시도 결과 - {result}");
+                    Managers.UI.ClosePopupUI();
                     if (result)
                         Managers.UI.ShowPopupUIAsync<SuccessRestorePurchase_Popup>();
                     else

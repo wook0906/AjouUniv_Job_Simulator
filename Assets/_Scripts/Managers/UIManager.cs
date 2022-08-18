@@ -333,9 +333,50 @@ public class UIManager
             }
 
             go.transform.SetParent(PopupRoot.transform);
+            go.layer = go.transform.parent.gameObject.layer;
+            go.transform.SetChildLayer(go.layer);
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale = Vector3.one;
             callback.Invoke();
+        });
+    }
+
+    public void ShowPopupUIAsync<T>(System.Action onInit
+        , System.Action onOpened, string name = null
+        , bool isAddTop = true, bool ignoreBackBtn = false) where T : UI_Popup
+    {
+        if (string.IsNullOrEmpty(name))
+            name = typeof(T).Name;
+
+        if (_popups.Contains(name))
+            return;
+
+        _popups.Insert(0, name);
+        Managers.Resource.InstantiateAsync($"UI/Popup/{name}.prefab", (result) =>
+        {
+            GameObject go = result.Result;
+
+            go.name = name;
+
+            T popup = Util.GetOrAddComponent<T>(go);
+            popup.OnInit = onInit;
+            popup.OnOpened = onOpened;
+
+            if (isAddTop)
+                _popupStack.Insert(0, popup);
+            else
+            {
+                _popupStack.Insert(1, popup);
+                popup.GetComponent<UIPanel>().depth = _popupStack[0].GetComponent<UIPanel>().depth;
+                _popupStack[0].GetComponent<UIPanel>().depth = _order;
+                _order++;
+            }
+
+            go.transform.SetParent(PopupRoot.transform);
+            go.layer = go.transform.parent.gameObject.layer;
+            go.transform.SetChildLayer(go.layer);
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localScale = Vector3.one;
         });
     }
 
