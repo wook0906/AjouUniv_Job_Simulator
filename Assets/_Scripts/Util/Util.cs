@@ -177,11 +177,10 @@ public static class Util
         return null;
     }
     public static int gcd(int a, int b)
-    {
-        if (b == 0) { return a; }
+    { 
+        if (b == 0) { return a; } 
         else { return gcd(b, a % b); }
     }
-
 
     public static EventDelegate.Parameter MakeParameter(UnityEngine.Object value, System.Type type)
     {
