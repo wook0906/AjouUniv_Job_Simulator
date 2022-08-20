@@ -20,5 +20,5 @@ MonoBehaviour:
   isButton: 1
   isNeedArrow: 1
   arrowAnchor: {x: 0.07, y: -0.16}
-  targetObjName: 49
+  targetObjName: Move
   alignment: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AppLovinRewardAd : MonoBehaviour
 {
-    private static AppLovinRewardAd instance;
+   /* private static AppLovinRewardAd instance;
     public static AppLovinRewardAd Instance { get { return instance; } }
     string adUnitId = "9cb9606c99c1cce2";
     int retryAttempt;
@@ -102,5 +102,5 @@ public class AppLovinRewardAd : MonoBehaviour
         {
             MaxSdk.ShowRewardedAd(adUnitId);
         }
-    }
+    }*/
 }
