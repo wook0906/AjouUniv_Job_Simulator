@@ -257,4 +257,10 @@ public class Define
         LeftBottom,
         RightBottom
     }
+
+    public enum ClickAction
+    {
+        CloseAllPopup, // 전체 팝업 종료
+        ClosePopup, // UI 스택 상 가장 위에있는 팝업 하나만 종료
+    }
 }

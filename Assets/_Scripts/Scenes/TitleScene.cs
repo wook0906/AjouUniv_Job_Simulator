@@ -164,8 +164,6 @@ public class TitleScene : BaseScene
 
         yield return new WaitUntil(() => { return loads == Loads.All; });
         Managers.UI.CloseAllPopupUI();
-
-       
     }
 
     private void FixedUpdate()
