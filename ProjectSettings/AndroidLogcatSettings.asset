@@ -3,10 +3,10 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM302HD1D",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 14329,
+        "processId": 25674,
         "exited": true
     },
-    "m_SelectedPriority": 1,
+    "m_SelectedPriority": 2,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CM302HD1D",
@@ -17,38 +17,38 @@
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 23701,
+            "processId": 10868,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 19285,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM302HD1D",
-            "name": "com.kakao.talk",
-            "processId": 2356,
+            "processId": 1556,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 31266,
+            "processId": 8588,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 312,
+            "processId": 12989,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 14329,
+            "processId": 16717,
             "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 25674,
+            "exited": false
         },
         {
             "deviceId": "R54N103EARX",
@@ -262,27 +262,9 @@
         },
         {
             "deviceId": "R3CR10ZLAYK",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 1659,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CR10ZLAYK",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 3502,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CR10ZLAYK",
-            "name": "com.kakao.talk",
-            "processId": 19003,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CR10ZLAYK",
             "name": "com.sec.android.app.launcher",
             "processId": 2409,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CR10ZLAYK",
@@ -301,6 +283,30 @@
             "name": "com.GFS.Mobile_Volt",
             "processId": 21580,
             "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2729,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.google.android.gms.ui",
+            "processId": 13027,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 21838,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CR10ZLAYK",
+            "name": "com.GFS.Mobile_Volt",
+            "processId": 23261,
+            "exited": false
         }
     ],
     "m_Tags": {

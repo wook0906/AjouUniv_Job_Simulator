@@ -141,6 +141,11 @@ public class HangarScene_UI : UI_Scene
     {
         RobotType robotType = robotViewSection.SelectRobotType;
         currentSkin = currentSkins[currentSelectedRobotSkinIndex];
+        if (!DBManager.instance.userSkinCondition[currentSkin.skinID])
+        {
+            Debug.LogWarning("실제로 가지고 있지 않은 스킨");
+            return;
+        }
         Volt_PlayerData.instance.selectdRobotSkins[robotType] = currentSkin;
         PlayerPrefs.SetInt($"{robotType}_skin", currentSelectedRobotSkinIndex);
 

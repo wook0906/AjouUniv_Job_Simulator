@@ -8,7 +8,29 @@ public class SignUpSuccessPacket : Packet
     {
         Debug.Log("SignUpSuccessPacket Unpack");
         Debug.Log("계정 생성에 성공하였음");
+        
         DBManager.instance.ClearDB();
+        {
+            // 몇 가지 로컬 데이터 초기화
+
+            // 새로 가입한 계정이니 튜토리얼할 수 있게 무조건 초기화
+            if (PlayerPrefs.HasKey("Volt_TutorialDone"))
+                PlayerPrefs.DeleteKey("Volt_TutorialDone");
+
+            // 아래 스킨과 같은 이유로 초기화
+            if (PlayerPrefs.HasKey("SELECTED_ROBOT"))
+                PlayerPrefs.DeleteKey("SELECTED_ROBOT");
+
+            // 로컬 기기에 스킨 착용정보가 저장되다보니
+            // 로컬 데이터가 남으면 새 계정에 스킨이 적용되는 현상이 있음.
+            for (int i = (int)RobotType.Volt; i < (int)RobotType.Max; ++i)
+            {
+                RobotType type = (RobotType)i;
+                string key = $"{type}_skin";
+                if (PlayerPrefs.HasKey(key))
+                    PlayerPrefs.DeleteKey(key);
+            }
+        }
 
         int startIndex = PacketInfo.FromServerPacketSettingIndex;
         int nicknameLength = ByteConverter.ToInt(buffer, ref startIndex);

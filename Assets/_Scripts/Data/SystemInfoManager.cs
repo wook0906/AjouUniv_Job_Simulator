@@ -29,60 +29,123 @@ public class SystemInfoManager : MonoBehaviour
     {
         try
         {
+            ClearSystemInfo();
+            Debug.Log($"InitSystemInfo daily DailyAch:{daliy.Count}, NormalAch:{normal.Count}");
             foreach (var item in packageShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[PackageShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
                 Debug.Log($"PackageShop Info {item.ToString()}");
             }
             foreach (var item in batteyShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[batteyShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
                 //Debug.Log($"BatteryShop Info {item.ToString()}");
             }
             foreach (var item in diamondShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[diamondShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
 
                 //Debug.Log($"DiamondShop Info {item.ToString()}");
             }
             foreach (var item in goldShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[goldShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
 
                 //Debug.Log($"GoldShop Info {item.ToString()}");
             }
             foreach (var item in frameDecoShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
-                    item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[frameDecoShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
+                //   item.count));
                 //Debug.Log($"FrameDecoShop Info {item.ToString()}");
             }
             foreach (var item in robotSkinShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
-                    item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[robotSkinShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
+                //   item.count));
                 //Debug.Log($"RobotSkinShop Info {item.ToString()}");
             }
             foreach (var item in emoticonShop)
             {
-                shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
-                    item.count));
+                if (!shopInfos.ContainsKey(item.ID))
+                    shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price, item.count));
+                else
+                {
+                    Debug.LogWarning($"[emoticonShop] 이미 존재하는 키 key:{item.ID}");
+                    shopInfos[item.ID] = new InfoShop(item.ID, item.priceAssetType, item.price, item.count);
+                }
+                //shopInfos.Add(item.ID, new InfoShop(item.ID, item.priceAssetType, item.price,
+                //   item.count));
                 //Debug.Log($"EmoticonShop Info {item.ToString()}");
             }
             foreach (var item in daliy)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));//item.rewardType, item.reward));
-                //Debug.Log($"Daily ACH condtionInfo {item.ToString()}");
+                if(!achConditionInfos.ContainsKey(item.ID))
+                    achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));//item.rewardType, item.reward));
+                else
+                {
+                    Debug.LogWarning($"[daliyACH] 이미 존재하는 키 key:{item.ID}");
+                    achConditionInfos[item.ID] = new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward);
+                }
+                Debug.Log($"Daily ACH condtionInfo ID:{item.ID}, {item.ToString()}");
             }
             foreach (var item in normal)
             {
-                achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));
-                //Debug.Log($"Normal ACH ConditionInfo {item.ToString()}");
+                if (!achConditionInfos.ContainsKey(item.ID))
+                    achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));//item.rewardType, item.reward));
+                else
+                {
+                    Debug.LogWarning($"[normalACH] 이미 존재하는 키 key:{item.ID}");
+                    achConditionInfos[item.ID] = new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward);
+                }
+                //achConditionInfos.Add(item.ID, new InfoACHCondition(item.ID, item.conditionType, item.condition, item.reward));
+                Debug.Log($"Normal ACH ConditionInfo ID:{item.ID}, {item.ToString()}");
             }
         }
         catch(System.Exception ex)
         {
-            Debug.LogError("Error : " + ex.Message);
+            Debug.LogError("InitSystemInfo Faile Error : " + ex.Message);
             return false;
         }
         return true;

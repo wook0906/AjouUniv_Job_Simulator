@@ -41,6 +41,7 @@ public class DailyAchievementInfoPacket : Packet
 
             //DBManager.instance.daliyACHConditionInfos.Add(new InfoACHCondition(id, conditionType, condition,
             //rewardType, reward));
+            Debug.Log($"Daily {id} Add");
             DBManager.instance.daliyACHConditionInfos.Add(new InfoACHCondition(id, conditionType, condition, rewardInfo));
 
             Debug.Log("ID : " + id);

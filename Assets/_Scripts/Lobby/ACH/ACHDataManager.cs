@@ -31,6 +31,7 @@ public class ACHDataManager : MonoBehaviour
         Dictionary<int, InfoACHCondition> achConditionInfos = SystemInfoManager.instance.achConditionInfos;
         foreach (ACHTable.Sheet sheet in this.ACHData.sheets)
         {
+            Debug.Log($"Full {sheet.name} from DB data count:{achConditionInfos.Count}");
             Dictionary<int, ACHModel> tempAchievementTalbe = new Dictionary<int, ACHModel>();
 
             foreach (ACHTable.Param param in sheet.list)

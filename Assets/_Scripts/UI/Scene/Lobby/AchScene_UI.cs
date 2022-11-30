@@ -51,12 +51,15 @@ public class AchScene_UI : UI_Scene
     private LobbyScene lobbyScene;
     public override void Init()
     {
+        Debug.Log($"Init {gameObject.name}");
         base.Init();
         Bind<UITexture>(typeof(Textures));
         Bind<UISprite>(typeof(Sprites));
         Bind<UIButton>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
         Bind<UIScrollView>(typeof(ScrollViews));
+
+        Debug.Log($"[{gameObject.name}] Complete Bind UI");
 
         lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
 
@@ -75,9 +78,9 @@ public class AchScene_UI : UI_Scene
             {
                 LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
                 lobbyScene.OnLoadedAchSceneUI();
-                //Debug.Log("callback 을 했음 1");
+                Debug.Log($"[{gameObject.name}] callback 을 했음 1");
             }
-           // Debug.Log("Init을 했음 1");
+            Debug.Log($"[{gameObject.name}] Init을 했음 1");
         });
         Get<UIScrollView>((int)ScrollViews.NormalACHView).GetComponent<ScrollViewItemCreator>().Init(() =>
         {
@@ -86,9 +89,9 @@ public class AchScene_UI : UI_Scene
             {
                 LobbyScene lobbyScene = Managers.Scene.CurrentScene as LobbyScene;
                 lobbyScene.OnLoadedAchSceneUI();
-                //Debug.Log("callback을 했음 2");
+                Debug.Log($"[{gameObject.name}] callback을 했음 2");
             }
-            //Debug.Log("Init을 했음 2");
+            Debug.Log($"[{gameObject.name}] Init을 했음 2");
         });
         //Debug.Log("왜이러니?");
     }

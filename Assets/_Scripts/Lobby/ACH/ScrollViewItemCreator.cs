@@ -46,13 +46,14 @@ public class ScrollViewItemCreator : MonoBehaviour
 
         if (ACHTable == null || ACHTable.Count == 0)
         {
-            //Debug.LogWarning(type.ToString() + " ACHTable null or empty");
+            Debug.LogWarning(type.ToString() + " ACHTable null or empty");
             yield break;
         }
 
-        //print("ACHTable Count: " + ACHTable.Count);
+        print("ACHTable Count: " + ACHTable.Count);
         uiScrollBar.value = 0f;
         int count = 0;
+        int i = 0;
         foreach (var ACH in ACHTable)
         {
             ACHModel param = ACH.Value;
@@ -60,6 +61,7 @@ public class ScrollViewItemCreator : MonoBehaviour
             yield return new WaitUntil(() => { return handle.IsDone; });
 
             GameObject itemGO = handle.Result;
+            Debug.Log($"Maked [{itemGO.name}_{i}]");
             itemGO.GetComponent<ACHItem>().Init(param.ID, param.title_KR, param.title_EN, param.title_GER,
                 param.title_Fren, param.description_KR, param.description_EN, param.description_GER,
                 param.description_Fren, param.rewardInfo,
@@ -81,6 +83,7 @@ public class ScrollViewItemCreator : MonoBehaviour
             ++count;
 
             yield return new WaitUntil(() => itemGO.GetOrAddComponent<ACHItem>().IsAllInit());
+            Debug.Log($"[{itemGO.name}_{i++}] Init complete");
         }
         float totalScrollViewHeight = SCROLLVIEWHEIGHTPERITEM * ACHTable.Count;
         float scrollViewHeight = Mathf.Min(SCROLLVIEWMAXHEIGHT, totalScrollViewHeight);
