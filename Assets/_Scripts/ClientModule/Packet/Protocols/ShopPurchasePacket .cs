@@ -13,12 +13,19 @@ public class ShopPurchasePacket : Packet
 
         //Debug.Log($"Purchased item type : {itemType.ToString()} item Id : {itemID}");
 
-        Managers.Data.SetPurchaseProductResult(itemType, true);
-        Managers.UI.ShowPopupUIAsync<PurchaseComplete_Popup>();
-        //Volt_ShopUIManager.S.BoughtItemConfirmPopup(EShopPurchase.Skin, true);
+        ShopScene shopScene = Managers.Scene.CurrentScene as ShopScene;
 
-        ShopScene scene = Managers.Scene.CurrentScene as ShopScene;
-        scene.RenewShopItemState(itemType, itemID);
-        //구매관련업적반영
+        if (shopScene)
+        {
+            Managers.Data.SetPurchaseProductResult(itemType, true);
+            Managers.UI.ShowPopupUIAsync<PurchaseComplete_Popup>();
+            //Volt_ShopUIManager.S.BoughtItemConfirmPopup(EShopPurchase.Skin, true);
+            //구매관련업적반영
+            shopScene.RenewShopItemState(itemType, itemID);
+        }
+        else
+        {
+            Volt_PlayerData.instance.RenewRobotSkinData(itemID);
+        }
     }
 }

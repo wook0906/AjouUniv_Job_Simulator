@@ -157,6 +157,7 @@ public class InputCoupon_Popup : UI_Popup
                             //Skin id:value 인 것을 받았음.
                             {
                                 Debug.Log($"Add {value} Skin");
+                                PacketTransmission.SendShopPurchasePacket(EShopPurchase.Skin, value);
                                 //Volt_PlayerData.instance.RenewRobotSkinData(value);
                                 //ShopScene_UI shopSceneUI = GameObject.FindObjectOfType<ShopScene_UI>();
                                 //if (shopSceneUI == null)

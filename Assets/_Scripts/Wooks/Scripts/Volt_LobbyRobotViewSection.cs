@@ -101,9 +101,11 @@ public class Volt_LobbyRobotViewSection : MonoBehaviour
 
     public void CreateRobot(RobotType robotType, SkinType skinType)
     {
+        Debug.Log($"Create Robot Model {robotType}_{skinType}");
         Managers.Resource.InstantiateAsync($"Robots/{robotType}/{robotType}_{skinType}.prefab",
                 (result) =>
                 {
+                    Debug.Log("Instantiate Robot Model");
                     GameObject go = result.Result;
                     Volt_ModelRobot model = go.GetOrAddComponent<Volt_ModelRobot>();
                     go.transform.parent = transform;

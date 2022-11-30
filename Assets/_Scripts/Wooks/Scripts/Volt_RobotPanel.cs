@@ -55,6 +55,7 @@ public class Volt_RobotPanel : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!Volt_PlayerManager.S) return;
         if (!Volt_PlayerManager.S.I) return;
         if (!Volt_PlayerManager.S.I.playerCam) return;
 

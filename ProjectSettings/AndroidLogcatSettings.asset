@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM302HD1D",
         "name": "com.GFS.Mobile_Volt",
-        "processId": 19790,
+        "processId": 14329,
         "exited": true
     },
     "m_SelectedPriority": 1,
@@ -17,43 +17,37 @@
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 31529,
+            "processId": 23701,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 3867,
+            "processId": 19285,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM302HD1D",
+            "name": "com.kakao.talk",
+            "processId": 2356,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 11908,
+            "processId": 31266,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 23093,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM302HD1D",
-            "name": "org.telegram.messenger",
-            "processId": 7552,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CM302HD1D",
-            "name": "com.GFS.Mobile_Volt",
-            "processId": 10608,
+            "processId": 312,
             "exited": true
         },
         {
             "deviceId": "R3CM302HD1D",
             "name": "com.GFS.Mobile_Volt",
-            "processId": 19790,
+            "processId": 14329,
             "exited": true
         },
         {

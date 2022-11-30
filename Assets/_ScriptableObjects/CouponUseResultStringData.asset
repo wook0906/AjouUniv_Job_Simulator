@@ -18,3 +18,5 @@ MonoBehaviour:
   CommonDatas:
   - couponCode: TestCouponYeah
     stringKey: Coupon_Popup_Confirm
+  - couponCode: TestMerry
+    stringKey: Coupon_Popup_Confirm

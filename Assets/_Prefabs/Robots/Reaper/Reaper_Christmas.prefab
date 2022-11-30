@@ -1990,6 +1990,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &3189178713252899500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724719977568693098}
+  m_Layer: 0
+  m_Name: StatusBar_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724719977568693098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189178713252899500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 28.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6504440414297587262}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3205452487221875323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,7 +3774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3133643608713731513
 Transform:
   m_ObjectHideFlags: 0
@@ -3820,7 +3850,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -3975,12 +4005,8 @@ GameObject:
   - component: {fileID: 6504440414297587262}
   - component: {fileID: 3805095119845217092}
   - component: {fileID: 6188077255104764788}
-  - component: {fileID: 6853223888636561364}
-  - component: {fileID: 5534743006078080792}
   - component: {fileID: 1276534879608148238}
   - component: {fileID: 2195408741860052129}
-  - component: {fileID: 6461709491166940399}
-  - component: {fileID: 5724947608147471985}
   - component: {fileID: 4808288483581702420}
   m_Layer: 9
   m_Name: Reaper_Christmas
@@ -4005,6 +4031,7 @@ Transform:
   - {fileID: 6504440414620172751}
   - {fileID: 3671004984457416515}
   - {fileID: 3133643608713731513}
+  - {fileID: 1724719977568693098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4043,50 +4070,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6853223888636561364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791002782977231917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dfc8a5a1a1cdcd47b5b72eb86e2cf70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInfo: {fileID: 0}
-  standingTile: {fileID: 0}
-  moduleCardExcutor: {fileID: 5534743006078080792}
-  audioController: {fileID: 0}
-  panel: {fileID: 3148155045570969752}
-  pushType: 0
-  addOnsMgr:
-    isHaveAnchor: 0
-    isDodgeOn: 0
-    isHaveBomb: 0
-    isHaveSawBlade: 0
-    isHackingOn: 0
-    isDummyGearOn: 0
-  timeBombInstance: {fileID: 0}
-  hitCount: 0
-  isInitAddOnMgr: 0
-  isResolutionDone: 0
-  lastAttackPlayer: 0
-  fsm: {fileID: 6461709491166940399}
---- !u!114 &5534743006078080792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791002782977231917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ae4739dd92342e3af5094baad3a6b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curEquipedCards: []
 --- !u!114 &1276534879608148238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,106 +4189,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6461709491166940399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791002782977231917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb0c992fb5b84381ba7633618b73b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 11400000, guid: 124511fd50db742098613d1631d6b75b, type: 2}
-  prevState: {fileID: 0}
-  remainState: {fileID: 0}
-  behavior:
-    direction: {x: 0, y: 0, z: 0}
-    behaviourPoints: 0
-    behaviourType: 0
-    activeTime: 0
-    playerNumber: 0
-  startPos: {x: Infinity, y: Infinity, z: Infinity}
-  destPos: {x: Infinity, y: Infinity, z: Infinity}
-  elapsedTime: 0
-  u: 0
-  moveTime: 0
-  rotationTime: 0
-  startTile: {fileID: 0}
-  anlge: 0
-  fromRot: {x: 0, y: 0, z: 0, w: 1}
-  toRot: {x: 0, y: 0, z: 0, w: 1}
-  targetRobot: {fileID: 0}
-  robotMask:
-    serializedVersion: 2
-    m_Bits: 512
-  trapMask:
-    serializedVersion: 2
-    m_Bits: 65536
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 262144
-  holeMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  itemMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  timebombMask:
-    serializedVersion: 2
-    m_Bits: 16384
-  tileMaks:
-    serializedVersion: 2
-    m_Bits: 256
-  moveSpeed: 7
-  knockbackSpeed: 8
-  fallSpeed: 7
-  angular: 20
-  isDetectSomething: 0
-  isDamaged: 0
-  isArriveDest: 0
-  isDodgeAttack: 0
-  isKnockback: 0
-  isInActivity: 0
-  isSpawn: 0
-  isMoving: 0
-  isDoneKnockback: 0
-  isDoneMove: 0
-  isDead: 0
-  isDoneFall: 0
-  isDoneWalkTo: 0
-  isDonePushDecision: 0
-  collidedGOs: []
-  collidedRobot: {fileID: 0}
-  collidedTrap: {fileID: 0}
-  collidedWall: {fileID: 0}
-  lastAttackRobots: []
-  prevDamagedAnimation: 
-  attackType: 0
-  attackModule: {fileID: 0}
-  isPlayAttackAnimation: 0
---- !u!114 &5724947608147471985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791002782977231917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29df5e072af3df4787f0c938caf3cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDoneDamaged: 0
-  isDoneFireWave: 0
-  isDoneAttack: 0
-  isDoneDodge: 0
-  isDoneInActivity: 0
-  isDoneSpawn: 0
-  isDoneStop: 0
-  isDoneCollideWithRobot: 0
 --- !u!135 &4808288483581702420
 SphereCollider:
   m_ObjectHideFlags: 0
