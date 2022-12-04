@@ -44,3 +44,8 @@ MonoBehaviour:
     skinID: 5000035
     skinPrefab: {fileID: 8692035461541048387, guid: 211d718f4fb4c40eb976ff876ed463fe,
       type: 3}
+  - RobotType: 3
+    SkinType: 7
+    skinID: 5000036
+    skinPrefab: {fileID: 7791002782977231917, guid: 173e864d14b704a6b8c01111010d517f,
+      type: 3}

@@ -45,9 +45,29 @@ public class Volt_LobbyRobotViewSection : MonoBehaviour
             SkinType skinType;
             RobotSkin value;
             if (Volt_PlayerData.instance.selectdRobotSkins.TryGetValue(robotType, out value))
-                skinType = Volt_PlayerData.instance.selectdRobotSkins[robotType].SkinType;
+            {
+                
+                if (DBManager.instance.userSkinCondition.ContainsKey(value.skinID) == false ||
+                    DBManager.instance.userSkinCondition[value.skinID] == false)
+                {
+                    Debug.Log($"실제 소유하고 있지 않은 스킨... skin id:[{value.skinID}]");
+                    string key = $"{robotType}_skin";
+                    PlayerPrefs.SetInt(key, 0);
+
+                    RobotSkinObject skinData;
+                    if (Managers.Data.SkinDatas.TryGetValue(robotType, out skinData))
+                    {
+                        Volt_PlayerData.instance.selectdRobotSkins[robotType] = skinData.RobotSkins[0];
+                    }
+                    skinType = SkinType.Origin;
+                }
+                else
+                    skinType = Volt_PlayerData.instance.selectdRobotSkins[robotType].SkinType;
+            }
             else
                 skinType = SkinType.Origin;
+
+            
             robots.Add(robotType, null);
             CreateRobot(robotType, skinType);
         }
@@ -101,9 +121,11 @@ public class Volt_LobbyRobotViewSection : MonoBehaviour
 
     public void CreateRobot(RobotType robotType, SkinType skinType)
     {
+        Debug.Log($"Create Robot Model {robotType}_{skinType}");
         Managers.Resource.InstantiateAsync($"Robots/{robotType}/{robotType}_{skinType}.prefab",
                 (result) =>
                 {
+                    Debug.Log("Instantiate Robot Model");
                     GameObject go = result.Result;
                     Volt_ModelRobot model = go.GetOrAddComponent<Volt_ModelRobot>();
                     go.transform.parent = transform;

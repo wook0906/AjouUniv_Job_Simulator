@@ -20,6 +20,7 @@ public enum SkinType
     OriginBlue,
     OriginRed,
     Christmas,
+    Electronic,
     Max
 }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18963413}
   - component: {fileID: 18963414}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: HP Bar
   mFixedAspect: 0
   mFillCenter: 1
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26863448}
   - component: {fileID: 26863449}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: shield2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: sheild-bar
   mFixedAspect: 0
   mFillCenter: 1
@@ -197,13 +197,13 @@ GameObject:
   - component: {fileID: 67047431}
   - component: {fileID: 67047428}
   - component: {fileID: 67047430}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: RobotPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &67047429
 Transform:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -329,6 +329,7 @@ MonoBehaviour:
   orderNumberLabel: {fileID: 1332121760}
   msgTransform: {fileID: 1676592604}
   controlWaitSprite: {fileID: 608058969}
+  emoticonSprite: {fileID: 0}
   owner: {fileID: 0}
 --- !u!114 &67047430
 MonoBehaviour:
@@ -353,7 +354,7 @@ GameObject:
   - component: {fileID: 608058971}
   - component: {fileID: 608058969}
   - component: {fileID: 608058970}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: controlWaitSpriteSheet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185483590}
   - component: {fileID: 1185483591}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: hp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +567,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: HP GAGE
   mFixedAspect: 0
   mFillCenter: 1
@@ -580,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1332121759}
   - component: {fileID: 1332121760}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OrderLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400224601}
   - component: {fileID: 1400224602}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +755,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: HP GAGE
   mFixedAspect: 0
   mFillCenter: 1
@@ -768,7 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445422635}
   - component: {fileID: 1445422636}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +842,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: sheild-bar
   mFixedAspect: 0
   mFillCenter: 1
@@ -854,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676592604}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: MSGTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905901444}
   - component: {fileID: 1905901445}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: IDLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1926760468}
   - component: {fileID: 1926760469}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: hp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1090,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: f24b1aafc90a8d140bb7617beccd3958, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: HP GAGE
   mFixedAspect: 0
   mFillCenter: 1
@@ -1102,7 +1103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3571645999839822061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,7 +1135,7 @@ GameObject:
   - component: {fileID: 9200165717815930194}
   - component: {fileID: 8559204052449450706}
   - component: {fileID: 7578205880992130023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1163,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990659552760211679}
-  m_Mesh: {fileID: 5818063044284238064, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: 5818063044284238064, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &7578205880992130023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1181,7 +1182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1211,7 +1212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7176723228322163604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_L_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8644137537127782225}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1277,7 @@ GameObject:
   - component: {fileID: 4708616438242357127}
   - component: {fileID: 5486237686678615529}
   - component: {fileID: 3448873678213278686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1305,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421198713795724318}
-  m_Mesh: {fileID: -2128599272216676504, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: -2128599272216676504, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &3448873678213278686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1323,7 +1324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1353,7 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2955551601116786154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8785113341251273573}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaunchPoint_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1414,7 +1415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683009988047795102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaunchPoint_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1477,7 +1478,7 @@ GameObject:
   - component: {fileID: 8284057980615391880}
   - component: {fileID: 1532242089916920765}
   - component: {fileID: 3396111591829552031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1505,7 +1506,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2280351403123776445}
-  m_Mesh: {fileID: 973877516759717424, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: 973877516759717424, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &3396111591829552031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1524,7 +1525,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a05eb1c45321d2b4d81be1054b5aff91, type: 2}
+  - {fileID: 2100000, guid: 52371e0869d85604abe6a9eecf28ed26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1554,7 +1555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4297802922757360396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43837105595350764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_R_ForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1619,7 @@ GameObject:
   - component: {fileID: 4043637462174911107}
   - component: {fileID: 8388620273824175966}
   - component: {fileID: 2921710721945396321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1647,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2569062240407439693}
-  m_Mesh: {fileID: 5760465168522449586, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: 5760465168522449586, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &2921710721945396321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1665,7 +1666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1695,7 +1696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5393978630209706526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_R_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1238400088244645627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_R_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496351132356311554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: snowman parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,7 +1789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2207888112580177302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_L_ForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1821,7 +1822,7 @@ GameObject:
   - component: {fileID: 1624373443468817317}
   - component: {fileID: 3136468014835646779}
   - component: {fileID: 5115405885419748679}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,7 +1850,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3765816484360575552}
-  m_Mesh: {fileID: 6412623515549900752, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: 6412623515549900752, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &5115405885419748679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1868,7 +1869,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a05eb1c45321d2b4d81be1054b5aff91, type: 2}
+  - {fileID: 2100000, guid: 52371e0869d85604abe6a9eecf28ed26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1898,7 +1899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2443012919045373901}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_Wheel_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1961,7 +1962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7435979467975322550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1993,7 +1994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7170744001083127505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_R_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2025,7 +2026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570536779151548081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276857880598400040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2087,7 +2088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5592303823293687480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497838830717071474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2149,7 +2150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4698101577104101070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_L_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 888266102440805842}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2212,7 +2213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8779714953535881444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mercury parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,7 +2243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2756779531830641664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_L_Shoulder_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,17 +2276,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7399448670962508735}
   - component: {fileID: 592817761862831813}
-  - component: {fileID: 307099836943959467}
-  - component: {fileID: 223899258839909202}
   - component: {fileID: 1167053543179085811}
   - component: {fileID: 8923462998062986410}
   - component: {fileID: 8428853081320333099}
-  - component: {fileID: 9188987495547681679}
-  - component: {fileID: 2525997734490116483}
   - component: {fileID: 3663393360929277260}
-  m_Layer: 0
-  m_Name: Christmas
-  m_TagString: Untagged
+  m_Layer: 9
+  m_Name: Mercury_Christmas
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2307,6 +2304,7 @@ Transform:
   - {fileID: 496351132356311554}
   - {fileID: 1897546479}
   - {fileID: 67047429}
+  - {fileID: 7490023785879645546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2329,58 +2327,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &307099836943959467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830831676684636588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dfc8a5a1a1cdcd47b5b72eb86e2cf70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInfo: {fileID: 0}
-  standingTile: {fileID: 0}
-  deadParticle: {fileID: 0}
-  _anim: {fileID: 592817761862831813}
-  moduleCardExcutor: {fileID: 223899258839909202}
-  audioController: {fileID: 0}
-  panel: {fileID: 67047428}
-  pushType: 0
-  addOnsMgr:
-    isHaveAnchor: 0
-    isDodgeOn: 0
-    isHaveBomb: 0
-    isHaveSawBlade: 0
-    isHackingOn: 0
-    isDummyGearOn: 0
-  timeBombInstance: {fileID: 0}
-  hitCount: 0
-  isInitAddOnMgr: 0
-  isResolutionDone: 0
-  lastAttackPlayer: 0
-  robotMask:
-    serializedVersion: 2
-    m_Bits: 512
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 262144
-  fsm: {fileID: 9188987495547681679}
---- !u!114 &223899258839909202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830831676684636588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ae4739dd92342e3af5094baad3a6b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curEquipedCards: []
 --- !u!54 &1167053543179085811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2516,106 +2462,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9188987495547681679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830831676684636588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb0c992fb5b84381ba7633618b73b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 11400000, guid: 124511fd50db742098613d1631d6b75b, type: 2}
-  prevState: {fileID: 0}
-  remainState: {fileID: 0}
-  behavior:
-    direction: {x: 0, y: 0, z: 0}
-    behaviourPoints: 0
-    behaviourType: 0
-    activeTime: 0
-    playerNumber: 0
-  startPos: {x: Infinity, y: Infinity, z: Infinity}
-  destPos: {x: Infinity, y: Infinity, z: Infinity}
-  elapsedTime: 0
-  u: 0
-  moveTime: 0
-  rotationTime: 0
-  startTile: {fileID: 0}
-  anlge: 0
-  fromRot: {x: 0, y: 0, z: 0, w: 1}
-  toRot: {x: 0, y: 0, z: 0, w: 1}
-  targetRobot: {fileID: 0}
-  robotMask:
-    serializedVersion: 2
-    m_Bits: 512
-  trapMask:
-    serializedVersion: 2
-    m_Bits: 65536
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 262144
-  holeMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  itemMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  timebombMask:
-    serializedVersion: 2
-    m_Bits: 16384
-  tileMaks:
-    serializedVersion: 2
-    m_Bits: 256
-  moveSpeed: 7
-  knockbackSpeed: 8
-  fallSpeed: 7
-  angular: 20
-  isDetectSomething: 0
-  isDamaged: 0
-  isArriveDest: 0
-  isDodgeAttack: 0
-  isKnockback: 0
-  isInActivity: 0
-  isSpawn: 0
-  isMoving: 0
-  isDoneKnockback: 0
-  isDoneMove: 0
-  isDead: 0
-  isDoneFall: 0
-  isDoneWalkTo: 0
-  isDonePushDecision: 0
-  collidedGOs: []
-  collidedRobot: {fileID: 0}
-  collidedTrap: {fileID: 0}
-  collidedWall: {fileID: 0}
-  lastAttackRobots: []
-  prevDamagedAnimation: 
-  attackType: 0
-  attackModule: {fileID: 0}
-  isPlayAttackAnimation: 0
---- !u!114 &2525997734490116483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830831676684636588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29df5e072af3df4787f0c938caf3cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDoneDamaged: 0
-  isDoneFireWave: 0
-  isDoneAttack: 0
-  isDoneDodge: 0
-  isDoneInActivity: 0
-  isDoneSpawn: 0
-  isDoneStop: 0
-  isDoneCollideWithRobot: 0
 --- !u!135 &3663393360929277260
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2638,7 +2484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5557780354088893963}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_L_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2669,7 +2515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3492950618007383670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2704,7 +2550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924221046059702219}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2736,7 +2582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4047792339722274609}
   - component: {fileID: 8750823017517052154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2835,7 +2681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618282317277734206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_R_Shoulder_Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,7 +2715,7 @@ GameObject:
   - component: {fileID: 2224768304577596602}
   - component: {fileID: 2558009010039477107}
   - component: {fileID: 2316309634776523746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,7 +2743,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6499467149869218942}
-  m_Mesh: {fileID: 2278449845601626105, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: 2278449845601626105, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &2316309634776523746
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2916,7 +2762,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2948,7 +2794,7 @@ GameObject:
   - component: {fileID: 5564780118755893934}
   - component: {fileID: 2717418003210929048}
   - component: {fileID: 590098934615864712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2976,7 +2822,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6756157646130725455}
-  m_Mesh: {fileID: -951608786083511892, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: -951608786083511892, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &590098934615864712
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2995,7 +2841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3027,7 +2873,7 @@ GameObject:
   - component: {fileID: 7997273526460740568}
   - component: {fileID: 5661113803396344610}
   - component: {fileID: 6611142973317661644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3055,7 +2901,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7320895920178381440}
-  m_Mesh: {fileID: -7816157650164661064, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: -7816157650164661064, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &6611142973317661644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3074,7 +2920,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1db14aa0cfa94b240b57bbe560e91f32, type: 2}
+  - {fileID: 2100000, guid: c9a81fca7760dd040a0aa067c0c5fd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3095,6 +2941,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &7716312808054500069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7490023785879645546}
+  m_Layer: 0
+  m_Name: StatusBar_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7490023785879645546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7716312808054500069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 28.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7399448670962508735}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8225116020788098496
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +2982,7 @@ GameObject:
   - component: {fileID: 1155304262545098561}
   - component: {fileID: 6483642705962748299}
   - component: {fileID: 4636751527871842323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3134,7 +3010,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8225116020788098496}
-  m_Mesh: {fileID: -2845505134294023193, guid: bee6ed851e89bf7488a0c041cfb0ed82, type: 3}
+  m_Mesh: {fileID: -2845505134294023193, guid: c34778ba1d74a58479cc67b7ba24241e, type: 3}
 --- !u!23 &4636751527871842323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3153,7 +3029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a05eb1c45321d2b4d81be1054b5aff91, type: 2}
+  - {fileID: 2100000, guid: 52371e0869d85604abe6a9eecf28ed26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3183,7 +3059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2622112686703540744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3215,7 +3091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2163901039020746969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3247,7 +3123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8609324498416221182}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3278,7 +3154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 163331886786085421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_R_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,7 +3185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2029064128104658785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001_L_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

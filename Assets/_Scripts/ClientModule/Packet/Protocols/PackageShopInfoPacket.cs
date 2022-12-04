@@ -20,9 +20,8 @@ public class PackageShopInfoPacket : Packet
             assetType = ByteConverter.ToInt(buffer, ref startIndex);
             price = ByteConverter.ToInt(buffer, ref startIndex);
 
-            Define.ShopPriceInfo priceInfo = Managers.Data.ShopPriceInfos[id];
-            DBManager.instance.packageShopInfos.Add(new InfoShop(priceInfo.id, priceInfo.assetType
-                , priceInfo.price, priceInfo.count));
+            DBManager.instance.packageShopInfos.Add(new InfoShop(id, assetType
+                , price, 1));
         }
 #else
         int startIndex = PacketInfo.FromServerPacketSettingIndex;

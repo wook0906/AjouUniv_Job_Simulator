@@ -86,6 +86,8 @@ public class DBManager : MonoBehaviour
         }
     }
 
+    public bool IsInit { get; private set; } = false;
+
     private void Awake()
     {
         if (instance == null)
@@ -99,6 +101,7 @@ public class DBManager : MonoBehaviour
     }
     public void ClearDB()
     {
+        Debug.LogWarning("ClearDB datas");
         emoticonShopInfos.Clear();
         packageShopInfos.Clear();
         goldShopInfos.Clear();
@@ -191,6 +194,7 @@ public class DBManager : MonoBehaviour
 
         //Debug.LogError("됐냐?");
 
+        Debug.Log($"Daily ACH Count:{daliyACHConditionInfos.Count}, Normal ACH Count:{normalACHConditionInfos.Count}");
         Volt_PlayerData.instance.Init(userData.level, userData.exp, userData.nickname, userData.battery, userData.diamond, userData.gold, userSkinCondition, userEmoticonCondition, userPackageCondition, userBenefitCondition);
 
         if(!SystemInfoManager.instance.InitSystemInfo(packageShopInfos, batteryShopInfos, diamondShopInfos, goldShopInfos, frameDecorationShopInfos, robotSkinShopInfos, emoticonShopInfos, daliyACHConditionInfos, normalACHConditionInfos))
@@ -198,6 +202,7 @@ public class DBManager : MonoBehaviour
             Debug.LogError("Error Falied to System information");
         }
 
+        IsInit = true;
     }
 
 
@@ -261,13 +266,13 @@ public class DBManager : MonoBehaviour
 
     public void OnLoadedUserDaliyACHSuccess()
     {
-        //Debug.Log("Loaded user daliy ach success");
+        Debug.Log("Loaded user daliy ach success");
         pLoadDatas |= LoadDatas.UserDaliyACHSuccess;
     }
 
     public void OnLoadedUserNormalACHCondition()
     {
-        //Debug.Log("Loaded user normal ach condtion");
+        Debug.Log("Loaded user normal ach condtion");
         pLoadDatas |= LoadDatas.UserNormalACHCondition;
     }
     public void OnLoadedUserNormalACHSuccess()

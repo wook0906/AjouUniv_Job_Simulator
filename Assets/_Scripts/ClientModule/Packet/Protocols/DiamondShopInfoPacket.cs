@@ -23,9 +23,9 @@ public class DiamondShopInfoPacket : Packet
             price = ByteConverter.ToInt(buffer, ref startIndex);
             diamond = ByteConverter.ToInt(buffer, ref startIndex);
 
-            Define.ShopPriceInfo priceInfo = Managers.Data.ShopPriceInfos[id];
-            DBManager.instance.diamondShopInfos.Add(new InfoShop(priceInfo.id, priceInfo.assetType
-                , priceInfo.price, priceInfo.count));
+            //Define.ShopPriceInfo priceInfo = Managers.Data.ShopPriceInfos[id];
+            DBManager.instance.diamondShopInfos.Add(new InfoShop(id, assetType
+                , price, diamond));
         }
 #else
         int startIndex = PacketInfo.FromServerPacketSettingIndex;

@@ -85,6 +85,9 @@ public class LobbyScene : BaseScene
         });
         fadeUI.IsStartRightAway = true;
 
+        // DBManager Init 끝날 때까지 대기
+        yield return new WaitUntil(() => { return DBManager.instance.IsInit; });
+
         Init();
         Managers.Resource.LoadAsync<AudioClip>("Assets/_SFX/BGMS/Lobby.mp3",
             (result) =>

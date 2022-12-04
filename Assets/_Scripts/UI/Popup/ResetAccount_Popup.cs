@@ -72,5 +72,9 @@ public class ResetAccount_Popup : UI_Popup
         PlayerPrefs.DeleteAll();
         ClosePopupUI();
         Managers.UI.ShowPopupUIAsync<ResetAccountCompleted_Popup>();
+
+#if UNITY_IOS
+        
+#endif
     }
 }

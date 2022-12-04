@@ -39,6 +39,7 @@ public class LobbyScene_UI : UI_Scene
         RobotInfo_Btn,
         Profile_Btn,
         ProfilePicture_Btn,
+        Coupon_Btn,
         //CustomRoom_Btn,
     }
 
@@ -49,6 +50,7 @@ public class LobbyScene_UI : UI_Scene
         Training_Label,
         Level_Label,
         CustomRoon_Label,
+        Coupon_Label,
     }
     private Volt_LobbyRobotViewSection robotViewSection;
     private GameObject startGameBtnOutlieEffect;
@@ -163,6 +165,11 @@ public class LobbyScene_UI : UI_Scene
         if (PlayerPrefs.HasKey("ProfilePictureInfo"))
             ChangeProfilePicture(PlayerPrefs.GetString("ProfilePictureInfo"));
         GetLabel((int)Labels.NickName_Label).text = Volt_PlayerData.instance.NickName;
+
+        GetButton((int)Buttons.Coupon_Btn).onClick.Add(new EventDelegate(() =>
+        {
+            Managers.UI.ShowPopupUIAsync<InputCoupon_Popup>();
+        }));
 
         RenewExpValue();
         RenewLevel();

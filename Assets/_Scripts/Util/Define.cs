@@ -257,4 +257,45 @@ public class Define
         LeftBottom,
         RightBottom
     }
+
+    public enum ClickAction
+    {
+        CloseAllPopup, // 전체 팝업 종료
+        ClosePopup, // UI 스택 상 가장 위에있는 팝업 하나만 종료
+    }
+
+    public enum RobotSkinCount
+    {
+        Volt_OriginBlue = 0,
+        Volt_Demon,
+        Volt_Military,
+        Volt_Neon,
+        Volt_Old,
+        Volt_Christmas,
+        Volt_Max,
+
+        Mecury_OriginBlue = 0,
+        Mecury_Demon,
+        Mecury_Military,
+        Mecury_Neon,
+        Mecury_Old,
+        Mecury_Christmas,
+        Mecury_Max,
+
+        Hound_OriginBlue = 0,
+        Hound_Demon,
+        Hound_Military,
+        Hound_Neon,
+        Hound_Old,
+        Hound_Christmas,
+        Hound_Max,
+
+        Reaper_OriginBlue = 0,
+        Reaper_Demon,
+        Reaper_Military,
+        Reaper_Neon,
+        Reaper_Old,
+        Reaper_Christmas,
+        Reaper_Max,
+    }
 }
