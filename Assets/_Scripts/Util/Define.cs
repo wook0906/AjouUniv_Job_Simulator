@@ -264,6 +264,9 @@ public class Define
         ClosePopup, // UI 스택 상 가장 위에있는 팝업 하나만 종료
     }
 
+    // 현재 DB에서 로봇당 10개씩 컬럼을 생성해뒀기 때문에
+    // MAX값은 10으로 고정할 필요가 있다.
+    // 단 리퍼는 6개....
     public enum RobotSkinCount
     {
         Volt_OriginBlue = 0,
@@ -272,7 +275,7 @@ public class Define
         Volt_Neon,
         Volt_Old,
         Volt_Christmas,
-        Volt_Max,
+        Volt_Max = 10,
 
         Mecury_OriginBlue = 0,
         Mecury_Demon,
@@ -280,7 +283,7 @@ public class Define
         Mecury_Neon,
         Mecury_Old,
         Mecury_Christmas,
-        Mecury_Max,
+        Mecury_Max = 10,
 
         Hound_OriginBlue = 0,
         Hound_Demon,
@@ -288,7 +291,7 @@ public class Define
         Hound_Neon,
         Hound_Old,
         Hound_Christmas,
-        Hound_Max,
+        Hound_Max = 10,
 
         Reaper_OriginBlue = 0,
         Reaper_Demon,

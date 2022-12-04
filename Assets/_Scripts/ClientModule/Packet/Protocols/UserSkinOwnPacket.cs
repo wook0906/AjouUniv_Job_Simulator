@@ -23,12 +23,14 @@ class UserSkinOwnPacket : Packet
         for (int i = 0; i < (int)Define.RobotSkinCount.Volt_Max; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);
+            Debug.Log($"Volt Skin id:{id + i}, isHave:{value}");
             DBManager.instance.userSkinCondition.Add(id + i, value);
         }
         id = 5000011;
         for (int i = 0; i < (int)Define.RobotSkinCount.Mecury_Max; i++)
         {
             value = ByteConverter.ToBool(buffer, ref startIndex);
+            Debug.Log($"Mercury Skin id:{id + i}, isHave:{value}");
             DBManager.instance.userSkinCondition.Add(id + i, value);
         }
         id = 5000021;
