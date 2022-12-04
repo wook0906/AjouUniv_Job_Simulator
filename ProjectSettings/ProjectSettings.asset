@@ -173,7 +173,7 @@ PlayerSettings:
     Android: com.GFS.Mobile_Volt
     iPhone: com.GFS.VoltMobile
   buildNumber:
-    iPhone: 41
+    iPhone: 42
   AndroidBundleVersionCode: 60
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 30
@@ -240,7 +240,7 @@ PlayerSettings:
   appleDeveloperTeamID: B8X6UT37DQ
   iOSManualSigningProvisioningProfileID: f75ef989-ce20-4844-8e8a-efbad1069786
   tvOSManualSigningProvisioningProfileID: 
-  iOSManualSigningProvisioningProfileType: 1
+  iOSManualSigningProvisioningProfileType: 2
   tvOSManualSigningProvisioningProfileType: 0
   appleEnableAutomaticSigning: 2
   iOSRequireARKit: 0

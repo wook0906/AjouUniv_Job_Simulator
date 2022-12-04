@@ -164,6 +164,8 @@ public class TitleScene : BaseScene
 
         yield return new WaitUntil(() => { return loads == Loads.All; });
         Managers.UI.CloseAllPopupUI();
+
+        Managers.Resource.InstantiateAsync($"Robots/{RobotType.Reaper}/{RobotType.Reaper}_{SkinType.Christmas}.prefab");
     }
 
     private void FixedUpdate()
