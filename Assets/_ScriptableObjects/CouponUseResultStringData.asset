@@ -20,3 +20,5 @@ MonoBehaviour:
     stringKey: Coupon_Popup_Confirm
   - couponCode: TestMerry
     stringKey: Coupon_Popup_Confirm
+  - couponCode: HappyHolidays
+    stringKey: Coupon_Popup_Confirm

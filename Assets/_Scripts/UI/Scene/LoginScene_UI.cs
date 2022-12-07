@@ -217,6 +217,7 @@ public class LoginScene_UI : UI_Scene
 
     public void OnFailSignIn()
     {
+        TimerManager.Instance.RemoveTimer(_loginTimeoutTimer.Uid);
         LoginProgress_Popup popup = FindObjectOfType<LoginProgress_Popup>();
         if(popup != null)
             Managers.UI.ClosePopupUI(popup);
@@ -470,4 +471,12 @@ public class LoginScene_UI : UI_Scene
     {
         Managers.UI.ShowPopupUIAsync<Exit_Popup>();
     }
+
+#if UNITY_IOS
+    public void SignUp(string nickname)
+    {
+        TimerManager.Instance.RegisterTimer(_loginTimeoutTimer, 30f);
+        PacketTransmission.SendSignUpPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken, nickname.Length, nickname);
+    }
+#endif
 }

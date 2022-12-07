@@ -89,7 +89,11 @@ public class AccountMaker_Popup : UI_Popup
             return;
         }
 
+#if UNITY_IOS
+        FindObjectOfType<LoginScene_UI>().SignUp(nickname);
+#else // UNITY_IOS
         PacketTransmission.SendSignUpPacket(Volt_PlayerData.instance.UserToken.Length, Volt_PlayerData.instance.UserToken, nickname.Length, nickname);
+#endif // UNITY_IOS
         ClosePopupUI();
     }
 }

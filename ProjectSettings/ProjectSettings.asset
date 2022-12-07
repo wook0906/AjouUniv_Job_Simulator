@@ -126,7 +126,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.0622
+  bundleVersion: 1.0.0623
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -173,7 +173,7 @@ PlayerSettings:
     Android: com.GFS.Mobile_Volt
     iPhone: com.GFS.VoltMobile
   buildNumber:
-    iPhone: 42
+    iPhone: 44
   AndroidBundleVersionCode: 60
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 30
